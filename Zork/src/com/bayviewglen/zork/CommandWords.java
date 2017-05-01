@@ -7,6 +7,7 @@ package com.bayviewglen.zork;
  * * It is used to recognize commands as they are typed in. 
  * * This class is part of the "Zork" game.
  * */
+
 class CommandWords{ 
 	
 	// a constant array that holds all valid command words
@@ -33,16 +34,15 @@ class CommandWords{
 		{        
 			for(int i = 0; i < validCommands.length; i++)    
 				{          
-						if(validCommands[i].equals(aString))     
-							return true;    
-				}     // if we get here, the string was not found in the commands      
+					if(validCommands[i].equals(aString))     
+						return true;    
+				}   // if we get here, the string was not found in the commands      
 			return false;   
 			}   
 	
 	/* 
 	 * * Print all valid commands to System.out.     
 	 * */   
-	
 	public void showAll(){       
 			for(int i = 0; i < validCommands.length; i++){     
 					

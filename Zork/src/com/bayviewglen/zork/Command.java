@@ -29,7 +29,8 @@ class Command{
 		commandWord = firstWord;       
 		this.secondWord = secondWord;  
 		}   
-	 /** Return the command word (the first word) of this command. 
+	
+	/** Return the command word (the first word) of this command. 
 	  **If the command was not understood, the result is null. */   
 	 public String getCommandWord()   
 	 {  
@@ -38,7 +39,6 @@ class Command{
 	 
 	 /** Return the second word of this command. Returns null if there was no    
 	  **second word.     */  
-	 
 	 public String getSecondWord()    
 	 {     
 		 return secondWord;  
@@ -50,6 +50,7 @@ class Command{
 	  {      
 		  return (commandWord == null);   
 		  } 
+	  
 	  /**Return true if the command has a second word. */   
 	  public boolean hasSecondWord()  
 	  {     
