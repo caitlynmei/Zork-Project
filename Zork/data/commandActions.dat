@@ -3,11 +3,24 @@ Command words: (CM)
 	- Drink
 	- Look (around)
 	- Inventory 
+	- North
+	- South
+	- East
+	- West
 	- N, E, W, S
 	- up
 	- Down 
+	- Left
+	- Right
 	- Open
 	- Move 
 	- Crouch 
-	- JumpClimb 
+	- JumpClimb
+	- Attack
+	- Stab
+	- Block
+	- Shoot
+	- Reload
+	- Bash
+	- Defend 
 
