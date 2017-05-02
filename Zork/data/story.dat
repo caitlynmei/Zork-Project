@@ -13,6 +13,10 @@ The cage is inside a dark airplane hanger. It is night time.
 Level 0 activities:
 
 Walk around the cage (each direction is blocked by bars, so you can't go anywhere)
+North - Front of the cage
+South - Back of the cage
+West - Left of the cage
+East - Right of the cage
 
 
 Ground is cold cement. You are wearing a T-Shirt and worn out jeans. You are wearing dress shoes covered in dust.
@@ -41,10 +45,29 @@ options to say -
 		"You will see very soon... have fun"
 		
 
+*Evil Laughter sound*
 The dark figure starts laughing as their figure fades from the dimly lit airplane hanger. 
 
-// we should have a leaflet to read instructions like Zork does - CM
+.. wait about 3 seconds before executing next line of code .. 
 
+*clicking sound*
+Suddenly the ground beneath you collapses and you fall. Everything goes dark.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// we should have a leaflet to read instructions like Zork does - CM
+//idk what that is - GG
 -----------------------------------------------------------------------------------------
 Level 1: Air World 
 
