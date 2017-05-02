@@ -47,7 +47,9 @@ class Parser
             System.out.println ("There was an error during reading: "
                                 + exc.getMessage());
         }
-
+        
+        // tokenizer is the process of breaking a stream of text up into words, phrases,
+        // symbols, or other meaningful elements called tokens. 
         StringTokenizer tokenizer = new StringTokenizer(inputLine);
 
         if(tokenizer.hasMoreTokens())
