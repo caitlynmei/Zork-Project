@@ -18,7 +18,7 @@ class Command{
 	
 	private String commandWord;   
 	private String secondWord; 
-	private String thirdWord;
+	private String thirdWord; // added the 3rd word - CM 
 	
 	/**    
 	 * * Create a command object. First and second word must be supplied, but    
