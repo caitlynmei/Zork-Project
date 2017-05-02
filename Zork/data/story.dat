@@ -1,11 +1,83 @@
-Level 0: Once upon a time... 
-You wake up in a cage. The cage is inside a dark airplane hanger. It is night time.
+
+**Journey to find your memories and as well escape 
+
+
+
+Beginning: Dialogue and intro to the game
+
+Level 0: 
+It's dark. You hear a distant voice and open your eyes to find that you're in a cage. 
+The cage is inside a dark airplane hanger. It is night time.
+
+ 
+Level 0 activities:
+
+Walk around the cage (each direction is blocked by bars, so you can't go anywhere)
+North - Front of the cage
+South - Back of the cage
+West - Left of the cage
+East - Right of the cage
+
+
+Ground is cold cement. You are wearing a T-Shirt and worn out jeans. You are wearing dress shoes covered in dust.
+You don't remember who you are, where you came from or even what your name is. A dark figure approaches the cage shown by the 
+little back light of the night sky.  
+Mysterious figure : 
+"Look who decided to finally wake up"
+
+You:
+options to say -
+		"Who are you?" - "Where am I?"  
+
+			Answer to "Who are you": 
+			"You don't Remember? You don't remember the hell you put me through? Well, that will make this
+			more enjoyable. I might feel a bit guilty after though...."
+			
+			Answer to "Where am I":
+			"You are in a place where you will finally get what you deserve."
+
+You:
+options to say - 
+		
+		"What do you mean?" - "I don't remember..." 
+		 
+		Answer to both:
+		"You will see very soon... have fun"
+		
+
+*Evil Laughter sound*
+The dark figure starts laughing as their figure fades from the dimly lit airplane hanger. 
+
+.. wait about 3 seconds before executing next line of code .. 
+
+*clicking sound*
+Suddenly the ground beneath you collapses and you fall. Everything goes dark.
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // we should have a leaflet to read instructions like Zork does - CM
-
+//idk what that is - GG
 -----------------------------------------------------------------------------------------
 Level 1: Air World 
-// can we call it heaven?? - CM 
+
+
+
+
+
+
+
+
 
 -----------------------------------------------------------------------------------------
 Level 2: Water World
