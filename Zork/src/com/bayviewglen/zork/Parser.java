@@ -18,11 +18,11 @@ package com.bayviewglen.zork;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.util.HashSet;
+import java.util.Set;
 import java.util.StringTokenizer;
 
-class Parser 
-{
-
+class Parser {
     private CommandWords commands;  // holds all valid command words
 
     public Parser() 
@@ -72,6 +72,20 @@ class Parser
             return new Command(null, word2);
     }
 
+    // Set: use contains() method, like a list but can't have duplicates 
+    public void UselessWords (){
+    	Set<String> ignoreWords = new HashSet<String>();
+    	ignoreWords.add("the");
+    	ignoreWords.add("a");
+    	ignoreWords.add("an");
+    	ignoreWords.add("and");
+    	ignoreWords.add("to");
+    	ignoreWords.add("that");
+    	ignoreWords.add("is");
+    	ignoreWords.add("it");
+    	System.out.println(ignoreWords);
+    }
+    
     /**
      * Print out a list of valid command words.
      */
@@ -79,4 +93,5 @@ class Parser
     {
         commands.showAll();
     }
+    
 }
