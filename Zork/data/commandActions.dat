@@ -1,14 +1,17 @@
 Command words: (CM)
 	- Eat
 	- Drink
-	- Look (around)
+	- Look 
 	- Inventory 
 	- North
 	- South
 	- East
 	- West
-	- N, E, W, S
-	- up
+	- N
+	- E
+	- W
+	- S
+	- Up
 	- Down 
 	- Left
 	- Right
