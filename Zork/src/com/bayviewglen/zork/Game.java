@@ -2,6 +2,7 @@ package com.bayviewglen.zork;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
 
@@ -33,6 +34,8 @@ class Game
     // In a hashmap keys are case sensitive.
     // masterRoomMap.get("GREAT_ROOM") will return the Room Object that is the Great Room (assuming you have one).
     private HashMap<String, Room> masterRoomMap;
+    
+    ArrayList<Object> bag = new ArrayList<Object>();
     
     private void initRooms(String fileName) throws Exception{
     	masterRoomMap = new HashMap<String, Room>();
@@ -156,29 +159,61 @@ class Game
             printHelp();
         else if (commandWord.equals("go"))
             goRoom(command);
-        else if (commandWord.equals("quit"))
-        {
+        else if (commandWord.equals("take"))
+        	getItem(command); // make this method -CM
+        else if (commandWord.equals("drop"))
+        	removeItem(command); // make this method -CM
+       // else if (commandWord.equals("inventory"))
+        	//printInventory(command);
+        else if (commandWord.equals("quit")){
             if(command.hasSecondWord())
                 System.out.println("Quit what?");
             else
-                return true;  // signal that we want to quit
-        }else if (commandWord.equals("eat")){
+                return true;  // signal that we want to quit <-- we need to do this -CM
+        } else if (commandWord.equals("eat")){
         	System.out.println("Do you really think you should be eating at a time like this?");
         }
         return false;
     }
 
-    // implementations of user commands:
+   /* method prints inventory -CM
+	private void printInventory(Command command) {
+		System.out.println("You have: ");
+		if (bag.getNumItems() == 0){
+			System.out.println("You have nothing right now.");
+		} else {
+			for (int i=0; i<bag.getNumItems(); i++){
+				Item currentItem = bag.getInventory().get(i);
+				if (currentItem != null){
+					System.out.println(currentItem.getDescription());
+				}
+			}
+		}
+	}
+	*/
 
-    /**
+	// method lets you store items in inventory. I got this -CM
+    private void getItem(Command command) {
+		// TODO Auto-generated method stub
+	}
+    
+    // method lets you remove items in inventory. -CM
+    private void removeItem(Command command) {
+		// TODO Auto-generated method stub
+		
+	}
+    
+    // implementations of user commands:
+	/**
      * Print out some help information.
      * Here we print some stupid, cryptic message and a list of the 
      * command words.
      */
     private void printHelp() 
     {
-        System.out.println("You are lost. You are alone. You wander");
-        System.out.println("around at Monash Uni, Peninsula Campus.");
+        System.out.println("You are lost. You are going to die alone and forever be forgotten.");
+        System.out.println("Just joking!! :)");
+        System.out.println("Don't worry. We will help guide you through this.");
         System.out.println();
         System.out.println("Your command words are:");
         parser.showCommands();
@@ -210,5 +245,6 @@ class Game
             System.out.println(currentRoom.longDescription());
         }
     }
+ 
   
 }
