@@ -25,6 +25,9 @@ public abstract class Weapons implements Items {
 	public String getname(){
 		return Name;
 	}
+	public void setdur(int newDurabillity){
+		this.Durrability = newDurabillity;
+	}
 	
 	
 }
