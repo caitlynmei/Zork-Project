@@ -4,9 +4,10 @@ import java.util.ArrayList;
 
 public class Inventory {
 
-	private ArrayList<Object> bag = new ArrayList<Object>();
+	private ArrayList<Object> bag = new ArrayList<Object>(); // Mr.D said to change object to item
 	
-	public Inventory(Object item){
-		bag.add(item);
+	public Inventory(ArrayList<Object> myBag){
+		bag = myBag;
 	}
+
 }

@@ -35,7 +35,7 @@ class Game
     // masterRoomMap.get("GREAT_ROOM") will return the Room Object that is the Great Room (assuming you have one).
     private HashMap<String, Room> masterRoomMap;
     
-    ArrayList<Object> bag = new ArrayList<Object>();
+    public ArrayList<Object> bag = new ArrayList<Object>();
     
     private void initRooms(String fileName) throws Exception{
     	masterRoomMap = new HashMap<String, Room>();
