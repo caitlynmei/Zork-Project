@@ -6,4 +6,6 @@ public interface Items {
 	
 	public void Name (String Name);	
 	
+	public boolean Equals(Items item);
+	
 }
