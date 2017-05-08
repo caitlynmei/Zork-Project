@@ -7,9 +7,9 @@ public abstract class Weapons implements Items {
 	private int weight;
 	private String Name;
 	
-	public Weapons(int Damage,int Durrability, int Weight, String Name){
+	public Weapons(int Damage,int Durability, int Weight, String Name){
 		this.Damage = Damage;
-		this.Durability = Durrability;
+		this.Durability = Durability;
 		this.weight = Weight;
 		this.Name = Name;
 	}
@@ -26,7 +26,7 @@ public abstract class Weapons implements Items {
 		return Name;
 	}
 	public void setdur(int newDurabillity){
-		this.Durrability = newDurabillity;
+		this.Durability = newDurabillity;
 	}
 	
 	
