@@ -98,17 +98,56 @@ Level 2: Water World
 	reappear in Earth World (in a muddy swamp). 
 	
 You wake up lying on your back in pitch dark. You can hear the sound of waves crashing 
-against cave walls
+against cave walls.
 
 You stand up cautiously.
 
 // user has to move eventually, so any move will make you fall into a hole...
 
 Ahhhhhhhhhh....... You fall into a deep dark hole and die...
-*Just joking. But you do fall into a hole and submerge into water. SPLASH. 
+Just joking. But you do fall into a hole and submerge into water. 
+*SPLASH*
 
+WATER SURFACE
+You are fighting for your life to keep your head above the water surface. Thankfully, you 
+know how to swim. You don't see anything above water other then dark gloomy clouds
+and murky water. There is just water, water, and more water. 
+(*HINT: go under the surface. It's more interesting)
 
+// person goes underwater
 
+UNDER THE SEA (BELOW WATER SURFACE)
+There is a colourful coral reef covering the sea floor. *You can now use the commands up (U) 
+and down (D) alongside the normal compass directions. The water surface is above you, but the
+dark dullness doesn't seem inviting. The only way left is down. 
+
+// person goes down
+
+CORAL REEF
+You are now on the sea floor with the exotic reefs. You realize you are holding your breath 
+under the water. You will run out of air soon. To the west, there is a trail of bubbles 
+coming from something that looks like a large ... purple ... rock? 
+
+// go west
+
+GIANT PURPLE CLAM
+There is a giant purple clam!! (In case you didn't read the title) You watch the clam breath
+out a trail of bubbles. The bubbles float upwards on top of the clam. You think, that's cute. 
+But, not really. You're head hurts. You NEED oxygen. Now. 
+
+A small silver clownfish swims into the bubbles and is caught in one. *THINK* 
+(*HINT: The bubbles have air. What do you need?)
+
+// you swim up on top of the clam
+// You take a bubble and place it on top of your head 
+// If you DON'T, sadly you run out of air and suffocate. Sorry!! Good game. 
+
+// if the user is an underwater astronaut...
+Good thinking!! You're like an underwater astronaut with the bubble helmet. Now you're free
+to 'traverse' the ocean as you wish. :)
+
+//look
+There is a sign to the left
 	
 ----------------------------------------------------------------------------------------
 Level 3: Earth World

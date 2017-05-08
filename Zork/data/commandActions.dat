@@ -2,7 +2,8 @@ Command words: (CM)
 	- Eat
 	- Drink
 	- Look 
-	- Inventory 
+	- Inventory
+	- Take 
 	- North
 	- South
 	- East
@@ -18,7 +19,8 @@ Command words: (CM)
 	- Open
 	- Move 
 	- Crouch 
-	- JumpClimb
+	- Jump
+	- Climb
 	- Attack
 	- Stab
 	- Block
