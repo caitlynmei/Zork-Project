@@ -25,7 +25,7 @@ import java.util.Scanner;
  *  commands that the parser returns.
  */
 
-class Game 
+class Game //*
 {
     private Parser parser;
     private Room currentRoom;
@@ -97,7 +97,7 @@ class Game
      */
     public Game() {
         try {
-			initRooms("data/Rooms.dat");
+			initRooms("data/rooms.dat");
 			currentRoom = masterRoomMap.get("ROOM_1");
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
@@ -138,7 +138,7 @@ class Game
         System.out.println("Get ready to some action!");
         System.out.println("Type 'help' if you need help.");
         System.out.println();
-        System.out.println(currentRoom.longDescription());
+        System.out.println(currentRoom.longDescription()); //*
     }
 
     /**  
