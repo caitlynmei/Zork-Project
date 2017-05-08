@@ -124,9 +124,9 @@ dark dullness doesn't seem inviting. The only way left is down.
 // person goes down
 
 CORAL REEF
-You are now on the sea floor with the exotic reefs. You realize you are holding your breath 
-under the water. You will run out of air soon. To the west, there is a trail of bubbles 
-coming from something that looks like a large ... purple ... rock? 
+You are now on the sea floor with the exotic reefs. To the east, there is a sign. You realize
+you are holding your breath under the water. You will run out of air soon. To the west, there 
+is a trail of bubbles coming from something that looks like a large ... purple ... rock? 
 
 // go west
 
@@ -147,7 +147,58 @@ Good thinking!! You're like an underwater astronaut with the bubble helmet. Now 
 to 'traverse' the ocean as you wish. :)
 
 //look
-There is a sign to the left
+There is a sign to the east. 
+
+// walk to the sign
+// read sign
+
+SIGN
+"BEWARE: SHARK!!! 
+Just stay inside the KELP FOREST to the east. 
+
+// east
+
+You see a shark!! Run away!!
+
+// east
+
+KELP FOREST
+There is a vast wall of kelp looming over you. This forest has been proven to be a good 
+hidding spot. To the west is a sign. 
+
+KELP FOREST
+You see kelp all around you in this thick and dim forest light. 
+
+// east
+
+KELP FOREST
+You see a faint glow ahead in the midst of all the kelp.
+
+// east
+
+KELP FOREST
+In the middle of the kelp forest, you see a glowing rock shaped like a "F". Hmm...
+
+// east
+
+KELP FOREST
+You see a beam of light to the east. 
+
+// east
+
+OTHER SIDE OF THE KELP FOREST
+The light is glowing stronger... Hallelujah!! You are out of the kelp forest!! 
+If you turn back you will die from the shark. There is a dark vast space of water beneath
+you. It's a one way ride. 
+
+// down
+
+MIDNIGHT ZONE
+The abyss of gloom. 
+It's actually not that bad. Unless, you have nyctophobia. In that case, good luck 'cause 
+this is the only path available for you. *MWAH HA HA HA* 
+
+
 	
 ----------------------------------------------------------------------------------------
 Level 3: Earth World
