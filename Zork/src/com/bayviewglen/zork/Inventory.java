@@ -5,8 +5,7 @@ import java.util.ArrayList;
 public class Inventory {
 	//this is assuming the items inputed are actual items
 	private ArrayList<Items> bag = new ArrayList<Items>(); // Mr.D said to change object to item
-	private int maxInv = 15;
-	
+		
 	public Inventory(ArrayList<Items> myBag){
 		bag = myBag;
 	}
@@ -18,17 +17,14 @@ public class Inventory {
 	
 	public void add(Items addMe){
 		
-		if(maxInv != 0 && addMe.amount == 0){
+		if(addMe.amount == 0){
 			bag.add(addMe);
-			maxInv --;
-		}else if(maxInv != 0){
+			
+		}else{
 			bag.add(addMe);
 			addMe.Increment();
-			maxInv --;
-		}else{
-			System.out.println("Bag is full!");
+	
 		}
-		
 	}
 	
 	public void toss(Items tossMe){
