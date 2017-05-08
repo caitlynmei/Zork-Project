@@ -31,6 +31,14 @@ public class Inventory {
 		bag.remove(findIndex(tossMe));
 		System.out.println("You have tossed " + tossMe);
 	}
+	
+	//prints inventory 
+	public void print(){
+		
+		for(Items x : bag){
+			System.out.println(x);
+		}
+	}
 
 	//method to find the item in the list
 	private int findIndex(Items item) {
