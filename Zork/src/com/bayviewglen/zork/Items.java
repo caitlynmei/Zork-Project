@@ -2,7 +2,6 @@ package com.bayviewglen.zork;
 
 public interface Items {
 
-	public String Name = "Item";
 	
 	public void Name (String Name);	
 	
