@@ -3,18 +3,18 @@ package com.bayviewglen.zork;
 public abstract class Weapons implements Items {
 
 	private int Damage;
-	private int Durrability;
+	private int Durability;
 	private int weight;
 	private String Name;
 	
 	public Weapons(int Damage,int Durrability, int Weight, String Name){
 		this.Damage = Damage;
-		this.Durrability = Durrability;
+		this.Durability = Durrability;
 		this.weight = Weight;
 		this.Name = Name;
 	}
 	public int getDur(){
-		return Durrability;
+		return Durability;
 	}
 	public int getDam(){
 		return Damage;
