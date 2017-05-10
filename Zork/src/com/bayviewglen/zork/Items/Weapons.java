@@ -1,35 +1,31 @@
 package com.bayviewglen.zork.Items;
 
 public class Weapons implements Items  {
-
+	
+	private String Name;
 	private int Damage;
 	private int Durability;
-	private int weight;
-	private String Name;
 	
-	public Weapons(int Damage,int Durability, int Weight, String Name){
+	public Weapons(String Name, int Damage, int Durability){
+		this.Name = Name;
 		this.Damage = Damage;
 		this.Durability = Durability;
-		this.weight = Weight;
-		this.Name = Name;
-	}
-	public int getDur(){
-		return Durability;
-	}
-	public int getDam(){
-		return Damage;
-	}
-	public int getwei(){
-		return weight;
 	}
 	
-	public String getname(){
+	public String getName(){
 		return Name;
 	}
 	
+	public int getDur(){
+		return Durability;
+	}
+	
+	public int getDam(){
+		return Damage;
+	}
 	
 	@Override
-	public void Name(String Name) {
+	public void getName(String Name) {
 		// TODO Auto-generated method stub
 		
 	}

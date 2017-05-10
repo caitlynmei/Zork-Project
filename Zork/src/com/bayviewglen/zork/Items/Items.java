@@ -1,14 +1,13 @@
 package com.bayviewglen.zork.Items;
 
 public interface Items {
-
-	
-	public void Name (String Name);	
-	
-	public boolean equals(Items item);
 	
 	public int amount = 0; 
 	
-	public void Increment();
+	public void getName(String Name);	 	// get Name of item
+	
+	public boolean equals(Items item);		// comparing items
+		
+	public void Increment();				
 	
 }
