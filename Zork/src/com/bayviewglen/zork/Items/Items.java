@@ -2,12 +2,16 @@ package com.bayviewglen.zork.Items;
 
 public interface Items {
 	
-	public int amount = 0; 
+	public int numItems = 0; 				// number of items
 	
-	public void getName(String Name);	 	// get Name of item
+	public String name = "Item";			// name of item
+	
+	public String getName(); 				// returns name of item
+	
+	public String getDescription();			// get characteristic description for user
 	
 	public boolean equals(Items item);		// comparing items
 		
-	public void Increment();				
+	public void Increment();				// 
 	
 }

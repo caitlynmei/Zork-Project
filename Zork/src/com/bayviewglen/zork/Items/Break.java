@@ -6,11 +6,7 @@ public class Break extends Tools implements Items {
 		// TODO Auto-generated constructor stub
 	}
 
-	@Override
-	public void Name(String Name) {
-		// TODO Auto-generated method stub
 
-	}
 
 	@Override
 	public boolean equals(Items item) {

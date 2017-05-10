@@ -1,34 +1,23 @@
 package com.bayviewglen.zork.Items;
 
-public class Weapons implements Items  {
+public abstract class Weapons implements Items  {
 	
-	private String Name;
-	private int Damage;
-	private int Durability;
+	private String name;
+	private int damage;
+	private int durability;
 	
-	public Weapons(String Name, int Damage, int Durability){
-		this.Name = Name;
-		this.Damage = Damage;
-		this.Durability = Durability;
+	public Weapons(String name, int damage, int durability){
+		this.name = name;
+		this.damage = damage;
+		this.durability = durability;
 	}
 	
 	public String getName(){
-		return Name;
+		return name;
 	}
-	
-	public int getDur(){
-		return Durability;
-	}
-	
-	public int getDam(){
-		return Damage;
-	}
-	
-	@Override
-	public void getName(String Name) {
-		// TODO Auto-generated method stub
 		
-	}
+	public abstract String getDescription();
+	
 	@Override
 	public boolean equals(Items item) {
 		// TODO Auto-generated method stub
@@ -36,9 +25,15 @@ public class Weapons implements Items  {
 	}
 	@Override
 	public void Increment() {
-		// TODO Auto-generated method stub
+		// TODO Auto-generated method stub		
+	}
 		
+	public int getDur(){
+		return durability;
 	}
 	
-	
+	public int getDam(){
+		return damage;
+	}
+		
 }

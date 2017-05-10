@@ -6,11 +6,15 @@ public class Lighting extends Tools implements Items {
 		// TODO Auto-generated constructor stub
 	}
 
-	@Override
-	public void Name(String Name) {
-		// TODO Auto-generated method stub
 
+
+	@Override
+	public String getName() {
+		// TODO Auto-generated method stub
+		return null;
 	}
+
+
 
 	@Override
 	public boolean equals(Items item) {
