@@ -1,66 +1,66 @@
-Room Name: Level 0
-Room Description: You are trapped inside a cage.
-Exit Rooms: D-Level 1
-Room Name: Level 1
-Room Description: You are in the clouds.
-Exit Rooms: D-Level 2, N-Zone 1, S-Zone 2, W-Zone 3 ,E- Zone 4
-Room Name: Zone 1
-Room Description: You are in the clouds.
-Exit Rooms: S- Level 1
-Room Name: Zone 2
-Room Description: You are in the clouds.
-Exit Rooms: N- Level 1
-Room Name: Zone 3
-Room Description: You are in the clouds.
-Exit Rooms: E- Level 1
-Room Name: Zone 4
-Room Description: You are in the clouds.
-Exit Rooms: W- Level 1
-Room Name: Level 2
-Room Description: You are submerged in water.
-Exit Rooms: D-Level 3, N-Zone 1, S-Zone 2, W-Zone 3 ,E- Zone 4
-Room Name: Zone 1
-Room Description: You are submerged in water.
-Exit Rooms: S- Level 2
-Room Name: Zone 2
-Room Description: You are submerged in water.
-Exit Rooms: N- Level 2
-Room Name: Zone 3
-Room Description: You are submerged in water.
-Exit Rooms: E- Level 2
-Room Name: Zone 4
-Room Description: You are submerged in water.
-Exit Rooms: W- Level 2
-Room Name: Level 3
-Room Description: You are on grass. 
-Exit Rooms: D-Level 4, N-Zone 1, S-Zone 2, W-Zone 3 ,E- Zone 4
-Room Name: Zone 1
-Room Description: You are on grass.
-Exit Rooms: S- Level 3
-Room Name: Zone 2
-Room Description: You are on grass.
-Exit Rooms: N- Level 3
-Room Name: Zone 3
-Room Description: You are on grass.
-Exit Rooms: E- Level 3
-Room Name: Zone 4
-Room Description: You are on grass.
-Exit Rooms: W- Level 3
-Room Name: Level 4
-Room Description: You are on the final level "Fire".
-Exit Rooms: D-End, N-Zone 1, S-Zone 2, W-Zone 3 ,E- Zone 4
-Room Name: Zone 1
-Room Description: You are on the final level "Fire".
-Exit Rooms: S- Level 4
-Room Name: Zone 2
-Room Description: You are on the final level "Fire".
-Exit Rooms: N- Level 4
-Room Name: Zone 3
-Room Description: You are on the final level "Fire".
-Exit Rooms: E- Level 4
-Room Name: Zone 4
-Room Description: You are on the final level "Fire".
-Exit Rooms: W- Level 4
-Room Name: End
-Room Description: You have reached the end. 
-Exit Rooms: None
+Room Name:Level 0
+Room Description:You are trapped inside a cage.
+Exit Rooms:D-Level 1
+Room Name:Level 1
+Room Description:You are in the clouds.
+Exit Rooms:D-Level 2,N-Zone 1,S-Zone 2,W-Zone 3,E- Zone 4
+Room Name:Zone 1
+Room Description:You are in the clouds.
+Exit Rooms:S-Level 1
+Room Name:Zone 2
+Room Description:You are in the clouds.
+Exit Rooms:N-Level 1
+Room Name:Zone 3
+Room Description:You are in the clouds.
+Exit Rooms:E-Level 1
+Room Name:Zone 4
+Room Description:You are in the clouds.
+Exit Rooms:W-Level 1
+Room Name:Level 2
+Room Description:You are submerged in water.
+Exit Rooms:D-Level 3,N-Zone 1,S-Zone 2,W-Zone 3,E- Zone 4
+Room Name:Zone 1
+Room Description:You are submerged in water.
+Exit Rooms:S-Level 2
+Room Name:Zone 2
+Room Description:You are submerged in water.
+Exit Rooms:N-Level 2
+Room Name:Zone 3
+Room Description:You are submerged in water.
+Exit Rooms:E-Level 2
+Room Name:Zone 4
+Room Description:You are submerged in water.
+Exit Rooms:W-Level 2
+Room Name:Level 3
+Room Description:You are on grass. 
+Exit Rooms:D-Level 4,N-Zone 1,S-Zone 2,W-Zone 3,E- Zone 4
+Room Name:Zone 1
+Room Description:You are on grass.
+Exit Rooms:S-Level 3
+Room Name:Zone 2
+Room Description:You are on grass.
+Exit Rooms:N-Level 3
+Room Name:Zone 3
+Room Description:You are on grass.
+Exit Rooms:E-Level 3
+Room Name:Zone 4
+Room Description:You are on grass.
+Exit Rooms:W-Level 3
+Room Name:Level 4
+Room Description:You are on the final level "Fire".
+Exit Rooms:D-End,N-Zone 1,S-Zone 2,W-Zone 3,E- Zone 4
+Room Name:Zone 1
+Room Description:You are on the final level "Fire".
+Exit Rooms:S-Level 4
+Room Name:Zone 2
+Room Description:You are on the final level "Fire".
+Exit Rooms:N-Level 4
+Room Name:Zone 3
+Room Description:You are on the final level "Fire".
+Exit Rooms:E-Level 4
+Room Name:Zone 4
+Room Description:You are on the final level "Fire".
+Exit Rooms:W-Level 4
+Room Name:End
+Room Description:You have reached the end. 
+Exit Rooms:
