@@ -17,7 +17,7 @@ public class Inventory {
 	
 	public void add(Items addMe){
 		
-		if(addMe.amount == 0){
+		if(addMe.numItems == 0){
 			bag.add(addMe);
 			
 		}else{
