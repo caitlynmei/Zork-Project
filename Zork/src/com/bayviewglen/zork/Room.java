@@ -42,14 +42,14 @@ class Room
 	}
 
     public void setExit(char direction, Room r) throws Exception{
-    	String dir= "";
+    	String dir = "";
     	switch (direction){
-    	case 'E': dir = "east";break;
-    	case 'W': dir = "west";break;
-    	case 'S': dir = "south";break;
-    	case 'N': dir = "north";break;
-    	case 'U': dir = "up";break;
-    	case 'D': dir = "down";break;
+    	case 'E': dir = "east"; break;
+    	case 'W': dir = "west"; break;
+    	case 'S': dir = "south"; break;
+    	case 'N': dir = "north"; break;
+    	case 'U': dir = "up"; break;
+    	case 'D': dir = "down"; break;
     	default: throw new Exception("Invalid Direction");
     	
     	}
