@@ -1,15 +1,13 @@
-package com.bayviewglen.zork;
+package com.bayviewglen.zork.Items;
 
 public class Tools implements Items{
-
+	
+	
 	
 	public Tools(){
 		
+		
 	}
-	
-	
-	
-	
 	
 
 
@@ -32,3 +30,6 @@ public class Tools implements Items{
 	}
 
 }
+
+
+
