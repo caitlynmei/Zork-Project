@@ -1,3 +1,18 @@
 Room Name: Room 1    
 Room Description: you wake up in a rusted cage
-Exit Rooms: N-Room 1
+Exit Rooms: D-Room 2
+Room Name: Room 2     
+Room Description:  Area of fluffy clouds
+Exit Rooms: N-Room 3, E-Room 4, S-Room 5, W-Room 6
+Room Name: Room 3
+Room Description:  There is a box .. .. . .and more stuff around you **Temp
+Exit Rooms: S-Room 2
+Room Name: Room 4
+Room Description: There is more stuff
+Exit Rooms: W-Room 2
+Room Name: Room 5
+Room Description: Stuff!
+Exit Rooms: N-Room 2
+Room Name: Room 6
+Room Description:  place
+Exit Rooms: E-Room 2
