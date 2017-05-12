@@ -73,6 +73,15 @@ Exit Rooms: N-Room 18, W-Room 17
 Room Name: Room 25
 Room Description:  place
 Exit Rooms: N-Room 14, E-Room 16
+Room Name: Room 26
+Room Description:  place
+Exit Rooms: N-Room 10, S-Room 27
+Room Name: Room 27
+Room Description:  place
+Exit Rooms: N-Room 26, S-Room 28
+Room Name: Room 28
+Room Description:  BOSS ROOM!!!!! YAAAAAAAAAAAAAAAA
+Exit Rooms: N-Room 27
 Room Name: Room2 1
 Room Description:  place
 Exit Rooms: U-Room 1, D-Room2 1
