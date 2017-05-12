@@ -1,6 +1,6 @@
 Room Name: Room 1     
 Room Description:  Area of fluffy clouds
-Exit Rooms: N-Room 2, E-Room 3, S-Room 4, W-Room 5
+Exit Rooms: N-Room 2, E-Room 3, S-Room 4, W-Room 5, D-Room2 1
 Room Name: Room 2
 Room Description:  There is a box .. .. . .and more stuff around you **Temp
 Exit Rooms: S-Room 1,E-Room 7, N-Room 11
@@ -73,3 +73,6 @@ Exit Rooms: N-Room 18, W-Room 17
 Room Name: Room 25
 Room Description:  place
 Exit Rooms: N-Room 14, E-Room 16
+Room Name: Room2 1
+Room Description:  place
+Exit Rooms: U-Room 1
