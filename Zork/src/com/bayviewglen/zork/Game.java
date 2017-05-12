@@ -145,7 +145,7 @@ class Game
        loading();// displays loading message
        
    	
-	   System.out.println("It's dark. You hear a distant voice and open your eyes to find that you're in a cage.\n"
+	   System.out.println("\nIt's dark. You hear a distant voice and open your eyes to find that you're in a cage.\n"
 	       		+ "The cage is inside a dark airplane hanger. It is night time.\n");
 	       thread.sleep(6500);
 	       System.out.println("The ground is cold cement. You are wearing a T-Shirt and worn out jeans. "
