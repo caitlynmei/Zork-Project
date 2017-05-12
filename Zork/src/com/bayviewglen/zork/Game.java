@@ -97,7 +97,7 @@ class Game
      */
     public Game() {
         try {
-			initRooms("data/levels/level0.dat");
+			initRooms("data/levels/level1.dat");
 			currentRoom = masterRoomMap.get("ROOM_1");
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
