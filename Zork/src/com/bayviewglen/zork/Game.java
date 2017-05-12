@@ -95,7 +95,7 @@ class Game
     }    
 
     /**
-     * Create the game and initialise its internal map.
+     * Create the game and initialize its internal map.
      */
     public Game() {
         try {
@@ -107,8 +107,6 @@ class Game
 		}
         parser = new Parser();
     }
-
-    
 
     /**
      *  Main play routine.  Loops until end of play.
@@ -136,10 +134,11 @@ class Game
     {
     	
         System.out.println();
-        System.out.println("Welcome to _!");
-        System.out.println("_ is going to be the most incredible adventure game you've ever seen!!");
+        System.out.println("Welcome to \'WhateverWeCallThis\'!");
+        System.out.println("\'WhateverWeCallThis\' is going to be the most incredible adventure game you've ever seen!!");
         System.out.println("Get ready to some action!");
-        System.out.println("Type 'help' if you need help.");
+        System.out.println();
+        System.out.println("Type 'help' if you need help."); // we need to do something about this command
         System.out.println();
         
        loading();// displays loading message
@@ -170,8 +169,7 @@ class Game
          	System.out.print("   .");
          	thread.sleep(1500);
          }
-         
-		
+   	
 	}
 
 	/**  
@@ -242,14 +240,14 @@ class Game
      * Here we print some stupid, cryptic message and a list of the 
      * command words.
      */
-    private void printHelp() 
-    {
+    private void printHelp() {
         System.out.println("You are lost. You are going to die alone and forever be forgotten.");
         System.out.println("Just joking!! :)");
         System.out.println("Don't worry. We will help guide you through this.");
         System.out.println();
         System.out.println("Your command words are:");
         parser.showCommands();
+        System.out.println();
     }
 
     /** 
