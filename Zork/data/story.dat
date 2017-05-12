@@ -152,7 +152,7 @@ There is a sign to the east.
 // walk to the sign
 // read sign
 
-SIGN
+INTRO SIGN
 "BEWARE: SHARK!!! 
 Just stay inside the KELP FOREST to the east. 
 
@@ -177,7 +177,7 @@ You see a faint glow ahead in the midst of all the kelp.
 // east
 
 KELP FOREST
-In the middle of the kelp forest, you see a glowing rock shaped like a "F". Hmm...
+In the middle of the kelp forest, you see a glowing rock shaped like a "T". Hmmm...
 
 // east
 
@@ -189,7 +189,7 @@ You see a beam of light to the east.
 OTHER SIDE OF THE KELP FOREST
 The light is glowing stronger... Hallelujah!! You are out of the kelp forest!! 
 If you turn back you will die from the shark. There is a dark vast space of water beneath
-you. It's a one way ride. 
+you. It's a one way ride. (You can follow the wall down where the bottom drops off)
 
 // down
 
@@ -199,6 +199,60 @@ The abyss of gloom. It's actually not that scary.
 this is the only path available for you. *MWAH HA HA HA*  // HAH OK - GG
 
 // down
+
+MIDNIGHT ZONE
+Look! Pretty bioluminescent jellyfish let you see in the dark. 
+
+// down
+// on west side of midnight zone, there is glowing turqoise stone.
+
+MIDNIGHT ZONE
+There is a turqoise glow coming from the west, on the side of the wall. 
+
+// west; down
+
+WALL LEDGE 
+Oooh, a glowing truqoise stone is on the ledge. There is a note under the stone.
+
+// take stone
+// take note
+// read note
+
+MIDNIGHT ZONE NOTE
+Good luck making if so far. If you still can't remember much right now, here's a clue. 
+
+/ rhyme of whatever we want the guy to remember...
+.
+.
+.
+.
+
+And there's also an "H". Hmmm... 
+
+// any move
+
+CURRENT MOVING DOWN
+You are caught in a current!
+Tumbling and tumbling and tumbling...
+Deeper and deeper into the sea...
+And...
+
+ABYSS FLOOR
+Finally you stop. The current took you to the bottom of the abyss. You are on the floor of the abyss.
+Another school of bioluminescent fish swim by. You see a another sign beside you. 
+
+// read sign
+
+ABYSS SIGN
+Good job once more! Follow the path of the glow in the dark road.
+"E" 
+Hmmmm.... interesting, another letter.
+
+// look
+ABYSS FLOOR
+Bottom of the abyss in the midnight zone. 
+
+
 
  
 
