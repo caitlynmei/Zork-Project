@@ -241,7 +241,8 @@ class Game
      * command words.
      */
     private void printHelp() {
-        System.out.println("You are lost. You are going to die alone and forever be forgotten.");
+    	System.out.println();
+    	System.out.println("You are lost. You are going to die alone and forever be forgotten.");
         System.out.println("Just joking!! :)");
         System.out.println("Don't worry. We will help guide you through this.");
         System.out.println();
