@@ -23,7 +23,7 @@ class Command{
 	/**    
 	 * * Create a command object. First and second word must be supplied, but    
 	 * * either one (or both) can be null. The command word should be null to indicate that this 
-	 * * was a command that is not recognised by this game.    
+	 * * was a command that is not recognized by this game.    
 	 * */  
 	public Command(String firstWord, String secondWord)  
 	 {       
@@ -31,7 +31,6 @@ class Command{
 		this.secondWord = secondWord;  
 		}   
 	
-	// CM
 	public Command(String firstWord, String secondWord, String thirdWord){
 		commandWord = firstWord;
 		this.secondWord = secondWord;
