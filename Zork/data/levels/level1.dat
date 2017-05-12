@@ -3,13 +3,73 @@ Room Description:  Area of fluffy clouds
 Exit Rooms: N-Room 2, E-Room 3, S-Room 4, W-Room 5
 Room Name: Room 2
 Room Description:  There is a box .. .. . .and more stuff around you **Temp
-Exit Rooms: S-Room 1
+Exit Rooms: S-Room 1,E-Room 7, N-Room 11
 Room Name: Room 3
 Room Description: There is more stuff
-Exit Rooms: W-Room 1
+Exit Rooms: W-Room 1, N-Room 7, S-Room 8, E-Room 12
 Room Name: Room 4
 Room Description: Stuff!
-Exit Rooms: N-Room 1
+Exit Rooms: N-Room 1, E-Room 8, W-Room 9, S-Room 10
 Room Name: Room 5
 Room Description:  place
-Exit Rooms: E-Room 1
+Exit Rooms: E-Room 1, N-Room 6, S-Room 9, W-Room 13
+Room Name: Room 6
+Room Description:  place
+Exit Rooms: S-Room 5, E-Room 2, W-Room 15, N-Room 21
+Room Name: Room 7
+Room Description:  place
+Exit Rooms: W-Room 2, S-Room 3, E-Room 19, N-Room 20
+Room Name: Room 8
+Room Description:  place
+Exit Rooms: W-Room 4, N-Room 3, E-Room 18, S-Room 17
+Room Name: Room 9
+Room Description:  place
+Exit Rooms: E-Room 4, N-Room 5, W-Room 14, S-Room 16
+Room Name: Room 10
+Room Description:  place
+Exit Rooms: N-Room 4, W-Room 16, E-Room 17
+Room Name: Room 11
+Room Description:  place
+Exit Rooms: S-Room 2, E-Room 20, W-Room 21
+Room Name: Room 12
+Room Description:  place
+Exit Rooms: W-Room 3, S-Room 18, N-Room 19
+Room Name: Room 13
+Room Description:  place
+Exit Rooms: E-Room 5, N-Room 15, S-Room 14
+Room Name: Room 14
+Room Description:  place
+Exit Rooms: N-Room 13, E-Room 9, S-Room 25
+Room Name: Room 15
+Room Description:  place
+Exit Rooms: S-Room 13, E-Room 6, N-Room 22
+Room Name: Room 16
+Room Description:  place
+Exit Rooms: N-Room 9, E-Room 10, W-Room 25
+Room Name: Room 17
+Room Description:  place
+Exit Rooms: W-Room 10, N-Room 8, E-Room 24
+Room Name: Room 18
+Room Description:  place
+Exit Rooms: W-Room 8, N-Room 12, S-Room 24
+Room Name: Room 19
+Room Description:  place
+Exit Rooms: S-Room 12, W-Room 7, N-Room 23
+Room Name: Room 20
+Room Description:  place
+Exit Rooms: S-Room 7, W-Room 11, E-Room 23
+Room Name: Room 21
+Room Description:  place
+Exit Rooms: E-Room 11, S-Room 6, W-Room 22
+Room Name: Room 22
+Room Description:  place
+Exit Rooms: E-Room 21, S-Room 15
+Room Name: Room 23
+Room Description:  place
+Exit Rooms: S-Room 19, W-Room 20
+Room Name: Room 24
+Room Description:  place
+Exit Rooms: N-Room 18, W-Room 17
+Room Name: Room 25
+Room Description:  place
+Exit Rooms: N-Room 14, E-Room 16
