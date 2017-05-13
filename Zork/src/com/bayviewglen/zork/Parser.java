@@ -82,6 +82,7 @@ class Parser {
     	ignoreWords.add("that");
     	ignoreWords.add("is");
     	ignoreWords.add("it");
+    	ignoreWords.add("in");
     	System.out.println(ignoreWords);
     }
     
