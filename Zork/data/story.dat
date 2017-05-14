@@ -93,7 +93,7 @@ Level 2: Water World
 
 
 ** Caitlyn make sure you think of the memories the guy gets back or just leave that to me when u r done - Gaby
-->	goal of this world player has to find a chest with a key inside. 
+->	goal of this world player has to find a key inside. 
 	It is the golden key of truth. You dissolve into the sand and 
 	reappear in Earth World (in a muddy swamp). 
 	
@@ -105,7 +105,7 @@ You stand up cautiously.
 // user has to move eventually, so any move will make you fall into a hole...
 
 Ahhhhhhhhhh....... You fall into a deep dark hole and die...
-Just joking. But you do fall into a hole and submerge into water. 
+Only joking! But you do fall into a hole and submerge into water. 
 *SPLASH*
 
 WATER SURFACE
@@ -189,7 +189,7 @@ You see a beam of light to the east.
 OTHER SIDE OF THE KELP FOREST
 The light is glowing stronger... Hallelujah!! You are out of the kelp forest!! 
 If you turn back you will die from the shark. There is a dark vast space of water beneath
-you. It's a one way ride. (You can follow the wall down where the bottom drops off)
+you. It's a one way ride. (You can follow the wall down, where the sea floor drops off)
 
 // down
 
@@ -207,7 +207,7 @@ Look! Pretty bioluminescent jellyfish let you see in the dark.
 // on west side of midnight zone, there is glowing turqoise stone.
 
 MIDNIGHT ZONE
-There is a turqoise glow coming from the west, on the side of the wall. 
+There is a turqoise light coming from the west, on the side of the wall. 
 
 // west; down
 
@@ -250,12 +250,126 @@ Hmmmm.... interesting, another letter.
 
 // look
 ABYSS FLOOR
-Bottom of the abyss in the midnight zone. 
+Bottom of the abyss in the Midnight Zone. You are in pitch black darkness, surrounded 
+by the mysterious, quiet, and beautiful creatures of the night. Their glowing helps 
+you see. The sea wall is to the west. To the east, there is a trail of glowing luminous
+rocks leading to a cave. There is nothing but emptiness to the north and south. 
 
+//east -- cave
 
+ABYSS CAVE ENTRANCE
+The luminous rocks led you to, not a gingerbread house, but a cave entrance! How cool 
+is that? You are in front of the cave. A huge spherical boulder blocks the entrance. There is
+a keypad beside the boulder on the cave wall. 
 
+// look at keypad
+CAVE KEYPAD
+It seems you have to enter a code. There are three blank spaces. It could be anything...
+
+// person can't enter a code yet...
+
+thread.sleep(5000)
+
+*SWISH*
+What was that? A red stripy thing just swam by... 
+*WHAM*
+You were knocked onto the sea floor by something. Your head banged onto the side of the cave. Thank 
+goodness your oxygen bubble is still intact. Dizzy, you look up and see an infinitely giant and long 
+silver fish. It's really, really long. Almost three times your height... And big... You shake your 
+head to clear the blurriness. 
+
+Nope. The fish is still there, guarding the cave entrance with a long, narrow silvery body, almost 
+like a sea serpent. It has a very deep red dorsal fin, from its head all the way to its back. 
+Wait, a red dorsal fin? 
+
+Thinking, you realize it's an oarfish. You wonder for a split second why you even know that,
+but the oarfish advances toward you. You back away, slowly pulling your body backwards with your 
+hands. Unfortunately, there's no where to go. Your back is pressed against the cave wall. 
+
+What do you do? It could eat you alive... It's definitely large enough to swallow you whole.
+
+	Option 1: Remember that knife in your inventory? That might be useful. Enter '1'.
+	Option 2: Think again. Use your head. Maybe, violence isn't the answer. Enter '2'.
+	
+	Option 1:
+	You take the knife out, and stab as hard as you can into the oarfish's right side. 
+	
+	The oarfish's eyes are filled with hate and anger. In a milisecond, it flicks its tail and you 
+	slam into the cave wall. *CRACK* That's going to leave more than a bruise... You almost blank out, 
+	but it could also just be the darkness. 
+	
+	*POP*
+	Or not... There goes your oxygen bubble... What a painful way to die... 
+	
+	// Person dies
+	
+	Option 2:
+	No knife... be the kind hero that dies won't you? Another memory floods into your mind. A friend was giving you
+	a lecture about deep sea creatures. Oarfish were gentle. 
+	
+	Cautiously, you remain silent and wait for the oarfish to come closer. Its eyes stare into yours. You slowly reach
+	out a hand, and stroke its side. It bumps its head into you. You laugh. You just made a new friend!
+	
+	Good job! Never judge anyone by their mere appearance. Looks are always deceiving. 
+	
+	The oarfish nudges your hand to the keypad. 
+	
+Do you want to 'enter a code'?
+
+	Option 1: Enter 'yes'.
+	Option 2: Enter 'no'. 
+	
+	// answer to 'no'
+	Okaaay, have fun waiting outside. Don't you have any curiosity? Don't you want to taste glory?
+	Just say 'yes'. 
+	
+	// if answer is still 'no'. 
+	Too bad. Just a heads up, you actually have to enter a code. The only exit to this world
+	is inside. 
+	
+	// answer to 'yes'
+	Great! (*Hint: Hmmm... where there any clues along the way?)
+	
+	Code: _ _ _ 
+
+// hangman thing: _ _ _. 
+// player enters "THE". 
+
+Great! You opened the cave! The sea floor shakes, and the boulder rolls slightly to the side, revealing 
+a gap just large enough for you to enter. 
+
+// enter cave
+
+INSIDE CAVE
+Almost there! You enter into an underwater sea cave. It is about the size of a small room. 
+There are more luminous rocks, this time covering the cave walls and ceiling like a star 
+constellation. In the middle of the room is a mirror.
+
+//look in mirror
+
+You see your own reflection looking back at you in the mirror. You look like death. Your hair
+is a mess, you have dark bags under your eyes, and your clothes are torn from this journey. 
+But, you smile. You made it this far and you're proud of that. You gasp as you relive a memory...
+
+"_" smiled at you on his birthday. You gave him the book he had his eye on for years about the
+midnight zone sea creatures. "_", your best friend. He was a huge dork when it came to marine 
+animals. "_" had a huge obsession and was practically a walking encyclopedia. 
+
+Loading... 
+
+But something happened. The last time he saw you, he was really scared. He had to do something
+that would be extraordinarily dangerous. And he warned you, what were his last words? Something
+about staying away from him... 
+
+You blink again, and the flashback is gone. You look in the mirror, and you see yourself looking
+fresh and healthy, like someone who didn't just almost die in the deep sea. There is also the faint
+outline of a silver key glowing in your jeans pocket. You look down at yourself. Shocked, you realize
+you are no longer a walking zombie. You reach into your pocket and pull out a silver key. Two keys
+down! It is added into your inventory.
+
+A swirl of light glows around you and you blank out...  
  
-
+END OF LEVEL 2: EXIT THE SEA WORLD
 	
 ----------------------------------------------------------------------------------------
 Level 3: Earth World

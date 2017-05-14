@@ -72,7 +72,7 @@ class Parser {
     }
 
     // Set: use contains() method, like a list but can't have duplicates 
-    public void UselessWords (){
+    public void uselessWords (){
     	Set<String> ignoreWords = new HashSet<String>();
     	ignoreWords.add("the");
     	ignoreWords.add("a");
@@ -82,6 +82,7 @@ class Parser {
     	ignoreWords.add("that");
     	ignoreWords.add("is");
     	ignoreWords.add("it");
+    	ignoreWords.add("in");
     	System.out.println(ignoreWords);
     }
     
