@@ -6,6 +6,10 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
 
+import com.bayviewglen.zork.Items.Food;
+import com.bayviewglen.zork.Items.Inventory;
+import com.bayviewglen.zork.Items.Item;
+
 /**
  * Class Game - the main class of the "Zork" game.
  *
@@ -39,6 +43,8 @@ class Game {
 
 	public ArrayList<Object> bag = new ArrayList<Object>();
 
+	Food apple = new Food("apple");
+	
 	private void initRooms(String fileName) throws Exception {
 		masterRoomMap = new HashMap<String, Room>();
 		Scanner roomScanner;
@@ -208,7 +214,7 @@ class Game {
 		
 		// Inventory actions
 		else if (commandWord.equals("TAKE"))
-			getItem(command); // make this method -CM
+			Inventory.add(apple); // make this method -CM
 		else if (commandWord.equals("DROP"))
 			removeItem(command); // make this method -CM
 				

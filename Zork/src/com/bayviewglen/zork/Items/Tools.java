@@ -1,18 +1,18 @@
 package com.bayviewglen.zork.Items;
 
-public class Tools implements Items{
+public class Tools implements Item{
 	
 	
 	
 	public Tools(){
-		
+		super();
 		
 	}
 	
 
 
 	@Override
-	public boolean equals(Items item) {
+	public boolean equals(Item item) {
 		// TODO Auto-generated method stub
 		return false;
 	}

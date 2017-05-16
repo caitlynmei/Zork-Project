@@ -1,12 +1,18 @@
 package com.bayviewglen.zork.Items;
 
-public class Lighting extends Tools implements Item {
+public class Food implements Item {
 
-	public Lighting() {
-		// TODO Auto-generated constructor stub
+	private String name;
+	private int damage;
+	private int durability;
+	
+	public Food(){
+		
 	}
-
-
+	
+	public Food(String name){
+		this.name = name;
+	}	
 
 	@Override
 	public String getName() {
@@ -14,7 +20,11 @@ public class Lighting extends Tools implements Item {
 		return null;
 	}
 
-
+	@Override
+	public String getDescription() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
 	@Override
 	public boolean equals(Item item) {
@@ -25,7 +35,6 @@ public class Lighting extends Tools implements Item {
 	@Override
 	public void Increment() {
 		// TODO Auto-generated method stub
-
+		
 	}
-
 }
