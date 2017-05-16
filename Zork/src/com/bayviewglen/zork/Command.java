@@ -42,8 +42,8 @@ class Command{
 	  **If the command was not understood, the result is null. */   
 	 public String getCommandWord()   
 	 {  
-		 return commandWord; 
-		 }   
+		 return commandWord.toUpperCase(); 
+	 }   
 	 
 	 /** Return the second word of this command. Returns null if there was no    
 	  **second word.     */  
