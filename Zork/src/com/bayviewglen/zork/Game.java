@@ -119,7 +119,7 @@ class Game {
 			Command command = parser.getCommand();
 			finished = processCommand(command);
 		}
-		System.out.println("Thank you for playing.  Good bye.");
+		System.out.println("Thank you for playing. Good bye.");
 	}
 
 	/**
@@ -176,24 +176,52 @@ class Game {
 		}
 
 		String commandWord = command.getCommandWord();
-		if (commandWord.equals("help"))
+		// help command
+		if (commandWord.equals("HELP"))
 			printHelp();
-		else if (commandWord.equals("go"))
+		
+		// look command
+		else if (commandWord.equals("LOOK"))
+			printLook(); 
+		
+		// directions
+		else if (commandWord.equals("GO")) // we need to work this, the person can't actually move that much... 
 			goRoom(command);
-		else if (commandWord.equals("take"))
+		else if (commandWord.equals("NORTH") || commandWord.equals("N"))
+			goRoom(command);
+		else if (commandWord.equals("EAST") || commandWord.equals("E"))
+			goRoom(command);
+		else if (commandWord.equals("SOUTH") || commandWord.equals("S"))
+			goRoom(command);
+		else if (commandWord.equals("WEST") || commandWord.equals("W"))
+			goRoom(command);
+		else if (commandWord.equals("UP") || commandWord.equals("U"))
+			goRoom(command);
+		else if (commandWord.equals("DOWN") || commandWord.equals("D"))
+			goRoom(command);
+		
+		// Other command actions
+		else if (commandWord.equals("EAT") || commandWord.equals("DRINK"))
+			System.out.println("Do you really think you should be having a meal at a time like this?");
+		else if (commandWord.equals("HI"))
+			System.out.println("Hi back! What's up?");
+		
+		// Inventory actions
+		else if (commandWord.equals("TAKE"))
 			getItem(command); // make this method -CM
-		else if (commandWord.equals("drop"))
+		else if (commandWord.equals("DROP"))
 			removeItem(command); // make this method -CM
+				
 		// else if (commandWord.equals("inventory"))
 		// printInventory(command);
-		else if (commandWord.equals("quit")) {
+		
+		// quit command 
+		else if (commandWord.equals("QUIT")) {
 			if (command.hasSecondWord())
-				System.out.println("Quit what?");
+				System.out.println("Would you like to save your progress?"); // make data file!!
 			else
 				return true; // signal that we want to quit <-- we need to do
 								// this -CM
-		} else if (commandWord.equals("eat")) {
-			System.out.println("Do you really think you should be eating at a time like this?");
 		}
 		return false;
 	}
@@ -214,6 +242,12 @@ class Game {
 	}
 	*/
 
+	private void printLook() {
+		// in here: boolean to check which level
+		// 			have to link this to level description later
+		
+	}
+
 	// method lets you store items in inventory. I got this -CM
 	private void getItem(Command command) {
 		// TODO Auto-generated method stub
@@ -225,7 +259,6 @@ class Game {
 
 	}
 
-	// implementations of user commands:
 	/**
 	 * Print out some help information. Here we print some stupid, cryptic
 	 * message and a list of the command words.
