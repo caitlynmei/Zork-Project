@@ -1,9 +1,17 @@
-package com.bayviewglen.zork.Items;
+package com.bayviewglen.zork.Item;
 
-public class Break extends Tools implements Item {
+public class Lighting extends Tool implements Item {
 
-	public Break() {
+	public Lighting() {
 		// TODO Auto-generated constructor stub
+	}
+
+
+
+	@Override
+	public String getName() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 

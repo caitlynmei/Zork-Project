@@ -1,10 +1,8 @@
-package com.bayviewglen.zork.Items;
+package com.bayviewglen.zork.Item;
 
-public class Tools implements Item{
-	
-	
-	
-	public Tools(){
+public class Tool implements Item{
+			
+	public Tool(){
 		super();
 		
 	}
