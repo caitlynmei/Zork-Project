@@ -89,6 +89,7 @@ public class Dialogue {
 						System.out.println("That doesn't appear in your thoughts...");
 						System.out.print(">");
 					}
+					}
 					
 					System.out.println("\nMysterious Figure:");
 					System.out.println("You will see very soon... have fun");
@@ -101,7 +102,7 @@ public class Dialogue {
 						
 	
 				
-			}
+			
 	
 	}
 }
