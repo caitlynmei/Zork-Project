@@ -1,6 +1,6 @@
 Room Name: Room 1     
 Room Description:  Area of fluffy clouds
-Exit Rooms: N-Room 2, E-Room 3, S-Room 4, W-Room 5, D-Room2 1
+Exit Rooms: N-Room 2, E-Room 3, S-Room 4, W-Room 5
 Room Name: Room 2
 Room Description:  There is a box .. .. . .and more stuff around you **Temp
 Exit Rooms: S-Room 1,E-Room 7, N-Room 11
@@ -84,7 +84,7 @@ Room Description:  BOSS ROOM!!!!! YAAAAAAAAAAAAAAAA
 Exit Rooms: N-Room 27
 Room Name: Room2 1
 Room Description:  place
-Exit Rooms: U-Room 1, D-Room2 1
+Exit Rooms: D-Room2 1
 Room Name: Room2 2
 Room Description:  place
 Exit Rooms: U-Room2 1, E-Room2 3
@@ -100,6 +100,27 @@ Exit Rooms: U-Room2 4, E-Room2 6
 Room Name: Room2 6
 Room Description:  place
 Exit Rooms: W-Room2 5, D-Room3 1
-Room Name: Room3 1
+Room Name: Room3 S
 Room Description:  place
-Exit Rooms: U-Room2 6
+Exit Rooms: W-Room3 1
+Room Name:Room3 1
+Room Description:Place
+Exit Rooms:N-Room3 2, S-Room3 3, W-Room3 5, E-Room3 S
+Room Name:Room3 2
+Room Description:Place
+Exit Rooms:S-Room3 1, W-Room3 6
+Room Name:Room3 3
+Room Description:Place
+Exit Rooms:N-Room3 1, W-Room3 4
+Room Name:Room3 4
+Room Description:Place
+Exit Rooms:E-Room3 3, N-Room3 5, W-Room3 9
+Room Name:Room3 5
+Room Description:Place
+Exit Rooms:E-Room3 1, W-Room3 8, N-Room3 6,S-Room3 4
+Room Name:Room3 6
+Room Description:Place
+Exit Rooms:S-Room3 5, E-Room3 2, W-Room3 7
+Room Name:Room3 7
+Room Description:Place
+Exit Rooms:E-Room3 6
