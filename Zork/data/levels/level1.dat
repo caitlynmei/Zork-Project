@@ -117,7 +117,7 @@ Room Description:Place
 Exit Rooms:E-Room3 3, N-Room3 5, W-Room3 9
 Room Name:Room3 5
 Room Description:Place
-Exit Rooms:E-Room3 1, W-Room3 8, N-Room3 6,S-Room3 4
+Exit Rooms:E-Room3 1, W-Room3 8, N-Room3 6, S-Room3 4
 Room Name:Room3 6
 Room Description:Place
 Exit Rooms:S-Room3 5, E-Room3 2, W-Room3 7

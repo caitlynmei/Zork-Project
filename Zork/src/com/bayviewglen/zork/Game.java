@@ -41,8 +41,6 @@ class Game {
 	// Great Room (assuming you have one).
 	private HashMap<String, Room> masterRoomMap;
 
-	public ArrayList<Object> bag = new ArrayList<Object>();
-
 	Food apple = new Food("apple");
 	
 	private void initRooms(String fileName) throws Exception {
@@ -116,6 +114,7 @@ class Game {
 	 */
 	public void play() throws InterruptedException {
 		printWelcome();
+		System.out.println(currentRoom.longDescription());
 
 		// Enter the main command loop. Here we repeatedly read commands and
 		// execute them until the game is over.

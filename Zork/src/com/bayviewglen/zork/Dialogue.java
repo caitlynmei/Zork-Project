@@ -99,6 +99,7 @@ public class Dialogue {
 					thread.sleep(6000);
 					System.out.println("\nSuddenly the ground beneath you collapses and you fall. Everything goes dark.");
 				
+					
 						
 	
 				
