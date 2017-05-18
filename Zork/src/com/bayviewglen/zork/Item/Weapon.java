@@ -1,12 +1,12 @@
-package com.bayviewglen.zork.Items;
+package com.bayviewglen.zork.Item;
 
-public abstract class Weapons implements Items  {
+public abstract class Weapon implements Item  {
 	
 	private String name;
 	private int damage;
 	private int durability;
 	
-	public Weapons(String name, int damage, int durability){
+	public Weapon(String name, int damage, int durability){
 		this.name = name;
 		this.damage = damage;
 		this.durability = durability;
@@ -19,7 +19,7 @@ public abstract class Weapons implements Items  {
 	public abstract String getDescription();
 	
 	@Override
-	public boolean equals(Items item) {
+	public boolean equals(Item item) {
 		// TODO Auto-generated method stub
 		return false;
 	}

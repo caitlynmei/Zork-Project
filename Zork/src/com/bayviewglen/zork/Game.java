@@ -6,6 +6,10 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
 
+import com.bayviewglen.zork.Item.Food;
+import com.bayviewglen.zork.Item.Inventory;
+import com.bayviewglen.zork.Item.Item;
+
 /**
  * Class Game - the main class of the "Zork" game.
  *
@@ -39,6 +43,8 @@ class Game {
 
 	public ArrayList<Object> bag = new ArrayList<Object>();
 
+	Food apple = new Food("apple");
+	
 	private void initRooms(String fileName) throws Exception {
 		masterRoomMap = new HashMap<String, Room>();
 		Scanner roomScanner;
@@ -119,7 +125,7 @@ class Game {
 			Command command = parser.getCommand();
 			finished = processCommand(command);
 		}
-		System.out.println("Thank you for playing.  Good bye.");
+		System.out.println("Thank you for playing. Good bye.");
 	}
 
 	/**
@@ -147,7 +153,7 @@ class Game {
 				+ "You are also wearing dress shoes covered in dust.\n"
 				+ "You don't remember who you are, where you came from or even what your name is.\n"
 				+ "A dark figure approaches the cage shown by the back light" + " of the night sky.");
-		thread.sleep(8000);
+		thread.sleep(8000); 
 		Dialogue.level0();
 		System.out.println();
 	}
@@ -176,24 +182,52 @@ class Game {
 		}
 
 		String commandWord = command.getCommandWord();
-		if (commandWord.equals("help"))
+		// help command
+		if (commandWord.equals("HELP"))
 			printHelp();
-		else if (commandWord.equals("go"))
+		
+		// look command
+		else if (commandWord.equals("LOOK"))
+			printLook(); 
+		
+		// directions
+		else if (commandWord.equals("GO")) // we need to work this, the person can't actually move that much... 
 			goRoom(command);
-		else if (commandWord.equals("take"))
-			getItem(command); // make this method -CM
-		else if (commandWord.equals("drop"))
+		else if (commandWord.equals("NORTH") || commandWord.equals("N"))
+			goRoom(command);
+		else if (commandWord.equals("EAST") || commandWord.equals("E"))
+			goRoom(command);
+		else if (commandWord.equals("SOUTH") || commandWord.equals("S"))
+			goRoom(command);
+		else if (commandWord.equals("WEST") || commandWord.equals("W"))
+			goRoom(command);
+		else if (commandWord.equals("UP") || commandWord.equals("U"))
+			goRoom(command);
+		else if (commandWord.equals("DOWN") || commandWord.equals("D"))
+			goRoom(command);
+		
+		// Other command actions
+		else if (commandWord.equals("EAT") || commandWord.equals("DRINK"))
+			System.out.println("Do you really think you should be having a meal at a time like this?");
+		else if (commandWord.equals("HI"))
+			System.out.println("Hi back! What's up?");
+		
+		// Inventory actions
+		else if (commandWord.equals("TAKE"))
+			Inventory.add(apple); // make this method -CM
+		else if (commandWord.equals("DROP"))
 			removeItem(command); // make this method -CM
+				
 		// else if (commandWord.equals("inventory"))
 		// printInventory(command);
-		else if (commandWord.equals("quit")) {
+		
+		// quit command 
+		else if (commandWord.equals("QUIT")) {
 			if (command.hasSecondWord())
-				System.out.println("Quit what?");
+				System.out.println("Would you like to save your progress?"); // make data file!!
 			else
 				return true; // signal that we want to quit <-- we need to do
 								// this -CM
-		} else if (commandWord.equals("eat")) {
-			System.out.println("Do you really think you should be eating at a time like this?");
 		}
 		return false;
 	}
@@ -214,6 +248,12 @@ class Game {
 	}
 	*/
 
+	private void printLook() {
+		// in here: boolean to check which level
+		// 			have to link this to level description later
+		
+	}
+
 	// method lets you store items in inventory. I got this -CM
 	private void getItem(Command command) {
 		// TODO Auto-generated method stub
@@ -225,7 +265,6 @@ class Game {
 
 	}
 
-	// implementations of user commands:
 	/**
 	 * Print out some help information. Here we print some stupid, cryptic
 	 * message and a list of the command words.

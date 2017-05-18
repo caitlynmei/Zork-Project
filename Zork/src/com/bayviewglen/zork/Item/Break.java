@@ -1,6 +1,6 @@
-package com.bayviewglen.zork.Items;
+package com.bayviewglen.zork.Item;
 
-public class Break extends Tools implements Items {
+public class Break extends Tool implements Item {
 
 	public Break() {
 		// TODO Auto-generated constructor stub
@@ -9,7 +9,7 @@ public class Break extends Tools implements Items {
 
 
 	@Override
-	public boolean equals(Items item) {
+	public boolean equals(Item item) {
 		// TODO Auto-generated method stub
 		return false;
 	}

@@ -1,6 +1,6 @@
-package com.bayviewglen.zork.Items;
+package com.bayviewglen.zork.Item;
 
-public class Lighting extends Tools implements Items {
+public class Lighting extends Tool implements Item {
 
 	public Lighting() {
 		// TODO Auto-generated constructor stub
@@ -17,7 +17,7 @@ public class Lighting extends Tools implements Items {
 
 
 	@Override
-	public boolean equals(Items item) {
+	public boolean equals(Item item) {
 		// TODO Auto-generated method stub
 		return false;
 	}
