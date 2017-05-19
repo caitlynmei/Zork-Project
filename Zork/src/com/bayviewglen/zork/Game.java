@@ -181,6 +181,7 @@ class Game {
 		}
 
 		String commandWord = command.getCommandWord();
+		
 		// help command
 		if (commandWord.equals("HELP"))
 			printHelp();

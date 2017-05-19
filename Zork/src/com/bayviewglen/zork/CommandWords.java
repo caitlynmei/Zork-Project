@@ -11,10 +11,9 @@ package com.bayviewglen.zork;
 class CommandWords {
 
 	// Constant String holding all valid first command words (word1)
-	private static final String validCommands[] = { "go", "quit", "eat", "take", "drop", "inventory", "help"};
-	// "north", "south", "east", "west", "N", "S", "E", "W" word2 - put in
-	// game.java - CM
-
+	private static final String validCommands[] = {"go", "quit", "eat", "take", "drop", "inventory", "help",
+												   "north", "south", "east", "west", "N", "S", "E", "W"};
+	
 	/**
 	 * Constructor - initialize the command words.
 	 **/
