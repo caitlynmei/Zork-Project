@@ -91,7 +91,7 @@ class Parser {
 		/*
 		 * The following checks for whether this word is an known command in the
 		 * game's command vocabulary. If so, create a command with that word. If
-		 * not, create a "nil" command (for unknown command).
+		 * not, create a "nil" command (for unknown command). 
 		 */
 		if (commands.isCommand(word1)){
 			return new Command(word1, word2, word3, word4, word5);
@@ -101,19 +101,19 @@ class Parser {
 	}
 
 	// Set: use contains() method, like a list but can't have duplicates
-	// however, I don't think we actually need this... - CM
+	// however, we might not actually need this... - CM
 	public void uselessWords() {
 		Set<String> ignoreWords = new HashSet<String>();
-		ignoreWords.add("the");
-		ignoreWords.add("a");
-		ignoreWords.add("an");
-		ignoreWords.add("and");
-		ignoreWords.add("to");
-		ignoreWords.add("that");
-		ignoreWords.add("is");
-		ignoreWords.add("it");
-		ignoreWords.add("in");
-		ignoreWords.add("if");
+		ignoreWords.add("THE");
+		ignoreWords.add("A");
+		ignoreWords.add("AN");
+		ignoreWords.add("AND");
+		ignoreWords.add("TO");
+		ignoreWords.add("THAT");
+		ignoreWords.add("IS");
+		ignoreWords.add("IT");
+		ignoreWords.add("IN");
+		ignoreWords.add("IF");
 
 		// System.out.println(ignoreWords);
 	}
