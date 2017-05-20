@@ -51,14 +51,18 @@ class Game {
 			roomScanner = new Scanner(new File(fileName));
 			while (roomScanner.hasNext()) {
 				Room room = new Room();
+				
 				// Read the Name
 				String roomName = roomScanner.nextLine();
 				room.setRoomName(roomName.split(":")[1].trim());
+				
 				// Read the Description
 				String roomDescription = roomScanner.nextLine();
 				room.setDescription(roomDescription.split(":")[1].replaceAll("<br>", "\n").trim());
+				
 				// Read the Exits
 				String roomExits = roomScanner.nextLine();
+				
 				// An array of strings in the format E-RoomName
 				String[] rooms = roomExits.split(":")[1].split(",");
 				HashMap<String, String> temp = new HashMap<String, String>();
