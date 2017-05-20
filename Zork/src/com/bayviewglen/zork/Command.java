@@ -36,23 +36,23 @@ class Command {
 		this.fifthWord = fifthWord;
 		
 		if (commandWord != null){
-			commandWord = commandWord.toUpperCase();
+			commandWord = commandWord.toLowerCase();
 		}
 		
 		if (this.secondWord != null){
-			this.secondWord = this.secondWord.toUpperCase();
+			this.secondWord = this.secondWord.toLowerCase();
 		}
 		
 		if (this.thirdWord != null){
-			this.thirdWord = this.thirdWord.toUpperCase();
+			this.thirdWord = this.thirdWord.toLowerCase();
 		}
 		
 		if (this.fourthWord != null){
-			this.fourthWord = this.fourthWord.toUpperCase();
+			this.fourthWord = this.fourthWord.toLowerCase();
 		}
 		
 		if (this.fifthWord != null){
-			this.fifthWord = this.fifthWord.toUpperCase();
+			this.fifthWord = this.fifthWord.toLowerCase();
 		}
 	}
 
@@ -61,7 +61,7 @@ class Command {
 	 * command was not understood, the result is returned as null.
 	 */
 	public String getCommandWord() {
-		return commandWord;
+		return commandWord.toLowerCase();
 	}
 
 	/*
@@ -69,13 +69,13 @@ class Command {
 	 * second word.
 	 */
 	public String getSecondWord() {
-		return secondWord;
+		return secondWord.toLowerCase();
 	}
 
 	// @return the third word of this command. Returns null if there was no
 	// third word.
 	public String getThirdWord() {
-		return thirdWord;
+		return thirdWord.toLowerCase();
 	}
 
 	/*
@@ -83,13 +83,13 @@ class Command {
 	 * second word.
 	 */
 	public String getFourthWord() {
-		return fourthWord;
+		return fourthWord.toLowerCase();
 	}
 	
 	// @return the fifth word of this command. Returns null if there was no
 	// second word
 	public String getFifthWord() {
-		return fifthWord;
+		return fifthWord.toLowerCase();
 	}
 	
 	

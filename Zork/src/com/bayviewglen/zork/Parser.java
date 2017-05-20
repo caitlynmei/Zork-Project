@@ -104,16 +104,16 @@ class Parser {
 	// however, we might not actually need this... - CM
 	public void uselessWords() {
 		Set<String> ignoreWords = new HashSet<String>();
-		ignoreWords.add("THE");
-		ignoreWords.add("A");
-		ignoreWords.add("AN");
-		ignoreWords.add("AND");
-		ignoreWords.add("TO");
-		ignoreWords.add("THAT");
-		ignoreWords.add("IS");
-		ignoreWords.add("IT");
-		ignoreWords.add("IN");
-		ignoreWords.add("IF");
+		ignoreWords.add("the");
+		ignoreWords.add("a");
+		ignoreWords.add("an");
+		ignoreWords.add("and");
+		ignoreWords.add("to");
+		ignoreWords.add("that");
+		ignoreWords.add("is");
+		ignoreWords.add("it");
+		ignoreWords.add("in");
+		ignoreWords.add("if");
 
 		// System.out.println(ignoreWords);
 	}
