@@ -1,6 +1,6 @@
-package com.bayviewglen.zork.Items;
+package com.bayviewglen.zork.Item;
 
-public interface Items {
+public interface Item {
 	
 	public int numItems = 0; 				// number of items
 	
@@ -10,7 +10,7 @@ public interface Items {
 	
 	public String getDescription();			// get characteristic description for user
 	
-	public boolean equals(Items item);		// comparing items
+	public boolean equals(Item item);		// comparing items
 		
 	public void Increment();				// 
 	

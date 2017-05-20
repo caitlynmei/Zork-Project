@@ -11,10 +11,9 @@ package com.bayviewglen.zork;
 class CommandWords {
 
 	// Constant String holding all valid first command words (word1)
-	private static final String validCommands[] = { "go", "quit", "eat", "take", "drop", "inventory", "help"};
-	// "north", "south", "east", "west", "N", "S", "E", "W" word2 - put in
-	// game.java - CM
-
+	private static final String validCommands[] = {"help", "rules", "commandlist", "look", "hi", "go", "quit", "save", "eat", "take", "drop", "inventory",
+												   "north", "south", "east", "west", "up", "down", "n", "s", "e", "w", "u", "d"
+												   };
 	/**
 	 * Constructor - initialize the command words.
 	 **/
@@ -24,12 +23,13 @@ class CommandWords {
 
 	/**
 	 ** Check whether a given String is a valid command word. Return true if it
-	 * is, false if it isn't.
+	 ** is, false if it isn't.
 	 **/
 	public boolean isCommand(String aString) {
 		for (int i = 0; i < validCommands.length; i++) {
-			if (validCommands[i].equals(aString))
+			if (validCommands[i].equals(aString)){
 				return true;
+			}
 		} // if we get here, the string was not found in the commands
 		return false;
 	}
@@ -37,15 +37,15 @@ class CommandWords {
 	// showAll Method: prints all valid commands
 	public void showAll() {
 		for (int i = 0; i < validCommands.length; i++) {
-			if (i == validCommands.length - 1) {
-				System.out.print(validCommands[i]);
-			} else if (i == 0){
-				System.out.print("> " + validCommands[i] + ", ");
-			} else {
-				System.out.print(validCommands[i] + ", ");
-			}
+			//if (i == validCommands.length - 1) {
+				//System.out.print(validCommands[i]);
+			//} else if (i == 0){
+			//	System.out.print("- " + validCommands[i]);
+			//} else {
+				System.out.println("- " + validCommands[i]);
+			//}
 		}
-		System.out.println();
+		//System.out.println();
 	}
 
 }

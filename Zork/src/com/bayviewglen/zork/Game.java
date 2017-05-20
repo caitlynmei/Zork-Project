@@ -6,6 +6,10 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
 
+import com.bayviewglen.zork.Item.Food;
+import com.bayviewglen.zork.Item.Inventory;
+import com.bayviewglen.zork.Item.Item;
+
 /**
  * Class Game - the main class of the "Zork" game.
  *
@@ -37,8 +41,8 @@ class Game {
 	// Great Room (assuming you have one).
 	private HashMap<String, Room> masterRoomMap;
 
-	public ArrayList<Object> bag = new ArrayList<Object>();
-
+	Food apple = new Food("apple");
+	
 	private void initRooms(String fileName) throws Exception {
 		masterRoomMap = new HashMap<String, Room>();
 		Scanner roomScanner;
@@ -47,14 +51,18 @@ class Game {
 			roomScanner = new Scanner(new File(fileName));
 			while (roomScanner.hasNext()) {
 				Room room = new Room();
+				
 				// Read the Name
 				String roomName = roomScanner.nextLine();
 				room.setRoomName(roomName.split(":")[1].trim());
+				
 				// Read the Description
 				String roomDescription = roomScanner.nextLine();
 				room.setDescription(roomDescription.split(":")[1].replaceAll("<br>", "\n").trim());
+				
 				// Read the Exits
 				String roomExits = roomScanner.nextLine();
+				
 				// An array of strings in the format E-RoomName
 				String[] rooms = roomExits.split(":")[1].split(",");
 				HashMap<String, String> temp = new HashMap<String, String>();
@@ -110,6 +118,7 @@ class Game {
 	 */
 	public void play() throws InterruptedException {
 		printWelcome();
+		System.out.println(currentRoom.longDescription());
 
 		// Enter the main command loop. Here we repeatedly read commands and
 		// execute them until the game is over.
@@ -119,7 +128,7 @@ class Game {
 			Command command = parser.getCommand();
 			finished = processCommand(command);
 		}
-		System.out.println("Thank you for playing. Good bye.");
+		System.out.println("Thank you for playing. Good bye for now!");
 	}
 
 	/**
@@ -128,13 +137,13 @@ class Game {
 	private void printWelcome() throws InterruptedException {
 
 		System.out.println();
-		System.out.println("Welcome to \'WhateverWeCallThis\'!");
+		System.out.println("Welcome to \'Anonymous'!");
 		System.out.println();
-		System.out.println("\'WhateverWeCallThis\' is going to be the most incredible adventure game you've ever seen!!");
-		System.out.println("You play the game by typing commands with your keyboard when you see the \'>\' symbol.");
-		System.out.println("You can type \'help\' for a refresher of the game rules.\n");
+		System.out.println("\'Anonymous\' is going to be the most incredible and mysterious adventure game you've ever seen!!");
+		System.out.println("You play the game by entering commands with your keyboard when you see the \'>\' symbol.\n");
+		System.out.println("You can also type \'help\' for a bit of advice.\n");
 		thread.sleep(8000);
-		System.out.println("Get ready for some serious challenges! Ready??");
+		System.out.println("Are you prepared for some serious challenges?");
 		System.out.println();
 		
 		// And the game begins!!
@@ -147,14 +156,14 @@ class Game {
 				+ "You are also wearing dress shoes covered in dust.\n"
 				+ "You don't remember who you are, where you came from or even what your name is.\n"
 				+ "A dark figure approaches the cage shown by the back light" + " of the night sky.");
-		thread.sleep(8000);
-		Dialogue.level0();
+		thread.sleep(8000); 
+		Dialogue.level0(); // Gaby, the word remember has a capital (can you change it?) -CM
 		System.out.println();
 	}
 
 	// loading Method: prints the "Loading . . . . " message
 	private void loading() throws InterruptedException {
-
+		System.out.println();
 		thread.sleep(1500); // delays code
 		System.out.print("Loading");
 		for (int i = 0; i < 4; i++) {
@@ -176,47 +185,51 @@ class Game {
 		}
 
 		String commandWord = command.getCommandWord();
-		// help command
-		if (commandWord.equals("HELP"))
-			printHelp();
 		
+		// help commands
+		if (commandWord.equals("help"))
+			printHelp();
+		else if (commandWord.equals("rules"))
+			printGameRules();
+		else if (commandWord.equals("commandlist"))
+			printCommandList();
 		// look command
-		else if (commandWord.equals("LOOK"))
+		else if (commandWord.equals("look"))
 			printLook(); 
 		
 		// directions
-		else if (commandWord.equals("GO")) // we need to work this, the person can't actually move that much... 
+		else if (commandWord.equals("go")) // we need to work this, the person can't actually move that much... 
 			goRoom(command);
-		else if (commandWord.equals("NORTH") || commandWord.equals("N"))
+		else if (commandWord.equals("north") || commandWord.equals("n"))
 			goRoom(command);
-		else if (commandWord.equals("EAST") || commandWord.equals("E"))
+		else if (commandWord.equals("east") || commandWord.equals("e"))
 			goRoom(command);
-		else if (commandWord.equals("SOUTH") || commandWord.equals("S"))
+		else if (commandWord.equals("south") || commandWord.equals("s"))
 			goRoom(command);
-		else if (commandWord.equals("WEST") || commandWord.equals("W"))
+		else if (commandWord.equals("west") || commandWord.equals("w"))
 			goRoom(command);
-		else if (commandWord.equals("UP") || commandWord.equals("U"))
+		else if (commandWord.equals("up") || commandWord.equals("u"))
 			goRoom(command);
-		else if (commandWord.equals("DOWN") || commandWord.equals("D"))
+		else if (commandWord.equals("down") || commandWord.equals("d"))
 			goRoom(command);
 		
 		// Other command actions
-		else if (commandWord.equals("EAT") || commandWord.equals("DRINK"))
+		else if (commandWord.equals("eat") || commandWord.equals("drink"))
 			System.out.println("Do you really think you should be having a meal at a time like this?");
-		else if (commandWord.equals("HI"))
+		else if (commandWord.equals("hi"))
 			System.out.println("Hi back! What's up?");
 		
 		// Inventory actions
-		else if (commandWord.equals("TAKE"))
-			getItem(command); // make this method -CM
-		else if (commandWord.equals("DROP"))
+		else if (commandWord.equals("take"))
+			Inventory.add(apple); // make this method -CM
+		else if (commandWord.equals("drop"))
 			removeItem(command); // make this method -CM
 				
 		// else if (commandWord.equals("inventory"))
 		// printInventory(command);
 		
 		// quit command 
-		else if (commandWord.equals("QUIT")) {
+		else if (commandWord.equals("quit")) {
 			if (command.hasSecondWord())
 				System.out.println("Would you like to save your progress?"); // make data file!!
 			else
@@ -271,14 +284,26 @@ class Game {
 		System.out.println();
 		thread.sleep(6000);
 		System.out.println("Just joking!! :)");
-		System.out.println("Don't worry. We will help guide you through this.");
-		System.out.println();
-		System.out.println("Remember what your goal is. This is a refresher of the game rules. \n");
-		System.out.println("You can try using the following command words:");
-		parser.showCommands(); // prints command words from validCommands String (or the word1)
-		System.out.println("Yes, you can call for help if you need it (like what you are doing right now)");
+		System.out.println("Don't worry. We will help guide you through this:");
+		System.out.println("- to see the game rules, enter: \'rules\'");
+		System.out.println("- to see the list of commands you may use, enter: \'commandlist\'");
 	}
 
+	private void printGameRules() throws InterruptedException{
+		loading();
+		System.out.println("\n");
+		System.out.println("Remember what your goal is. Here is a refresher of the game rules. \n");
+		System.out.println("**Whatever the rules end up being... ");
+	}
+	
+	private void printCommandList() throws InterruptedException{
+		loading();
+		System.out.println("\n");
+		System.out.println("You can try using the following command words:");
+		parser.showCommands(); // prints command words from validCommands String 
+		System.out.println("Yes, you can call for help if you need it (like what you are doing right now)\n");
+	}
+	
 	/**
 	 * Try to go to one direction. If there is an exit, enter the new room,
 	 * otherwise print an error message.
