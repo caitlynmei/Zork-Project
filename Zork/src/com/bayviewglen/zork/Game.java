@@ -157,7 +157,7 @@ class Game {
 				+ "You don't remember who you are, where you came from or even what your name is.\n"
 				+ "A dark figure approaches the cage shown by the back light" + " of the night sky.");
 		thread.sleep(8000); 
-		Dialogue.level0();
+		Dialogue.level0(); // Gaby, the word remember has a capital (can you change it?) -CM
 		System.out.println();
 	}
 
