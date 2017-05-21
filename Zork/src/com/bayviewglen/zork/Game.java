@@ -152,10 +152,10 @@ class Game {
 		System.out.println("\nIt's dark. You hear a distant voice and open your eyes to find that you're in a cage.\n"
 				+ "The cage is inside a dark airplane hanger. It is night time.\n");
 		thread.sleep(6500);
-		System.out.println("The ground is cold cement. You are wearing a T-Shirt and worn out jeans. "
-				+ "You are also wearing dress shoes covered in dust.\n"
-				+ "You don't remember who you are, where you came from or even what your name is.\n"
-				+ "A dark figure approaches the cage shown by the back light" + " of the night sky.");
+		System.out.println("The ground is cold cement. You are wearing a T-Shirt and worn out jeans. You are also wearing"
+				+ "\ndress shoes covered in dust. You don't remember who you are, where you came from or even what"
+				+ "\n your name is.");
+		System.out.println("A dark figure approaches the cage shown by the back light of the night sky.");
 		thread.sleep(8000); 
 		Dialogue.level0(); // Gaby, the word remember has a capital (can you change it?) -CM
 		System.out.println();
@@ -201,17 +201,17 @@ class Game {
 		else if (commandWord.equalsIgnoreCase("go")) // we need to work this, the person can't actually move that much... 
 			goRoom(command);
 		else if (commandWord.equalsIgnoreCase("north") || commandWord.equalsIgnoreCase("n"))
-			goRoom(command);
+			goRoomDirection("north");
 		else if (commandWord.equalsIgnoreCase("east") || commandWord.equalsIgnoreCase("e"))
-			goRoom(command);
+			goRoomDirection("east");
 		else if (commandWord.equalsIgnoreCase("south") || commandWord.equalsIgnoreCase("s"))
-			goRoom(command);
+			goRoomDirection("south");
 		else if (commandWord.equalsIgnoreCase("west") || commandWord.equalsIgnoreCase("w"))
-			goRoom(command);
+			goRoomDirection("west");
 		else if (commandWord.equalsIgnoreCase("up") || commandWord.equalsIgnoreCase("u"))
-			goRoom(command);
+			goRoomDirection("up");
 		else if (commandWord.equalsIgnoreCase("down") || commandWord.equalsIgnoreCase("d"))
-			goRoom(command);
+			goRoomDirection("down");
 		
 		// Other command actions
 		else if (commandWord.equalsIgnoreCase("eat") || commandWord.equalsIgnoreCase("drink"))
@@ -306,17 +306,57 @@ class Game {
 	
 	/**
 	 * Try to go to one direction. If there is an exit, enter the new room,
-	 * otherwise print an error message.
+	 * otherwise print an error message. 
+	 * 
+	 * This method is for when the user types in "go" as first word
 	 */
-	private void goRoom(Command command) {
+	private void goRoom(Command command) {		
+		// if there is no second word, we don't know where to go...
 		if (!command.hasSecondWord()) {
-			// if there is no second word, we don't know where to go...
-			System.out.println("Go where?");
+			System.out.println("Go where? (*Hint: direction)");
 			return;
 		}
+		
+		// String direction = command.getSecondWord(); original
 
-		String direction = command.getSecondWord();
+		String secondWord = command.getSecondWord();
+		String direction = "";
+		if (secondWord.equalsIgnoreCase("north") || secondWord.equalsIgnoreCase("n"))
+			direction = "north";
+		else if (secondWord.equalsIgnoreCase("east") || secondWord.equalsIgnoreCase("e"))
+			direction = "east";
+		else if (secondWord.equalsIgnoreCase("south") || secondWord.equalsIgnoreCase("s"))
+			direction = "south";
+		else if (secondWord.equalsIgnoreCase("west") || secondWord.equalsIgnoreCase("w"))
+			direction = "west";
+		else if (secondWord.equalsIgnoreCase("up") || secondWord.equalsIgnoreCase("u"))
+			direction = "up";
+		else if (secondWord.equalsIgnoreCase("down") || secondWord.equalsIgnoreCase("d"))
+			direction = "down";
+		else {
+			System.out.println();
+			System.out.println("That is not a valid direction.");
+			System.out.println("Please enter \'commandlist\' to see the valid directions.");
+		}
+		
+		// Try to leave current room.
+		Room nextRoom = currentRoom.nextRoom(direction);
 
+		if (nextRoom == null){
+			System.out.println();
+			System.out.println("There is no exit here!");
+		} else {
+			currentRoom = nextRoom;
+			System.out.println(currentRoom.longDescription());
+		}
+	}
+	
+	/*
+	 * This method determines whether the player can move in a direction. This is for 
+	 * when the player directly types in the direction, and not "go" first. 
+	 */
+	private void goRoomDirection(String direction){
+		
 		// Try to leave current room.
 		Room nextRoom = currentRoom.nextRoom(direction);
 
