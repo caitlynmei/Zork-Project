@@ -103,7 +103,7 @@ class Game {
 	/**
 	 * Create the game and initialize its internal map.
 	 */
-	public Game() {
+	public Game() { // I got the levels thing, I'll finish it later - CM
 		try {
 			initRooms("data/levels/level1.dat");
 			currentRoom = masterRoomMap.get("ROOM_1");
