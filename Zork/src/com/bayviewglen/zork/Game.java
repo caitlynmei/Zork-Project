@@ -187,49 +187,49 @@ class Game {
 		String commandWord = command.getCommandWord();
 		
 		// help commands
-		if (commandWord.equals("help"))
+		if (commandWord.equalsIgnoreCase("help"))
 			printHelp();
-		else if (commandWord.equals("rules"))
+		else if (commandWord.equalsIgnoreCase("rules"))
 			printGameRules();
-		else if (commandWord.equals("commandlist"))
+		else if (commandWord.equalsIgnoreCase("commandlist"))
 			printCommandList();
 		// look command
-		else if (commandWord.equals("look"))
+		else if (commandWord.equalsIgnoreCase("look"))
 			printLook(); 
 		
 		// directions
-		else if (commandWord.equals("go")) // we need to work this, the person can't actually move that much... 
+		else if (commandWord.equalsIgnoreCase("go")) // we need to work this, the person can't actually move that much... 
 			goRoom(command);
-		else if (commandWord.equals("north") || commandWord.equals("n"))
+		else if (commandWord.equalsIgnoreCase("north") || commandWord.equalsIgnoreCase("n"))
 			goRoom(command);
-		else if (commandWord.equals("east") || commandWord.equals("e"))
+		else if (commandWord.equalsIgnoreCase("east") || commandWord.equalsIgnoreCase("e"))
 			goRoom(command);
-		else if (commandWord.equals("south") || commandWord.equals("s"))
+		else if (commandWord.equalsIgnoreCase("south") || commandWord.equalsIgnoreCase("s"))
 			goRoom(command);
-		else if (commandWord.equals("west") || commandWord.equals("w"))
+		else if (commandWord.equalsIgnoreCase("west") || commandWord.equalsIgnoreCase("w"))
 			goRoom(command);
-		else if (commandWord.equals("up") || commandWord.equals("u"))
+		else if (commandWord.equalsIgnoreCase("up") || commandWord.equalsIgnoreCase("u"))
 			goRoom(command);
-		else if (commandWord.equals("down") || commandWord.equals("d"))
+		else if (commandWord.equalsIgnoreCase("down") || commandWord.equalsIgnoreCase("d"))
 			goRoom(command);
 		
 		// Other command actions
-		else if (commandWord.equals("eat") || commandWord.equals("drink"))
+		else if (commandWord.equalsIgnoreCase("eat") || commandWord.equalsIgnoreCase("drink"))
 			System.out.println("Do you really think you should be having a meal at a time like this?");
-		else if (commandWord.equals("hi"))
+		else if (commandWord.equalsIgnoreCase("hi"))
 			System.out.println("Hi back! What's up?");
 		
 		// Inventory actions
-		else if (commandWord.equals("take"))
+		else if (commandWord.equalsIgnoreCase("take"))
 			Inventory.add(apple); // make this method -CM
-		else if (commandWord.equals("drop"))
+		else if (commandWord.equalsIgnoreCase("drop"))
 			removeItem(command); // make this method -CM
 				
 		// else if (commandWord.equals("inventory"))
 		// printInventory(command);
 		
 		// quit command 
-		else if (commandWord.equals("quit")) {
+		else if (commandWord.equalsIgnoreCase("quit")) {
 			if (command.hasSecondWord())
 				System.out.println("Would you like to save your progress?"); // make data file!!
 			else
