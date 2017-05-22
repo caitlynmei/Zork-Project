@@ -121,13 +121,24 @@ class Game {
 		parser = new Parser();
 	}
 
-	public boolean resetLevel(int currentLevel){
+	// resetLevel method for when the player dies
+	public boolean resetLevelDies(int currentLevel){
 		while (currentLevel > 0){ // the stuff in ("...") is wrong
 			// stuff that has to be reset
 			// can't right now since no one wrote an actual level
 		}
 		return false;
 	}
+	
+	// resetLevel method for when the player wins a level
+		public boolean resetLevelWins(int currentLevel){
+			while (currentLevel > 0){ // the stuff in ("...") is wrong
+				// stuff that has to be reset
+				// can't right now since no one wrote an actual level
+			}
+			return false;
+		}
+		
 	
 	/**
 	 * Main play routine. Loops until end of play.
