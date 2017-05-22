@@ -2,7 +2,7 @@ package com.bayviewglen.zork.Item;
 
 public interface Item {
 	
-	public int numItems = 0; 				// number of items
+
 	
 	public String name = "Item";			// name of item
 	
