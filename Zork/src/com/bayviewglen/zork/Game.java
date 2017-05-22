@@ -253,9 +253,6 @@ class Game {
 			Inventory.add(apple); // make this method -CM
 		else if (commandWord.equalsIgnoreCase("drop"))
 			removeItem(command); // make this method -CM
-				
-		// else if (commandWord.equals("inventory"))
-		// printInventory(command);
 		
 		// quit command 
 		else if (commandWord.equalsIgnoreCase("quit")) {
