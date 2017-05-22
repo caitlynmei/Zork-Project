@@ -23,8 +23,6 @@ public class Tool implements Item{
 
 
 
-
-
 	@Override
 	public String getName() {
 		// TODO Auto-generated method stub
@@ -37,6 +35,14 @@ public class Tool implements Item{
 	public String getDescription() {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+
+
+	@Override
+	public int getAmount() {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 }
