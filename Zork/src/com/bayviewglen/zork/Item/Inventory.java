@@ -24,7 +24,9 @@ public class Inventory {
 	}
 	
 	public static void toss(Item tossMe){
-		
+		if(bag.size() <= 0){
+			System.out.println("You have nothing in your Inventory");
+		}
 		bag.remove(findIndex(tossMe));
 		System.out.println("You have tossed " + tossMe.getName());
 	}
