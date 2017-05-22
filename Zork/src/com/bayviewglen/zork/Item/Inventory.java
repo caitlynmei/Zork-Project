@@ -16,7 +16,7 @@ public class Inventory {
 	}
 	
 	public static void add(Item addMe){
-		if(findIndex(addMe) == -1){
+		if(findIndex(addMe) < 0) {
 			bag.add(addMe);
 		} else {
 			addMe.Increment();
