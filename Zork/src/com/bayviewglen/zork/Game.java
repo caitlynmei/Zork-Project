@@ -253,7 +253,7 @@ class Game {
 			Inventory.printInventory();
 		else if (commandWord.equalsIgnoreCase("take"))
 			Inventory.add(apple); 
-		else if (commandWord.equalsIgnoreCase("drop")){
+		else if (commandWord.equalsIgnoreCase("drop") || commandWord.equalsIgnoreCase("toss")){
 			Inventory.toss(apple); 
 		}
 		// quit command 
