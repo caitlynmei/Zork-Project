@@ -33,7 +33,7 @@ public class Inventory {
 	public void print(){
 		
 		for(Item x : bag){
-			System.out.println(x);
+			System.out.println(x.getName());
 		}
 	}
 
