@@ -29,7 +29,9 @@ public class Food implements Item {
 
 	@Override
 	public boolean equals(Item item) {
-		// TODO Auto-generated method stub
+		if(name.equalsIgnoreCase(item.getName())){
+			return true;
+		}
 		return false;
 	}
 

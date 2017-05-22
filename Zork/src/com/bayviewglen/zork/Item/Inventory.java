@@ -16,10 +16,9 @@ public class Inventory {
 	}
 	
 	public static void add(Item addMe){
-		if(addMe.getAmount() == 0){
+		if(findIndex(addMe) == -1){
 			bag.add(addMe);
 		} else {
-			bag.add(addMe);
 			addMe.Increment();
 		}
 	}
@@ -40,7 +39,7 @@ public class Inventory {
 	}
 
 	// method to find the item in the list
-	private int findIndex(Item item) {
+	private static int findIndex(Item item) {
 		
 		for(int i = 0; i<bag.size(); i++){
 			if(bag.get(i).equals(item)){
