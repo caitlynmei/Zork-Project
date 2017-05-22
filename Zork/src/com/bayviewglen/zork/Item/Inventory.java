@@ -30,6 +30,7 @@ public class Inventory {
 	}
 	
 	//prints inventory 
+
 	public static void printInventory(){
 		System.out.print("Inventory : ");
 		for(Item x : bag){
