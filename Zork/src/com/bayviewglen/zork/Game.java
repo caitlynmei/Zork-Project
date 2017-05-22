@@ -104,7 +104,7 @@ class Game {
 	 * Create the game and initialize its internal map.
 	 */
 	public Game() { // I got the levels thing, I'll finish it later - CM
-		int currentLevel = 1;
+		int currentLevel = 2;
 		try {
 			if (currentLevel == 1)
 				initRooms("data/levels/level1.dat");
@@ -114,7 +114,7 @@ class Game {
 				initRooms("data/levels/level3.dat");
 			else if (currentLevel == 4)
 				initRooms("data/levels/level4.dat");
-			currentRoom = masterRoomMap.get("ROOM_1");
+			currentRoom = masterRoomMap.get("ROOM_3");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
