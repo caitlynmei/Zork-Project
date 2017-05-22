@@ -14,10 +14,6 @@ public class Break extends Tool implements Item {
 		return false;
 	}
 
-	@Override
-	public void Increment() {
-		// TODO Auto-generated method stub
 
-	}
 
 }
