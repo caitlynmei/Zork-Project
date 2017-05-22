@@ -23,10 +23,7 @@ public abstract class Weapon implements Item  {
 		// TODO Auto-generated method stub
 		return false;
 	}
-	@Override
-	public void Increment() {
-		// TODO Auto-generated method stub		
-	}
+
 		
 	public int getDur(){
 		return durability;

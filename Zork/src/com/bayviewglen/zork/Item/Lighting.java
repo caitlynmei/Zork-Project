@@ -22,10 +22,4 @@ public class Lighting extends Tool implements Item {
 		return false;
 	}
 
-	@Override
-	public void Increment() {
-		// TODO Auto-generated method stub
-
-	}
-
 }
