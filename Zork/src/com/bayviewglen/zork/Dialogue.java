@@ -98,7 +98,7 @@ public class Dialogue {
 	
 	
 	public static void level0() throws InterruptedException{
-		
+
 		 System.out.println("\nMysterious figure :");
 		 System.out.println("Look who decided to finally wake up");
 					thread.sleep(3000);

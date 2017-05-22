@@ -144,7 +144,7 @@ class Game {
 	 * Main play routine. Loops until end of play.
 	 */
 	public void play() throws InterruptedException {
-		//printWelcome();
+		printWelcome();
 		System.out.println(currentRoom.longDescription());
 
 		// Enter the main command loop. Here we repeatedly read commands and
@@ -187,6 +187,8 @@ class Game {
 		thread.sleep(8000); 
 		Dialogue.level0(); // Gaby, the word remember has a capital (can you change it?) -CM
 		System.out.println();
+		loading();
+		System.out.println("\n\n");
 	}
 
 	public boolean printLevel2(){
