@@ -161,6 +161,7 @@ class Game {
 	/**
 	 * Print out the opening message for the player.
 	 */
+
 	private void printWelcome() throws InterruptedException {
 
 		System.out.println();
@@ -187,6 +188,7 @@ class Game {
 		Dialogue.level0(); // Gaby, the word remember has a capital (can you change it?) -CM
 		System.out.println();
 	}
+
 
 	// loading Method: prints the "Loading . . . . " message
 	private void loading() throws InterruptedException {

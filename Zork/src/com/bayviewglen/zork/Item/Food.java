@@ -5,6 +5,7 @@ public class Food implements Item {
 	private String name;
 	private int damage;
 	private int durability;
+	private int amount;
 	
 	public Food(){
 		
@@ -34,7 +35,11 @@ public class Food implements Item {
 
 	@Override
 	public void Increment() {
-		// TODO Auto-generated method stub
+		amount++;
 		
 	}
+	public int getAmount(){
+		return amount;
+	}
+	
 }
