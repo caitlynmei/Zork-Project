@@ -182,6 +182,8 @@ public class Dialogue {
 					System.out.println("\nThe dark figure starts laughing as their figure fades from the dimly lit airplane hanger.");
 					thread.sleep(6000);
 					System.out.println("\nSuddenly the ground beneath you collapses and you fall. Everything goes dark.");
+					
+		
 				
 					
 						

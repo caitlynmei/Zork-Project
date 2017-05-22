@@ -144,7 +144,7 @@ class Game {
 	 * Main play routine. Loops until end of play.
 	 */
 	public void play() throws InterruptedException {
-		printWelcome();
+		//printWelcome();
 		System.out.println(currentRoom.longDescription());
 
 		// Enter the main command loop. Here we repeatedly read commands and
@@ -189,7 +189,19 @@ class Game {
 		System.out.println();
 	}
 
-
+	public boolean printLevel2(){
+		boolean level2Over = false;
+		
+		System.out.println("You wake up lying on your back in pitch dark. You can hear the sound of waves crashing\n" 
+				+ "against cave walls.");
+		System.out.println("You stand up cautiously.");
+		// user has to move eventually, so any move will make you fall into a hole...
+		System.out.println("Ahhhhhhhhhh....... You fall into a deep dark hole and die...");
+		System.out.println("Only joking! But you do fall into a hole and submerge into water.\n*SPLASH*");
+		
+		return (level2Over == true);
+	}
+	
 	// loading Method: prints the "Loading . . . . " message
 	private void loading() throws InterruptedException {
 		System.out.println();
