@@ -23,7 +23,7 @@ public class Inventory {
 		}
 	}
 	
-	public void toss(Item tossMe){
+	public static void toss(Item tossMe){
 		bag.remove(findIndex(tossMe));
 		System.out.println("You have tossed " + tossMe);
 	}
