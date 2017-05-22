@@ -30,11 +30,13 @@ public class Inventory {
 	}
 	
 	//prints inventory 
+
 	public static void printInventory(){
-		
+		System.out.print("Inventory : ");
 		for(Item x : bag){
-			System.out.println(x.getName());
+			System.out.printf("%5s ", x.getName() +  " " +  x.getAmount() + "");
 		}
+		System.out.println(" ");
 	}
 
 	// method to find the item in the list

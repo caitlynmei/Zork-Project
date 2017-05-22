@@ -130,7 +130,7 @@ public class Dialogue {
 						System.out.println("\nYou say:\nWho are you?\n");
 						thread.sleep(2000);
 						System.out.println("\nMysterious Figure:");
-						System.out.println("You don't Remember? You don't remember the hell you put me through?");
+						System.out.println("You don't remember? You don't remember the hell you put me through?");
 						thread.sleep(2500);
 						System.out.println("Well, that will make this more enjoyable. I might feel a bit guilty after though...");
 						thread.sleep(2000);

@@ -11,7 +11,11 @@ public interface Item {
 	public String getDescription();			// get characteristic description for user
 	
 	public boolean equals(Item item);		// comparing items
-		
+	
+	public int amount = 0;
+	
+	public int getAmount();
+	
 	public void Increment();				// 
 	
 }
