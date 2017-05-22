@@ -201,7 +201,7 @@ class Game {
 		
 		return (level2Over == true);
 	}
-	
+
 	// loading Method: prints the "Loading . . . . " message
 	private void loading() throws InterruptedException {
 		System.out.println();
