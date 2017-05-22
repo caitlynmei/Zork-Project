@@ -104,8 +104,16 @@ class Game {
 	 * Create the game and initialize its internal map.
 	 */
 	public Game() { // I got the levels thing, I'll finish it later - CM
+		int currentLevel = 1;
 		try {
-			initRooms("data/levels/level1.dat");
+			if (currentLevel == 1)
+				initRooms("data/levels/level1.dat");
+			else if (currentLevel == 2)
+				initRooms("data/levels/level2.dat");
+			else if (currentLevel == 3)
+				initRooms("data/levels/level3.dat");
+			else if (currentLevel == 4)
+				initRooms("data/levels/level4.dat");
 			currentRoom = masterRoomMap.get("ROOM_1");
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -113,6 +121,14 @@ class Game {
 		parser = new Parser();
 	}
 
+	public boolean resetLevel(int currentLevel){
+		while (currentLevel > 0){ // the stuff in ("...") is wrong
+			// stuff that has to be reset
+			// can't right now since no one wrote an actual level
+		}
+		return false;
+	}
+	
 	/**
 	 * Main play routine. Loops until end of play.
 	 */
