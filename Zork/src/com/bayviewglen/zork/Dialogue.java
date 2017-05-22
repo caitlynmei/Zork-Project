@@ -27,7 +27,7 @@ public class Dialogue {
 		if(temp.equals("HANG ONTO THE CHEST") || temp.equals("HANG ONTO CHEST") || temp.equals("DO NOTHING") || temp.equals("CLOSE EYES")){
 			valid = true;
 		}else if(temp.equals("HELP")){
-			System.out.println("\nType what you want to do.");
+			System.out.println("\nType what you want to do. Make sure you don't have any extra spaces!");
 		}
 		}
 		
@@ -51,7 +51,7 @@ public class Dialogue {
 			if(temp.equals("DO NOTHING") || temp.equals("CLOSE EYES")){
 				valid = true;
 			}else if(temp.equals("HELP")){
-				System.out.println("\nType what you want to do.");
+				System.out.println("\nType what you want to do. Make sure you don't have any extra spaces!");
 			}
 			}
 			
