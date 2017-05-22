@@ -15,11 +15,6 @@ public class Tool implements Item{
 		return false;
 	}
 
-	@Override
-	public void Increment() {
-		// TODO Auto-generated method stub
-		
-	}
 
 
 
@@ -39,11 +34,6 @@ public class Tool implements Item{
 
 
 
-	@Override
-	public int getAmount() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
 
 }
 

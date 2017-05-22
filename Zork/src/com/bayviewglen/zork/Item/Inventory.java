@@ -19,13 +19,14 @@ public class Inventory {
 		if(findIndex(addMe) < 0) {
 			bag.add(addMe);
 		} else {
-			addMe.Increment();
+			System.out.println("You already have a " + addMe.getName());
 		}
 	}
 	
 	public static void toss(Item tossMe){
+		
 		bag.remove(findIndex(tossMe));
-		System.out.println("You have tossed " + tossMe);
+		System.out.println("You have tossed " + tossMe.getName());
 	}
 	
 	//prints inventory 
@@ -33,7 +34,7 @@ public class Inventory {
 	public static void printInventory(){
 		System.out.print("Inventory : ");
 		for(Item x : bag){
-			System.out.printf("%5s ", x.getName() +  " " +  x.getAmount() + "");
+			System.out.printf("%5s ", x.getName() +  " ");
 		}
 		System.out.println(" ");
 	}
