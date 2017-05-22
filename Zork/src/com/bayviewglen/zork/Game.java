@@ -247,6 +247,8 @@ class Game {
 			System.out.println("Hi back! What's up?");
 		
 		// Inventory actions
+		else if (commandWord.equalsIgnoreCase("inventory"))
+			Inventory.printInventory();
 		else if (commandWord.equalsIgnoreCase("take"))
 			Inventory.add(apple); // make this method -CM
 		else if (commandWord.equalsIgnoreCase("drop"))
