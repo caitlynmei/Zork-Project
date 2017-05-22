@@ -252,10 +252,10 @@ class Game {
 		else if (commandWord.equalsIgnoreCase("inventory"))
 			Inventory.printInventory();
 		else if (commandWord.equalsIgnoreCase("take"))
-			Inventory.add(apple); // make this method -CM
-		else if (commandWord.equalsIgnoreCase("drop"))
-			removeItem(command); // make this method -CM
-		
+			Inventory.add(apple); 
+		else if (commandWord.equalsIgnoreCase("drop")){
+			Inventory.toss(apple); 
+		}
 		// quit command 
 		else if (commandWord.equalsIgnoreCase("quit")) {
 			if (command.hasSecondWord())
@@ -287,17 +287,6 @@ class Game {
 		// in here: boolean to check which level
 		// 			have to link this to level description later
 		
-	}
-
-	// method lets you store items in inventory. I got this -CM
-	private void getItem(Command command) {
-		// TODO Auto-generated method stub
-	}
-
-	// method lets you remove items in inventory. -CM
-	private void removeItem(Command command) {
-		// TODO Auto-generated method stub
-
 	}
 
 	/**
