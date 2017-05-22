@@ -12,7 +12,7 @@ public interface Item {
 	
 	public boolean equals(Item item);		// comparing items
 	
-	public int amount = 0;
+	public int amount = 1;
 	
 	public int getAmount();
 	
