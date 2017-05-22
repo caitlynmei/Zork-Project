@@ -16,8 +16,8 @@ public class Food implements Item {
 
 	@Override
 	public String getName() {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return name;
 	}
 
 	@Override
