@@ -15,7 +15,7 @@ public class Dialogue {
 		System.out.println("The clouds around you start to disappear one by one.");
 		System.out.println("\n\nYou think about what to do. You think to yourself\n");
 		thread.sleep(2000);
-		System.out.println("\t\"Hang onto the chest\" - \"Do Nothing\" - \"Close your eyes\"\n" );
+		System.out.println("\t\"Hang onto the chest\" - \"Do Nothing\" - \"Close eyes\"\n" );
 		thread.sleep(2000);
 		System.out.println("What do you say?");
 		System.out.print(">");
@@ -24,7 +24,7 @@ public class Dialogue {
 		boolean valid = false;
 		while(!valid){
 			temp = keyboard.nextLine().toUpperCase();	
-		if(temp.equals("HANG ONTO THE CHEST") || temp.equals("HANG ONTO CHEST") || temp.equals("DO NOTHING") || temp.equals("CLOSE YOUR EYES")){
+		if(temp.equals("HANG ONTO THE CHEST") || temp.equals("HANG ONTO CHEST") || temp.equals("DO NOTHING") || temp.equals("CLOSE EYES")){
 			valid = true;
 		}else if(temp.equals("HELP")){
 			System.out.println("\nType what you want to do.");
@@ -39,7 +39,7 @@ public class Dialogue {
 			System.out.println("The clouds around you keep disappearing.");
 			System.out.println("\n\nYou think about what to do. You think to yourself\n");
 			thread.sleep(2000);
-			System.out.println("\t \"Do Nothing\" - \"Close your eyes\"\n" );
+			System.out.println("\t \"Do Nothing\" - \"Close eyes\"\n" );
 			thread.sleep(2000);
 			System.out.println("What do you say?");
 			System.out.print(">");
@@ -48,7 +48,7 @@ public class Dialogue {
 			valid = false;
 			while(!valid){
 				temp = keyboard.nextLine().toUpperCase();	
-			if(temp.equals("DO NOTHING") || temp.equals("CLOSE YOUR EYES")){
+			if(temp.equals("DO NOTHING") || temp.equals("CLOSE EYES")){
 				valid = true;
 			}else if(temp.equals("HELP")){
 				System.out.println("\nType what you want to do.");
