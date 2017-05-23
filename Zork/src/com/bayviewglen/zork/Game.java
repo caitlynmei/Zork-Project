@@ -41,7 +41,9 @@ class Game {
 	// Great Room (assuming you have one).
 	private HashMap<String, Room> masterRoomMap;
 
-	Food apple = new Food("apple");
+	static Food apple = new Food("apple");
+	static Food orange = new Food("orange");
+	private static final Food validFoodItems[] = {apple, orange};
 	
 	private void initRooms(String fileName) throws Exception {
 		masterRoomMap = new HashMap<String, Room>();
@@ -256,7 +258,7 @@ class Game {
 			printLook(); 
 		
 		// directions
-		else if (commandWord.equalsIgnoreCase("go")) // we need to work this, the person can't actually move that much... 
+		else if (commandWord.equalsIgnoreCase("go")) 
 			goRoom(command);
 		else if (commandWord.equalsIgnoreCase("north") || commandWord.equalsIgnoreCase("n"))
 			goRoomDirection("north");
@@ -280,9 +282,10 @@ class Game {
 		// Inventory actions
 		else if (commandWord.equalsIgnoreCase("inventory"))
 			Inventory.printInventory();
-		else if (commandWord.equalsIgnoreCase("take"))
-			Inventory.add(apple); 
-		else if (commandWord.equalsIgnoreCase("drop") || commandWord.equalsIgnoreCase("toss")){
+		else if (commandWord.equalsIgnoreCase("take")){
+			//takeItem(command);
+			//Inventory.add(apple); 
+		} else if (commandWord.equalsIgnoreCase("drop") || commandWord.equalsIgnoreCase("toss")){
 			Inventory.toss(apple); 
 		}
 		// quit command 
@@ -311,7 +314,28 @@ class Game {
 		}
 	}
 	*/
+	/*
+	private void takeItem(Command command) {
+		// if there is no second word, we don't know where to take...
+		if (!command.hasSecondWord()) {
+			System.out.println("Take what? (*Hint: item)");
+			return;
+		}
+		
+		String secondWord = command.getSecondWord();
+		String item = "";
+		if (secondWord.equalsIgnoreCase())
+	}
 
+	public boolean isCommand(String aString) {
+		for (int i = 0; i < validFoodItems.length; i++) {
+			if (validFoodItems[i].equalsIgnoreCase(aString)){
+				return true;
+			}
+		} // if we get here, the string was not found in the commands
+		return false;
+	}
+	*/
 	private void printLook() {
 		// in here: boolean to check which level
 		// 			have to link this to level description later
