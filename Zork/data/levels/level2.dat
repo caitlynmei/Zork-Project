@@ -2,13 +2,13 @@ Room Name: Room 1
 Room Description: PITCH BLACK CAVE
 Exit Rooms: D-Room 2
 Room Name: Room 2
-Room Description: WATER SURFACE
+Room Description: WATER SURFACE <br> You are fighting for your life to keep your head above the water surface. Thankfully, you <br> know how to swim. You don't see anything above water other then dark gloomy clouds and murky <br> water. There is just water, water, and more water. <br> (*HINT: go under the surface. It's more interesting)
 Exit Rooms: D-Room 3
 Room Name: Room 3
-Room Description: UNDER THE SEA (BELOW WATER SURFACE) You are fighting for your life to keep your head above the water surface. Thankfully, you know how to swim. You don't see anything above water other then dark gloomy clouds and murky water. There is just water, water, and more water. (*HINT: go under the surface. It's more interesting)
+Room Description: UNDER THE SEA (BELOW WATER SURFACE) <br> There is a colourful coral reef covering the sea floor. *You can now use the commands up (U) <br> and down (D) alongside the normal compass directions. The water surface is above you, but <br> the dark dullness doesn't seem inviting. The only way left is down. 
 Exit Rooms: U-Room 2, D-Room 4
 Room Name: Room 4
-Room Description: CORAL REEF
+Room Description: CORAL REEF <br> You are now on the sea floor with the exotic reefs. To the east, there is a sign. You <br> realize you are holding your breath under the water. You will run out of air soon. To the <br> west, there is a trail of bubbles coming from something that looks like a large ... purple <br> ... rock? 
 Exit Rooms: W-Room 5, E-Room 6
 Room Name: Room 5
 Room Description: GIANT PURPLE CLAM
