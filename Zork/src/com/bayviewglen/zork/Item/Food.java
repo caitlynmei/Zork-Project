@@ -4,6 +4,11 @@ public class Food implements Item {
 
 	private String name;
 	
+	private static Food apple = new Food("apple");
+	private static Food orange = new Food("orange");
+	
+	private static final Food validFoodItems[] = {apple, orange};
+	
 	public Food(){
 		// nothing to do yet...
 	}
