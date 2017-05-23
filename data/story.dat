@@ -1,11 +1,10 @@
-
 **Journey to find your memories and as well escape 
 
 Beginning: Dialogue and intro to the game
-
+//Instructions
 Level 0: 
 It's dark. You hear a distant voice and open your eyes to find that you're in a cage. 
-The cage is inside a dark airplane hanger. It is night time.
+The cage is inside a dark airplane hangar. It is night time.
 
 Level 0 activities:
 
@@ -47,19 +46,13 @@ options to say -
 		
 
 *Evil Laughter sound*
-The dark figure starts laughing as their figure fades from the dimly lit airplane hanger. 
+The dark figure starts laughing as their figure fades from the dimly lit airplane hangar. 
 
 .. wait about 3 seconds before executing next line of code .. 
 
 *clicking sound*
 Suddenly the ground beneath you collapses and you fall. Everything goes dark.
 
-
-
-// we should have a leaflet to read instructions like Zork does - CM
-//idk what that is - GG
-// there was a mailbox in Zork where you read the intro to Zork. 
-// Or at least have a game intro explanation - CM
 -----------------------------------------------------------------------------------------
 Level 1: Air World 
 
@@ -68,29 +61,19 @@ Squinting, you look around to see a ground of white fluff which seems to resembl
 You try to remember how you got here, but only remember the scary figure that greeted you from outside the cage you were
 trapped in. 
 
-start level one
+Start level one
+You start to wander around and find a chest you make note that there is a key slot. So you assume that you have to find a key. You wonder around and find a little boy. He says his name is Jack and he need help finding his bean and in return he will give you a key too open the chest you found. You eventually come upon a large castle and knock on the door. A giant appears and you question him about the bean. Giant is not happy so you fight and in order to win the fight you have to trip him so that he falls unconscious. You search his satchel that was on him to find a golden bean. You go back to Jack and he gives you the key in exchange. You go back to the chest from the beginning.
 
-
-When you open the chest at the end of the level (or however u get out):
-
-
-the clouds around you start to disappear one by one.
-
-Options - 
-Hang onto the chest - The chest disappears into thin air, you fall on your face.
-Do nothing - You watch as the clouds around you disappear. Eventually the cloud underneath you also disappears. 
+Once you insert the key into the chest the word FIND appears. All of a sudden the whole world starts to shake.
+OPTIONS-
+	1. Do nothing - You watch as the clouds around you disappear. Eventually the cloud underneath you also disappears. 
 You Fall. Everything goes dark.
-Close your eyes -  You close your eyes, and hope for the best. The anticipation is high and you anxiously wait for the cloud beneath
-you, to disappear. You lose consciousness.  
+	2. Close your eyes -  You close your eyes, and hope for the best. The anticipation is high and you anxiously await only for all the clouds to disappear and you fall.
+ You lose consciousness and everything fades to black.
+END OF LEVEL 1: EXIT THE CLOUDS
 
-You see a child skipping on a hot summers day. "Do I know her?" you ask yourself. She starts skipping away. "Wait!" you call. Everything
-fades to black.
-Start Level 2
-
- 
 -----------------------------------------------------------------------------------------
 Level 2: Water World
-
 ** Caitlyn make sure you think of the memories the guy gets back or just leave that to me when u r done - Gaby
 ->	goal of this world player has to find a key inside. 
 	It is the golden key of truth. You dissolve into the sand and 
@@ -109,7 +92,7 @@ Only joking! But you do fall into a hole and submerge into water.
 
 WATER SURFACE
 You are fighting for your life to keep your head above the water surface. Thankfully, you 
-know how to swim. You don't see anything above water other then dark gloomy clouds
+know how to swim. You don't see anything above water other than dark gloomy clouds
 and murky water. There is just water, water, and more water. 
 (*HINT: go under the surface. It's more interesting)
 
@@ -146,12 +129,10 @@ Good thinking!! You're like an underwater astronaut with the bubble helmet. Now 
 to 'traverse' the ocean as you wish. :)
 
 //look
-There is a sign to the east. A knife, attached by a tightly braided seaweed rope from its handle 
-to the sign post, floats around. 
+There is a sign to the east. 
 
 // walk to the sign
 // read sign
-// take knife
 
 INTRO SIGN
 "BEWARE: SHARK!!! 
@@ -285,7 +266,7 @@ Wait, a red dorsal fin?
 
 Thinking, you realize it's an oarfish. You wonder for a split second why you even know that,
 but the oarfish advances toward you. You back away, slowly pulling your body backwards with your 
-hands. Unfortunately, there's no where to go. Your back is pressed against the cave wall. 
+hands. Unfortunately, there's nowhere to go. Your back is pressed against the cave wall. 
 
 What do you do? It could eat you alive... It's definitely large enough to swallow you whole.
 
@@ -295,7 +276,7 @@ What do you do? It could eat you alive... It's definitely large enough to swallo
 	Option 1:
 	You take the knife out, and stab as hard as you can into the oarfish's right side. 
 	
-	The oarfish's eyes are filled with hate and anger. In a milisecond, it flicks its tail and you 
+	The oarfish's eyes are filled with hate and anger. In a millisecond, it flicks its tail and you 
 	slam into the cave wall. *CRACK* That's going to leave more than a bruise... You almost blank out, 
 	but it could also just be the darkness. 
 	
@@ -352,8 +333,8 @@ You see your own reflection looking back at you in the mirror. You look like dea
 is a mess, you have dark bags under your eyes, and your clothes are torn from this journey. 
 But, you smile. You made it this far and you're proud of that. You gasp as you relive a memory...
 
-July 8th. "_" smiled at you on his birthday. You gave him the book he had his eye on for years about 
-the midnight zone sea creatures. "_", your best friend. He was a huge dork when it came to marine 
+"_" smiled at you on his birthday. You gave him the book he had his eye on for years about the
+midnight zone sea creatures. "_", your best friend. He was a huge dork when it came to marine 
 animals. "_" had a huge obsession and was practically a walking encyclopedia. 
 
 Loading... 
@@ -373,15 +354,22 @@ A swirl of light glows around you and you blank out...
 END OF LEVEL 2: EXIT THE SEA WORLD
 
 ----------------------------------------------------------------------------------------
-Level 3: Earth World
+Level 3: Forest
 You wake up, gasping for air only to find yourself in a strange place.
 Your eyes readjusts after facing the sun and you regain sight. You notice the blades of grass that are tall 
 enough to brush against your face when the wind whistles.  The sky has transitioned to red and blue in such a
  way that you can see the purple start to appear. You finally feel relaxed as you breathe in the lilac scented air.
- That lilac scent is inticing you and you have the desire to follow it
+ That lilac scent is enticing you and you have the desire to follow it
+
+OPTION:
+	1. Ignore- if you do you end up dying some how
+	2. Follow- you end up upon a large tree
+
+At this tree there are a bunch of fireflies but then all of sudden you see one of fireflies come up to you. Upon closer look you see that it is a fairy. The fairy talks to you and ask for your help in 
+
+
  
- 
- 
+ END OF LEVEL 3: EXIT THE FOREST 
 ----------------------------------------------------------------------------------------
 Level 4: Volcano
 
@@ -389,22 +377,15 @@ You find yourself on the edge of a volcano, terrified you look around only to be
 You scream and hit the ground but are still alive. 
 You look around and see a bunch of flames surrounding you but realize when you reach out to touch them they don't burn you.
 You decide to start walking around come across many items.
-
-
+Eventually you 
 
 
 You find the last key word KEYS and open the chest to find the fourth key.
-You go back to the main and realize that there are 4 slots in this door. 
-You insert  keys you found and all of your memories come flooding back to your mind and realize that you can now escape.
-END
+You go back to the chest and realize that there are 4 slots. 
+You insert the 4 keys you found and all of your memories come flooding back to your mind and realize that you can now escape.
+END OF LEVEL 4: EXIT THE VOLCANO
 
 ----------------------------------------------------------------------------------------
 Ending
 
-Congradulations you have succesfully escaped. 
-
-
-
-
-
-	
+Congratulations you have successfully escaped. 
