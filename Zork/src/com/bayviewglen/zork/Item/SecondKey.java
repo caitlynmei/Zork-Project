@@ -1,14 +1,18 @@
 package com.bayviewglen.zork.Item;
 
-public class Food implements Item {
-
-	private String name;
+public class SecondKey implements Item{
 	
-	public Food(){
+	// can't be removed from inventory
+	
+	private String name = "Sea Key";
+	private String description = "This is a silver key which you bravely fought "
+			+ "to obtain from the Midnight Zone of the Sea World in Level 2.";
+	
+	public SecondKey(){
 		// nothing to do yet...
 	}
 	
-	public Food(String name){
+	public SecondKey(String name){
 		this.name = name;
 	}	
 
@@ -18,11 +22,9 @@ public class Food implements Item {
 		return name;
 	}
 
-
 	@Override
 	public String getDescription() {
-		// TODO Auto-generated method stub
-		return null;
+		return description;
 	}
 
 	@Override
@@ -31,8 +33,5 @@ public class Food implements Item {
 			return true;
 		}
 		return false;
-	}
-
-	
-	
+	}	
 }
