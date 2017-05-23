@@ -201,6 +201,21 @@ class Game {
 		System.out.println("Ahhhhhhhhhh....... You fall into a deep dark hole and die...");
 		System.out.println("Only joking! But you do fall into a hole and submerge into water.\n*SPLASH*");
 		
+		//if (){
+			System.out.println("But something happened. The last time he saw you, he was really scared. He had "
+					+ "to do something that would be extraordinarily dangerous. And he warned you, what were his "
+					+ "last words? Something about staying away from him... ");
+			System.out.println("You blink again, and the flashback is gone. You look in the mirror, and you see "
+					+ "yourself looking fresh and healthy, like someone who didn't just almost die in the deep sea. "
+					+ "There is also the faint outline of a silver key glowing in your jeans pocket. You look down"
+					+ " at yourself. Shocked, you realize you are no longer a walking zombie. You reach into your "
+					+ "pocket and pull out a silver key. Two keys down! It is added into your inventory.");
+			System.out.println("A swirl of light glows around you and you blank out...");
+			System.out.println();
+			System.out.println("END OF LEVEL 2: EXIT THE SEA WORLD");
+			level2Over = true;
+		//}
+		
 		return (level2Over == true);
 	}
 
