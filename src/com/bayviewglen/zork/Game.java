@@ -114,7 +114,7 @@ class Game {
 				initRooms("data/levels/level3.dat");
 			else if (currentLevel == 4)
 				initRooms("data/levels/level4.dat");
-			currentRoom = masterRoomMap.get("ROOM_1");
+			currentRoom = masterRoomMap.get("LEVEL_ENTRANCE");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -144,7 +144,7 @@ class Game {
 	 * Main play routine. Loops until end of play.
 	 */
 	public void play() throws InterruptedException {
-		printWelcome();
+		//printWelcome();
 		System.out.println(currentRoom.longDescription());
 
 		// Enter the main command loop. Here we repeatedly read commands and
