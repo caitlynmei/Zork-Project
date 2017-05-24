@@ -21,8 +21,11 @@ import java.util.Iterator;
 class Room 
 {
 	private String roomName;
+	private String lock;
     private String description;
     private HashMap<String, Room> exits;        // stores exits of this room.
+    private String roomItems;
+    private String roomEnemies;
 
     /**
      * Create a room described "description". Initially, it has no exits.
@@ -37,8 +40,11 @@ class Room
     public Room() {
 		// default constructor.
     	roomName = "DEFAULT ROOM";
+    	lock = "0";
     	description = "DEFAULT DESCRIPTION";
     	exits = new HashMap<String, Room>();
+    	roomItems = "DEFAULT ITEMS";
+    	roomEnemies = "DEFAULT ENEMIES";
 	}
 
     public void setExit(char direction, Room r) throws Exception{
