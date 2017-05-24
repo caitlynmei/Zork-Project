@@ -41,9 +41,7 @@ class Game {
 	// Great Room (assuming you have one).
 	private HashMap<String, Room> masterRoomMap;
 
-	static Food apple = new Food("apple");
-	static Food orange = new Food("orange");
-	private static final Food validFoodItems[] = {apple, orange};
+	private static Food apple = new Food("apple");
 	
 	private void initRooms(String fileName) throws Exception {
 		masterRoomMap = new HashMap<String, Room>();
