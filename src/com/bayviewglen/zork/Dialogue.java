@@ -17,7 +17,7 @@ public class Dialogue {
 		thread.sleep(2000);
 		System.out.println("\t\"Hang onto the chest\" - \"Do Nothing\" - \"Close eyes\"\n" );
 		thread.sleep(2000);
-		System.out.println("What do you say?");
+		System.out.println("What do you do?");
 		System.out.print(">");
 		String temp = "";
 		
@@ -41,7 +41,7 @@ public class Dialogue {
 			thread.sleep(2000);
 			System.out.println("\t \"Do Nothing\" - \"Close eyes\"\n" );
 			thread.sleep(2000);
-			System.out.println("What do you say?");
+			System.out.println("What do you do?");
 			System.out.print(">");
 			
 			temp = "";
@@ -55,18 +55,7 @@ public class Dialogue {
 			}
 			}
 			
-			if(temp.equals("DO NOTHING")){
-				thread.sleep(2000);
-				System.out.println("You watch as the clouds around you disappear.");
-				thread.sleep(2000);
-				System.out.println("You see the clouds beneath you disappear.");
-				System.out.println("You Fall. Everything goes dark.");
-			} else{
-			
-			}
-			
-			
-		}else if(temp.equals("DO NOTHING")){
+		if(temp.equals("DO NOTHING")){
 			thread.sleep(2000);
 			System.out.println("You watch as the clouds around you disappear.");
 			thread.sleep(2000);
@@ -91,6 +80,7 @@ public class Dialogue {
 		System.out.println("\"Wait!\" you call.");
 		thread.sleep(2000);
 		System.out.println("\nEverything fades to black");
+		}
 
 	
 		

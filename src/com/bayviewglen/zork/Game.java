@@ -313,8 +313,7 @@ class Game {
 	*/
 
 	private void printLook() {
-		// in here: boolean to check which level
-		// 			have to link this to level description later
+		System.out.println(currentRoom.getDescription());
 		
 	}
 
