@@ -23,8 +23,6 @@ class Room
 	private String roomName;
     private String description;
     private HashMap<String, Room> exits;        // stores exits of this room.
-    private String items;
-    private String Enemies;
 
     /**
      * Create a room described "description". Initially, it has no exits.
@@ -41,8 +39,6 @@ class Room
     	roomName = "DEFAULT ROOM";
     	description = "DEFAULT DESCRIPTION";
     	exits = new HashMap<String, Room>();
-    	items = "NO ITEMS";
-    	Enemies = "NO ENEMIES";
 	}
 
     public void setExit(char direction, Room r) throws Exception{
