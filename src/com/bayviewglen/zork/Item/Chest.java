@@ -2,6 +2,8 @@ package com.bayviewglen.zork.Item;
 
 public abstract class Chest extends Unmoveables{
 
+	private boolean locked;
+	private boolean key;
 	public Chest() {
 
 	}
@@ -11,9 +13,15 @@ public abstract class Chest extends Unmoveables{
 
 		
 	}
+	public void isLocked(){
+		this.locked = true;
+	}
+	public void setlocked(boolean key){
+		this.locked = key;
+	}
 	
-	public boolean isLocked(){
-		return true;
+	public boolean CheckisLocked(){
+		return locked;
 		
 
 	}
