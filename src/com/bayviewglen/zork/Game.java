@@ -43,7 +43,7 @@ class Game {
 	// Great Room (assuming you have one).
 	private HashMap<String, Room> masterRoomMap;
 
-	int currentLevel = 2;
+	int currentLevel = 1;
 	Food apple = new Food("apple");
 	Tool secondKey = new Tool("second key");
 	
@@ -60,11 +60,9 @@ class Game {
 				String roomName = roomScanner.nextLine();
 				room.setRoomName(roomName.split(":")[1].trim());
 				
-				/*
 				//Read The Locks
 				String roomLock = roomScanner.nextLine();
 				room.setRoomLock(roomName.split(":")[1].trim());
-				*/
 				
 				// Read the Description
 				String roomDescription = roomScanner.nextLine();
@@ -81,8 +79,7 @@ class Game {
 				}
 
 				exits.put(roomName.substring(10).trim().toUpperCase().replaceAll(" ", "_"), temp);
-				
-				/*
+/*
 				//Reads the Items
 				String roomItems = roomScanner.nextLine();
 				room.setRoomItems(roomItems.split(":")[1].trim());
@@ -90,8 +87,8 @@ class Game {
 				//Reads the Enemies
 				String roomEnemies = roomScanner.nextLine();
 				room.setRoomEnemies(roomEnemies.split(":")[1].trim());
-				*/
-
+		
+*/
 				// This puts the room we created (Without the exits in the
 				// masterMap)
 				masterRoomMap.put(roomName.toUpperCase().substring(10).trim().replaceAll(" ", "_"), room);
@@ -127,13 +124,14 @@ class Game {
 		try {
 			if (currentLevel == 1)
 				initRooms("data/levels/level1.dat");
-			else if (currentLevel == 2)
+			/*else if (currentLevel == 2)
 				initRooms("data/levels/level2.dat");
 			else if (currentLevel == 3)
 				initRooms("data/levels/level3.dat");
 			else if (currentLevel == 4)
-				initRooms("data/levels/level4.dat");
-			currentRoom = masterRoomMap.get("LEVEL_ENTRANCE");
+				initRooms("data/levels/level4.dat");*/
+			currentRoom = masterRoomMap.get("ROOM_1");
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -165,7 +163,6 @@ class Game {
 	public void play() throws InterruptedException {
 		//printWelcome();
 		System.out.println(currentRoom.longDescription());
-		level1();
 		//printLevel2();
 		
 		// Enter the main command loop. Here we repeatedly read commands and
