@@ -6,8 +6,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
 
+import com.bayviewglen.zork.Inventory.Inventory;
 import com.bayviewglen.zork.Item.Food;
-import com.bayviewglen.zork.Item.Inventory;
 import com.bayviewglen.zork.Item.Item;
 import com.bayviewglen.zork.Item.Tool;
 
