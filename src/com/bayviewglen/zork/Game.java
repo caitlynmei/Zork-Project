@@ -9,6 +9,7 @@ import java.util.Scanner;
 import com.bayviewglen.zork.Item.Food;
 import com.bayviewglen.zork.Item.Inventory;
 import com.bayviewglen.zork.Item.Item;
+import com.bayviewglen.zork.Item.Tool;
 
 /**
  * Class Game - the main class of the "Zork" game.
@@ -41,7 +42,9 @@ class Game {
 	// Great Room (assuming you have one).
 	private HashMap<String, Room> masterRoomMap;
 
+	int currentLevel = 2;
 	Food apple = new Food("apple");
+	Tool secondKey = new Tool("second key");
 	
 	private void initRooms(String fileName) throws Exception {
 		masterRoomMap = new HashMap<String, Room>();
@@ -104,7 +107,6 @@ class Game {
 	 * Create the game and initialize its internal map.
 	 */
 	public Game() { // I got the levels thing, I'll finish it later - CM
-		int currentLevel = 1;
 		try {
 			if (currentLevel == 1)
 				initRooms("data/levels/level1.dat");
@@ -146,7 +148,8 @@ class Game {
 	public void play() throws InterruptedException {
 		//printWelcome();
 		System.out.println(currentRoom.longDescription());
-
+		printLevel2();
+		
 		// Enter the main command loop. Here we repeatedly read commands and
 		// execute them until the game is over.
 
@@ -191,7 +194,7 @@ class Game {
 		System.out.println("\n\n");
 	}
 
-	public boolean printLevel2(){
+	public boolean printLevel2() throws InterruptedException{
 		boolean level2Over = false;
 		
 		System.out.println("You wake up lying on your back in pitch dark. You can hear the sound of waves crashing\n" 
@@ -201,20 +204,23 @@ class Game {
 		System.out.println("Ahhhhhhhhhh....... You fall into a deep dark hole and die...");
 		System.out.println("Only joking! But you do fall into a hole and submerge into water.\n*SPLASH*");
 		
-		//if (){
+		/*if (){
 			System.out.println("But something happened. The last time he saw you, he was really scared. He had "
 					+ "to do something that would be extraordinarily dangerous. And he warned you, what were his "
 					+ "last words? Something about staying away from him... ");
+			thread.sleep(5000);
 			System.out.println("You blink again, and the flashback is gone. You look in the mirror, and you see "
 					+ "yourself looking fresh and healthy, like someone who didn't just almost die in the deep sea. "
 					+ "There is also the faint outline of a silver key glowing in your jeans pocket. You look down"
 					+ " at yourself. Shocked, you realize you are no longer a walking zombie. You reach into your "
 					+ "pocket and pull out a silver key. Two keys down! It is added into your inventory.");
+			Inventory.add(secondKey);
 			System.out.println("A swirl of light glows around you and you blank out...");
 			System.out.println();
 			System.out.println("END OF LEVEL 2: EXIT THE SEA WORLD");
+			currentLevel++;
 			level2Over = true;
-		//}
+		}*/
 		
 		return (level2Over == true);
 	}
@@ -274,6 +280,8 @@ class Game {
 		// Other command actions
 		else if (commandWord.equalsIgnoreCase("eat") || commandWord.equalsIgnoreCase("drink"))
 			System.out.println("Do you really think you should be having a meal at a time like this?");
+		else if (commandWord.equalsIgnoreCase("read"))
+			checkReadableItem(command);
 		else if (commandWord.equalsIgnoreCase("hi"))
 			System.out.println("Hi back! What's up?");
 		
@@ -294,6 +302,61 @@ class Game {
 								// this -CM
 		}
 		return false;
+	}
+
+	// method reads an item
+	private void checkReadableItem(Command command) {
+		// if there is no second word, we don't know where to go...
+		if (!command.hasSecondWord()) {
+			System.out.println("Read what? (*Hint: item)");
+			return;
+		}
+		
+		boolean readable = true;
+		
+		String secondWord = command.getSecondWord();
+		String thirdWord = command.getThirdWord();
+		String fourthWord = command.getFourthWord();
+		//String item = "";
+		
+		// making player more specific about which items they want to read
+		if (secondWord.equalsIgnoreCase("item")){
+			System.out.println("You're going to have to be way more specific. What is the item called?");
+		} else if (secondWord.equalsIgnoreCase("note"))
+			System.out.println("Please be more specific. Which note? What is it called?");
+		else if (secondWord.equalsIgnoreCase("sign"))
+			System.out.println("Please be more specific. Which sign? What is it called?");
+		else {
+			if (currentLevel == 1){
+				// list stuff in here
+				System.out.println("That is not an item with legible words on it.");
+			} else if (currentLevel == 2){
+				if (secondWord.equalsIgnoreCase("intro") && thirdWord.equalsIgnoreCase("sign")){
+					System.out.println("\nINTRO SIGN");
+					System.out.println("BEWARE: SHARK!!!\nJust stay inside the \'Kelp Forest\' to the east. ");
+				} else if (secondWord.equalsIgnoreCase("abyss") && thirdWord.equalsIgnoreCase("sign")){
+					System.out.println("\nABYSS SIGN\nGood job once more! Follow the path of the glow in the dark road.");
+					System.out.println("\'E\'\nHmmmm.... interesting, another letter.");
+				} else if (secondWord.equalsIgnoreCase("midnight") && thirdWord.equalsIgnoreCase("zone") && fourthWord.equalsIgnoreCase("note")){
+					System.out.println("\nMIDNIGHT ZONE NOTE");
+					System.out.println("Good luck making if so far. If you still can't remember much right now, here's a clue."); 
+					System.out.println("//rhyme of whatever we want the guy to remember...");
+					System.out.println(".\n.\n.\n.");
+					System.out.println("And there's also an \'H\'. Hmmm...");
+				} else {
+					System.out.println("That is not an item with legible words on it.");
+				}
+			} else if (currentLevel == 3){
+				// list stuff in here
+				System.out.println("That is not an item with legible words on it.");
+			} else if (currentLevel == 4){
+				// list stuff in here
+				System.out.println("That is not an item with legible words on it.");
+			} else {
+				System.out.println("That is not an item with legible words on it.");
+			}
+		}
+	
 	}
 
 	/* method prints inventory -CM
