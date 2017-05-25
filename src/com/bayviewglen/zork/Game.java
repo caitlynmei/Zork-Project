@@ -116,7 +116,7 @@ class Game {
 				initRooms("data/levels/level3.dat");
 			else if (currentLevel == 4)
 				initRooms("data/levels/level4.dat");
-			currentRoom = masterRoomMap.get("LEVEL_ENTRANCE");
+			currentRoom = masterRoomMap.get("ROOM_1");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -164,7 +164,7 @@ class Game {
 	/**
 	 * Print out the opening message for the player.
 	 */
-
+//Introductin to Game
 	private void printWelcome() throws InterruptedException {
 
 		System.out.println();
@@ -194,6 +194,9 @@ class Game {
 		System.out.println("\n\n");
 	}
 
+
+	
+	
 	public boolean printLevel2() throws InterruptedException{
 		boolean level2Over = false;
 		
