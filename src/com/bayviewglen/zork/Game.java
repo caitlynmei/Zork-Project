@@ -59,6 +59,10 @@ class Game {
 				String roomName = roomScanner.nextLine();
 				room.setRoomName(roomName.split(":")[1].trim());
 				
+				//Read The Locks
+				String roomLock = roomScanner.nextLine();
+				room.setRoomLock(roomName.split(":")[1].trim());
+				
 				// Read the Description
 				String roomDescription = roomScanner.nextLine();
 				room.setDescription(roomDescription.split(":")[1].replaceAll("<br>", "\n").trim());
@@ -74,6 +78,15 @@ class Game {
 				}
 
 				exits.put(roomName.substring(10).trim().toUpperCase().replaceAll(" ", "_"), temp);
+				
+				//Reads the Items
+				String roomItems = roomScanner.nextLine();
+				room.setRoomItems(roomItems.split(":")[1].trim());
+				
+				//Reads the Enemies
+				String roomEnemies = roomScanner.nextLine();
+				room.setRoomEnemies(roomEnemies.split(":")[1].trim());
+				
 
 				// This puts the room we created (Without the exits in the
 				// masterMap)
@@ -148,7 +161,8 @@ class Game {
 	public void play() throws InterruptedException {
 		//printWelcome();
 		System.out.println(currentRoom.longDescription());
-		printLevel2();
+		level1();
+		//printLevel2();
 		
 		// Enter the main command loop. Here we repeatedly read commands and
 		// execute them until the game is over.
@@ -164,7 +178,7 @@ class Game {
 	/**
 	 * Print out the opening message for the player.
 	 */
-
+//Introductin to Game
 	private void printWelcome() throws InterruptedException {
 
 		System.out.println();
@@ -188,10 +202,18 @@ class Game {
 				+ "\n your name is.");
 		System.out.println("A dark figure approaches the cage shown by the back light of the night sky.");
 		thread.sleep(8000); 
-		Dialogue.level0(); 
+		DialogueLevel0.beginningOfGame(); 
 		System.out.println();
 		loading();
 		System.out.println("\n\n");
+	}
+
+	//JT Level 1 
+	public boolean level1() throws InterruptedException{
+		boolean level1Over = true; 
+		DialogueLevel1.level1Intro();
+		DialogueLevel1.level1end();
+		return (level1Over == true);
 	}
 
 	public boolean printLevel2() throws InterruptedException{
