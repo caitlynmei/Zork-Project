@@ -2,7 +2,10 @@ package com.bayviewglen.zork.Item;
 
 public class Lighting extends Tool implements Item {
 
-	public Lighting() {
+	
+
+	public Lighting(String name) {
+		super(name);
 		// TODO Auto-generated constructor stub
 	}
 

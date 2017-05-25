@@ -1,6 +1,8 @@
-package com.bayviewglen.zork.Item;
+package com.bayviewglen.zork.Inventory;
 
 import java.util.ArrayList;
+
+import com.bayviewglen.zork.Item.Item;
 
 public class Inventory {
 	//this is assuming the items inputed are actual items
