@@ -116,7 +116,7 @@ class Game {
 				initRooms("data/levels/level3.dat");
 			else if (currentLevel == 4)
 				initRooms("data/levels/level4.dat");
-			currentRoom = masterRoomMap.get("ROOM_1");
+			currentRoom = masterRoomMap.get("LEVEL_ENTRANCE");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
