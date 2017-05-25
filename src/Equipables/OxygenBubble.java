@@ -1,6 +1,4 @@
-package com.bayviewglen.zork.Item;
-
-import Equipables.Equipables;
+package Equipables;
 
 public class OxygenBubble extends Equipables{
 
