@@ -59,6 +59,10 @@ class Game {
 				String roomName = roomScanner.nextLine();
 				room.setRoomName(roomName.split(":")[1].trim());
 				
+				//Read The Locks
+				String roomLock = roomScanner.nextLine();
+				room.setRoomLock(roomName.split(":")[1].trim());
+				
 				// Read the Description
 				String roomDescription = roomScanner.nextLine();
 				room.setDescription(roomDescription.split(":")[1].replaceAll("<br>", "\n").trim());
@@ -74,6 +78,15 @@ class Game {
 				}
 
 				exits.put(roomName.substring(10).trim().toUpperCase().replaceAll(" ", "_"), temp);
+				
+				//Reads the Items
+				String roomItems = roomScanner.nextLine();
+				room.setRoomItems(roomItems.split(":")[1].trim());
+				
+				//Reads the Enemies
+				String roomEnemies = roomScanner.nextLine();
+				room.setRoomEnemies(roomEnemies.split(":")[1].trim());
+				
 
 				// This puts the room we created (Without the exits in the
 				// masterMap)
