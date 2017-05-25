@@ -42,7 +42,7 @@ class Game {
 	// Great Room (assuming you have one).
 	private HashMap<String, Room> masterRoomMap;
 
-	int currentLevel = 1;
+	int currentLevel = 2;
 	Food apple = new Food("apple");
 	Tool secondKey = new Tool("second key");
 	
@@ -204,7 +204,7 @@ class Game {
 		System.out.println("Ahhhhhhhhhh....... You fall into a deep dark hole and die...");
 		System.out.println("Only joking! But you do fall into a hole and submerge into water.\n*SPLASH*");
 		
-		//if (){
+		/*if (){
 			System.out.println("But something happened. The last time he saw you, he was really scared. He had "
 					+ "to do something that would be extraordinarily dangerous. And he warned you, what were his "
 					+ "last words? Something about staying away from him... ");
@@ -220,7 +220,7 @@ class Game {
 			System.out.println("END OF LEVEL 2: EXIT THE SEA WORLD");
 			currentLevel++;
 			level2Over = true;
-		//}
+		}*/
 		
 		return (level2Over == true);
 	}
@@ -317,11 +317,18 @@ class Game {
 		String fourthWord = command.getFourthWord();
 		String item = "";
 		
+		// making player more specific about which items
+		if (secondWord.equalsIgnoreCase("note")){
+			System.out.println("\nPlease be more specific. Which note? What is it called?");
+		} else if (secondWord.equalsIgnoreCase("sign")){
+			System.out.println("\nPlease be more specific. Which sign? What is it called?");
+		}
+		
 		if (currentLevel == 1){
 			// list stuff in here
 		} else if (currentLevel == 2){
 			if (secondWord.equalsIgnoreCase("intro") && thirdWord.equalsIgnoreCase("sign")){
-				System.out.println("\nIntro Sign");
+				System.out.println("\nINTRO SIGN");
 				System.out.println("BEWARE: SHARK!!!\nJust stay inside the \'Kelp Forest\' to the east. ");
 			} else if (secondWord.equalsIgnoreCase("abyss") && thirdWord.equalsIgnoreCase("sign")){
 				System.out.println("\nABYSS SIGN\nGood job once more! Follow the path of the glow in the dark road.");
@@ -339,6 +346,7 @@ class Game {
 			// list stuff in here
 		} else {
 			System.out.println("That is not an item with legible words on it.");
+			return;
 		}
 		
 		

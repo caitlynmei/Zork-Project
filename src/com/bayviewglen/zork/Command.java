@@ -61,7 +61,7 @@ class Command {
 	 * command was not understood, the result is returned as null.
 	 */
 	public String getCommandWord() {
-		return commandWord.toLowerCase();
+		return commandWord;
 	}
 
 	/*
@@ -69,13 +69,13 @@ class Command {
 	 * second word.
 	 */
 	public String getSecondWord() {
-		return secondWord.toLowerCase();
+		return secondWord;
 	}
 
 	// @return the third word of this command. Returns null if there was no
 	// third word.
 	public String getThirdWord() {
-		return thirdWord.toLowerCase();
+		return thirdWord;
 	}
 
 	/*
@@ -83,13 +83,13 @@ class Command {
 	 * second word.
 	 */
 	public String getFourthWord() {
-		return fourthWord.toLowerCase();
+		return fourthWord;
 	}
 	
 	// @return the fifth word of this command. Returns null if there was no
 	// second word
 	public String getFifthWord() {
-		return fifthWord.toLowerCase();
+		return fifthWord;
 	}
 	
 	
