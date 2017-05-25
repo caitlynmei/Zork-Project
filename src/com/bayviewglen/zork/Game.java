@@ -317,9 +317,9 @@ class Game {
 		String secondWord = command.getSecondWord();
 		String thirdWord = command.getThirdWord();
 		String fourthWord = command.getFourthWord();
-		String item = "";
+		//String item = "";
 		
-		// making player more specific about which items
+		// making player more specific about which items they want to read
 		if (secondWord.equalsIgnoreCase("item")){
 			System.out.println("You're going to have to be way more specific. What is the item called?");
 		} else if (secondWord.equalsIgnoreCase("note"))
@@ -327,6 +327,37 @@ class Game {
 		else if (secondWord.equalsIgnoreCase("sign"))
 			System.out.println("Please be more specific. Which sign? What is it called?");
 		else {
+			if (currentLevel == 1){
+				// list stuff in here
+				System.out.println("That is not an item with legible words on it.");
+			} else if (currentLevel == 2){
+				if (secondWord.equalsIgnoreCase("intro") && thirdWord.equalsIgnoreCase("sign")){
+					System.out.println("\nINTRO SIGN");
+					System.out.println("BEWARE: SHARK!!!\nJust stay inside the \'Kelp Forest\' to the east. ");
+				} else if (secondWord.equalsIgnoreCase("abyss") && thirdWord.equalsIgnoreCase("sign")){
+					System.out.println("\nABYSS SIGN\nGood job once more! Follow the path of the glow in the dark road.");
+					System.out.println("\'E\'\nHmmmm.... interesting, another letter.");
+				} else if (secondWord.equalsIgnoreCase("midnight") && thirdWord.equalsIgnoreCase("zone") && fourthWord.equalsIgnoreCase("note")){
+					System.out.println("\nMIDNIGHT ZONE NOTE");
+					System.out.println("Good luck making if so far. If you still can't remember much right now, here's a clue."); 
+					System.out.println("//rhyme of whatever we want the guy to remember...");
+					System.out.println(".\n.\n.\n.");
+					System.out.println("And there's also an \'H\'. Hmmm...");
+				} else {
+					System.out.println("That is not an item with legible words on it.");
+				}
+			} else if (currentLevel == 3){
+				// list stuff in here
+				System.out.println("That is not an item with legible words on it.");
+			} else if (currentLevel == 4){
+				// list stuff in here
+				System.out.println("That is not an item with legible words on it.");
+			} else {
+				System.out.println("That is not an item with legible words on it.");
+			}
+		}
+			
+			/*
 			System.out.println("That is not an item that has words on it.");
 			readable = false;
 		}
@@ -334,9 +365,9 @@ class Game {
 		if (readable){
 			readItem(command, secondWord, thirdWord, fourthWord);
 		}
-		
+		*/
 	}
-	
+	/*
 	private void readItem(Command command, String secondWord, String thirdWord, String fourthWord){
 		if (currentLevel == 1){
 			// list stuff in here
@@ -362,7 +393,7 @@ class Game {
 			System.out.println("That is not an item with legible words on it.");
 		}	
 	}
-
+*/
 	/* method prints inventory -CM
 	private void printInventory(Command command) {
 		System.out.println("You have: ");
