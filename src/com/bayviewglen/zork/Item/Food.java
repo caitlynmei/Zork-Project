@@ -33,6 +33,12 @@ public class Food implements Item {
 		return false;
 	}
 
+	@Override
+	public String itemType() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 	
 	
 }

@@ -12,6 +12,7 @@ public interface Item {
 	
 	public boolean equals(Item item);		// comparing items
 	
+	public String itemType();
 
 	
 	

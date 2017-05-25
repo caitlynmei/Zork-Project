@@ -1,11 +1,13 @@
-package com.bayviewglen.zork.Item;
+package Tools;
+
+import com.bayviewglen.zork.Item.Item;
 
 public class Tool implements Item{
 			
 	private String name;
 	
-	public Tool(String name){
-		super();
+	public Tool(String myName){
+		name = myName;
 		
 	}
 	
@@ -23,7 +25,7 @@ public class Tool implements Item{
 	@Override
 	public String getName() {
 		// TODO Auto-generated method stub
-		return null;
+		return name;
 	}
 
 
@@ -32,6 +34,13 @@ public class Tool implements Item{
 	public String getDescription() {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+
+
+	@Override
+	public String itemType() {
+		return "Tool";
 	}
 
 
