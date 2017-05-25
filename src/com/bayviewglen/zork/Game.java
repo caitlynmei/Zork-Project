@@ -148,7 +148,8 @@ class Game {
 	public void play() throws InterruptedException {
 		//printWelcome();
 		System.out.println(currentRoom.longDescription());
-		printLevel2();
+		level1();
+		//printLevel2();
 		
 		// Enter the main command loop. Here we repeatedly read commands and
 		// execute them until the game is over.
@@ -194,8 +195,13 @@ class Game {
 		System.out.println("\n\n");
 	}
 
+	//JT Level 1 
+	public boolean level1() throws InterruptedException{
+		boolean level1Over = true; 
+		Dialogue.level1end();
+		return (level1Over == true);
+	}
 
-	
 	
 	public boolean printLevel2() throws InterruptedException{
 		boolean level2Over = false;

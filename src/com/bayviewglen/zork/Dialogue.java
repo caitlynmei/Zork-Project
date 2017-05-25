@@ -6,10 +6,23 @@ public class Dialogue {
 	
 	static Scanner keyboard = new Scanner(System.in);
 	
-	static Thread thread = new Thread();
-
-	// methods for each level... 
+	static Thread thread = new Thread(); 
 	
+	//LEVEL 1 DIALOGUE
+	//Level 1 Introduction
+	public static void level1Intro() throws InterruptedException{
+	System.out.println("You wake up on a fluffy surface. You look around to see blue skies and the bright sun in the Morning sky.");
+	thread.sleep(5000);
+	System.out.println("Squinting, you look around to see a ground of white fluff which seems to resemble the clouds you are used to seeing above your head.");
+	thread.sleep(5000);
+	System.out.println("You try to remember how you got here, but only remember the scary figure that greeted you from outside the cage you were trapped in.");
+	thread.sleep(5000);
+	}
+	//When you come across Jack
+	public static void level1JackDialogue() throws InterruptedException{
+		
+	}
+	//Level 1 Outro
 	public static void level1end() throws InterruptedException{ //to be called after completing level 1
 		thread.sleep(1500);
 		System.out.println("The clouds around you start to disappear one by one.");
@@ -80,12 +93,8 @@ public class Dialogue {
 		System.out.println("\"Wait!\" you call.");
 		thread.sleep(2000);
 		System.out.println("\nEverything fades to black");
-		}
-
-	
-		
+		}	
 	}
-	
 	
 	public static void level0() throws InterruptedException{
 
