@@ -59,9 +59,11 @@ class Game {
 				String roomName = roomScanner.nextLine();
 				room.setRoomName(roomName.split(":")[1].trim());
 				
+				/*
 				//Read The Locks
 				String roomLock = roomScanner.nextLine();
 				room.setRoomLock(roomName.split(":")[1].trim());
+				*/
 				
 				// Read the Description
 				String roomDescription = roomScanner.nextLine();
@@ -79,6 +81,7 @@ class Game {
 
 				exits.put(roomName.substring(10).trim().toUpperCase().replaceAll(" ", "_"), temp);
 				
+				/*
 				//Reads the Items
 				String roomItems = roomScanner.nextLine();
 				room.setRoomItems(roomItems.split(":")[1].trim());
@@ -86,7 +89,7 @@ class Game {
 				//Reads the Enemies
 				String roomEnemies = roomScanner.nextLine();
 				room.setRoomEnemies(roomEnemies.split(":")[1].trim());
-				
+				*/
 
 				// This puts the room we created (Without the exits in the
 				// masterMap)
@@ -222,6 +225,7 @@ class Game {
 		System.out.println("You wake up lying on your back in pitch dark. You can hear the sound of waves crashing\n" 
 				+ "against cave walls.");
 		System.out.println("You stand up cautiously.");
+		thread.sleep(5000);
 		// user has to move eventually, so any move will make you fall into a hole...
 		System.out.println("Ahhhhhhhhhh....... You fall into a deep dark hole and die...");
 		System.out.println("Only joking! But you do fall into a hole and submerge into water.\n*SPLASH*");
@@ -334,12 +338,9 @@ class Game {
 			return;
 		}
 		
-		boolean readable = true;
-		
 		String secondWord = command.getSecondWord();
 		String thirdWord = command.getThirdWord();
 		String fourthWord = command.getFourthWord();
-		//String item = "";
 		
 		// making player more specific about which items they want to read - CM
 		if (secondWord.equalsIgnoreCase("item")){
