@@ -281,7 +281,7 @@ class Game {
 		else if (commandWord.equalsIgnoreCase("eat") || commandWord.equalsIgnoreCase("drink"))
 			System.out.println("Do you really think you should be having a meal at a time like this?");
 		else if (commandWord.equalsIgnoreCase("read"))
-			readItem(command);
+			checkReadableItem(command);
 		else if (commandWord.equalsIgnoreCase("hi"))
 			System.out.println("Hi back! What's up?");
 		
@@ -305,12 +305,14 @@ class Game {
 	}
 
 	// method reads an item
-	private void readItem(Command command) {
+	private void checkReadableItem(Command command) {
 		// if there is no second word, we don't know where to go...
 		if (!command.hasSecondWord()) {
 			System.out.println("Read what? (*Hint: item)");
 			return;
 		}
+		
+		boolean readable = true;
 		
 		String secondWord = command.getSecondWord();
 		String thirdWord = command.getThirdWord();
@@ -318,12 +320,24 @@ class Game {
 		String item = "";
 		
 		// making player more specific about which items
-		if (secondWord.equalsIgnoreCase("note")){
-			System.out.println("\nPlease be more specific. Which note? What is it called?");
-		} else if (secondWord.equalsIgnoreCase("sign")){
-			System.out.println("\nPlease be more specific. Which sign? What is it called?");
+		if (secondWord.equalsIgnoreCase("item")){
+			System.out.println("You're going to have to be way more specific. What is the item called?");
+		} else if (secondWord.equalsIgnoreCase("note"))
+			System.out.println("Please be more specific. Which note? What is it called?");
+		else if (secondWord.equalsIgnoreCase("sign"))
+			System.out.println("Please be more specific. Which sign? What is it called?");
+		else {
+			System.out.println("That is not an item that has words on it.");
+			readable = false;
 		}
 		
+		if (readable){
+			readItem(command, secondWord, thirdWord, fourthWord);
+		}
+		
+	}
+	
+	private void readItem(Command command, String secondWord, String thirdWord, String fourthWord){
 		if (currentLevel == 1){
 			// list stuff in here
 		} else if (currentLevel == 2){
@@ -346,11 +360,7 @@ class Game {
 			// list stuff in here
 		} else {
 			System.out.println("That is not an item with legible words on it.");
-			return;
-		}
-		
-		
-		
+		}	
 	}
 
 	/* method prints inventory -CM
