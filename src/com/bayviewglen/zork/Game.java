@@ -270,12 +270,13 @@ class Game {
 	 * @throws InterruptedException 
 	 */
 	private boolean processCommand(Command command) throws InterruptedException {
-		if (command.isUnknown()) {
+		if (command.isUnknown()) {	
 			System.out.println("I don't know what you mean...");
 			return false;
 		}
 
-		String commandWord = command.getCommandWord();
+		String commandWord = command.getWord(0); // changed from command.hasCommand()
+		String secondWord = command.getWord(1);
 		
 		// help commands
 		if (commandWord.equalsIgnoreCase("help"))
@@ -308,7 +309,7 @@ class Game {
 		else if (commandWord.equalsIgnoreCase("eat") || commandWord.equalsIgnoreCase("drink"))
 			System.out.println("Do you really think you should be having a meal at a time like this?");
 		else if (commandWord.equalsIgnoreCase("read"))
-			checkReadableItem(command);
+			readItem(command);
 		else if (commandWord.equalsIgnoreCase("hi"))
 			System.out.println("Hi back! What's up?");
 		
@@ -322,26 +323,26 @@ class Game {
 		}
 		// quit command 
 		else if (commandWord.equalsIgnoreCase("quit")) {
-			if (command.hasSecondWord())
+			if (secondWord == null){
 				System.out.println("Would you like to save your progress?"); // make data file!!
-			else
+			} else {
 				return true; // signal that we want to quit <-- we need to do
-								// this -CM
+			}					// this -CM
 		}
 		return false;
 	}
 
 	// method reads an item
-	private void checkReadableItem(Command command) {
+	private void readItem(Command command) {
 		// if there is no second word, we don't know where to go...
-		if (!command.hasSecondWord()) {
+		if (!command.hasWord(1)) {
 			System.out.println("Read what? (*Hint: item)");
 			return;
 		}
 		
-		String secondWord = command.getSecondWord();
-		String thirdWord = command.getThirdWord();
-		String fourthWord = command.getFourthWord();
+		String secondWord = command.getWord(1);
+		String thirdWord = command.getWord(2);
+		String fourthWord = command.getWord(3);
 		
 		// making player more specific about which items they want to read - CM
 		if (secondWord.equalsIgnoreCase("item")){
@@ -444,14 +445,14 @@ class Game {
 	 */
 	private void goRoom(Command command) {		
 		// if there is no second word, we don't know where to go...
-		if (!command.hasSecondWord()) {
+		if (!command.hasWord(1)) {
 			System.out.println("Go where? (*Hint: direction)");
 			return;
 		}
 		
 		// String direction = command.getSecondWord(); original
 
-		String secondWord = command.getSecondWord();
+		String secondWord = command.getWord(1);
 		String direction = "";
 		if (secondWord.equalsIgnoreCase("north") || secondWord.equalsIgnoreCase("n"))
 			direction = "north";
