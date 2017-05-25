@@ -22,4 +22,9 @@ public class Equipables implements Item {
 		return false;
 	}
 
+	@Override
+	public String itemType() {
+		return "Equipable";
+	}
+
 }

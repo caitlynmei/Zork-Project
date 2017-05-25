@@ -33,5 +33,10 @@ public class SecondKey implements Item{
 			return true;
 		}
 		return false;
+	}
+
+	@Override
+	public String itemType() {
+		return "Key";
 	}	
 }
