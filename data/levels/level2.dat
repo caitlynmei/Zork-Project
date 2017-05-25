@@ -1,90 +1,120 @@
-Room Name: Room 1 
+Room Name: Room 1
+Room lock: 0 
 Room Description: PITCH BLACK CAVE
 Exit Rooms: D-Room 2
 Room Name: Room 2
+Room lock: 0
 Room Description: WATER SURFACE You are fighting for your life to keep your head above the water surface. Thankfully, you know how to swim. You don't see anything above water other then dark gloomy clouds and murky water. There is just water, water, and more water. (*HINT: go under the surface. It's more interesting)
 Exit Rooms: D-Room 3
 Room Name: Room 3
+Room lock: 0
 Room Description: UNDER THE SEA (BELOW WATER SURFACE) 
 Exit Rooms: U-Room 2, D-Room 4
 Room Name: Room 4
+Room lock: 0
 Room Description: CORAL REEF
 Exit Rooms: W-Room 5, E-Room 6
 Room Name: Room 5
+Room lock: 0
 Room Description: GIANT PURPLE CLAM
 Exit Rooms: E-Room 4
 Room Name: Room 6
+Room lock: 0
 Room Description: CORAL REEF CLEARING
 Exit Rooms: W-Room 4, E-Room 7
 Room Name: Room 7
+Room lock: 0
 Room Description: KELP FOREST ENTRANCE
 Exit Rooms: W-Room 6, E-Room 8, N-Room 9, S-Room 10
 Room Name: Room 8
+Room lock: 0
 Room Description: KELP FOREST 
 Exit Rooms: S-Room 7, E-Room 11
 Room Name: Room 9
+Room lock: 0
 Room Description: KELP FOREST 
 Exit Rooms: N-Room 7, E-Room 12
 Room Name: Room 10
+Room lock: 0
 Room Description: KELP FOREST 
 Exit Rooms: W-Room 7, N-Room 11, S-Room 12, E-Room 13
 Room Name: Room 11
+Room lock: 0
 Room Description: KELP FOREST 
 Exit Rooms: W-Room 8, S-Room 10, E-Room 14
 Room Name: Room 12
+Room lock: 0
 Room Description: KELP FOREST 
 Exit Rooms: W-Room 9, N-Room 10, E-Room 15
 Room Name: Room 13
+Room lock: 0
 Room Description: KELP FOREST CLEARING
 Exit Rooms: W-Room 10, N-Room 14, S-Room 15, E-Room 16
 Room Name: Room 14
+Room lock: 0
 Room Description: KELP FOREST 
 Exit Rooms: W-Room 11, S-Room 13, E-Room 17
 Room Name: Room 15
+Room lock: 0
 Room Description: KELP FOREST 
 Exit Rooms: W-Room 12, N-Room 13, E-Room 18
 Room Name: Room 16
+Room lock: 0
 Room Description: KELP FOREST 
 Exit Rooms: W-Room 13, N-Room 17, S-Room 18, E-Room 19
 Room Name: Room 17
+Room lock: 0
 Room Description: KELP FOREST 
 Exit Rooms: W-Room 14, S-Room 16
 Room Name: Room 18
+Room lock: 0
 Room Description: KELP FOREST 
 Exit Rooms: W-Room 15, N-Room 16
 Room Name: Room 19
+Room lock: 0
 Room Description: FAR SIDE OF THE KELP FOREST
 Exit Rooms: W-Room 16, D-Room 20
 Room Name: Room 20
+Room lock: 0
 Room Description: MIDNIGHT ZONE
 Exit Rooms: U-Room 19, D-Room 21
 Room Name: Room 21
+Room lock: 0
 Room Description: MIDNIGHT ZONE
 Exit Rooms: U-Room 20, D-Room 22
 Room Name: Room 22
+Room lock: 0
 Room Description: MIDNIGHT ZONE
 Exit Rooms: U-Room 21, W-Room 23, D-Room 24
 Room Name: Room 23
+Room lock: 0
 Room Description: WALL LEDGE 
 Exit Rooms: E-Room 22, D-Room 25
 Room Name: Room 24
+Room lock: 0
 Room Description: WALL LEDGE 
 Exit Rooms: U-Room 22
 Room Name: Room 25
+Room lock: 0
 Room Description: CURRENT MOVING DOWN
 Exit Rooms: D-Room 26
 Room Name: Room 26
+Room lock: 0
 Room Description: ABYSS FLOOR
 Exit Rooms: E-Room 27
 Room Name: Room 27
+Room lock: 0
 Room Description: ABYSS FLOOR
 Exit Rooms: W-Room 26, E-Room 28
 Room Name: Room 28
+Room lock: 0
 Room Description: ABYSS FLOOR
 Exit Rooms: W-Room 27, E-Room 29
 Room Name: Room 29
+Room lock: 0
 Room Description: ABYSS CAVE ENTRANCE
 Exit Rooms: W-Room 28, E-Room 30
 Room Name: Room 30
+Room lock: 0
 Room Description: INSIDE CAVE
 Exit Rooms: W-Room 29

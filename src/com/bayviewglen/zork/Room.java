@@ -149,28 +149,33 @@ class Room
 	public void setDescription(String description) {
 		this.description = description;
 	}
+	
 	public String getRoomLock(){
 		return roomLock;
 	}
 	public void setRoomLock(String roomLock){
 		this.roomLock = roomLock;
 	}
+	
 	public String getRoomItems(){
 		return roomItems;
 	}
 	public void setRoomItems(String roomItems){
 		this.roomItems = roomItems;
 	}
+	
 	public String getRoomEnemies(){
 		return roomEnemies;
 	}
 	public void setRoomEnemies(String roomEnemies){
 		this.roomEnemies = roomEnemies;
 	}
+	
 	public String getRoomCharacters(){
 		return roomCharacters;
 	}
 	public void setRoomCharacters(String roomCharacters){
 		this.roomCharacters = roomCharacters;
 	}
+	
 }
