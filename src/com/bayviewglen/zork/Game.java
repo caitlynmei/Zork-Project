@@ -202,7 +202,7 @@ class Game {
 				+ "\n your name is.");
 		System.out.println("A dark figure approaches the cage shown by the back light of the night sky.");
 		thread.sleep(8000); 
-		Dialogue.level0(); 
+		DialogueLevel0.beginningOfGame(); 
 		System.out.println();
 		loading();
 		System.out.println("\n\n");
@@ -211,7 +211,8 @@ class Game {
 	//JT Level 1 
 	public boolean level1() throws InterruptedException{
 		boolean level1Over = true; 
-		Dialogue.level1end();
+		DialogueLevel1.level1Intro();
+		DialogueLevel1.level1end();
 		return (level1Over == true);
 	}
 
