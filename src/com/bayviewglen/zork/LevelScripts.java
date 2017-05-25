@@ -3,10 +3,10 @@ package com.bayviewglen.zork;
 public abstract class LevelScripts {
 
 	public static void getScript(Command command, int currentLevel) {
-		String commandWord = command.getCommandWord();
-		String secondWord = command.getSecondWord();
-		String thirdWord = command.getThirdWord();
-		String fourthWord = command.getFourthWord();
+		String commandWord = command.getWord(0);
+		String secondWord = command.getWord(1);
+		String thirdWord = command.getWord(2);
+		String fourthWord = command.getWord(3);
 
 		if (currentLevel == 1) {
 			// list stuff in here
