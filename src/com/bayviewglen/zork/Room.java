@@ -26,11 +26,12 @@ import java.util.Iterator;
 class Room 
 {
 	private String roomName;
-	private String lock;
+	private String roomLock;
     private String description;
     private HashMap<String, Room> exits;        // stores exits of this room.
     private String roomItems;
     private String roomEnemies;
+    private String roomCharacters;
 	private Inventory roomInventory;
 
     /**
@@ -46,7 +47,7 @@ class Room
     public Room() {
 		// default constructor.
     	roomName = "DEFAULT ROOM";
-    	lock = "0";
+    	roomLock = "0";
     	description = "DEFAULT DESCRIPTION";
     	exits = new HashMap<String, Room>();
     	roomItems = "DEFAULT ITEMS";
@@ -147,5 +148,29 @@ class Room
 
 	public void setDescription(String description) {
 		this.description = description;
+	}
+	public String getRoomLock(){
+		return roomLock;
+	}
+	public void setRoomLock(String roomLock){
+		this.roomLock = roomLock;
+	}
+	public String getRoomItems(){
+		return roomItems;
+	}
+	public void setRoomItems(String roomItems){
+		this.roomItems = roomItems;
+	}
+	public String getRoomEnemies(){
+		return roomEnemies;
+	}
+	public void setRoomEnemies(String roomEnemies){
+		this.roomEnemies = roomEnemies;
+	}
+	public String getRoomCharacters(){
+		return roomCharacters;
+	}
+	public void setRoomCharacters(String roomCharacters){
+		this.roomCharacters = roomCharacters;
 	}
 }
