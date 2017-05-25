@@ -4,19 +4,19 @@ Room Description: PITCH BLACK CAVE
 Exit Rooms: D-Room 2
 Room Name: Room 2
 Room lock: 0
-Room Description: WATER SURFACE You are fighting for your life to keep your head above the water surface. Thankfully, you know how to swim. You don't see anything above water other then dark gloomy clouds and murky water. There is just water, water, and more water. (*HINT: go under the surface. It's more interesting)
+Room Description: WATER SURFACE <br> You are fighting for your life to keep your head above the water surface. Thankfully, you know how to swim. <br> You don't see anything above water other then dark gloomy clouds and murky water. There is just water, water, and more water. <br> (*HINT: go under the surface. It's more interesting)
 Exit Rooms: D-Room 3
 Room Name: Room 3
 Room lock: 0
-Room Description: UNDER THE SEA (BELOW WATER SURFACE) 
+Room Description: UNDER THE SEA (BELOW WATER SURFACE) <br> There is a colourful coral reef covering the sea floor. *You can now use the commands up (U) <br> and down (D) alongside the normal compass directions. The water surface is above you, but the <br> dark dullness doesn't seem inviting. The only way left is down. 
 Exit Rooms: U-Room 2, D-Room 4
 Room Name: Room 4
 Room lock: 0
-Room Description: CORAL REEF
+Room Description: CORAL REEF <br> You are now on the sea floor with the exotic reefs. To the east, there is a sign. To the west, there is a trail of bubbles <br> coming from something that looks like a large ... purple ... rock? 
 Exit Rooms: W-Room 5, E-Room 6
 Room Name: Room 5
 Room lock: 0
-Room Description: GIANT PURPLE CLAM
+Room Description: GIANT PURPLE CLAM <br> There is a giant purple clam!! (In case you didn't read the title) You watch the clam breath <br> out a trail of bubbles. The bubbles float upwards on top of the clam.
 Exit Rooms: E-Room 4
 Room Name: Room 6
 Room lock: 0

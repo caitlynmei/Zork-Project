@@ -1,4 +1,6 @@
-package com.bayviewglen.zork.Item;
+package Equipables;
+
+import com.bayviewglen.zork.Item.Item;
 
 public class Equipables implements Item {
 	
@@ -20,6 +22,11 @@ public class Equipables implements Item {
 	public boolean equals(Item item) {
 		// TODO Auto-generated method stub
 		return false;
+	}
+
+	@Override
+	public String itemType() {
+		return "Equipable";
 	}
 
 }

@@ -1,4 +1,6 @@
-package com.bayviewglen.zork.Item;
+package Tools;
+
+import com.bayviewglen.zork.Item.Item;
 
 public class Lighting extends Tool implements Item {
 

@@ -9,7 +9,8 @@ import java.util.Scanner;
 import com.bayviewglen.zork.Inventory.Inventory;
 import com.bayviewglen.zork.Item.Food;
 import com.bayviewglen.zork.Item.Item;
-import com.bayviewglen.zork.Item.Tool;
+
+import Tools.Tool;
 
 /**
  * Class Game - the main class of the "Zork" game.
@@ -59,9 +60,11 @@ class Game {
 				String roomName = roomScanner.nextLine();
 				room.setRoomName(roomName.split(":")[1].trim());
 				
+				/*
 				//Read The Locks
 				String roomLock = roomScanner.nextLine();
 				room.setRoomLock(roomName.split(":")[1].trim());
+				*/
 				
 				// Read the Description
 				String roomDescription = roomScanner.nextLine();
@@ -78,7 +81,7 @@ class Game {
 				}
 
 				exits.put(roomName.substring(10).trim().toUpperCase().replaceAll(" ", "_"), temp);
-			/*
+
 				//Reads the Items
 				String roomItems = roomScanner.nextLine();
 				room.setRoomItems(roomItems.split(":")[1].trim());
@@ -86,7 +89,7 @@ class Game {
 				//Reads the Enemies
 				String roomEnemies = roomScanner.nextLine();
 				room.setRoomEnemies(roomEnemies.split(":")[1].trim());
-				*/
+		
 
 				// This puts the room we created (Without the exits in the
 				// masterMap)
@@ -130,6 +133,7 @@ class Game {
 			else if (currentLevel == 4)
 				initRooms("data/levels/level4.dat");*/
 			currentRoom = masterRoomMap.get("ROOM_1");
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -177,7 +181,7 @@ class Game {
 	/**
 	 * Print out the opening message for the player.
 	 */
-
+//Introductin to Game
 	private void printWelcome() throws InterruptedException {
 
 		System.out.println();
@@ -201,10 +205,18 @@ class Game {
 				+ "\n your name is.");
 		System.out.println("A dark figure approaches the cage shown by the back light of the night sky.");
 		thread.sleep(8000); 
-		Dialogue.level0(); 
+		DialogueLevel0.beginningOfGame(); 
 		System.out.println();
 		loading();
 		System.out.println("\n\n");
+	}
+
+	//JT Level 1 
+	public boolean level1() throws InterruptedException{
+		boolean level1Over = true; 
+		DialogueLevel1.level1Intro();
+		DialogueLevel1.level1end();
+		return (level1Over == true);
 	}
 
 	public boolean printLevel2() throws InterruptedException{
@@ -213,6 +225,7 @@ class Game {
 		System.out.println("You wake up lying on your back in pitch dark. You can hear the sound of waves crashing\n" 
 				+ "against cave walls.");
 		System.out.println("You stand up cautiously.");
+		thread.sleep(5000);
 		// user has to move eventually, so any move will make you fall into a hole...
 		System.out.println("Ahhhhhhhhhh....... You fall into a deep dark hole and die...");
 		System.out.println("Only joking! But you do fall into a hole and submerge into water.\n*SPLASH*");
@@ -325,12 +338,9 @@ class Game {
 			return;
 		}
 		
-		boolean readable = true;
-		
 		String secondWord = command.getSecondWord();
 		String thirdWord = command.getThirdWord();
 		String fourthWord = command.getFourthWord();
-		//String item = "";
 		
 		// making player more specific about which items they want to read - CM
 		if (secondWord.equalsIgnoreCase("item")){
