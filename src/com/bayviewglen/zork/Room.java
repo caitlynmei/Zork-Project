@@ -109,7 +109,7 @@ class Room
     public String longDescription()
     {
     	
-        return "Room: " + roomName +"\n" + description + "\n" + exitString();
+        return "Room: " + roomName +"\n"+roomLock +"\n"+ description + "\n" + exitString() + "\n"+roomItems+"\n"+roomEnemies;
     }
 
     /**
