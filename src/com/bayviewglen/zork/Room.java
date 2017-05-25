@@ -15,6 +15,11 @@ package com.bayviewglen.zork;
  */
 
 import java.util.Set;
+
+import com.bayviewglen.zork.Inventory.Inventory;
+import com.bayviewglen.zork.Item.Item;
+
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 
@@ -26,6 +31,7 @@ class Room
     private HashMap<String, Room> exits;        // stores exits of this room.
     private String roomItems;
     private String roomEnemies;
+	private Inventory roomInventory;
 
     /**
      * Create a room described "description". Initially, it has no exits.
@@ -45,6 +51,7 @@ class Room
     	exits = new HashMap<String, Room>();
     	roomItems = "DEFAULT ITEMS";
     	roomEnemies = "DEFAULT ENEMIES";
+    	roomInventory = new Inventory();
 	}
 
     public void setExit(char direction, Room r) throws Exception{

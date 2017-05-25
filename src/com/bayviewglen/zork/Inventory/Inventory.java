@@ -6,8 +6,12 @@ import com.bayviewglen.zork.Item.Item;
 
 public class Inventory {
 	//this is assuming the items inputed are actual items
-	private static ArrayList<Item> bag = new ArrayList<Item>(); // Mr.D said to change object to item
+	private static ArrayList<Item> bag ; // Mr.D said to change object to item
 		
+	public Inventory(){
+		bag = new ArrayList<Item>();
+	}
+	
 	public Inventory(ArrayList<Item> myBag){
 		bag = myBag;
 	}
