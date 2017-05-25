@@ -2,7 +2,9 @@ package com.bayviewglen.zork.Item;
 
 public class Tool implements Item{
 			
-	public Tool(){
+	private String name;
+	
+	public Tool(String name){
 		super();
 		
 	}
