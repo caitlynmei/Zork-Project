@@ -1,6 +1,9 @@
-Room Name: Level Entrance    
+Room Name: Room 1 
+Room lock:   
 Room Description:  Area of fluffy clouds
 Exit Rooms: N-Room 2, E-Room 3, S-Room 4, W-Room 5
+Room Items:
+Room Enemies:
 Room Name: Room 2
 Room Description:  There is a box .. .. . .and more stuff around you **Temp
 Exit Rooms: S-Room 1,E-Room 7, N-Room 11
