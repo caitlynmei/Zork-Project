@@ -32,11 +32,13 @@ class Parser {
 
 	public Command getCommand() {
 		String inputLine = ""; // will hold the full input line
+		/*
 		String word1;
 		String word2;
 		String word3;
 		String word4;
 		String word5;
+		*/
 		ArrayList <String> words = new ArrayList <String>();
 
 		System.out.print("> "); // print prompt
