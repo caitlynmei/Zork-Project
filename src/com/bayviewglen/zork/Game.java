@@ -319,7 +319,7 @@ class Game {
 		String fourthWord = command.getFourthWord();
 		//String item = "";
 		
-		// making player more specific about which items they want to read
+		// making player more specific about which items they want to read - CM
 		if (secondWord.equalsIgnoreCase("item")){
 			System.out.println("You're going to have to be way more specific. What is the item called?");
 		} else if (secondWord.equalsIgnoreCase("note"))
