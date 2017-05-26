@@ -34,6 +34,8 @@ class Game {
 
 	private Parser parser;
 	private Room currentRoom;
+	//private CommandWords playerInputWords; CM
+	
 	// This is a MASTER object that contains all of the rooms and is easily
 	// accessible.
 	// The key will be the name of the room -> no spaces (Use all caps and
@@ -267,7 +269,7 @@ class Game {
 	 * @throws InterruptedException 
 	 */
 	private boolean processCommand(Command command) throws InterruptedException {
-		if (command.isUnknown()) {	
+		if (command.isUnknown()) {	// doesn't work... -CM
 			System.out.println("I don't know what you mean...");
 			return false;
 		}

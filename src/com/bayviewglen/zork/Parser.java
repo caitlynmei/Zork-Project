@@ -39,6 +39,7 @@ class Parser {
 		String word4;
 		String word5;
 		*/
+		
 		ArrayList <String> words = new ArrayList <String>();
 
 		System.out.print("> "); // print prompt
@@ -103,7 +104,7 @@ class Parser {
 		*/
 		
 		/*
-		 * The following checks for whether this word is an known command in the
+		 * The following checks for whether this word is a known command in the
 		 * game's command vocabulary. If so, create a command with that word. If
 		 * not, create a "nil" command (for unknown command). 
 		 
@@ -113,6 +114,12 @@ class Parser {
 			return new Command(null, word2, word3, word4, word5);
 		}
 		*/
+		
+		/*if (words.isCommand(words.get(0))){
+			return new Command(words);
+		} else {
+			return null;
+		}*/ // CM 5/25
 		
 		return new Command(words);
 		
