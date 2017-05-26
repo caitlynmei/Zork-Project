@@ -36,16 +36,17 @@ class Game {
 	private Room currentRoom;
 	//private CommandWords playerInputWords; CM
 	
-	// This is a MASTER object that contains all of the rooms and is easily
-	// accessible.
-	// The key will be the name of the room -> no spaces (Use all caps and
-	// underscore -> Great Room would have a key of GREAT_ROOM
-	// In a hashmap keys are case sensitive.
-	// masterRoomMap.get("GREAT_ROOM") will return the Room Object that is the
-	// Great Room (assuming you have one).
+	/* This is a MASTER object that contains all of the rooms and is easily
+	 * accessible.
+	 * The key will be the name of the room -> no spaces (Use all caps and
+	 * underscore -> Great Room would have a key of GREAT_ROOM
+	 * In a hashmap keys are case sensitive.
+	 * masterRoomMap.get("GREAT_ROOM") will return the Room Object that is the
+	 * Great Room (assuming you have one).
+	 */
 	private HashMap<String, Room> masterRoomMap;
 
-	int currentLevel = 1;
+	int currentLevel = 2;
 	Food apple = new Food("apple");
 	Tool secondKey = new Tool("second key");
 	
@@ -127,12 +128,12 @@ class Game {
 		try {
 			if (currentLevel == 1)
 				initRooms("data/levels/level1.dat");
-			/*else if (currentLevel == 2)
+			else if (currentLevel == 2)
 				initRooms("data/levels/level2.dat");
 			else if (currentLevel == 3)
 				initRooms("data/levels/level3.dat");
 			else if (currentLevel == 4)
-				initRooms("data/levels/level4.dat");*/
+				initRooms("data/levels/level4.dat");
 			currentRoom = masterRoomMap.get("ROOM_1");
 
 		} catch (Exception e) {
