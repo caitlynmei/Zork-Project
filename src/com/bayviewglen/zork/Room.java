@@ -50,8 +50,8 @@ class Room
     	roomLock = "0";
     	description = "DEFAULT DESCRIPTION";
     	exits = new HashMap<String, Room>();
-    	roomItems = "DEFAULT ITEMS";
-    	roomEnemies = "DEFAULT ENEMIES";
+    	roomItems = "Items";
+    	roomEnemies = "enemies";
     	roomInventory = new Inventory();
 	}
 
@@ -109,7 +109,7 @@ class Room
     public String longDescription()
     {
     	
-        return "Room: " + roomName +"\n"+roomLock +"\n"+ description + "\n" + exitString() + "\n"+roomItems+"\n"+roomEnemies;
+        return "Room: " + roomName +"\n"+roomLock +"\n"+ description + "\n" + exitString() + "\n"+roomItems+"\n"+roomEnemies+"\n";
     }
 
     /**
