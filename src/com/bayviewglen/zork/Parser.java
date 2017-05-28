@@ -18,6 +18,7 @@ package com.bayviewglen.zork;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.StringTokenizer;
@@ -31,11 +32,15 @@ class Parser {
 
 	public Command getCommand() {
 		String inputLine = ""; // will hold the full input line
+		/*
 		String word1;
 		String word2;
 		String word3;
 		String word4;
 		String word5;
+		*/
+		
+		ArrayList <String> words = new ArrayList <String>();
 
 		System.out.print("> "); // print prompt
 
@@ -58,6 +63,15 @@ class Parser {
 		 */
 		StringTokenizer tokenizer = new StringTokenizer(inputLine);
 
+		while (tokenizer.hasMoreTokens()){
+			String temp = tokenizer.nextToken();
+			
+			if(isUseful(temp)){
+				words.add(temp);
+			}
+		}
+		
+		/*
 		if (tokenizer.hasMoreTokens()) {
 			word1 = tokenizer.nextToken(); // get first word
 		} else {
@@ -87,19 +101,38 @@ class Parser {
 		} else {
 			word5 = null;
 		}
-
+		*/
+		
 		/*
-		 * The following checks for whether this word is an known command in the
+		 * The following checks for whether this word is a known command in the
 		 * game's command vocabulary. If so, create a command with that word. If
 		 * not, create a "nil" command (for unknown command). 
-		 */
+		 
 		if (commands.isCommand(word1)){
 			return new Command(word1, word2, word3, word4, word5);
 		} else {
 			return new Command(null, word2, word3, word4, word5);
 		}
+		*/
+		
+		/*if (words.isCommand(words.get(0))){
+			return new Command(words);
+		} else {
+			return null;
+		}*/ // CM 5/25
+		
+		return new Command(words);
+		
 	}
 
+	
+	public boolean isUseful(String word){
+		if (word != null){
+			return true;
+		}
+		return false;
+	}
+	
 	// Set: use contains() method, like a list but can't have duplicates
 	// however, we might not actually need this... - CM
 	public void uselessWords() {

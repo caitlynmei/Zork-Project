@@ -34,13 +34,16 @@ class Game {
 
 	private Parser parser;
 	private Room currentRoom;
-	// This is a MASTER object that contains all of the rooms and is easily
-	// accessible.
-	// The key will be the name of the room -> no spaces (Use all caps and
-	// underscore -> Great Room would have a key of GREAT_ROOM
-	// In a hashmap keys are case sensitive.
-	// masterRoomMap.get("GREAT_ROOM") will return the Room Object that is the
-	// Great Room (assuming you have one).
+	//private CommandWords playerInputWords; CM
+	
+	/* This is a MASTER object that contains all of the rooms and is easily
+	 * accessible.
+	 * The key will be the name of the room -> no spaces (Use all caps and
+	 * underscore -> Great Room would have a key of GREAT_ROOM
+	 * In a hashmap keys are case sensitive.
+	 * masterRoomMap.get("GREAT_ROOM") will return the Room Object that is the
+	 * Great Room (assuming you have one).
+	 */
 	private HashMap<String, Room> masterRoomMap;
 
 	int currentLevel = 2;
@@ -60,11 +63,9 @@ class Game {
 				String roomName = roomScanner.nextLine();
 				room.setRoomName(roomName.split(":")[1].trim());
 				
-				/*
 				//Read The Locks
 				String roomLock = roomScanner.nextLine();
-				room.setRoomLock(roomName.split(":")[1].trim());
-				*/
+				room.setRoomLock(roomLock.split(":")[1].trim());
 				
 				// Read the Description
 				String roomDescription = roomScanner.nextLine();
@@ -81,17 +82,17 @@ class Game {
 				}
 
 				exits.put(roomName.substring(10).trim().toUpperCase().replaceAll(" ", "_"), temp);
-				
-				/*
+/*
 				//Reads the Items
 				String roomItems = roomScanner.nextLine();
 				room.setRoomItems(roomItems.split(":")[1].trim());
 				
+				
 				//Reads the Enemies
 				String roomEnemies = roomScanner.nextLine();
 				room.setRoomEnemies(roomEnemies.split(":")[1].trim());
-				*/
-
+		
+*/
 				// This puts the room we created (Without the exits in the
 				// masterMap)
 				masterRoomMap.put(roomName.toUpperCase().substring(10).trim().replaceAll(" ", "_"), room);
@@ -133,7 +134,8 @@ class Game {
 				initRooms("data/levels/level3.dat");
 			else if (currentLevel == 4)
 				initRooms("data/levels/level4.dat");
-			currentRoom = masterRoomMap.get("LEVEL_ENTRANCE");
+			currentRoom = masterRoomMap.get("ROOM_1");
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -165,7 +167,6 @@ class Game {
 	public void play() throws InterruptedException {
 		//printWelcome();
 		System.out.println(currentRoom.longDescription());
-		level1();
 		//printLevel2();
 		
 		// Enter the main command loop. Here we repeatedly read commands and
@@ -270,12 +271,13 @@ class Game {
 	 * @throws InterruptedException 
 	 */
 	private boolean processCommand(Command command) throws InterruptedException {
-		if (command.isUnknown()) {
+		if (command.isUnknown()) {	// doesn't work... -CM
 			System.out.println("I don't know what you mean...");
 			return false;
 		}
 
-		String commandWord = command.getCommandWord();
+		String commandWord = command.getWord(0); // changed from command.hasCommand()
+		String secondWord = command.getWord(1);
 		
 		// help commands
 		if (commandWord.equalsIgnoreCase("help"))
@@ -308,7 +310,7 @@ class Game {
 		else if (commandWord.equalsIgnoreCase("eat") || commandWord.equalsIgnoreCase("drink"))
 			System.out.println("Do you really think you should be having a meal at a time like this?");
 		else if (commandWord.equalsIgnoreCase("read"))
-			checkReadableItem(command);
+			readItem(command);
 		else if (commandWord.equalsIgnoreCase("hi"))
 			System.out.println("Hi back! What's up?");
 		
@@ -322,26 +324,26 @@ class Game {
 		}
 		// quit command 
 		else if (commandWord.equalsIgnoreCase("quit")) {
-			if (command.hasSecondWord())
+			if (secondWord == null){
 				System.out.println("Would you like to save your progress?"); // make data file!!
-			else
+			} else {
 				return true; // signal that we want to quit <-- we need to do
-								// this -CM
+			}					// this -CM
 		}
 		return false;
 	}
 
 	// method reads an item
-	private void checkReadableItem(Command command) {
+	private void readItem(Command command) {
 		// if there is no second word, we don't know where to go...
-		if (!command.hasSecondWord()) {
+		if (!command.hasWord(1)) {
 			System.out.println("Read what? (*Hint: item)");
 			return;
 		}
 		
-		String secondWord = command.getSecondWord();
-		String thirdWord = command.getThirdWord();
-		String fourthWord = command.getFourthWord();
+		String secondWord = command.getWord(1);
+		String thirdWord = command.getWord(2);
+		String fourthWord = command.getWord(3);
 		
 		// making player more specific about which items they want to read - CM
 		if (secondWord.equalsIgnoreCase("item")){
@@ -444,14 +446,14 @@ class Game {
 	 */
 	private void goRoom(Command command) {		
 		// if there is no second word, we don't know where to go...
-		if (!command.hasSecondWord()) {
+		if (!command.hasWord(1)) {
 			System.out.println("Go where? (*Hint: direction)");
 			return;
 		}
 		
 		// String direction = command.getSecondWord(); original
 
-		String secondWord = command.getSecondWord();
+		String secondWord = command.getWord(1);
 		String direction = "";
 		if (secondWord.equalsIgnoreCase("north") || secondWord.equalsIgnoreCase("n"))
 			direction = "north";
