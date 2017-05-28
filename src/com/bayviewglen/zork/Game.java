@@ -49,7 +49,7 @@ class Game {
 
 	int currentLevel = 2;
 	Food apple = new Food("apple");
-	Key secondKey = new Key("Sea Key");
+	Tool secondKey = new Tool("Sea Key");
 	
 	private void initRooms(String fileName) throws Exception {
 		masterRoomMap = new HashMap<String, Room>();
