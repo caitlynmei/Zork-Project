@@ -10,6 +10,7 @@ import com.bayviewglen.zork.Inventory.Inventory;
 import com.bayviewglen.zork.Item.Food;
 import com.bayviewglen.zork.Item.Item;
 
+import Tools.Key;
 import Tools.Tool;
 
 /**
@@ -48,7 +49,7 @@ class Game {
 
 	int currentLevel = 2;
 	Food apple = new Food("apple");
-	Tool secondKey = new Tool("second key");
+	Key secondKey = new Key("Sea Key");
 	
 	private void initRooms(String fileName) throws Exception {
 		masterRoomMap = new HashMap<String, Room>();
@@ -224,32 +225,17 @@ class Game {
 
 	public boolean printLevel2() throws InterruptedException{
 		boolean level2Over = false;
-		
-		System.out.println("You wake up lying on your back in pitch dark. You can hear the sound of waves crashing\n" 
-				+ "against cave walls.");
-		System.out.println("You stand up cautiously.");
-		thread.sleep(5000);
-		// user has to move eventually, so any move will make you fall into a hole...
-		System.out.println("Ahhhhhhhhhh....... You fall into a deep dark hole and die...");
-		System.out.println("Only joking! But you do fall into a hole and submerge into water.\n*SPLASH*");
-		
+		DialogueLevel2.level2Intro();
+		DialogueLevel2.level2Ending(currentLevel);
 		/*if (){
-			System.out.println("But something happened. The last time he saw you, he was really scared. He had "
-					+ "to do something that would be extraordinarily dangerous. And he warned you, what were his "
-					+ "last words? Something about staying away from him... ");
-			thread.sleep(5000);
-			System.out.println("You blink again, and the flashback is gone. You look in the mirror, and you see "
-					+ "yourself looking fresh and healthy, like someone who didn't just almost die in the deep sea. "
-					+ "There is also the faint outline of a silver key glowing in your jeans pocket. You look down"
-					+ " at yourself. Shocked, you realize you are no longer a walking zombie. You reach into your "
-					+ "pocket and pull out a silver key. Two keys down! It is added into your inventory.");
 			Inventory.add(secondKey);
 			System.out.println("A swirl of light glows around you and you blank out...");
 			System.out.println();
 			System.out.println("END OF LEVEL 2: EXIT THE SEA WORLD");
 			currentLevel++;
 			level2Over = true;
-		}*/
+		}
+		*/
 		
 		return (level2Over == true);
 	}
@@ -318,9 +304,10 @@ class Game {
 		// Inventory actions
 		else if (commandWord.equalsIgnoreCase("inventory"))
 			Inventory.printInventory();
-		else if (commandWord.equalsIgnoreCase("take"))
+		else if (commandWord.equalsIgnoreCase("take")){
+			takeItem(command);		
 			Inventory.add(apple); 
-		else if (commandWord.equalsIgnoreCase("drop") || commandWord.equalsIgnoreCase("toss")){
+		} else if (commandWord.equalsIgnoreCase("drop") || commandWord.equalsIgnoreCase("toss")){
 			Inventory.toss(apple); 
 		}
 		// quit command 
@@ -332,6 +319,43 @@ class Game {
 			}					// this -CM
 		}
 		return false;
+	}
+
+	private void takeItem(Command command) throws InterruptedException {
+		// if there is no second word, we don't know where to go...
+		if (!command.hasWord(1)) {
+			System.out.println("Read what? (*Hint: item)");
+			return;
+		}
+				
+		String itemSecondWord = command.getWord(1);
+		String itemthirdWord = command.getWord(2);
+		String itemfourthWord = command.getWord(3);
+				
+		// making player more specific about which items they want to read - CM
+		if (itemSecondWord.equalsIgnoreCase("item")){
+			System.out.println("You're going to have to be way more specific. What is the item called?");
+		} else {
+			if (currentLevel == 1){
+				// list stuff in here
+				System.out.println("That is not an item with legible words on it.");
+			} else if (currentLevel == 2){
+				if (itemSecondWord.equalsIgnoreCase("sea key")){
+					Inventory.add(secondKey);
+					DialogueLevel2.level2Ending(currentLevel);
+				} else {
+					System.out.println("That is not an item with legible words on it.");
+				}
+			} else if (currentLevel == 3){
+				// list stuff in here
+				System.out.println("That is not an item with legible words on it.");
+			} else if (currentLevel == 4){
+				// list stuff in here
+				System.out.println("That is not an item with legible words on it.");
+			} else {
+				System.out.println("That is not an item with legible words on it.");
+			}
+		}
 	}
 
 	// method reads an item
@@ -386,22 +410,6 @@ class Game {
 	
 	}
 
-	/* method prints inventory -CM
-	private void printInventory(Command command) {
-		System.out.println("You have: ");
-		if (bag.getNumItems() == 0) {
-			System.out.println("You have nothing right now.");
-		} else {
-			for (int i = 0; i < bag.getNumItems(); i++) {
-				Item currentItem = bag.getInventory().get(i);
-				if (currentItem != null) {
-					System.out.println(currentItem.getDescription());
-				}
-			}
-		}
-	}
-	*/
-
 	private void printLook() {
 		System.out.println(currentRoom.getDescription());
 		
@@ -413,7 +421,6 @@ class Game {
 	 * @throws InterruptedException 
 	 */
 	private void printHelp() throws InterruptedException {
-		loading();
 		System.out.println("\n");
 		System.out.println("You are lost. You are going to die alone and forever be forgotten.");
 		System.out.println();
@@ -425,14 +432,12 @@ class Game {
 	}
 
 	private void printGameRules() throws InterruptedException{
-		loading();
 		System.out.println("\n");
 		System.out.println("Remember what your goal is. Here is a refresher of the game rules. \n");
 		System.out.println("**Whatever the rules end up being... ");
 	}
 	
 	private void printCommandList() throws InterruptedException{
-		loading();
 		System.out.println("\n");
 		System.out.println("You can try using the following command words:");
 		parser.showCommands(); // prints command words from validCommands String 
