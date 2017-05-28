@@ -2,7 +2,7 @@ package Tools;
 
 import com.bayviewglen.zork.Item.Item;
 
-public class SecondKey implements Item{
+public class Key implements Item{
 	
 	// can't be removed from inventory
 	
@@ -10,11 +10,11 @@ public class SecondKey implements Item{
 	private String description = "This is a silver key which you bravely fought "
 			+ "to obtain from the Midnight Zone of the Sea World in Level 2.";
 	
-	public SecondKey(){
+	public Key(){
 		// nothing to do yet...
 	}
 	
-	public SecondKey(String name){
+	public Key(String name){
 		this.name = name;
 	}	
 
