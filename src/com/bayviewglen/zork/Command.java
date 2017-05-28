@@ -120,6 +120,9 @@ class Command {
 	
 	// @return true if this command was not understood.
 	public boolean isUnknown() {
+		if (words.size() <= 0){
+			return true;
+		}
 		return (words == null);
 	}
 	/*

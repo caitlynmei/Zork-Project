@@ -4,39 +4,39 @@ Room Description: PITCH BLACK CAVE
 Exit Rooms: D-Room 2
 Room Name: Room 2
 Room lock: 0
-Room Description: WATER SURFACE <br> You are fighting for your life to keep your head above the water surface. Thankfully, you know how to swim. <br> You don't see anything above water other then dark gloomy clouds and murky water. There is just water, water, and more water. <br> (*HINT: go under the surface. It's more interesting)
+Room Description: WATER SURFACE<br>You are fighting for your life to keep your head above the water surface. Thankfully, you know how to swim.<br>You don't see anything above water other then dark gloomy clouds and murky water. There is just water, water, and more water.<br>(*HINT* Go under the surface. It's more interesting)
 Exit Rooms: D-Room 3
 Room Name: Room 3
 Room lock: 0
-Room Description: UNDER THE SEA (BELOW WATER SURFACE) <br> There is a colourful coral reef covering the sea floor. *You can now use the commands up (U) <br> and down (D) alongside the normal compass directions. The water surface is above you, but the <br> dark dullness doesn't seem inviting. The only way left is down. 
+Room Description: UNDER THE SEA (BELOW WATER SURFACE)<br>There is a colourful coral reef covering the sea floor. *You can now use the commands up (U)<br>and down (D) alongside the normal compass directions. The water surface is above you, but the<br>dark dullness doesn't seem inviting. The only way left is down. 
 Exit Rooms: U-Room 2, D-Room 4
 Room Name: Room 4
 Room lock: 0
-Room Description: CORAL REEF <br> You are now on the sea floor with the exotic reefs. To the east, there is a sign. To the west, there is a trail of bubbles <br> coming from something that looks like a large ... purple ... rock? 
+Room Description: CORAL REEF<br>You are now on the sea floor with the exotic reefs. To the east, there is a sign. To the west, there is a trail of bubbles<br>coming from something that looks like a large ... purple ... rock? 
 Exit Rooms: W-Room 5, E-Room 6
 Room Name: Room 5
 Room lock: 0
-Room Description: GIANT PURPLE CLAM <br> There is a giant purple clam!! (In case you didn't read the title) You watch the clam breath <br> out a trail of bubbles. The bubbles float upwards on top of the clam.
+Room Description: GIANT PURPLE CLAM<br>There is a giant purple clam!! (In case you didn't read the title) You watch the clam breath<br>out a trail of bubbles. The bubbles float upwards on top of the clam.
 Exit Rooms: E-Room 4
 Room Name: Room 6
 Room lock: 0
-Room Description: CORAL REEF CLEARING
+Room Description: CORAL REEF CLEARING<br>BEWARE, A SHARK!!!<br>Just stay inside the KELP FOREST to the east. 
 Exit Rooms: W-Room 4, E-Room 7
 Room Name: Room 7
 Room lock: 0
-Room Description: KELP FOREST ENTRANCE
+Room Description: KELP FOREST ENTRANCE<br>There is a vast wall of kelp looming over you. This forest has been proven to be a good<br>hiding spot. To the west is a sign. 
 Exit Rooms: W-Room 6, E-Room 8, N-Room 9, S-Room 10
 Room Name: Room 8
 Room lock: 0
-Room Description: KELP FOREST 
+Room Description: KELP FOREST<br>You see kelp all around you in this thick and dim forest light.  
 Exit Rooms: S-Room 7, E-Room 11
 Room Name: Room 9
 Room lock: 0
-Room Description: KELP FOREST 
+Room Description: KELP FOREST<br>You see kelp all around you in this thick and dim forest light.  
 Exit Rooms: N-Room 7, E-Room 12
 Room Name: Room 10
 Room lock: 0
-Room Description: KELP FOREST 
+Room Description: KELP FOREST<br>You see a faint glow ahead in the midst of all the kelp. 
 Exit Rooms: W-Room 7, N-Room 11, S-Room 12, E-Room 13
 Room Name: Room 11
 Room lock: 0
@@ -48,7 +48,7 @@ Room Description: KELP FOREST
 Exit Rooms: W-Room 9, N-Room 10, E-Room 15
 Room Name: Room 13
 Room lock: 0
-Room Description: KELP FOREST CLEARING
+Room Description: KELP FOREST CLEARING<br>In the middle of the kelp forest, you see a glowing rock shaped like a "T". Hmmm...
 Exit Rooms: W-Room 10, N-Room 14, S-Room 15, E-Room 16
 Room Name: Room 14
 Room lock: 0
@@ -60,7 +60,7 @@ Room Description: KELP FOREST
 Exit Rooms: W-Room 12, N-Room 13, E-Room 18
 Room Name: Room 16
 Room lock: 0
-Room Description: KELP FOREST 
+Room Description: KELP FOREST<br>You see a beam of light to the east. 
 Exit Rooms: W-Room 13, N-Room 17, S-Room 18, E-Room 19
 Room Name: Room 17
 Room lock: 0

@@ -11,15 +11,29 @@ public class DialogueLevel1 {
 	//Level 1 Introduction
 	public static void level1Intro() throws InterruptedException{
 	System.out.println("You wake up on a fluffy surface. You look around to see blue skies and the bright sun in the Morning sky.");
-	thread.sleep(5000);
+	thread.sleep(2000);
 	System.out.println("Squinting, you look around to see a ground of white fluff which seems to resemble the clouds you are used to seeing above your head.");
-	thread.sleep(5000);
+	thread.sleep(2000);
 	System.out.println("You try to remember how you got here, but only remember the scary figure that greeted you from outside the cage you were trapped in.");
-	thread.sleep(5000);
+	thread.sleep(2000);
+	System.out.println();
+	
+	
 	}
+	
+	
 	//When you come across Jack
 	public static void level1JackDialogue() throws InterruptedException{
 		
+	}
+	
+	
+	//When you encounter Giant
+	public static void level1Giant() throws InterruptedException{
+	System.out.println("You decide to knock");
+	
+	//Giant Reply
+
 	}
 	
 	//Level 1 Outro
