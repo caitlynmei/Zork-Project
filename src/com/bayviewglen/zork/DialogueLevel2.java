@@ -25,7 +25,7 @@ public class DialogueLevel2 {
 	}
 	
 	// Level 2 Ending
-	public static void level2Ending(Tool secondKey) throws InterruptedException{
+	public static void level2Ending(int currentLevel, Tool secondKey) throws InterruptedException{
 		System.out.println();
 		System.out.println("But something happened. The last time he saw you, he was really scared. He had to do something that would be extraordinarily dangerous. And he warned you, "
 				+ "\nwhat were his last words? Something about staying away from him... ");
@@ -37,6 +37,7 @@ public class DialogueLevel2 {
 		System.out.println("\n\nA swirl of light glows around you and you blank out...");
 		System.out.println();
 		System.out.println("END OF LEVEL 2: EXIT THE SEA WORLD");
+		currentLevel++;
 	}
 
 }
