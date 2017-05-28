@@ -51,7 +51,7 @@ public class Inventory {
 	private static int findIndex(Item item) {
 		
 		for(int i = 0; i<bag.size(); i++){
-			if(bag.get(i).equals(item)){
+			if(bag.get(i).getName().equalsIgnoreCase(item.getName())){
 				return i;
 			}
 		}
