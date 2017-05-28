@@ -5,17 +5,20 @@ import java.util.ArrayList;
 
 import Tools.Key;
 
-public abstract class Chest extends Unmoveables{
+public class Chest extends Unmoveables{
 
 	private boolean locked;
 	private String name;
+	private String description;
 	
 	private static ArrayList<Item> Chest;
 
 	public Chest() {
 		name = "Chest";
 		locked = false;
+		description = "this is a Chest";
 	}
+	
 	public Chest(String myName){
 		name = myName.toUpperCase();
 		locked = false;
@@ -24,10 +27,18 @@ public abstract class Chest extends Unmoveables{
 		return name;
 	}
 	
-	public boolean Open(){
-		return true;
-		
+	public void addItem(Item myItem){
+		Chest.add(myItem);
 	}
+	
+	public void removeItem(Item myItem){
+		if(Chest.size() >= 0){
+
+			Chest.remove(findIndex(myItem));
+			
+		}
+	}
+
 	
 	public void isLocked(){
 		locked = true;
@@ -56,6 +67,31 @@ public abstract class Chest extends Unmoveables{
 		return " " +  Chest; //<-- make prettier
 
 
+	}
+	@Override
+	public String getDescription() {
+		return description;
+	}
+	@Override
+	public boolean equals(Item item) {
+		if(name.equalsIgnoreCase(item.getName())){
+			return true;
+		}
+		return false;
+	}
+	@Override
+	public String itemType() {
+		return "chest";
+	}
+
+	private static int findIndex(Item item) {
+		
+		for(int i = 0; i<Chest.size(); i++){
+			if(Chest.get(i).equals(item)){
+				return i;
+			}
+		}
+		return -1;
 	}
 
 	
