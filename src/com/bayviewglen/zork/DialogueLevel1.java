@@ -17,6 +17,8 @@ public class DialogueLevel1 {
 	System.out.println("You try to remember how you got here, but only remember the scary figure that greeted you from outside the cage you were trapped in.");
 	thread.sleep(5000);
 	}
+	
+	
 	//When you come across Jack
 	public static void level1JackDialogue() throws InterruptedException{
 		
