@@ -1,7 +1,9 @@
-package com.bayviewglen.zork.Item;
+package Unmoveables;
 
 
 import java.util.ArrayList;
+
+import com.bayviewglen.zork.Item.Item;
 
 import Tools.Key;
 
@@ -34,7 +36,7 @@ public class Chest extends Unmoveables{
 	public void removeItem(Item myItem){
 		if(Chest.size() >= 0){
 
-			Chest.remove(findIndex(myItem));
+		Chest.remove(findIndex(myItem));
 			
 		}
 	}
