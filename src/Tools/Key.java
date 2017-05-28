@@ -6,30 +6,35 @@ public class Key implements Item{
 	
 	// can't be removed from inventory
 	
-	private String name = "Sea Key";
-	private String description = "This is a silver key which you bravely fought "
-			+ "to obtain from the Midnight Zone of the Sea World in Level 2.";
+	private String name;
+	private String description; 
+	private String chest; 
 	
-	public Key(){
-		// nothing to do yet...
+	
+
+	public Key(String myName, String myChest){
+		name = myName;
+		chest = myChest.toUpperCase();
+		
+	}	
+	public void setDescription(String myDescription){	
+		description = myDescription;
 	}
 	
-	public Key(String name){
-		this.name = name;
-	}	
+	public String getDescription(){
+		return description;
+	}
 
-	@Override
 	public String getName() {
 		
 		return name;
 	}
-
-	@Override
-	public String getDescription() {
-		return description;
+	
+	public String getChest(){
+		return chest;
 	}
 
-	@Override
+
 	public boolean equals(Item item) {
 		if(name.equalsIgnoreCase(item.getName())){
 			return true;
