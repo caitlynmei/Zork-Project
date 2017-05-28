@@ -65,7 +65,6 @@ class Game {
 				
 				//Read The Locks
 				String roomLock = roomScanner.nextLine();
-				room.setRoomLock(roomLock.split(":")[1].trim());
 				
 				// Read the Description
 				String roomDescription = roomScanner.nextLine();

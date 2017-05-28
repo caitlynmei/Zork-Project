@@ -9,6 +9,7 @@ public class Key implements Item{
 	private String name;
 	private String description; 
 	private String chest; 
+	private int type;
 	
 	
 
@@ -45,5 +46,11 @@ public class Key implements Item{
 	@Override
 	public String itemType() {
 		return "Key";
+	}
+	public int getType() {
+		return type;
 	}	
+	public int setType(int type){
+		return type;
+	}
 }

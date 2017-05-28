@@ -20,6 +20,8 @@ import com.bayviewglen.zork.Inventory.Inventory;
 import com.bayviewglen.zork.Item.Item;
 import com.bayviewglen.zork.characters.Enemies;
 
+import Tools.Key;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
