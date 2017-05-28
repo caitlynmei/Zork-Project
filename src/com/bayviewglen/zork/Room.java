@@ -18,6 +18,7 @@ import java.util.Set;
 
 import com.bayviewglen.zork.Inventory.Inventory;
 import com.bayviewglen.zork.Item.Item;
+import com.bayviewglen.zork.characters.Enemies;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -26,13 +27,12 @@ import java.util.Iterator;
 class Room 
 {
 	private String roomName;
-	private String roomLock;
+	private int roomLock;
     private String description;
     private HashMap<String, Room> exits;        // stores exits of this room.
-    private String roomItems;
-    private String roomEnemies;
+    private ArrayList<Enemies> roomEnemies = new ArrayList<Enemies>();
     private String roomCharacters;
-	private Inventory roomInventory;
+	private Inventory roomInventory = new Inventory();
 
     /**
      * Create a room described "description". Initially, it has no exits.
@@ -47,12 +47,8 @@ class Room
     public Room() {
 		// default constructor.
     	roomName = "DEFAULT ROOM";
-    	roomLock = "0";
     	description = "DEFAULT DESCRIPTION";
     	exits = new HashMap<String, Room>();
-    	roomItems = "Items";
-    	roomEnemies = "enemies";
-    	roomInventory = new Inventory();
 	}
 
     public void setExit(char direction, Room r) throws Exception{
@@ -109,7 +105,7 @@ class Room
     public String longDescription()
     {
     	
-        return "Room: " + roomName +"\nLocked Doors: "+roomLock +"\n"+ description + "\n\n" + exitString() + "\n"+roomItems+"\n"+roomEnemies+"\n";
+        return "Room: " + roomName +"\nLocked Doors: "+roomLock +"\n"+ description + "\n\n" + exitString() + "\n"+ roomEnemies+"\n";
     }
 
     /**
@@ -149,33 +145,22 @@ class Room
 	public void setDescription(String description) {
 		this.description = description;
 	}
+	public Inventory getInventory(){
+		return roomInventory;
+	}
+	public boolean unlock(Key key) {
+		if (key.getType() == roomLock){
+			roomLock = 0;
+			return true;
+		}
+		return false;
+	}
 	
-	public String getRoomLock(){
+	public int getroomLock(){
 		return roomLock;
 	}
-	public void setRoomLock(String roomLock){
+	
+	public void setroomLock(int roomLock){
 		this.roomLock = roomLock;
 	}
-	
-	public String getRoomItems(){
-		return roomItems;
-	}
-	public void setRoomItems(String roomItems){
-		this.roomItems = roomItems;
-	}
-	
-	public String getRoomEnemies(){
-		return roomEnemies;
-	}
-	public void setRoomEnemies(String roomEnemies){
-		this.roomEnemies = roomEnemies;
-	}
-	
-	public String getRoomCharacters(){
-		return roomCharacters;
-	}
-	public void setRoomCharacters(String roomCharacters){
-		this.roomCharacters = roomCharacters;
-	}
-	
 }
