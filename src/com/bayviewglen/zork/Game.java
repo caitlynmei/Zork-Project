@@ -167,6 +167,7 @@ class Game {
 	public void play() throws InterruptedException {
 		//printWelcome();
 		System.out.println(currentRoom.longDescription());
+		DialogueLevel1.level1Intro();
 		//printLevel2();
 		
 		// Enter the main command loop. Here we repeatedly read commands and
@@ -183,7 +184,7 @@ class Game {
 	/**
 	 * Print out the opening message for the player.
 	 */
-//Introductin to Game
+//Introduction to Game
 	private void printWelcome() throws InterruptedException {
 
 		System.out.println();
