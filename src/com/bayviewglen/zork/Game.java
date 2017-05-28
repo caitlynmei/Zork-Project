@@ -168,8 +168,18 @@ class Game {
 	public void play() throws InterruptedException {
 		//printWelcome();
 		System.out.println(currentRoom.longDescription());
-		DialogueLevel1.level1Intro();
-		//printLevel2();
+		
+		if (currentLevel == 1){
+			DialogueLevel1.level1Intro();
+		} else if (currentLevel == 2){
+			DialogueLevel2.level2Intro();
+		} else if (currentLevel == 3){
+			System.out.println("here: change to 3");
+			//...
+		} else { // currentLevel == 4
+			//...
+		}
+	
 		
 		// Enter the main command loop. Here we repeatedly read commands and
 		// execute them until the game is over.
@@ -225,8 +235,8 @@ class Game {
 
 	public boolean printLevel2() throws InterruptedException{
 		boolean level2Over = false;
-		DialogueLevel2.level2Intro();
-		DialogueLevel2.level2Ending(currentLevel);
+		//DialogueLevel2.level2Intro();
+		//DialogueLevel2.level2Ending(currentLevel);
 		/*if (){
 			Inventory.add(secondKey);
 			System.out.println("A swirl of light glows around you and you blank out...");
@@ -329,8 +339,8 @@ class Game {
 		}
 				
 		String itemSecondWord = command.getWord(1);
-		String itemthirdWord = command.getWord(2);
-		String itemfourthWord = command.getWord(3);
+		String itemThirdWord = command.getWord(2);
+		String itemFourthWord = command.getWord(3);
 				
 		// making player more specific about which items they want to read - CM
 		if (itemSecondWord.equalsIgnoreCase("item")){
@@ -338,22 +348,24 @@ class Game {
 		} else {
 			if (currentLevel == 1){
 				// list stuff in here
-				System.out.println("That is not an item with legible words on it.");
+				System.out.println("That is not an item that you can take.");
 			} else if (currentLevel == 2){
-				if (itemSecondWord.equalsIgnoreCase("sea key")){
+				if (itemSecondWord.equalsIgnoreCase("sea") && itemThirdWord.equalsIgnoreCase("key")){
 					Inventory.add(secondKey);
-					DialogueLevel2.level2Ending(currentLevel);
+					DialogueLevel2.level2Ending(secondKey);
+					currentLevel++;
+					System.out.println("Level: " + currentLevel);
 				} else {
-					System.out.println("That is not an item with legible words on it.");
+					System.out.println("That is not an item that you can take.");
 				}
 			} else if (currentLevel == 3){
 				// list stuff in here
-				System.out.println("That is not an item with legible words on it.");
+				System.out.println("That is not an item that you can take.");
 			} else if (currentLevel == 4){
 				// list stuff in here
-				System.out.println("That is not an item with legible words on it.");
+				System.out.println("That is not an item that you can take.");
 			} else {
-				System.out.println("That is not an item with legible words on it.");
+				System.out.println("That is not an item that you can take.");
 			}
 		}
 	}
