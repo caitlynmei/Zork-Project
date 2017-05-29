@@ -61,6 +61,7 @@ class Game {
 			while (roomScanner.hasNext()) {
 				Room room = new Room();
 
+				
 				// Read the Name
 				String roomName = roomScanner.nextLine();
 				room.setRoomName(roomName.split(":")[1].trim());
