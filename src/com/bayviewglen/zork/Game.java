@@ -166,7 +166,7 @@ class Game {
 	 */
 	public void play() throws InterruptedException {
 		//printWelcome();
-		System.out.println(currentRoom.longDescription());
+		
 
 		if (currentLevel == 1) {
 			DialogueLevel1.level1Intro();
@@ -181,7 +181,9 @@ class Game {
 		} else { // currentLevel == 4
 			// ...
 		}
-
+		System.out.println();
+		System.out.println();
+		System.out.println(currentRoom.longDescription());
 		// Enter the main command loop. Here we repeatedly read commands and
 		// execute them until the game is over.
 

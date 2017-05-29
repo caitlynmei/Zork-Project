@@ -95,7 +95,7 @@ class Room
      */
     public String shortDescription()
     {
-        return "Room: " + roomName +"\n\n" + description;
+        return description+"\n";
     }
 
     /**
@@ -106,7 +106,7 @@ class Room
     public String longDescription()
     {
     	
-        return "Room: " + roomName +"\nLocked Doors: "+roomLock +"\n"+ description + "\n\n" + exitString() + "\n"+ roomEnemies+"\n";
+        return description + "\nLocked Doors: "+roomLock+ "\n\n" + exitString() + "\n"+ roomEnemies+"\n";
     }
 
     /**
