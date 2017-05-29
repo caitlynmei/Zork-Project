@@ -4,18 +4,23 @@ public class Enemies implements Characters {
 	
 	private String enemiesName;
 	private String enemiesDescription;
-	private String enemiesHealth;
-	private String enemiesArmour;
+	private int enemiesHealth;
+	private int enemiesArmour;
+	private int enemiesDamage;
 
 	public Enemies(){
 		//Default Constructor
 		enemiesName = "grunt";
 		enemiesDescription = "gaby";
-		enemiesHealth = "1";
-		enemiesArmour = "0";
+		enemiesHealth = 1;
+		enemiesArmour = 0;
+		enemiesDamage = 1;
+	}
+	public String Description(){
+		return "It is a "+ enemiesName+ " be careful!";
 	}
 	
-	public String Description(){
+	public String LongDescription(){
 		return "It is a " + enemiesName+ "\n It has "+ enemiesHealth + " and "+enemiesArmour;
 	}
 	
@@ -33,15 +38,19 @@ public class Enemies implements Characters {
 		this.enemiesDescription = enemiesDescription;
 		
 	}
-	public void setEnemiesHealth(String enemiesHealth){
+	public void setEnemiesHealth(int enemiesHealth){
 		this.enemiesHealth = enemiesHealth;
 	}
-	public void setEnemiesArmour(String enemiesArmour){
+	public void setEnemiesArmour(int enemiesArmour){
 		this.enemiesArmour = enemiesArmour;
 	}
-	public String getEnemiesHealthAndArmour(){
-		return enemiesHealth +enemiesArmour;
+	public int getEnemiesHealth(){
+		return enemiesHealth;
 	}
+	public int getEnemiesArmour(){
+		return enemiesArmour;
+	}
+	
 	@Override
 	public String getName() {
 		// TODO Auto-generated method stub
