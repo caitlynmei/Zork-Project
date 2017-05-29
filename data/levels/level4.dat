@@ -26,13 +26,13 @@ Room Name: Room 9
 Room Description:  place
 Exit Rooms:W-Room 8
 Room Name: Room 10
-Room Description:  place
+Room Description: There is a ladder --------------------------------
 Exit Rooms:S-Room 2, U-Room 17, E-Room 11
 Room Name: Room 11
-Room Description:  place
+Room Description:  stuff
 Exit Rooms:S-Room 3, U-Room 18, E-Room 12, W-Room 10
 Room Name: Room 12
-Room Description:  place
+Room Description: ladder--------------------
 Exit Rooms:S-Room 4, U-Room 19, E-Room 13, W-Room 11
 Room Name: Room 13
 Room Description:  place
