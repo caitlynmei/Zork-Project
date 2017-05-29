@@ -1,6 +1,6 @@
-package Weapons;
+package com.bayviewglen.zork.weapons;
 
-import com.bayviewglen.zork.Item.Item;
+import com.bayviewglen.zork.item.Item;
 
 public abstract class Weapon implements Item  {
 	

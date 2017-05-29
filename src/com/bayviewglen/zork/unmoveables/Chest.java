@@ -1,11 +1,10 @@
-package Unmoveables;
+package com.bayviewglen.zork.unmoveables;
 
 
 import java.util.ArrayList;
 
-import com.bayviewglen.zork.Item.Item;
-
-import Tools.Key;
+import com.bayviewglen.zork.item.Item;
+import com.bayviewglen.zork.tool.Key;
 
 public class Chest extends Unmoveables{
 

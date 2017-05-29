@@ -1,4 +1,4 @@
-package Equipables;
+package com.bayviewglen.equipable;
 
 public class OxygenBubble extends Equipables{
 

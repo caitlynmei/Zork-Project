@@ -1,6 +1,6 @@
-package Equipables;
+package com.bayviewglen.equipable;
 
-import com.bayviewglen.zork.Item.Item;
+import com.bayviewglen.zork.item.Item;
 
 public class Equipables implements Item {
 	

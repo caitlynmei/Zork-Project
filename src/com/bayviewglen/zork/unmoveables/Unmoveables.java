@@ -1,6 +1,6 @@
-package Unmoveables;
+package com.bayviewglen.zork.unmoveables;
 
-import com.bayviewglen.zork.Item.Item;
+import com.bayviewglen.zork.item.Item;
 
 // Test
 public abstract class Unmoveables implements Item{

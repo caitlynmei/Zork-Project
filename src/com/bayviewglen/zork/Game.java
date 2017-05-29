@@ -6,12 +6,11 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
 
-import com.bayviewglen.zork.Inventory.Inventory;
-import com.bayviewglen.zork.Item.Food;
-import com.bayviewglen.zork.Item.Item;
-
-import Tools.Key;
-import Tools.Tool;
+import com.bayviewglen.zork.inventory.Inventory;
+import com.bayviewglen.zork.item.Food;
+import com.bayviewglen.zork.item.Item;
+import com.bayviewglen.zork.tool.Key;
+import com.bayviewglen.zork.tool.Tool;
 
 /**
  * Class Game - the main class of the "Zork" game.

@@ -16,11 +16,10 @@ package com.bayviewglen.zork;
 
 import java.util.Set;
 
-import com.bayviewglen.zork.Inventory.Inventory;
-import com.bayviewglen.zork.Item.Item;
 import com.bayviewglen.zork.characters.Enemies;
-
-import Tools.Key;
+import com.bayviewglen.zork.inventory.Inventory;
+import com.bayviewglen.zork.item.Item;
+import com.bayviewglen.zork.tool.Key;
 
 import java.util.ArrayList;
 import java.util.HashMap;

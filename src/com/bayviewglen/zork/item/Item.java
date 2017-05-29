@@ -1,4 +1,4 @@
-package com.bayviewglen.zork.Item;
+package com.bayviewglen.zork.item;
 
 public interface Item {
 	

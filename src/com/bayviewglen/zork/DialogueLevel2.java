@@ -2,8 +2,9 @@ package com.bayviewglen.zork;
 
 // imports
 import java.util.Scanner;
-import com.bayviewglen.zork.Inventory.Inventory;
-import Tools.Tool;
+
+import com.bayviewglen.zork.inventory.Inventory;
+import com.bayviewglen.zork.tool.Tool;
 
 public class DialogueLevel2 {
 
