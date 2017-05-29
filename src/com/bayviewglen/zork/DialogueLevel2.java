@@ -17,10 +17,10 @@ public class DialogueLevel2 {
 		System.out.println();
 		System.out.println("You wake up lying on your back in pitch dark. You can hear the sound of waves crashing\n"
 				+ "against cave wall. You stand up cautiously.");
-		thread.sleep(5000);
+		thread.sleep(1500);
 		System.out.println("Ahhhhhhhhhh....... You fall into a deep dark hole and die...");
 		thread.sleep(5000);
-		System.out.println("Only joking! But you do fall into a hole and submerge into water. *SPLASH* Only direction left is \'down\'.");
+		System.out.println("Only joking! But you do fall into a hole and submerge into water. *SPLASH* Only direction you can go is \'down\'.");
 	}
 	
 	// Level 2 Ending

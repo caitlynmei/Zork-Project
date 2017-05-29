@@ -41,10 +41,15 @@ public class Inventory {
 
 	public static void printInventory(){
 		System.out.print("Inventory : ");
-		for(Item x : bag){
-			System.out.printf("%5s ", x.getName() +  " ");
+		if (bag.size() <= 0){
+			System.out.println("empty");
+		} else {
+			for(Item x : bag){
+				System.out.printf("%5s ", x.getName() +  " ");
+			}
+			System.out.println(" ");
 		}
-		System.out.println(" ");
+	
 	}
 
 	// method to find the item in the list

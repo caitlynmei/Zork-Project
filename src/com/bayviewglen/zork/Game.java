@@ -135,7 +135,7 @@ class Game {
 				initRooms("data/levels/level3.dat");
 			else if (currentLevel == 4)
 				initRooms("data/levels/level4.dat");
-			currentRoom = masterRoomMap.get("ROOM_1");
+			currentRoom = masterRoomMap.get("ROOM_28");
 
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -166,19 +166,24 @@ class Game {
 	 */
 	public void play() throws InterruptedException {
 		//printWelcome();
-		System.out.println(currentRoom.longDescription());
+		
 
 		if (currentLevel == 1) {
 			DialogueLevel1.level1Intro();
 		} else if (currentLevel == 2) {
 			//DialogueLevel2.level2Intro();
+			if (currentRoom.equals(masterRoomMap.get("ROOM_30"))){
+				DialogueLevel2.level2Ending(currentLevel, secondKey);
+			}
 		} else if (currentLevel == 3) {
 			System.out.println("here: change to 3");
 			// ...
 		} else { // currentLevel == 4
 			// ...
 		}
-
+		System.out.println();
+		System.out.println();
+		System.out.println(currentRoom.longDescription());
 		// Enter the main command loop. Here we repeatedly read commands and
 		// execute them until the game is over.
 
@@ -317,10 +322,10 @@ class Game {
 			Inventory.printInventory();
 		} else if (commandWord.equalsIgnoreCase("take")){
 			takeItem(command);
-			// Inventory.add(apple);
+			// testing: Inventory.add(apple);
 		} else if (commandWord.equalsIgnoreCase("drop") || commandWord.equalsIgnoreCase("toss")){
 			dropItem(command);
-			// Inventory.toss(apple);
+			// testing: Inventory.toss(apple);
 		
 		// Quit command
 		} else if (commandWord.equalsIgnoreCase("quit")){
