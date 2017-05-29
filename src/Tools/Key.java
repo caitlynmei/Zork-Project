@@ -51,11 +51,18 @@ public class Key implements Item{
 	public int getType() {
 		return type;
 	}	
-	public int setType(int type){
-		return type;
+	public void setType(int type){
+		this.type = type;
 	}
 	
-	public void changelevel(int currentLevel){
+	public boolean getlevelKey(){
+		return LevelKey;
+	}
+	public void setLevelKey(boolean levelKey){
+		this.LevelKey = levelKey;
+	}
+	
+	public void changelevel(int currentLevel, boolean LevelKey){
 		if(LevelKey)
 			currentLevel++;
 	}
