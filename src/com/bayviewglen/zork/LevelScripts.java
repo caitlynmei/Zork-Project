@@ -1,3 +1,4 @@
+/*
 package com.bayviewglen.zork;
 
 public abstract class LevelScripts {
@@ -45,3 +46,4 @@ public abstract class LevelScripts {
 		}
 	}
 }
+*/
