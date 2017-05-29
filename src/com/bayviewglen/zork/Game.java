@@ -166,22 +166,21 @@ class Game {
 	 */
 	public void play() throws InterruptedException {
 		//printWelcome();
-		System.out.println(currentRoom.longDescription());
+		
 
 		if (currentLevel == 1) {
 			DialogueLevel1.level1Intro();
 		} else if (currentLevel == 2) {
 			DialogueLevel2.level2Intro();
-			if (currentRoom.equals(masterRoomMap.get("ROOM_30"))){
-				DialogueLevel2.level2Ending(currentLevel, secondKey);
-			}
 		} else if (currentLevel == 3) {
 			System.out.println("here: change to 3");
 			// ...
 		} else { // currentLevel == 4
 			// ...
 		}
-
+		System.out.println();
+		System.out.println();
+		System.out.println(currentRoom.longDescription());
 		// Enter the main command loop. Here we repeatedly read commands and
 		// execute them until the game is over.
 
