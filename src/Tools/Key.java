@@ -10,6 +10,7 @@ public class Key implements Item{
 	private String description; 
 	private String chest; 
 	private int type;
+	private boolean LevelKey;
 	
 	
 
@@ -52,5 +53,10 @@ public class Key implements Item{
 	}	
 	public int setType(int type){
 		return type;
+	}
+	
+	public void changelevel(int currentLevel){
+		if(LevelKey)
+			currentLevel++;
 	}
 }

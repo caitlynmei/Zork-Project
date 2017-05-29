@@ -32,7 +32,7 @@ import Tools.Tool;
 
 class Game {
 
-	int currentLevel = 2; // temp 2 for testing, CM
+	public int currentLevel = 1; // temp 2 for testing, CM
 
 	// Level 2 Items
 	Food apple = new Food("apple");
