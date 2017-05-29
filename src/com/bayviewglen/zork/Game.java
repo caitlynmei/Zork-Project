@@ -165,22 +165,6 @@ class Game {
 	 * Main play routine. Loops until end of play.
 	 */
 	public void play() throws InterruptedException {
-		//printWelcome();
-		
-
-		if (currentLevel == 1) {
-			DialogueLevel1.level1Intro();
-		} else if (currentLevel == 2) {
-			//DialogueLevel2.level2Intro();
-			if (currentRoom.equals(masterRoomMap.get("ROOM_30"))){
-				DialogueLevel2.level2Ending(currentLevel, secondKey);
-			}
-		} else if (currentLevel == 3) {
-			System.out.println("here: change to 3");
-			// ...
-		} else { // currentLevel == 4
-			// ...
-		}
 		System.out.println();
 		System.out.println();
 		System.out.println(currentRoom.longDescription());
@@ -191,6 +175,30 @@ class Game {
 		while (!finished) {
 			Command command = parser.getCommand();
 			finished = processCommand(command);
+			
+			//printWelcome();
+			
+			if (currentLevel == 1){
+				DialogueLevel1.level1Intro();
+			} 
+			
+			if (currentLevel == 2){
+				//DialogueLevel2.level2Intro();
+				if (currentRoom.equals(masterRoomMap.get("ROOM_30"))){
+					DialogueLevel2.level2Ending(currentLevel, secondKey);
+					currentLevel++;
+				}
+			} 
+			
+			if (currentLevel == 3){
+				System.out.println("here: change to 3");
+				// ...
+			} 
+			
+			if (currentLevel == 4){ // currentLevel == 4
+				// ...
+			}
+			
 		}
 		System.out.println("Thank you for playing. Good bye for now!");
 	}

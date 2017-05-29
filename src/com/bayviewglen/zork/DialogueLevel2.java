@@ -36,7 +36,7 @@ public class DialogueLevel2 {
 		System.out.println("\n\nA swirl of light glows around you and you blank out...");
 		System.out.println();
 		System.out.println("END OF LEVEL 2: EXIT THE SEA WORLD");
-		currentLevel++;
+		//currentLevel++;
 	}
 
 }
