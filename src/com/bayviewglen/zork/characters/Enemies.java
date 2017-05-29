@@ -16,8 +16,11 @@ public class Enemies implements Characters {
 		enemiesArmour = 0;
 		enemiesDamage = 1;
 	}
-	
 	public String Description(){
+		return "It is a "+ enemiesName+ " be careful!";
+	}
+	
+	public String LongDescription(){
 		return "It is a " + enemiesName+ "\n It has "+ enemiesHealth + " and "+enemiesArmour;
 	}
 	
