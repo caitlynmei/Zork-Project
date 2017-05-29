@@ -171,7 +171,7 @@ class Game {
 		if (currentLevel == 1) {
 			DialogueLevel1.level1Intro();
 		} else if (currentLevel == 2) {
-			DialogueLevel2.level2Intro();
+			//DialogueLevel2.level2Intro();
 			if (currentRoom.equals(masterRoomMap.get("ROOM_30"))){
 				DialogueLevel2.level2Ending(currentLevel, secondKey);
 			}
