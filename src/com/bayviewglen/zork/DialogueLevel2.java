@@ -15,13 +15,11 @@ public class DialogueLevel2 {
 	public static void level2Intro() throws InterruptedException{
 		System.out.println();
 		System.out.println("You wake up lying on your back in pitch dark. You can hear the sound of waves crashing\n"
-				+ "against cave walls.");
-		System.out.println("You stand up cautiously.");
+				+ "against cave wall. You stand up cautiously.");
 		thread.sleep(5000);
-		
-		// user has to move eventually, so any move will make you fall into a hole...
 		System.out.println("Ahhhhhhhhhh....... You fall into a deep dark hole and die...");
-		System.out.println("Only joking! But you do fall into a hole and submerge into water.\n*SPLASH*");
+		thread.sleep(5000);
+		System.out.println("Only joking! But you do fall into a hole and submerge into water. *SPLASH* Only direction left is \'down\'.");
 	}
 	
 	// Level 2 Ending

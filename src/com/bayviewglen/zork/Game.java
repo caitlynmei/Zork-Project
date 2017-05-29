@@ -32,7 +32,7 @@ import Tools.Tool;
 
 class Game {
 
-	int currentLevel = 2; // temp 2 for testing, CM
+	public int currentLevel = 2; // temp 2 for testing, CM
 
 	// Level 2 Items
 	Food apple = new Food("apple");
@@ -165,13 +165,13 @@ class Game {
 	 * Main play routine. Loops until end of play.
 	 */
 	public void play() throws InterruptedException {
-		// printWelcome();
+		//printWelcome();
 		System.out.println(currentRoom.longDescription());
 
 		if (currentLevel == 1) {
 			DialogueLevel1.level1Intro();
 		} else if (currentLevel == 2) {
-			DialogueLevel2.level2Intro();
+			//DialogueLevel2.level2Intro();
 		} else if (currentLevel == 3) {
 			System.out.println("here: change to 3");
 			// ...
@@ -268,13 +268,13 @@ class Game {
 	 * @throws InterruptedException
 	 */
 	private boolean processCommand(Command command) throws InterruptedException {
-		if (command.isUnknown()){ // doesn't work... -CM
+		if (command.isUnknown(command)){ 
 			System.out.println("I don't know what you mean...");
 			return false;
-		}
+		} 
 
-		String commandWord = command.getWord(0); // changed from command.hasCommand()
-		String secondWord = command.getWord(1);
+		String commandWord = command.getCommandWord(); // changed from command.getWord(0)
+		String secondWord = command.getSecondWord();
 
 		// Help commands
 		if (commandWord.equalsIgnoreCase("help")){
@@ -338,14 +338,14 @@ class Game {
 	 */
 	private void readItem(Command command) {
 		// if there is no second word, we don't know what to read...
-		if (!command.hasWord(1)) {
+		if (!command.hasSecondWord()) { // changed from command.hasWord(1)
 			System.out.println("Read what? (*Hint: item)");
 			return;
 		}
 
-		String secondWord = command.getWord(1);
-		String thirdWord = command.getWord(2);
-		String fourthWord = command.getWord(3);
+		String secondWord = command.getSecondWord(); // changed from command.getWord(1)
+		String thirdWord = command.getThirdWord();
+		String fourthWord = command.getFourthWord();
 
 		// making player more specific about which items they want to read - CM
 		if (secondWord.equalsIgnoreCase("item")){
@@ -395,14 +395,14 @@ class Game {
 
 	private void takeItem(Command command) throws InterruptedException {
 		// if there is no second word, we don't know what item to take...
-		if (!command.hasWord(1)){
+		if (!command.hasSecondWord()){
 			System.out.println("Take what? (*Hint: item)");
 			return;
 		}
 
-		String itemSecondWord = command.getWord(1);
-		String itemThirdWord = command.getWord(2);
-		String itemFourthWord = command.getWord(3);
+		String itemSecondWord = command.getSecondWord();
+		String itemThirdWord = command.getThirdWord();
+		String itemFourthWord = command.getFourthWord();
 
 		// making player more specific about which items they want to take - CM
 		if (itemSecondWord.equalsIgnoreCase("item")) {
@@ -438,14 +438,14 @@ class Game {
 
 	private void dropItem(Command command) {
 		// if there is no second word, we don't know what item to drop...
-		if (!command.hasWord(1)){
+		if (!command.hasSecondWord()){
 			System.out.println("Read what? (*Hint: item)");
 			return;
 		}
 		
-		String itemSecondWord = command.getWord(1);
-		String itemThirdWord = command.getWord(2);
-		String itemFourthWord = command.getWord(3);
+		String itemSecondWord = command.getSecondWord();
+		String itemThirdWord = command.getThirdWord();
+		String itemFourthWord = command.getFourthWord();
 		
 		// making player more specific about which items they want to drop
 		if (itemSecondWord.equalsIgnoreCase("item")) {
@@ -517,14 +517,14 @@ class Game {
 	 */
 	private void goRoom(Command command) {
 		// if there is no second word, we don't know where to go...
-		if (!command.hasWord(1)) {
+		if (!command.hasSecondWord()) {
 			System.out.println("Go where? (*Hint: direction)");
 			return;
 		}
 
 		// String direction = command.getSecondWord(); original
 
-		String secondWord = command.getWord(1);
+		String secondWord = command.getSecondWord();
 		String direction = "";
 		if (secondWord.equalsIgnoreCase("north") || secondWord.equalsIgnoreCase("n"))
 			direction = "north";

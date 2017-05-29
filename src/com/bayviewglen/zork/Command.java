@@ -25,13 +25,13 @@ class Command {
 	private String fourthWord;
 	private String fifthWord;
 	
-	private ArrayList <String> words;
+	//private ArrayList <String> words;
 
 	/*
 	 * Create a command object. First and second word must be supplied, but
 	 * either one (or both) can be null. The command word should be null to
 	 * indicate that this was a command that is not recognized by this game.
-	 
+	 */
 	public Command(String firstWord, String secondWord, String thirdWord, String fourthWord, String fifthWord) {
 		commandWord = firstWord;
 		this.secondWord = secondWord;
@@ -59,8 +59,8 @@ class Command {
 			this.fifthWord = this.fifthWord.toLowerCase();
 		}
 	}
-	*/
 
+	/*
 	public Command(ArrayList<String> words) {
 		this.words = words;
 	}
@@ -72,44 +72,43 @@ class Command {
 			return null;
 		}
 	}
+	*/
 	
 	/*
 	 * getCommandWord method gets the command word when called. If the 
 	 * command was not understood, the result is returned as null.
 	 */
-	//public String getCommandWord() {
-		//return commandWord;
-	//}
+	public String getCommandWord() {
+		return commandWord;
+	}
 
 	/*
 	 * @return the second word of this command. Returns null if there was no
 	 * second word.
 	 */
-	//public String getSecondWord() {
-		//return secondWord;
-	//}
+	public String getSecondWord() {
+		return secondWord;
+	}
 
-	// @return the third word of this command. Returns null if there was no
-	// third word.
-	//public String getThirdWord() {
-	//	return thirdWord;
-	//}
+	//@return the third word of this command. Returns null if there was no third word.
+	public String getThirdWord() {
+		return thirdWord;
+	}
 
 	/*
 	 * @return the fourth word of this command. Returns null if there was no
 	 * second word.
 	 */
-	//public String getFourthWord() {
-	//	return fourthWord;
-	//}
+	public String getFourthWord() {
+		return fourthWord;
+	}
 	
-	// @return the fifth word of this command. Returns null if there was no
-	// second word
-	//public String getFifthWord() {
-	//	return fifthWord;
-	//}
+	// @return the fifth word of this command. Returns null if there was no second word
+	public String getFifthWord() {
+		return fifthWord;
+	}
 	
-	
+	/*
 	public boolean hasWord(int index){
 		if (index < words.size()){
 			return (words.get(index) != null);
@@ -117,15 +116,23 @@ class Command {
 		return false;
 	}
 	
+	*/
 	
-	// @return true if this command was not understood.
-	public boolean isUnknown() {
-		if (words.size() <= 0){
+	/* new tried version
+	 *@return true if this command was not understood.
+	 
+	public boolean isUnknown(ArrayList words) {
+		if (words == null || words.size() <= 0){
 			return true;
 		}
-		return (words == null);
+		return !word.isCommand(word);
 	}
-	/*
+	*/
+	
+	public boolean isUnknown(Command command){
+		return (commandWord == null);
+	}
+	 
 	// @return true if the command has a second word.
 	public boolean hasSecondWord() {
 		return (secondWord != null);
@@ -145,5 +152,4 @@ class Command {
 	public boolean hasFifthWord() {
 		return (fifthWord != null);
 	}
-	*/
 }

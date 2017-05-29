@@ -8,6 +8,8 @@ package com.bayviewglen.zork;
  * * This class is part of the "Zork" game.
  * */
 
+import java.util.ArrayList;
+
 class CommandWords {
 
 	// Constant String holding all valid first command words (word1)
@@ -25,7 +27,7 @@ class CommandWords {
 	 ** Check whether a given String is a valid command word. Return true if it
 	 ** is, false if it isn't.
 	 **/
-	public boolean isCommand(String aString) {
+	public boolean isCommand(String aString) { 
 		for (int i = 0; i < validCommands.length; i++) {
 			if (validCommands[i].equalsIgnoreCase(aString)){
 				return true;
@@ -33,7 +35,13 @@ class CommandWords {
 		} // if we get here, the string was not found in the commands
 		return false;
 	}
-
+	
+	/*
+	public String isCommandString(ArrayList<String> words){
+		return words.get(0);
+	}
+	*/
+	
 	// showAll Method: prints all valid commands
 	public void showAll() {
 		for (int i = 0; i < validCommands.length; i++) {
