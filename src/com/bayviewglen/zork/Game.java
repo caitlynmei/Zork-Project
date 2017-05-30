@@ -243,17 +243,12 @@ class Game {
  //JT Level 1
 	public boolean printLevel1() throws InterruptedException {
 		boolean level1Over = true;
-		
-	/*	DialogueLevel1.level1Intro();
-		//if (currentRoom.equals(masterRoomMap.get(""))){
-			DialogueLevel1.level1End(currentLevel, firstKey);
-			currentLevel++;
-		}
-	*/	
-		DialogueLevel1.level1Outro();
+		DialogueLevel1.level1Intro();
+
 		currentLevel++;
 		return (level1Over == true);
 	}
+}
 
 	public boolean printLevel2() throws InterruptedException {
 		boolean level2Over = false;
