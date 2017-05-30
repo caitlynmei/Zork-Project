@@ -16,23 +16,57 @@ public class DialogueLevel1 {
 	thread.sleep(2000);
 	System.out.println("You try to remember how you got here, but only remember the scary figure that greeted you from outside the cage you were trapped in.");
 	thread.sleep(2000);
-	System.out.println();
-	
+
 	}
 	
 	
 	//When you come across Jack
 	public static void level1JackDialogue() throws InterruptedException{
-		
+		System.out.println("");
+		thread.sleep(2000);
+		System.out.println("");
+		thread.sleep(2000);
+		System.out.println("");
+		thread.sleep(2000);
+		System.out.println("");
+		thread.sleep(2000);
+		System.out.println("");
+		thread.sleep(2000);
 	}
 	
 	
 	//When you encounter Giant
 	public static void level1Giant() throws InterruptedException{
-	System.out.println("You decide to knock");
-	
-	//Giant Reply
+	System.out.println("You have come across a castle.");
+	thread.sleep(2000);
+	System.out.println("You decide to...");
+	thread.sleep(2000);
+	System.out.println("\t\"Knock\" - \"Do Nothing\" - \"Stare\"\n" );
+	System.out.print(">");
+	String temp = "";
+	boolean valid = false;
+	while(!valid){
+		temp = keyboard.nextLine().toUpperCase();	
+	if(temp.equals("KNOCK") || temp.equals("DO NOTHING")){
+		valid = true;
+	}else if(temp.equals("HELP")){
+		System.out.println("\nType exactly what you want to do, make sure no there are no extra spaces");
+	}
+	}
+	if(temp.equals("KNOCK")){
+		thread.sleep(2000);
+		System.out.println("You hear loud footsteps");
+		thread.sleep(2000);
+		System.out.println("Your scared but can't seem to move your feet");
+	}
+	if(temp.equals("DO NOTHING")){
+		thread.sleep(2000);
+		System.out.println("You don't know what to do but stare a the door.");
+		thread.sleep(2000);
+		System.out.println("");
+	}
 
+	
 	}
 	
 	//Level 1 Outro

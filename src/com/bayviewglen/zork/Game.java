@@ -31,6 +31,7 @@ import com.bayviewglen.zork.tool.Tool;
 
 class Game {
 
+	
 	public int currentLevel = 2; // temp 2 for testing, CM
 
 	// Level 2 Items
@@ -180,6 +181,10 @@ class Game {
 			
 			if (currentLevel == 1){
 				DialogueLevel1.level1Intro();
+				/*if (currentRoom.equals(masterRoomMap.get("ROOM_30"))){
+					DialogueLevel1.level1End(currentLevel, firstKey);
+					currentLevel++;
+				}*/
 			} 
 			
 			if (currentLevel == 2){
@@ -242,8 +247,11 @@ class Game {
 	// JT Level 1
 	public boolean level1() throws InterruptedException {
 		boolean level1Over = true;
-		DialogueLevel1.level1Intro();
+		//DialogueLevel1.level1JackDialogue();
+		DialogueLevel1.level1Giant();
+		//if (){ Inventory.add(firstKey); System.out.
 		DialogueLevel1.level1end();
+		currentLevel++;
 		return (level1Over == true);
 	}
 
