@@ -192,8 +192,9 @@ class Game {
 			} 
 			
 			if (currentLevel == 3){
-				System.out.println("here: change to 3");
-				// ...
+				if(currentRoom.equals(masterRoomMap.get("ROOM_60"))){
+					currentLevel++;
+				}
 			} 
 			
 			if (currentLevel == 4){ // currentLevel == 4

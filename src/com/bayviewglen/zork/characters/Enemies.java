@@ -3,18 +3,16 @@ package com.bayviewglen.zork.characters;
 public class Enemies implements Characters {
 	
 	private String enemiesName;
-	private String enemiesDescription;
 	private int enemiesHealth;
 	private int enemiesArmour;
-	private int enemiesDamage;
+	private boolean inRange;
 
 	public Enemies(){
 		//Default Constructor
 		enemiesName = "grunt";
-		enemiesDescription = "gaby";
 		enemiesHealth = 1;
 		enemiesArmour = 0;
-		enemiesDamage = 1;
+		inRange = true;
 	}
 	public String Description(){
 		return "It is a "+ enemiesName+ " be careful!";
@@ -23,20 +21,17 @@ public class Enemies implements Characters {
 	public String LongDescription(){
 		return "It is a " + enemiesName+ "\n It has "+ enemiesHealth + " and "+enemiesArmour;
 	}
-	
+	public boolean getInRange() {
+		return inRange;
+	}
+	public void setInRange(boolean inRange){
+		this.inRange = inRange;
+	}
 	public String getEnemiesName(){
 		return enemiesName;
 	}
 	public void setEnemiesName(String enemiesName){
 		this.enemiesName = enemiesName;
-	}
-	
-	public String getEnemiesDescriptions(){
-		return enemiesDescription;
-	}
-	public void setEnemiesDescriptions(String enemiesDescription){
-		this.enemiesDescription = enemiesDescription;
-		
 	}
 	public void setEnemiesHealth(int enemiesHealth){
 		this.enemiesHealth = enemiesHealth;
