@@ -130,13 +130,14 @@ class Game {
 		try {
 			if (currentLevel == 1)
 				initRooms("data/levels/level1.dat");
-			else if (currentLevel == 2)
+			else if (currentLevel == 2){
 				initRooms("data/levels/level2.dat");
-			else if (currentLevel == 3)
+				currentRoom = masterRoomMap.get("ROOM_28");
+			} else if (currentLevel == 3)
 				initRooms("data/levels/level3.dat");
 			else if (currentLevel == 4)
 				initRooms("data/levels/level4.dat");
-			currentRoom = masterRoomMap.get("ROOM_28");
+			
 
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -164,8 +165,9 @@ class Game {
 
 	/**
 	 * Main play routine. Loops until end of play.
+	 * @throws Exception 
 	 */
-	public void play() throws InterruptedException {
+	public void play() throws Exception {
 		System.out.println();
 		System.out.println();
 		System.out.println(currentRoom.longDescription());
@@ -188,12 +190,21 @@ class Game {
 				if (currentRoom.equals(masterRoomMap.get("ROOM_30"))){
 					DialogueLevel2.level2Ending(currentLevel, secondKey);
 					currentLevel++;
+					//initRooms("data/levels/level3.dat");
+					//currentRoom = masterRoomMap.get("ROOM_1");
 				}
 			} 
 			
 			if (currentLevel == 3){
+				
+				System.out.println();
+				System.out.println();
+				initRooms("data/levels/level3.dat");
+				
+				System.out.println(currentRoom.longDescription());
 				if(currentRoom.equals(masterRoomMap.get("ROOM_60"))){
 					currentLevel++;
+					
 				}
 			} 
 			
@@ -253,16 +264,7 @@ class Game {
 
 	public boolean printLevel2() throws InterruptedException {
 		boolean level2Over = false;
-		// DialogueLevel2.level2Intro();
-		// DialogueLevel2.level2Ending(currentLevel);
-		/*
-		 * if (){ Inventory.add(secondKey); System.out.
-		 * println("A swirl of light glows around you and you blank out...");
-		 * System.out.println();
-		 * System.out.println("END OF LEVEL 2: EXIT THE SEA WORLD");
-		 * currentLevel++; level2Over = true; }
-		 */
-
+		
 		return (level2Over == true);
 	}
 
