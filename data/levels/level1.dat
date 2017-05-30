@@ -92,19 +92,19 @@ Room Description:  place
 Exit Rooms: S-Room 19, W-Room 20
 Room Name: Room 24
 Room lock: 0 
-Room Description:  place
+Room Description: You see a small figure in the distance.
 Exit Rooms: N-Room 18, W-Room 17
 Room Name: Room 25
 Room lock: 0 
-Room Description:  place
+Room Description: You have come across a little boy.
 Exit Rooms: N-Room 14, E-Room 16
 Room Name: Room 26
 Room lock: 0 
-Room Description:  place
+Room Description: You see a castle in the distance.
 Exit Rooms: N-Room 10, S-Room 27
-Room Name: Room 27
+Room Name: CASTLE
 Room lock: 0 
-Room Description:  place
+Room Description: You are at the castle door.
 Exit Rooms: N-Room 26, S-Room 28
 Room Name: Room 28
 Room lock: 0 
