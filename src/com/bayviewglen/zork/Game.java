@@ -128,39 +128,48 @@ class Game {
 	 */
 	public Game() { // I got the levels thing, I'll finish it later - CM
 		try {
-			if (currentLevel == 1)
+			resetLevel(currentLevel);
+			/*
+			if (currentLevel == 1){
 				initRooms("data/levels/level1.dat");
-			else if (currentLevel == 2){
+				currentRoom = masterRoomMap.get("ROOM_1");
+			} else if (currentLevel == 2){
 				initRooms("data/levels/level2.dat");
 				currentRoom = masterRoomMap.get("ROOM_28");
-			} else if (currentLevel == 3)
+			} else if (currentLevel == 3){
 				initRooms("data/levels/level3.dat");
-			else if (currentLevel == 4)
+				currentRoom = masterRoomMap.get("ROOM_1");
+			} else if (currentLevel == 4){
 				initRooms("data/levels/level4.dat");
-			
-
+				currentRoom = masterRoomMap.get("ROOM_1");
+			} 
+			*/
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		parser = new Parser();
 	}
 
-	// resetLevel method for when the player dies
-	public boolean resetLevelDies(int currentLevel) {
-		while (currentLevel > 0) { // the stuff in ("...") is wrong
-			// stuff that has to be reset
-			// can't right now since no one wrote an actual level
-		}
-		return false;
-	}
 
 	// resetLevel method for when the player wins a level
-	public boolean resetLevelWins(int currentLevel) {
-		while (currentLevel > 0) { // the stuff in ("...") is wrong
-			// stuff that has to be reset
-			// can't right now since no one wrote an actual level
+	public void resetLevel(int currentLevel) throws Exception {
+		if (currentLevel == 1){
+			initRooms("data/levels/level1.dat");
+			currentRoom = masterRoomMap.get("ROOM_1");
+		} else if (currentLevel == 2){
+			initRooms("data/levels/level2.dat");
+			currentRoom = masterRoomMap.get("ROOM_28");
+			System.out.println("TESTING: currentLevel: " + currentLevel);
+			System.out.println("TESTING: roomDescrip: " + currentRoom.longDescription());
+		} else if (currentLevel == 3){
+			initRooms("data/levels/level3.dat");
+			currentRoom = masterRoomMap.get("ROOM_1");
+			System.out.println("TESTING: currentLevel: " + currentLevel);
+			System.out.println("TESTING: roomDescrip: " + currentRoom.longDescription());
+		} else if (currentLevel == 4){
+			initRooms("data/levels/level4.dat");
+			currentRoom = masterRoomMap.get("ROOM_1");
 		}
-		return false;
 	}
 
 	/**
@@ -183,31 +192,34 @@ class Game {
 			
 			if (currentLevel == 1){
 				printLevel1();
-			} 
-			
-			if (currentLevel == 2){
-				//DialogueLevel2.level2Intro();
+				if (currentRoom.equals(masterRoomMap.get("ROOM_25"))){
+					currentLevel++;
+				}
+			} else if (currentLevel == 2){
+				// initRooms("data/levels/level2.dat");
+				// DialogueLevel2.level2Intro();
 				if (currentRoom.equals(masterRoomMap.get("ROOM_30"))){
 					DialogueLevel2.level2Ending(currentLevel, secondKey);
 					currentLevel++;
+					resetLevel(currentLevel);
 					//initRooms("data/levels/level3.dat");
 					//currentRoom = masterRoomMap.get("ROOM_1");
 				}
-			} 
-			
-			if (currentLevel == 3){
-				initRooms("data/levels/level3.dat");
-				System.out.println();
-				System.out.println();
+			} else if (currentLevel == 3){
+				//initRooms("data/levels/level3.dat");
+				//currentRoom = masterRoomMap.get("ROOM_1");
+				//if (currentRoom.equals(masterRoomMap.get("ROOM_1"))){
+					//System.out.println(currentRoom.longDescription());
+				//}
 				
-				System.out.println(currentRoom.longDescription());
+				System.out.println();
+				System.out.println();
+				// Testing: System.out.println("You are now in LEVEL 3!");
 				if(currentRoom.equals(masterRoomMap.get("ROOM_60"))){
 					currentLevel++;
 				}
-			} 
-			
-			if (currentLevel == 4){ // currentLevel == 4
-				// ...
+			} else {// if (currentLevel == 4){
+				System.out.println("You are now in LEVEL 4!");
 			}
 			
 		}
