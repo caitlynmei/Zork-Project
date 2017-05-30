@@ -196,15 +196,13 @@ class Game {
 			} 
 			
 			if (currentLevel == 3){
-				
-				System.out.println();
-				System.out.println();
 				initRooms("data/levels/level3.dat");
+				System.out.println();
+				System.out.println();
 				
 				System.out.println(currentRoom.longDescription());
 				if(currentRoom.equals(masterRoomMap.get("ROOM_60"))){
 					currentLevel++;
-					
 				}
 			} 
 			
