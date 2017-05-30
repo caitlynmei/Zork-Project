@@ -156,16 +156,20 @@ class Game {
 		if (currentLevel == 1){
 			initRooms("data/levels/level1.dat");
 			currentRoom = masterRoomMap.get("ROOM_1");
+			
 		} else if (currentLevel == 2){
 			initRooms("data/levels/level2.dat");
 			currentRoom = masterRoomMap.get("ROOM_28");
-			System.out.println("TESTING: currentLevel: " + currentLevel);
-			System.out.println("TESTING: roomDescrip: " + currentRoom.longDescription());
+			
 		} else if (currentLevel == 3){
 			initRooms("data/levels/level3.dat");
 			currentRoom = masterRoomMap.get("ROOM_1");
-			System.out.println("TESTING: currentLevel: " + currentLevel);
-			System.out.println("TESTING: roomDescrip: " + currentRoom.longDescription());
+			//System.out.println("TESTING: currentLevel: " + currentLevel);
+			if (currentRoom.equals(masterRoomMap.get("ROOM_1"))){
+				System.out.println();
+				System.out.println(currentRoom.longDescription()); // to print out room description of ROOM_1
+			}
+			
 		} else if (currentLevel == 4){
 			initRooms("data/levels/level4.dat");
 			currentRoom = masterRoomMap.get("ROOM_1");
@@ -184,7 +188,7 @@ class Game {
 		// execute them until the game is over.
 
 		boolean finished = false;
-		while (!finished) {
+		while (!finished){
 			Command command = parser.getCommand();
 			finished = processCommand(command);
 			
@@ -194,31 +198,21 @@ class Game {
 				printLevel1();
 				if (currentRoom.equals(masterRoomMap.get("ROOM_25"))){
 					currentLevel++;
+					resetLevel(currentLevel);
 				}
 			} else if (currentLevel == 2){
-				// initRooms("data/levels/level2.dat");
 				// DialogueLevel2.level2Intro();
 				if (currentRoom.equals(masterRoomMap.get("ROOM_30"))){
 					DialogueLevel2.level2Ending(currentLevel, secondKey);
 					currentLevel++;
 					resetLevel(currentLevel);
-					//initRooms("data/levels/level3.dat");
-					//currentRoom = masterRoomMap.get("ROOM_1");
 				}
 			} else if (currentLevel == 3){
-				//initRooms("data/levels/level3.dat");
-				//currentRoom = masterRoomMap.get("ROOM_1");
-				//if (currentRoom.equals(masterRoomMap.get("ROOM_1"))){
-					//System.out.println(currentRoom.longDescription());
-				//}
-				
-				System.out.println();
-				System.out.println();
-				// Testing: System.out.println("You are now in LEVEL 3!");
 				if(currentRoom.equals(masterRoomMap.get("ROOM_60"))){
 					currentLevel++;
+					resetLevel(currentLevel);
 				}
-			} else {// if (currentLevel == 4){
+			} else { // currentLevel == 4
 				System.out.println("You are now in LEVEL 4!");
 			}
 			
