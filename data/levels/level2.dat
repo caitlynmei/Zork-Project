@@ -115,6 +115,6 @@ Room lock: 0
 Room Description: ABYSS CAVE ENTRANCE<br>The luminous rocks led you to, not a gingerbread house, but a cave entrance! How cool<br>is that? You are in front of the cave. A huge spherical boulder blocks the entrance. There is<br>a keypad beside the boulder on the cave wall. 
 Exit Rooms: W-Room 28, E-Room 30
 Room Name: Room 30
-Room lock: 0
+Room lock: 1
 Room Description: INSIDE CAVE<br>Almost there! You enter into an underwater sea cave. It is about the size of a small room.<br>There are more luminous rocks, this time covering the cave walls and ceiling like a star<br>constellation. In the middle of the room is a mirror.
 Exit Rooms: W-Room 29
