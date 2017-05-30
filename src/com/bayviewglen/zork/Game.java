@@ -245,10 +245,10 @@ class Game {
 	}
 
 	// JT Level 1
-	public boolean level1() throws InterruptedException {
+	public boolean printlevel1() throws InterruptedException {
 		boolean level1Over = true;
-		//DialogueLevel1.level1JackDialogue();
-		DialogueLevel1.level1Giant();
+		
+
 		//if (){ Inventory.add(firstKey); System.out.
 		DialogueLevel1.level1end();
 		currentLevel++;

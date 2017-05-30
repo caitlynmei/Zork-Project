@@ -19,9 +19,9 @@ public class DialogueLevel1 {
 
 	}
 	
-	
-	//When you come across Jack
-	public static void level1JackDialogue() throws InterruptedException{
+
+	//When you first meet Jack
+	public static void Jack1stMeeting() throws InterruptedException{
 		System.out.println("");
 		thread.sleep(2000);
 		System.out.println("");
@@ -68,6 +68,13 @@ public class DialogueLevel1 {
 
 	
 	}
+	
+	//When you get bean & meet Jack for 2nd time
+	public static void Jack2ndMeeting() throws InterruptedException{
+		
+	}
+	
+	//When you come across chest and put key in
 	
 	//Level 1 Outro
 	public static void level1end() throws InterruptedException{ //to be called after completing level 1

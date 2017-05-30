@@ -1,6 +1,6 @@
 Room Name: Room 1 
 Room lock: 1
-Room Description:  Area of fluffy clouds
+Room Description: Area of fluffy clouds
 Exit Rooms: N-Room 2, E-Room 3, S-Room 4, W-Room 5
 Room Name: Room 2
 Room lock: 0 
@@ -12,7 +12,7 @@ Room Description: There is more stuff
 Exit Rooms: W-Room 1, N-Room 7, S-Room 8, E-Room 12
 Room Name: Room 4
 Room lock: 0 
-Room Description: Stuff!
+Room Description: Stuff
 Exit Rooms: N-Room 1, E-Room 8, W-Room 9, S-Room 10
 Room Name: Room 5
 Room lock: 0 
@@ -108,5 +108,5 @@ Room Description:  place
 Exit Rooms: N-Room 26, S-Room 28
 Room Name: Room 28
 Room lock: 0 
-Room Description:  BOSS ROOM!!!!! YAAAAAAAAAAAAAAAA
+Room Description: place
 Exit Rooms: N-Room 27
