@@ -1,64 +1,85 @@
 Room Name: Room 1 
+Room Lock: 0
 Room Description: Volcano Base **description of surroundings rocks and stuff
 Exit Rooms: E-Room 2, N-Room 3, W-Room 4
 Room Name: Room 2
+Room Lock: 0
 Room Description: place
 Exit Rooms: W-Room 1, N-Room 5
 Room Name: Room 3
+Room Lock: 0
 Room Description: There is more stuff
 Exit Rooms: E-Room 5, W-Room 6, S-Room 1
 Room Name: Room 4
+Room Lock: 0
 Room Description: stuff
 Exit Rooms: N-Room 6, E-Room 1
 Room Name: Room 5
+Room Lock: 0
 Room Description: stuff
 Exit Rooms: S-Room 2, W-Room 3
 Room Name: Room 6
+Room Lock: 0
 Room Description: Ladder! ***last room on floor
 Exit Rooms: U-Room 7, E-Room 3, S-Room 4
 Room Name: Room 7
+Room Lock: 0
 Room Description: new place oo
 Exit Rooms: E-Room 8, S-Room 12, D-Room 6
 Room Name: Room 8
+Room Lock: 0
 Room Description: stuff
 Exit Rooms:S-Room 11, E-Room 9, W-Room 7
 Room Name: Room 9
+Room Lock: 0
 Room Description: stuff
 Exit Rooms: S-Room 10, W-Room 8
 Room Name: Room 10
+Room Lock: 0
 Room Description: stuff
 Exit Rooms: N-Room 9, W-Room 11
 Room Name: Room 11
+Room Lock: 0
 Room Description: Ladder!
 Exit Rooms: N-Room 8, E-Room 10, W-Room 12, U-Room 13
 Room Name: Room 12
+Room Lock: 0
 Room Description: stuff
 Exit Rooms: N-Room 7, E-Room 11
 Room Name: Room 13
+Room Lock: 0
 Room Description: stuff
 Exit Rooms: D-Room 11, N-Room 14. W-Room 16
 Room Name: Room 14
+Room Lock: 0
 Room Description: stuff
 Exit Rooms: S-Room 13, W-Room 15
 Room Name: Room 15
+Room Lock: 0
 Room Description: Ladder!
 Exit Rooms: U-Room 17, S-Room 16, E-Room 14
 Room Name: Room 16
+Room Lock: 0
 Room Description: Stuff
 Exit Rooms: N-Room 15, E-Room 13
 Room Name: Room 17
+Room Lock: 0
 Room Description: stuff
 Exit Rooms: E-Room 18
 Room Name: Room 18
+Room Lock: 0
 Room Description: Ladder!
 Exit Rooms: U-Room 19, W-Room 17
 Room Name: Room 19
+Room Lock: 0
 Room Description: stuff
 Exit Rooms: E-Room 20, D-Room 18
 Room Name: Room 20
+Room Lock: 0
 Room Description: stuff
 Exit Rooms: W-Room 19, E-Room 21
 Room Name: Room 21
+Room Lock: 0
 Room Description: end
 Exit Rooms:
 
