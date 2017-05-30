@@ -129,21 +129,6 @@ class Game {
 	public Game() { // I got the levels thing, I'll finish it later - CM
 		try {
 			resetLevel(currentLevel);
-			/*
-			if (currentLevel == 1){
-				initRooms("data/levels/level1.dat");
-				currentRoom = masterRoomMap.get("ROOM_1");
-			} else if (currentLevel == 2){
-				initRooms("data/levels/level2.dat");
-				currentRoom = masterRoomMap.get("ROOM_28");
-			} else if (currentLevel == 3){
-				initRooms("data/levels/level3.dat");
-				currentRoom = masterRoomMap.get("ROOM_1");
-			} else if (currentLevel == 4){
-				initRooms("data/levels/level4.dat");
-				currentRoom = masterRoomMap.get("ROOM_1");
-			} 
-			*/
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -223,7 +208,7 @@ class Game {
 	/**
 	 * Print out the opening message for the player.
 	 */
-	// Introduction to Game
+	// Game Introduction
 	private void printWelcome() throws InterruptedException {
 
 		System.out.println();
