@@ -248,7 +248,7 @@ class Game {
 		currentLevel++;
 		return (level1Over == true);
 	}
-}
+
 
 	public boolean printLevel2() throws InterruptedException {
 		boolean level2Over = false;
