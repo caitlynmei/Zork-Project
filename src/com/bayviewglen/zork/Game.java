@@ -180,11 +180,7 @@ class Game {
 			//printWelcome();
 			
 			if (currentLevel == 1){
-				DialogueLevel1.level1Intro();
-				/*if (currentRoom.equals(masterRoomMap.get("ROOM_30"))){
-					DialogueLevel1.level1End(currentLevel, firstKey);
-					currentLevel++;
-				}*/
+				printLevel1();
 			} 
 			
 			if (currentLevel == 2){
@@ -244,13 +240,17 @@ class Game {
 		System.out.println("\n\n");
 	}
 
-	// JT Level 1
-	public boolean printlevel1() throws InterruptedException {
+ //JT Level 1
+	public boolean printLevel1() throws InterruptedException {
 		boolean level1Over = true;
 		
-
-		//if (){ Inventory.add(firstKey); System.out.
-		DialogueLevel1.level1end();
+	/*	DialogueLevel1.level1Intro();
+		//if (currentRoom.equals(masterRoomMap.get(""))){
+			DialogueLevel1.level1End(currentLevel, firstKey);
+			currentLevel++;
+		}
+	*/	
+		DialogueLevel1.level1Outro();
 		currentLevel++;
 		return (level1Over == true);
 	}

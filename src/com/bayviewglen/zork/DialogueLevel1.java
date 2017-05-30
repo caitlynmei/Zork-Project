@@ -54,25 +54,25 @@ public class DialogueLevel1 {
 			System.out.println("\"You think to yourself and say\"...");
 			System.out.println("Options: \t\"Why should I help?\" - \"What do I get out of this?\"");
 			System.out.print(">");
-			String temp = "";
-			boolean valid = false;
-			while (!valid) {
-				temp = keyboard.nextLine().toUpperCase();
-				if (temp.equals("WHY SHOULD I HELP?") || temp.equals("What do I get out of this?")) {
-					valid = true;
-				} else if (temp.equals("HELP")) {
+			String temp2 = "";
+			boolean valid2 = false;
+			while (!valid2) {
+				temp2 = keyboard.nextLine().toUpperCase();
+				if (temp2.equals("WHY SHOULD I HELP?") || temp.equals("What do I get out of this?")) {
+					valid2 = true;
+				} else if (temp2.equals("HELP")) {
 					System.out.println("\nType exactly what you want to do, make sure no there are no extra spaces");
 				} else {
 					System.out.println("ERROR- Make sure you type exactly what you want to do with no extra spaces...");
 				}
 			}
-			if (temp.equals("WHY SHOULD I HELP?")) {
+			if (temp2.equals("WHY SHOULD I HELP?")) {
 				thread.sleep(2000);
 				System.out.println("Hmmmmm, if you do I can give you a key.");
 				thread.sleep(2000);
 				System.out.println("I have no use for this key but I ");
 			}
-			if (temp.equals("What do I get out this?")) {
+			if (temp2.equals("What do I get out this?")) {
 				thread.sleep(2000);
 				
 			}
@@ -130,10 +130,7 @@ public class DialogueLevel1 {
 	// When you come across chest and put key in
 
 	// Level 1 Outro
-	public static void level1end() throws InterruptedException { // to be called
-																	// after
-																	// completing
-																	// level 1
+	public static void level1Outro() throws InterruptedException { // to be called after completing level 1
 		thread.sleep(1500);
 		System.out.println("The clouds around you start to disappear one by one.");
 		System.out.println("\n\nYou think about what to do. You think to yourself\n");
