@@ -292,7 +292,7 @@ class Game {
 		} else if (commandWord.equalsIgnoreCase("commandlist")){
 			printCommandList();
 		
-			// look command
+		// look command
 		} else if (commandWord.equalsIgnoreCase("look")){
 			printLook();
 
@@ -401,6 +401,9 @@ class Game {
 		}
 	}
 
+	/*
+	 * Allows player to take an item and add it to their inventory 
+	 */
 	private void takeItem(Command command) throws InterruptedException {
 		// if there is no second word, we don't know what item to take...
 		if (!command.hasSecondWord()){
@@ -422,13 +425,6 @@ class Game {
 			} else if (currentLevel == 2) {
 				if (itemSecondWord.equalsIgnoreCase("stone")) {
 					Inventory.add(stone);
-					/*
-					 * if (itemSecondWord.equalsIgnoreCase("sea") &&
-					 * itemThirdWord.equalsIgnoreCase("key")){
-					 * Inventory.add(secondKey);
-					 * DialogueLevel2.level2Ending(secondKey); currentLevel++;
-					 * System.out.println("Level: " + currentLevel);
-					 */
 				} else {
 					System.out.println("That is not an item that you can take.");
 				}
@@ -444,6 +440,9 @@ class Game {
 		}
 	}
 
+	/*
+	 *  Allows player to drop an item and remove it from their inventory. 
+	 */
 	private void dropItem(Command command) {
 		// if there is no second word, we don't know what item to drop...
 		if (!command.hasSecondWord()){
@@ -484,7 +483,6 @@ class Game {
 	// printLook() Method lets you see room/environment description
 	private void printLook() {
 		System.out.println(currentRoom.getDescription());
-
 	}
 
 	/**
@@ -530,8 +528,6 @@ class Game {
 			return;
 		}
 
-		// String direction = command.getSecondWord(); original
-
 		String secondWord = command.getSecondWord();
 		String direction = "";
 		if (secondWord.equalsIgnoreCase("north") || secondWord.equalsIgnoreCase("n"))
@@ -570,7 +566,6 @@ class Game {
 	 * first.
 	 */
 	private void goRoomDirection(String direction) {
-
 		// Try to leave current room.
 		Room nextRoom = currentRoom.nextRoom(direction);
 
