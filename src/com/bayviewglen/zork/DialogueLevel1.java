@@ -10,6 +10,7 @@ public class DialogueLevel1 {
 
 	// Level 1 Introduction
 	public static void level1Intro() throws InterruptedException {
+		System.out.println("LEVEL 1");
 		System.out.println(
 				"You wake up on a fluffy surface. You look around to see blue skies and the bright sun in the Morning sky.");
 		thread.sleep(2000);
@@ -72,11 +73,11 @@ public class DialogueLevel1 {
 				thread.sleep(2000);
 				System.out.println("I have no use for this key but I ");
 			}
-			if (temp2.equals("What do I get out this?")) {
+			if (temp2.equals("WHAT DO I GET OUT OF THIS?")) {
 				thread.sleep(2000);
-				
 			}
 
+			
 		}
 		if (temp.equals("NO")) {
 			thread.sleep(2000);
@@ -127,11 +128,13 @@ public class DialogueLevel1 {
 
 	}
 
-	// When you come across chest and put key in
+	// When you come across door and put key in
+	public static void level1Door() throws InterruptedException{
+		
+	}
 
 	// Level 1 Outro
 	public static void level1Outro() throws InterruptedException { // to be called after completing level 1
-		thread.sleep(1500);
 		System.out.println("The clouds around you start to disappear one by one.");
 		System.out.println("\n\nYou think about what to do. You think to yourself\n");
 		thread.sleep(2000);
@@ -140,7 +143,6 @@ public class DialogueLevel1 {
 		System.out.println("What do you do?");
 		System.out.print(">");
 		String temp = "";
-
 		boolean valid = false;
 		while (!valid) {
 			temp = keyboard.nextLine().toUpperCase();

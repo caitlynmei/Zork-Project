@@ -181,7 +181,7 @@ class Game {
 			
 			if (currentLevel == 1){
 				printLevel1();
-				if (currentRoom.equals(masterRoomMap.get("ROOM_25"))){
+				if (currentRoom.equals(masterRoomMap.get("ROOM_1"))){
 					currentLevel++;
 					resetLevel(currentLevel);
 				}
