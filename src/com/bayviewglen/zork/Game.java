@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
 
+import com.bayviewglen.zork.characters.Grunt;
 import com.bayviewglen.zork.inventory.Inventory;
 import com.bayviewglen.zork.item.Food;
 import com.bayviewglen.zork.item.Item;
@@ -87,9 +88,7 @@ class Game {
 
 				exits.put(roomName.substring(10).trim().toUpperCase().replaceAll(" ", "_"), temp);
 				
-				 //Reads the Items String roomItems = roomScanner.nextLine();
-				  room.setRoomItems(roomItems.split(":")[1].trim());
-				  
+				 //Reads the Items String roomItems = roomScanner.nextLine();				  
 				  
 				  
 				 //Reads the Enemies String 
@@ -137,7 +136,7 @@ class Game {
 					roomTemp.setExit(s.trim().charAt(0), exitRoom);
 
 				}
-
+			}
 			}
 
 			roomScanner.close();
