@@ -234,8 +234,9 @@ class Game {
 		System.out
 				.println("You play the game by entering commands with your keyboard when you see the \'>\' symbol.\n");
 		System.out.println("You can also type \'help\' for a bit of advice.\n");
+		thread.sleep(2000);
 		printGameRules();
-		thread.sleep(8000);
+		thread.sleep(10000);
 		System.out.println("Are you prepared for some serious challenges?");
 		System.out.println();
 
