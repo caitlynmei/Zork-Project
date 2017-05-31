@@ -237,7 +237,7 @@ class Game {
 		thread.sleep(2000);
 		printGameRules();
 		thread.sleep(10000);
-		System.out.println("Are you prepared for some serious challenges?");
+		System.out.println("\n\nAre you prepared for some serious challenges?");
 		System.out.println();
 
 		// And the game begins!!
