@@ -92,7 +92,7 @@ class Game {
 				 * 
 				 * 
 				 * 
-				 * //Reads the Enemies String roomEnemies =
+				 //Reads the Enemies String roomEnemies =
 				 * roomScanner.nextLine();
 				 * room.setRoomEnemies(roomEnemies.split(":")[1].trim());
 				 * 
