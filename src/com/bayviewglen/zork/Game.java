@@ -167,10 +167,12 @@ class Game {
 		} else if (currentLevel == 2){
 			initRooms("data/levels/level2.dat");
 			currentRoom = masterRoomMap.get("ROOM_1");
-			if (currentRoom.equals(masterRoomMap.get("ROOM_1"))){
+			
+			/*if (currentRoom.equals(masterRoomMap.get("ROOM_1"))){
 				System.out.println();
 				System.out.println(currentRoom.longDescription()); // to print out room description of ROOM_1
 			}
+			*/
 			
 		} else if (currentLevel == 3){
 			initRooms("data/levels/level3.dat");
