@@ -196,7 +196,7 @@ class Game {
 	 * @throws Exception
 	 */
 	public void play() throws Exception {
-		// printWelcome();
+		//printWelcome();
 
 		// Enter the main command loop. Here we repeatedly read commands and
 		// execute them until the game is over.
@@ -229,11 +229,12 @@ class Game {
 				} else if (currentRoom.equals(masterRoomMap.get("ROOM_1"))) {
 					if (Inventory.findIndex(secondKey) == -1){
 					//something
-					} else if (Inventory.findIndex(bean) != -1){
-						//door appears
+					} else if (Inventory.findIndex(secondKey) != -1){
+						DialogueLevel1.level1Door();
+						DialogueLevel1.level1Outro();
+						currentLevel++;
+						resetLevel(currentLevel);
 					}
-					currentLevel++;
-					resetLevel(currentLevel);
 				}
 			} else if (currentLevel == 2) {
 				if (currentRoom.equals(masterRoomMap.get("ROOM_1"))) {

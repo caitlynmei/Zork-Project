@@ -141,7 +141,7 @@ public class DialogueLevel1 {
 	}
 
 	// Level 1 Code Check
-	public static void level2CodeCheck() {
+	public static void level1CodeCheck() {
 
 		final String VALID_CODE_CHARACTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 		final int GUESSED_CHAR_LENGTH = 1; // length of guessed character (which
