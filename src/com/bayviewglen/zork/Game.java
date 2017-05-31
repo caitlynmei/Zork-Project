@@ -32,12 +32,14 @@ import com.bayviewglen.zork.tool.Tool;
 
 class Game {
 
-	
-	public int currentLevel = 2; // temp 2 for testing, CM
+	public int currentLevel = 1; // temp 2 for testing, CM
 
+	// Level 1 Items
+	Tool firstKey = new Tool("1: Air Key");
+	Food bean = new Food("bean");
+	
 	// Level 2 Items
-	Food apple = new Food("apple");
-	Tool secondKey = new Tool("Sea Key");
+	Tool secondKey = new Tool("2: Sea Key");
 	Tool stone = new Tool("stone");
 	Tool bubble = new Tool("bubble");
 
@@ -64,7 +66,6 @@ class Game {
 			while (roomScanner.hasNext()) {
 				Room room = new Room();
 
-				
 				// Read the Name
 				String roomName = roomScanner.nextLine();
 				room.setRoomName(roomName.split(":")[1].trim());
@@ -87,37 +88,34 @@ class Game {
 				}
 
 				exits.put(roomName.substring(10).trim().toUpperCase().replaceAll(" ", "_"), temp);
-				
-				 //Reads the Items String roomItems = roomScanner.nextLine();				  
-				  
-				  
-				 //Reads the Enemies String 
-				 /* String[] roomEnemies = roomScanner.nextLine().trim().split(":")[1].split(",");
-					int counter = 0;
-					if (!roomEnemies[0].trim().equals("none")) {
-						for (String s : roomEnemies) {
-							String currentEnemyType = roomEnemies[counter].trim().split("-")[0];
-							String inRange = roomEnemies[counter].trim().split("-")[1];
-							int hitsToKill = Integer.parseInt(roomEnemies[counter].trim().split("-")[2]);
-							if(currentEnemyType.equals("Grunt")){
-								room.addRoomEnemy(new Grunt(hitsToKill,"Grunt",inRange.equals("C")));
-							}else if(currentEnemyType.equals("Grunt")){
-								room.addRoomEnemy(new Grunt(hitsToKill,"Grunt",inRange.equals("C")));
-							}else if(currentEnemyType.equals("Grunt")){
-								room.addRoomEnemy(new Grunt(hitsToKill,"Grunt",inRange.equals("C")));
-							}else if(currentEnemyType.equals("Grunt")){
-								room.addRoomEnemy(new Grunt(hitsToKill,"Grunt",inRange.equals("C")));
-							}else if(currentEnemyType.equals("Grunt")){
-								room.addRoomEnemy(new Grunt(hitsToKill,"Grunt",inRange.equals("C")));
-							}else if(currentEnemyType.equals("Grunt")){
-								room.addRoomEnemy(new Grunt(hitsToKill,"Grunt",inRange.equals("C")));
-							}
-							counter++;
-							
-						}
-					}
-				*/
-				
+
+				// Reads the Items String roomItems = roomScanner.nextLine();
+
+				// Reads the Enemies String
+				/*
+				 * String[] roomEnemies =
+				 * roomScanner.nextLine().trim().split(":")[1].split(","); int
+				 * counter = 0; if (!roomEnemies[0].trim().equals("none")) { for
+				 * (String s : roomEnemies) { String currentEnemyType =
+				 * roomEnemies[counter].trim().split("-")[0]; String inRange =
+				 * roomEnemies[counter].trim().split("-")[1]; int hitsToKill =
+				 * Integer.parseInt(roomEnemies[counter].trim().split("-")[2]);
+				 * if(currentEnemyType.equals("Grunt")){ room.addRoomEnemy(new
+				 * Grunt(hitsToKill,"Grunt",inRange.equals("C"))); }else
+				 * if(currentEnemyType.equals("Grunt")){ room.addRoomEnemy(new
+				 * Grunt(hitsToKill,"Grunt",inRange.equals("C"))); }else
+				 * if(currentEnemyType.equals("Grunt")){ room.addRoomEnemy(new
+				 * Grunt(hitsToKill,"Grunt",inRange.equals("C"))); }else
+				 * if(currentEnemyType.equals("Grunt")){ room.addRoomEnemy(new
+				 * Grunt(hitsToKill,"Grunt",inRange.equals("C"))); }else
+				 * if(currentEnemyType.equals("Grunt")){ room.addRoomEnemy(new
+				 * Grunt(hitsToKill,"Grunt",inRange.equals("C"))); }else
+				 * if(currentEnemyType.equals("Grunt")){ room.addRoomEnemy(new
+				 * Grunt(hitsToKill,"Grunt",inRange.equals("C"))); } counter++;
+				 * 
+				 * } }
+				 */
+
 				// This puts the room we created (Without the exits in the
 				// masterMap)
 				masterRoomMap.put(roomName.toUpperCase().substring(10).trim().replaceAll(" ", "_"), room);
@@ -157,31 +155,36 @@ class Game {
 		parser = new Parser();
 	}
 
-
 	// resetLevel method for when the player wins a level
 	public void resetLevel(int currentLevel) throws Exception {
-		if (currentLevel == 1){
+		if (currentLevel == 1) {
 			initRooms("data/levels/level1.dat");
-			currentRoom = masterRoomMap.get("ROOM_1");
-			
-		} else if (currentLevel == 2){
+			currentRoom = masterRoomMap.get("ROOM_13");
+
+		} else if (currentLevel == 2) {
 			initRooms("data/levels/level2.dat");
 			currentRoom = masterRoomMap.get("ROOM_1");
-			if (currentRoom.equals(masterRoomMap.get("ROOM_1"))){
-				System.out.println();
-				System.out.println(currentRoom.longDescription()); // to print out room description of ROOM_1
-			}
-			
-		} else if (currentLevel == 3){
+
+			/*
+			 * if (currentRoom.equals(masterRoomMap.get("ROOM_1"))){
+			 * System.out.println();
+			 * System.out.println(currentRoom.longDescription()); // to print
+			 * out room description of ROOM_1 }
+			 */
+
+		} else if (currentLevel == 3) {
 			initRooms("data/levels/level3.dat");
 			currentRoom = masterRoomMap.get("ROOM_1");
-			//System.out.println("TESTING: currentLevel: " + currentLevel);
-			if (currentRoom.equals(masterRoomMap.get("ROOM_1"))){
+			// System.out.println("TESTING: currentLevel: " + currentLevel);
+			if (currentRoom.equals(masterRoomMap.get("ROOM_1"))) {
 				System.out.println();
-				System.out.println(currentRoom.longDescription()); // to print out room description of ROOM_1
+				System.out.println(currentRoom.longDescription()); // to print
+																	// out room
+																	// description
+																	// of ROOM_1
 			}
-			
-		} else if (currentLevel == 4){
+
+		} else if (currentLevel == 4) {
 			initRooms("data/levels/level4.dat");
 			currentRoom = masterRoomMap.get("ROOM_1");
 		}
@@ -189,58 +192,77 @@ class Game {
 
 	/**
 	 * Main play routine. Loops until end of play.
-	 * @throws Exception 
+	 * 
+	 * @throws Exception
 	 */
 	public void play() throws Exception {
-		printWelcome();
-		
-		int counter = 0; // to count the number of times you enter a room, so dialogue only shows once 
-		
+		//printWelcome();
+
 		// Enter the main command loop. Here we repeatedly read commands and
 		// execute them until the game is over.
 
 		boolean finished = false;
-		while (!finished){
+		while (!finished) {
 			Command command = parser.getCommand();
 			finished = processCommand(command);
-			
-			//System.out.println();
-			//System.out.println();
-			//System.out.println(currentRoom.longDescription());
-			
-			if (currentLevel == 1){
-				printLevel1();
-				if (currentRoom.equals(masterRoomMap.get("ROOM_1"))){
-					currentLevel++;
-					resetLevel(currentLevel);
+			int counter = 0; // to count the number of times you enter a room,
+								// so dialogue only shows once
+
+			System.out.println("current level: " + currentLevel);
+			// System.out.println();
+			// System.out.println(currentRoom.longDescription());
+
+			if (currentLevel == 1) {
+				if (currentRoom.equals(masterRoomMap.get("ROOM_13"))) {
+					DialogueLevel1.level1Intro();
+				} else if (currentRoom.equals(masterRoomMap.get("ROOM_4"))) {
+					// stuff...
+				} else if (currentRoom.equals(masterRoomMap.get("ROOM_17"))) {
+					DialogueLevel1.level1Giant();
+					if (Inventory.findIndex(bean) == -1){
+						DialogueLevel1.Jack1stMeeting();
+					} else if (Inventory.findIndex(bean) != -1){
+						DialogueLevel1.Jack2ndMeeting(secondKey);
+					}
+				} else if (currentRoom.equals(masterRoomMap.get("ROOM_22"))) {
+					Inventory.add(bean);
+				} else if (currentRoom.equals(masterRoomMap.get("ROOM_1"))) {
+					if (Inventory.findIndex(secondKey) == -1){
+					//something
+					} else if (Inventory.findIndex(secondKey) != -1){
+						DialogueLevel1.level1Door();
+						DialogueLevel1.level1Outro();
+						currentLevel++;
+						resetLevel(currentLevel);
+					}
 				}
-			} else if (currentLevel == 2){
-				if (currentRoom.equals(masterRoomMap.get("ROOM_1"))){
+			} else if (currentLevel == 2) {
+				if (currentRoom.equals(masterRoomMap.get("ROOM_1"))) {
 					DialogueLevel2.level2Intro();
-				} else if (currentRoom.equals(masterRoomMap.get("ROOM_6"))){
-					if (Inventory.findIndex(bubble) == -1){
+				} else if (currentRoom.equals(masterRoomMap.get("ROOM_6"))) {
+					if (Inventory.findIndex(bubble) == -1) {
 						DialogueLevel2.level2NoAir();
 						finished = true;
 					}
-				} else if (currentRoom.equals(masterRoomMap.get("ROOM_6"))){
+				} else if (currentRoom.equals(masterRoomMap.get("ROOM_6"))) {
 					DialogueLevel2.level2Shark();
-				} else if (currentRoom.equals(masterRoomMap.get("ROOM_29"))){
+				} else if (currentRoom.equals(masterRoomMap.get("ROOM_29"))) {
 					DialogueLevel2.level2Oarfish(finished);
-				} else if (currentRoom.equals(masterRoomMap.get("ROOM_30"))){
+				} else if (currentRoom.equals(masterRoomMap.get("ROOM_30"))) {
 					DialogueLevel2.level2Mirror();
 					DialogueLevel2.level2Ending(currentLevel, secondKey);
 					currentLevel++;
 					resetLevel(currentLevel);
 				}
-			} else if (currentLevel == 3){
-				if(currentRoom.equals(masterRoomMap.get("ROOM_60"))){
+			} else if (currentLevel == 3) {
+				if (currentRoom.equals(masterRoomMap.get("ROOM_60"))) {
 					currentLevel++;
 					resetLevel(currentLevel);
 				}
 			} else { // currentLevel == 4
 				System.out.println("You are now in LEVEL 4!");
 			}
-			
+
 		}
 		System.out.println("Thank you for playing. Good bye for now!");
 	}
@@ -283,7 +305,7 @@ class Game {
 		System.out.println("\n\n");
 	}
 
- //JT Level 1
+	// JT Level 1
 	public boolean printLevel1() throws InterruptedException {
 		boolean level1Over = true;
 		DialogueLevel1.level1Intro();
@@ -292,10 +314,9 @@ class Game {
 		return (level1Over == true);
 	}
 
-
 	public boolean printLevel2() throws InterruptedException {
 		boolean level2Over = false;
-		
+
 		return (level2Over == true);
 	}
 
@@ -318,66 +339,69 @@ class Game {
 	 * @throws InterruptedException
 	 */
 	private boolean processCommand(Command command) throws InterruptedException {
-		if (command.isUnknown(command)){ 
+		if (command.isUnknown(command)) {
 			System.out.println("I don't know what you mean...");
 			return false;
-		} 
+		}
 
-		String commandWord = command.getCommandWord(); // changed from command.getWord(0)
+		String commandWord = command.getCommandWord(); // changed from
+														// command.getWord(0)
 		String secondWord = command.getSecondWord();
 
 		// Help commands
-		if (commandWord.equalsIgnoreCase("help")){
+		if (commandWord.equalsIgnoreCase("help")) {
 			printHelp();
-		} else if (commandWord.equalsIgnoreCase("rules")){
+		} else if (commandWord.equalsIgnoreCase("rules")) {
 			printGameRules();
-		} else if (commandWord.equalsIgnoreCase("commandlist")){
+		} else if (commandWord.equalsIgnoreCase("commandlist")) {
 			printCommandList();
-		
-		// look command
-		} else if (commandWord.equalsIgnoreCase("look")){
+
+			// look command
+		} else if (commandWord.equalsIgnoreCase("look")) {
 			printLook();
 
-		// directions
-		} else if (commandWord.equalsIgnoreCase("go")){
+			// directions
+		} else if (commandWord.equalsIgnoreCase("go")) {
 			goRoom(command);
-		} else if (commandWord.equalsIgnoreCase("north") || commandWord.equalsIgnoreCase("n")){
+		} else if (commandWord.equalsIgnoreCase("north") || commandWord.equalsIgnoreCase("n")) {
 			goRoomDirection("north");
-		} else if (commandWord.equalsIgnoreCase("east") || commandWord.equalsIgnoreCase("e")){
+		} else if (commandWord.equalsIgnoreCase("east") || commandWord.equalsIgnoreCase("e")) {
 			goRoomDirection("east");
-		} else if (commandWord.equalsIgnoreCase("south") || commandWord.equalsIgnoreCase("s")){
+		} else if (commandWord.equalsIgnoreCase("south") || commandWord.equalsIgnoreCase("s")) {
 			goRoomDirection("south");
-		} else if (commandWord.equalsIgnoreCase("west") || commandWord.equalsIgnoreCase("w")){
+		} else if (commandWord.equalsIgnoreCase("west") || commandWord.equalsIgnoreCase("w")) {
 			goRoomDirection("west");
-		} else if (commandWord.equalsIgnoreCase("up") || commandWord.equalsIgnoreCase("u")){
+		} else if (commandWord.equalsIgnoreCase("up") || commandWord.equalsIgnoreCase("u")) {
 			goRoomDirection("up");
-		} else if (commandWord.equalsIgnoreCase("down") || commandWord.equalsIgnoreCase("d")){
+		} else if (commandWord.equalsIgnoreCase("down") || commandWord.equalsIgnoreCase("d")) {
 			goRoomDirection("down");
 
-		// Other command actions
-		} else if (commandWord.equalsIgnoreCase("eat") || commandWord.equalsIgnoreCase("drink")){
+			// Other command actions
+		} else if (commandWord.equalsIgnoreCase("eat") || commandWord.equalsIgnoreCase("drink")) {
 			System.out.println("Do you really think you should be having a meal at a time like this?");
-		} else if (commandWord.equalsIgnoreCase("read")){
+		} else if (commandWord.equalsIgnoreCase("read")) {
 			readItem(command);
-		} else if (commandWord.equalsIgnoreCase("hi")){
+		} else if (commandWord.equalsIgnoreCase("hi")) {
 			System.out.println("Hi back! What's up?");
-		} else if (commandWord.equalsIgnoreCase("use")){
+		} else if (commandWord.equalsIgnoreCase("use")) {
 			useItem(command);
 
-		// Inventory actions
-		} else if (commandWord.equalsIgnoreCase("inventory")){
+			// Inventory actions
+		} else if (commandWord.equalsIgnoreCase("inventory")) {
 			Inventory.printInventory();
-		} else if (commandWord.equalsIgnoreCase("take")){
+		} else if (commandWord.equalsIgnoreCase("take")) {
 			takeItem(command);
 			// testing: Inventory.add(apple);
-		} else if (commandWord.equalsIgnoreCase("drop") || commandWord.equalsIgnoreCase("toss")){
+		} else if (commandWord.equalsIgnoreCase("drop") || commandWord.equalsIgnoreCase("toss")) {
 			dropItem(command);
 			// testing: Inventory.toss(apple);
-		
-		// Quit command
-		} else if (commandWord.equalsIgnoreCase("quit")){
+
+			// Quit command
+		} else if (commandWord.equalsIgnoreCase("quit")) {
 			if (secondWord == null) {
-				System.out.println("Would you like to save your progress?"); // make data file!!													
+				System.out.println("Would you like to save your progress?"); // make
+																				// data
+																				// file!!
 			} else {
 				return true; // signal that we want to quit <-- we need to do
 			} // this -CM
@@ -392,15 +416,15 @@ class Game {
 			return;
 		}
 
-		String secondWord = command.getSecondWord(); 
+		String secondWord = command.getSecondWord();
 		String thirdWord = command.getThirdWord();
 		String fourthWord = command.getFourthWord();
 
 		// making player more specific about which items they want to use - CM
-		if (secondWord.equalsIgnoreCase("item")){
+		if (secondWord.equalsIgnoreCase("item")) {
 			System.out.println("You're going to have to be way more specific. What is the item called?");
-		} else if (currentLevel == 2){
-			if (secondWord.equalsIgnoreCase("bubble")){
+		} else if (currentLevel == 2) {
+			if (secondWord.equalsIgnoreCase("bubble")) {
 				DialogueLevel2.level2YesAir();
 				Inventory.add(bubble);
 			} else {
@@ -421,42 +445,43 @@ class Game {
 			return;
 		}
 
-		String secondWord = command.getSecondWord(); // changed from command.getWord(1)
+		String secondWord = command.getSecondWord(); // changed from
+														// command.getWord(1)
 		String thirdWord = command.getThirdWord();
 		String fourthWord = command.getFourthWord();
 
 		// making player more specific about which items they want to read - CM
-		if (secondWord.equalsIgnoreCase("item")){
+		if (secondWord.equalsIgnoreCase("item")) {
 			System.out.println("You're going to have to be way more specific. What is the item called?");
-		} else if (secondWord.equalsIgnoreCase("note")){
+		} else if (secondWord.equalsIgnoreCase("note")) {
 			System.out.println("Please be more specific. Which note? What is it called?");
-		} else if (secondWord.equalsIgnoreCase("sign")){
+		} else if (secondWord.equalsIgnoreCase("sign")) {
 			System.out.println("Please be more specific. Which sign? What is it called?");
 		} else {
-			if (currentLevel == 1){
+			if (currentLevel == 1) {
 				// list stuff in here
 				System.out.println("That is not an item with legible words on it.");
-			} else if (currentLevel == 2){
+			} else if (currentLevel == 2) {
 				// intro sign
-				if (secondWord.equalsIgnoreCase("intro") && thirdWord.equalsIgnoreCase("sign")){
+				if (secondWord.equalsIgnoreCase("intro") && thirdWord.equalsIgnoreCase("sign")) {
 					System.out.println("\nINTRO SIGN");
 					System.out.println("BEWARE: SHARK!!!\nJust stay inside the \'Kelp Forest\' to the east. ");
 					// abyss sign
-				} else if (secondWord.equalsIgnoreCase("abyss") && thirdWord.equalsIgnoreCase("sign")){
+				} else if (secondWord.equalsIgnoreCase("abyss") && thirdWord.equalsIgnoreCase("sign")) {
 					System.out
 							.println("\nABYSS SIGN\nGood job once more! Follow the path of the glow in the dark road.");
 					System.out.println("\'E\'\nHmmmm.... interesting, another letter.");
 					// mignight zone note
 				} else if (secondWord.equalsIgnoreCase("midnight") && thirdWord.equalsIgnoreCase("zone")
-						&& fourthWord.equalsIgnoreCase("note")){
+						&& fourthWord.equalsIgnoreCase("note")) {
 					DialogueLevel2.level2Note();
 				} else {
 					System.out.println("That is not an item with legible words on it.");
 				}
-			} else if (currentLevel == 3){
+			} else if (currentLevel == 3) {
 				// list stuff in here
 				System.out.println("That is not an item with legible words on it.");
-			} else if (currentLevel == 4){
+			} else if (currentLevel == 4) {
 				// list stuff in here
 				System.out.println("That is not an item with legible words on it.");
 			} else {
@@ -466,11 +491,11 @@ class Game {
 	}
 
 	/*
-	 * Allows player to take an item and add it to their inventory 
+	 * Allows player to take an item and add it to their inventory
 	 */
 	private void takeItem(Command command) throws InterruptedException {
 		// if there is no second word, we don't know what item to take...
-		if (!command.hasSecondWord()){
+		if (!command.hasSecondWord()) {
 			System.out.println("Take what? (*Hint: item)");
 			return;
 		}
@@ -484,8 +509,11 @@ class Game {
 			System.out.println("You're going to have to be way more specific. What is the item called?");
 		} else {
 			if (currentLevel == 1) {
-				// list stuff in here
-				System.out.println("That is not an item that you can take.");
+				if (itemSecondWord.equalsIgnoreCase("key")) {
+					Inventory.add(firstKey);
+				} else {
+					System.out.println("That is not an item that you can take.");
+				}
 			} else if (currentLevel == 2) {
 				if (itemSecondWord.equalsIgnoreCase("stone")) {
 					Inventory.add(stone);
@@ -505,19 +533,19 @@ class Game {
 	}
 
 	/*
-	 *  Allows player to drop an item and remove it from their inventory. 
+	 * Allows player to drop an item and remove it from their inventory.
 	 */
 	private void dropItem(Command command) {
 		// if there is no second word, we don't know what item to drop...
-		if (!command.hasSecondWord()){
+		if (!command.hasSecondWord()) {
 			System.out.println("Read what? (*Hint: item)");
 			return;
 		}
-		
+
 		String itemSecondWord = command.getSecondWord();
 		String itemThirdWord = command.getThirdWord();
 		String itemFourthWord = command.getFourthWord();
-		
+
 		// making player more specific about which items they want to drop
 		if (itemSecondWord.equalsIgnoreCase("item")) {
 			System.out.println("You're going to have to be way more specific. What is the item called?");
@@ -562,16 +590,19 @@ class Game {
 		thread.sleep(6000);
 		System.out.println("Just joking!! :)");
 		System.out.println("Don't worry. We will help guide you through this:");
-		System.out.println("- to see the game rules, enter: \'rules\' (*HINT*: you should actually look at this for helpful tips at least once)");
+		System.out.println(
+				"- to see the game rules, enter: \'rules\' (*HINT*: you should actually look at this for helpful tips at least once)");
 		System.out.println("- to see the list of commands you may use, enter: \'commandlist\'");
 	}
 
 	private void printGameRules() throws InterruptedException {
 		System.out.println("\n");
 		System.out.println("Remember what your goal is. Here is a refresher of the game rules. \n");
-		System.out.println("- purpose of this game is to get your memory back (because that\'s sorta important) and get out of this game");
+		System.out.println(
+				"- purpose of this game is to get your memory back (because that\'s sorta important) and get out of this game");
 		System.out.println("- there will be command hints in quotes, \'like this\', you should use");
-		System.out.println("- you will have to enter commands into the game to control your actions. Here are some starter commands:");
+		System.out.println(
+				"- you will have to enter commands into the game to control your actions. Here are some starter commands:");
 		System.out.println("- to view all commands, enter: \'commandlist\'");
 		System.out.println("- to take and drop items, simply enter: \'take\' or \'drop\' respectively");
 		System.out.println("- to see what is in your inventory, enter: \'inventory\'");
