@@ -35,9 +35,12 @@ class Game {
 	
 	public int currentLevel = 2; // temp 2 for testing, CM
 
+	// Level 1 Items
+	Tool firstKey = new Tool("1: Air Key");
+	
 	// Level 2 Items
 	Food apple = new Food("apple");
-	Tool secondKey = new Tool("Sea Key");
+	Tool secondKey = new Tool("2: Sea Key");
 	Tool stone = new Tool("stone");
 	Tool bubble = new Tool("bubble");
 
@@ -486,8 +489,11 @@ class Game {
 			System.out.println("You're going to have to be way more specific. What is the item called?");
 		} else {
 			if (currentLevel == 1) {
-				// list stuff in here
-				System.out.println("That is not an item that you can take.");
+				if (itemSecondWord.equalsIgnoreCase("key")){
+					Inventory.add(firstKey);
+				} else {
+					System.out.println("That is not an item that you can take.");
+				}
 			} else if (currentLevel == 2) {
 				if (itemSecondWord.equalsIgnoreCase("stone")) {
 					Inventory.add(stone);
