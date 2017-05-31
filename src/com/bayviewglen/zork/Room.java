@@ -106,7 +106,7 @@ class Room implements Lockable
     public String longDescription()
     {
     	
-        return description + "\nLocked Doors: "+roomLock+ "\n\n" + exitString() + "\n"+ roomEnemies+"\n";
+        return description + "\nLocked Doors: "+roomLock+ "\n\n" + exitString() + "\n";
     }
 	//Add enemies to a room
 	public void addRoomEnemy(Enemies enemy){

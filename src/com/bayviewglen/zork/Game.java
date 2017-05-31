@@ -92,7 +92,7 @@ class Game {
 				  
 				  
 				 //Reads the Enemies String 
-				  String[] roomEnemies = roomScanner.nextLine().trim().split(":")[1].split(",");
+				 /* String[] roomEnemies = roomScanner.nextLine().trim().split(":")[1].split(",");
 					int counter = 0;
 					if (!roomEnemies[0].trim().equals("none")) {
 						for (String s : roomEnemies) {
@@ -100,23 +100,23 @@ class Game {
 							String inRange = roomEnemies[counter].trim().split("-")[1];
 							int hitsToKill = Integer.parseInt(roomEnemies[counter].trim().split("-")[2]);
 							if(currentEnemyType.equals("Grunt")){
-								room.addRoomEnemy(new Grunt(hitsToKill,"Grunt",inRange.equals("Close")));
+								room.addRoomEnemy(new Grunt(hitsToKill,"Grunt",inRange.equals("C")));
 							}else if(currentEnemyType.equals("Grunt")){
-								room.addRoomEnemy(new Grunt(hitsToKill,"Grunt",inRange.equals("Close")));
+								room.addRoomEnemy(new Grunt(hitsToKill,"Grunt",inRange.equals("C")));
 							}else if(currentEnemyType.equals("Grunt")){
-								room.addRoomEnemy(new Grunt(hitsToKill,"Grunt",inRange.equals("Close")));
+								room.addRoomEnemy(new Grunt(hitsToKill,"Grunt",inRange.equals("C")));
 							}else if(currentEnemyType.equals("Grunt")){
-								room.addRoomEnemy(new Grunt(hitsToKill,"Grunt",inRange.equals("Close")));
+								room.addRoomEnemy(new Grunt(hitsToKill,"Grunt",inRange.equals("C")));
 							}else if(currentEnemyType.equals("Grunt")){
-								room.addRoomEnemy(new Grunt(hitsToKill,"Grunt",inRange.equals("Close")));
+								room.addRoomEnemy(new Grunt(hitsToKill,"Grunt",inRange.equals("C")));
 							}else if(currentEnemyType.equals("Grunt")){
-								room.addRoomEnemy(new Grunt(hitsToKill,"Grunt",inRange.equals("Close")));
+								room.addRoomEnemy(new Grunt(hitsToKill,"Grunt",inRange.equals("C")));
 							}
 							counter++;
 							
 						}
-
-				
+					}
+				*/
 				
 				// This puts the room we created (Without the exits in the
 				// masterMap)
@@ -137,7 +137,6 @@ class Game {
 					roomTemp.setExit(s.trim().charAt(0), exitRoom);
 
 				}
-			}
 			}
 
 			roomScanner.close();
