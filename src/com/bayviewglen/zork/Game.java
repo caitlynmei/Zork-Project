@@ -113,6 +113,7 @@ class Game {
 								room.addRoomEnemy(new Grunt(hitsToKill,"Grunt",inRange.equals("Close")));
 							}
 							counter++;
+							
 						}
 
 				
