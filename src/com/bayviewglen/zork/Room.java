@@ -108,6 +108,15 @@ class Room implements Lockable
     	
         return description + "\nLocked Doors: "+roomLock+ "\n\n" + exitString() + "\n"+ roomEnemies+"\n";
     }
+    public void checkEnemyType(char type, Enemies E) throws Exception{
+    	String Ene = "";
+    	switch(type){
+    	case 'G': Ene = "Grunt";break;
+    	case 'B': Ene = "Boss"; break;
+    	default: throw new Exception("That is not an enemy type");
+    	}
+    	roomEnemies.add(E);
+    }
 
     /**
      * Return a string describing the room's exits, for example
