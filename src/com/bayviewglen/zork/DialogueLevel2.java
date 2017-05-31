@@ -24,6 +24,7 @@ public class DialogueLevel2 {
 		System.out.println("Only direction you can go is \'down\'.");
 	}
 	
+	/*
 	// Level 2: "You will run out of oxygen soon and die" message
 	public static void level2NeedOxygen(){
 		System.out.println();
@@ -35,9 +36,10 @@ public class DialogueLevel2 {
 		System.out.println();
 		System.out.println("You think, that's cute. But, not really. You're head hurts. You NEED oxygen. Now. ");
 		System.out.println("A small silver clownfish swims into the bubbles and is caught in one. *THINK*");
-		System.out.println("(*HINT: The bubbles have air. What do you need? Do you need to \'use' it?)");
+		System.out.println("(*HINT: The bubbles have air. What do you need? Do you need to \'use\' it?)");
 	}
-
+	*/
+	
 	// Level 2: "You got oxygen" message
 	public static void level2YesAir(){
 		System.out.println();

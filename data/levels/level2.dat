@@ -8,15 +8,15 @@ Room Description: WATER SURFACE<br>You are fighting for your life to keep your h
 Exit Rooms: D-Room 3
 Room Name: Room 3
 Room Lock: 0 
-Room Description: UNDER THE SEA (BELOW WATER SURFACE)<br>There is a colourful coral reef covering the sea floor. The water surface is above you, but the<br>dark dullness doesn't seem inviting. The only way left is down. 
+Room Description: UNDER THE SEA (BELOW WATER SURFACE)<br>There is a colourful coral reef covering the sea floor. The water surface is above you, but the<br>dark dullness doesn't seem inviting. The only way left is down.<br><br>You realize you are holding your breath. You will run out of air soon...
 Exit Rooms: U-Room 2, D-Room 4
 Room Name: Room 4
 Room Lock: 0 
-Room Description: CORAL REEF<br>You are now on the sea floor with the exotic reefs. To the east, there is a sign. To the west, there is a trail of bubbles<br>coming from something that looks like a large ... purple ... rock? (*HINT* Go east)
+Room Description: CORAL REEF<br>You are now on the sea floor with the exotic reefs. To the east, there is a sign. To the west, there is a trail of bubbles<br>coming from something that looks like a large ... purple ... rock? (*HINT* Go west)
 Exit Rooms: W-Room 5, E-Room 6
 Room Name: Room 5
 Room Lock: 0 
-Room Description: GIANT PURPLE CLAM<br>There is a giant purple clam!! (In case you didn't read the title) You watch the clam breath<br>out a trail of bubbles. The bubbles float upwards on top of the clam.
+Room Description: GIANT PURPLE CLAM<br>There is a giant purple clam!! (In case you didn't read the title) You watch the clam breath<br>out a trail of bubbles. The bubbles float upwards on top of the clam.<br><br>You think, that's cute. But, not really. You're head hurts. You NEED oxygen. Now.<br>A small silver clownfish swims into the bubbles and is caught in one. *THINK*<br>*HINT* The bubbles have air. What do you need? Do you need to 'use' it?
 Exit Rooms: E-Room 4
 Room Name: Room 6
 Room Lock: 0 

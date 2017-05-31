@@ -170,6 +170,9 @@ class Game {
 		System.out.println();
 		System.out.println();
 		System.out.println(currentRoom.longDescription());
+		
+		int counter = 0; // to count the number of times you enter a room, so dialogue only shows once 
+		
 		// Enter the main command loop. Here we repeatedly read commands and
 		// execute them until the game is over.
 
@@ -188,12 +191,8 @@ class Game {
 				}
 			} else if (currentLevel == 2){
 				// DialogueLevel2.level2Intro();
-				if (currentRoom.equals(masterRoomMap.get("ROOM_4"))){
-					DialogueLevel2.level2NeedOxygen();
-				} else if (currentRoom.equals(masterRoomMap.get("ROOM_5"))){
-					DialogueLevel2.level2ClamIntro();
-				} else if (currentRoom.equals(masterRoomMap.get("ROOM_6"))){
-					if (Inventory.findIndex(bubble) <= 0){
+				if (currentRoom.equals(masterRoomMap.get("ROOM_6"))){
+					if (Inventory.findIndex(bubble) == -1){
 						DialogueLevel2.level2NoAir();
 						finished = true;
 					}
@@ -607,7 +606,7 @@ class Game {
 		Room nextRoom = currentRoom.nextRoom(direction);
 
 		if (nextRoom == null)
-			System.out.println("There is no door!");
+			System.out.println("There is no exit here!");
 		else {
 			currentRoom = nextRoom;
 			System.out.println(currentRoom.longDescription());
