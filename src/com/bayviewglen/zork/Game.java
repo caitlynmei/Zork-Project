@@ -32,7 +32,7 @@ import com.bayviewglen.zork.tool.Tool;
 
 class Game {
 
-	public int currentLevel = 2; // temp 2 for testing, CM
+	public int currentLevel = 4; // temp 4 for testing, GG
 
 	// Level 1 Items
 	Tool firstKey = new Tool("1: Air Key");
@@ -42,7 +42,7 @@ class Game {
 	Tool secondKey = new Tool("2: Sea Key");
 	Tool stone = new Tool("stone");
 	Tool bubble = new Tool("bubble");
-	Tool knife = new Tool("knife");
+	Tool knife = new Tool("knife");	
 
 	static Thread thread = new Thread(); // thread for delays
 
@@ -188,6 +188,7 @@ class Game {
 		} else if (currentLevel == 4) {
 			initRooms("data/levels/level4.dat");
 			currentRoom = masterRoomMap.get("ROOM_1");
+			
 		}
 	}
 
@@ -265,7 +266,14 @@ class Game {
 					resetLevel(currentLevel);
 				}
 			} else { // currentLevel == 4
-				System.out.println("You are now in LEVEL 4!");
+				if (currentRoom.equals(masterRoomMap.get("ROOM_21"))) {
+					if(DialogueLevel4.keyWord()){
+					DialogueLevel4.levelEnd();
+					currentLevel++;
+					resetLevel(currentLevel);
+					}
+					
+				}
 			}
 
 		}
@@ -324,6 +332,8 @@ class Game {
 
 		return (level2Over == true);
 	}
+	
+
 
 	// loading Method: prints the "Loading . . . . " message
 	private void loading() throws InterruptedException {
