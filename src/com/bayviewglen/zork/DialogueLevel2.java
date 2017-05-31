@@ -9,9 +9,8 @@ import com.bayviewglen.zork.tool.Tool;
 public class DialogueLevel2 {
 
 	static Scanner keyboard = new Scanner(System.in);
-
 	static Thread thread = new Thread();
-
+	
 	// Level 2 Intro
 	public static void level2Intro() throws InterruptedException{
 		System.out.println();
@@ -93,23 +92,198 @@ public class DialogueLevel2 {
 		System.out.println("from its head all the way to its back.\nWait, a red dorsal fin?");
 		System.out.println("\nThinking, you realize it's an oarfish. You wonder for a split second why you even know that, but the oarfish advances toward you. You back away, slowly"); 
 		System.out.println("scootching your body backwards with your hands. Unfortunately, there's nowhere to go. Your back is pressed against the cave wall.\n");
-		System.out.println("What do you do? It could eat you alive... It's definitely large enough to swallow you whole...");
-		//continue here...
+		thread.sleep(5000);
+		System.out.println("What do you do? It could eat you alive... It's definitely large enough to swallow you whole...\n");
+		System.out.println("Option 1: Remember that knife in your inventory? That might be useful. Enter \'1\'.\nOption 2: Think again. Use your head. Maybe, violence isn\'t the answer. Enter \'2\'.\n");
+		thread.sleep(1500);
+		System.out.print(">");
+		
+		String temp = " ";
+		boolean validAnswer = false;
+		while (!validAnswer){
+			temp = keyboard.nextLine().toUpperCase();
+			if (temp.equals("1") ||  temp.equals("2") || temp.equals("OPTION 1") || temp.equals("OPTION 2")){
+				validAnswer = true;
+			} else if (temp.equals("HELP")){
+				System.out.println("\nType which option you are thinking.");
+				System.out.print(">");
+			} else {
+				System.out.println("That option doesn't appear in your thoughts...");
+				System.out.print(">");
+			}
+		}
+		
+		if (temp.equals("1")){
+			level2Oarfish1();
+		}
+		
+		if (temp.equals("2")){
+			level2Oarfish();
+		}
+		
+	}
+	
+	// Level 2: Option 1: Killed by Oarfish Message
+	public static void level2Oarfish1() throws InterruptedException{
+		System.out.println("\nOption 1:\nYou take the knife out, and stab as hard as you can into the oarfish\'s right side.");
+		thread.sleep(1500);
+		System.out.println("The oarfish's eyes are filled with hate and anger. In a millisecond, it flicks its tail and you slam into the cave wall. *CRACK* That's going to leave more than");
+		System.out.println("a bruise... You almost blank out, but it could also just be the darkness.");
+		thread.sleep(2000);
+		System.out.println("*POP*\nOr not... There goes your oxygen bubble... What a painful way to die...");
+	}
+	
+	// Level 2: Option 2: Made an Oarfish Friend Message
+	public static void level2Oarfish2() throws InterruptedException{
+		System.out.println("\nOption 2:\nNo knife... be the kind hero that dies won't you? Another memory floods into your mind. A friend was giving you a lecture about deep sea creatures.");
+		System.out.println("Oarfish are gentle.");
+		thread.sleep(1500);
+		System.out.println("Cautiously, you remain silent and wait for the oarfish to come closer. Its eyes stare into yours. You slowly reach out a hand, and stroke its side. It bumps its");
+		System.out.println("head into you. You laugh. You just made a new friend!");
+		thread.sleep(2000);
+		System.out.println("\nGood job! Never judge anyone by their mere appearance. Looks are always deceiving.\nThe oarfish nudges your hand to the keypad.");
+	}
+	
+	// Level 2: Cave Keypad Code Message
+	public static void level2Keypad() throws InterruptedException{
+		System.out.println("\nDo you want to \'enter a code\'?\nOption 1: Enter \'yes\'.\nOption 2: Enter \'no\'.");
+		System.out.print(">");
+		
+		String temp = " ";
+		boolean validAnswer = false;
+		while (!validAnswer){
+			temp = keyboard.nextLine().toUpperCase();
+			if (temp.equals("YES")){
+				validAnswer = true;
+			} else if (temp.equals("NO")){
+				System.out.println("Okaaay, have fun waiting outside. Don\'t you have any curiosity? Don\'t you want to taste glory? Just say \'yes\'.");
+				thread.sleep(25000);
+				System.out.println("Actually, you know what? Too bad. Just a heads up, you actually have to enter a code. The only exit to this world is inside like it or not");
+				System.out.print(">");
+			} else if (temp.equals("HELP")){
+				System.out.println("\nType which option you are thinking.");
+				System.out.print(">");
+			} else {
+				System.out.println("That option doesn't appear in your thoughts...");
+				System.out.print(">");
+			}
+		}
+		
+		if (temp.equals("YES")){
+			System.out.println("\n");
+			System.out.println("Great! (*Hint: Hmmm... where there any clues along the way?)\n\nCode: _ _ _ ");
+			System.out.println("Like perhaps, some clues that made you go \'hmmmm....\'?"); // Code is "THE"
+		}
+		
+		// check if player enters in correct code for keypad to open cave entrance
+		level2CodeCheck();
+	}
+	
+	// Level 2: Keypad Code Check
+	public static void level2CodeCheck(){
+		
+		final String VALID_CODE_CHARACTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+		final int GUESSED_CHAR_LENGTH = 1; 			// length of guessed character (which has to be 1)
+		boolean codeIsSolved = false; 				// for when code is solved by player
+		int numCorrectGuesses = 0;					// stores the number of times a correct character is guessed
+		String encryptedCode = "THE"; 				// the ANSWER for the cave entrance (the code word)
+		String guessedCharacter = ""; 				// the character that the player guessed
+		String usedChars = ""; 						// stores all characters that have been guessed
+		String characterList = "A B C D E F G H I J K L M N O P Q R S T U V W X Y Z"; 	// the displayed characters which the player may choose from 
+		
+		while (!codeIsSolved){
+			// to display unused characters
+			System.out.println("Unused Characters: ");
+			String displayedCharacters = ""; // the displayed unused and guessed characters
+			System.out.println(characterList);
+					
+			System.out.println("Please enter a single character: "); 
+										
+			guessedCharacter = "";								
+			boolean validGuessedCharacter = false; // to check if guessedCharacter is a single character
+			while (!validGuessedCharacter){
+				validGuessedCharacter = true;
+				guessedCharacter = keyboard.nextLine().toUpperCase(); 
+				for (int i = 0; i < guessedCharacter.length() && validGuessedCharacter; i++){
+					if (guessedCharacter.length() != 1 && VALID_CODE_CHARACTERS.indexOf(guessedCharacter.charAt(i)) == -1){ 
+						validGuessedCharacter = false; 
+						System.out.println("Please enter a single valid character (don't use spaces):");
+					} else if (guessedCharacter.length() != 1){ 
+						validGuessedCharacter = false; 
+						System.out.println("Please enter a \'single\' valid character (don't use spaces):");
+					} else if (usedChars.indexOf(guessedCharacter) != -1){
+						validGuessedCharacter = false;
+						System.out.println("You have already guessed the character \'" + guessedCharacter + "\', please select again: "); // to check if guessed character was already used
+					} 
+				}
+			}
+			
+			// to print and update the displayed characters guesser may use
+			int index = 0;
+			index = characterList.indexOf(guessedCharacter);
+			for (int i = 0; i < characterList.length(); i++){
+				if (i == index){
+					displayedCharacters += "_";
+				} else {
+					displayedCharacters += characterList.charAt(i);
+				}
+			}
+			characterList = displayedCharacters;
+			
+			// to check if guessed character is in message
+			for (int i = 0; i < GUESSED_CHAR_LENGTH; i++){
+				if (encryptedCode.indexOf(guessedCharacter.charAt(i)) != -1){
+					System.out.println("The character \'" + guessedCharacter + "\' is in the phrase.");
+					numCorrectGuesses++;
+				} else {
+					System.out.println("The character \'" + guessedCharacter + "\' is not in the phrase.");
+				}
+				usedChars += guessedCharacter;
+			}
+			
+			if (numCorrectGuesses == 3){
+				codeIsSolved = true;
+			}
+		}
+		System.out.println("\nGreat! You opened the cave! The sea floor shakes, and the boulder rolls slightly to the side, revealing a gap just large enough for you to enter.");
+	}
+		
+	// Level 2: Mirror Memory Flashback
+	public static void level2Mirror() throws InterruptedException{
+		System.out.println("\nYou see your own reflection looking back at you in the mirror. You look like death. Your hair is a mess, you have dark bags under your eyes, and your ");
+		System.out.println("clothes are torn from this journey. But, you smile. You made it this far and you're proud of that. You gasp as you relive a memory...");
+		loading();
+		System.out.println("Your best friend smiled at you on his birthday. July 6th. You gave him the book he had his eye on for years about the midnight zone sea creatures. He was"); 
+		System.out.println("a huge dork when it came to marine animals. He had a huge obsession and was practically a walking encyclopedia. His name was... Odd, it\'s on the tip of ");
+		System.out.println("your tongue. You can\'t remember... ");
+		loading();
+		System.out.println("But something happened. The last time he saw you, he was really scared. He had to do something that would be extraordinarily dangerous. And he warned you,");
+		System.out.println("what were his last words? Something about staying away from him... ");	
 	}
 	
 	// Level 2: Ending Message
 	public static void level2Ending(int currentLevel, Tool secondKey) throws InterruptedException{
 		System.out.println();
-		System.out.println("But something happened. The last time he saw you, he was really scared. He had to do something that would be extraordinarily dangerous. And he warned you, "
-				+ "\nwhat were his last words? Something about staying away from him... ");
-		thread.sleep(5000);
 		System.out.println("\nYou blink again, and the flashback is gone. You look in the mirror, and you see yourself looking fresh and healthy, like someone who didn't just almost "
 				+ "\ndie in the deep sea. There is also the faint outline of a silver key glowing in your jeans pocket. You look down at yourself. Shocked, you realize you are no longer"
 				+ "\na walking zombie. You reach into your pocket and pull out a silver key. Two keys down! It is added into your inventory.");
 		Inventory.add(secondKey);
+		thread.sleep(5000);
 		System.out.println("\n\nA swirl of light glows around you and you blank out...");
 		System.out.println();
-		System.out.println("END OF LEVEL 2: EXIT THE SEA WORLD");;
+		System.out.println("END OF LEVEL 2: EXIT THE SEA WORLD");
+	}
+	
+	// loading Method: prints the "Loading . . . . " message
+	private static void loading() throws InterruptedException {
+		System.out.println();
+		thread.sleep(1500); // delays code
+		System.out.print("Loading");
+		
+		for (int i = 0; i < 4; i++) {
+			System.out.print("   .");
+			thread.sleep(1500);
+		}
 	}
 
 }
