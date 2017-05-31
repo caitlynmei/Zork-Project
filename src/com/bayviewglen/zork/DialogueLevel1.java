@@ -126,12 +126,117 @@ public class DialogueLevel1 {
 	public static void Jack2ndMeeting() throws InterruptedException {
 		System.out.println("Hey did you get the bean?");
 		thread.sleep(2000);
+//PUT KEY INTO INVENTORY HERE
+	}
+
+	// When you come across door there is keypad
+	public static void level1Door() throws InterruptedException {
 
 	}
 
-	// When you come across door and put key in
-	public static void level1Door() throws InterruptedException {
+	// Level 1 Code Check
+	public static void level2CodeCheck() {
 
+		final String VALID_CODE_CHARACTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+		final int GUESSED_CHAR_LENGTH = 1; // length of guessed character (which
+											// has to be 1)
+		boolean codeIsSolved = false; // for when code is solved by player
+		int numCorrectGuesses = 0; // stores the number of times a correct
+									// character is guessed
+		String code = "FIND"; // the ANSWER for the cave entrance (the code word)
+		String encryptedCode = ""; // stores the characters the player has
+									// guessed, displayed for player to see
+									// updates
+		String guessedCharacter = ""; // the character that the player guessed
+		String usedChars = ""; // stores all characters that have been guessed
+		String characterList = "A B C D E F G H I J K L M N O P Q R S T U V W X Y Z"; // the
+																						// displayed
+																						// characters
+																						// which
+																						// the
+																						// player
+																						// may
+																						// choose
+																						// from
+
+		while (!codeIsSolved) {
+			// to update and show encrypted message
+			for (int b = 0; b < encryptedCode.length(); b++) {
+				if (usedChars.indexOf(encryptedCode.charAt(b)) != -1) {
+					encryptedCode += usedChars.charAt(usedChars.indexOf(code.charAt(b))) + " ";
+					// codedMessage += phrase.charAt(b); // simpler version of
+					// above line
+				} else if (VALID_CODE_CHARACTERS.indexOf(encryptedCode.charAt(b)) != -1) {
+					encryptedCode += "_ ";
+				} else {
+					encryptedCode += "/ ";
+				}
+			}
+
+			System.out.println(encryptedCode);
+
+			// to display unused characters
+			System.out.println("Unused Characters: ");
+			String displayedCharacters = ""; // the displayed unused and guessed
+												// characters
+			System.out.println(characterList);
+
+			System.out.println("Please enter a single character: ");
+
+			guessedCharacter = "";
+			boolean validGuessedCharacter = false; // to check if
+													// guessedCharacter is a
+													// single character
+			while (!validGuessedCharacter) {
+				validGuessedCharacter = true;
+				guessedCharacter = keyboard.nextLine().toUpperCase();
+				for (int i = 0; i < guessedCharacter.length() && validGuessedCharacter; i++) {
+					if (guessedCharacter.length() != 1
+							&& VALID_CODE_CHARACTERS.indexOf(guessedCharacter.charAt(i)) == -1) {
+						validGuessedCharacter = false;
+						System.out.println("Please enter a single valid character (don't use spaces):");
+					} else if (guessedCharacter.length() != 1) {
+						validGuessedCharacter = false;
+						System.out.println("Please enter a \'single\' valid character (don't use spaces):");
+					} else if (usedChars.indexOf(guessedCharacter) != -1) {
+						validGuessedCharacter = false;
+						System.out.println("You have already guessed the character \'" + guessedCharacter
+								+ "\', please select again: "); // to check if
+																// guessed
+																// character was
+																// already used
+					}
+				}
+			}
+
+			// to print and update the displayed characters guesser may use
+			int index = 0;
+			index = characterList.indexOf(guessedCharacter);
+			for (int i = 0; i < characterList.length(); i++) {
+				if (i == index) {
+					displayedCharacters += "_";
+				} else {
+					displayedCharacters += characterList.charAt(i);
+				}
+			}
+			characterList = displayedCharacters;
+
+			// to check if guessed character is in message
+			for (int i = 0; i < GUESSED_CHAR_LENGTH; i++) {
+				if (code.indexOf(guessedCharacter.charAt(i)) != -1) {
+					System.out.println("The character \'" + guessedCharacter + "\' is in the phrase.\n");
+					numCorrectGuesses++;
+				} else {
+					System.out.println("The character \'" + guessedCharacter + "\' is not in the phrase.\n");
+				}
+				usedChars += guessedCharacter;
+			}
+
+			if (numCorrectGuesses == 3) {
+				codeIsSolved = true;
+			}
+		}
+		System.out.println("You hear a click.");
 	}
 
 	// Level 1 Outro
@@ -181,5 +286,16 @@ public class DialogueLevel1 {
 		System.out.println("\nEverything fades to black");
 		thread.sleep(2000);
 		System.out.println("END OF LEVEL 1");
+	}
+	// loading Method: prints the "Loading . . . . " message
+	private static void loading() throws InterruptedException {
+		System.out.println();
+		thread.sleep(1500); // delays code
+		System.out.print("Loading");
+		
+		for (int i = 0; i < 4; i++) {
+			System.out.print("   .");
+			thread.sleep(1500);
+		}
 	}
 }

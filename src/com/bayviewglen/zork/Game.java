@@ -88,7 +88,8 @@ class Game {
 
 				exits.put(roomName.substring(10).trim().toUpperCase().replaceAll(" ", "_"), temp);
 				
-				 //Reads the Items String roomItems = roomScanner.nextLine();				  
+				 //Reads the Items String roomItems = roomScanner.nextLine();
+							  
 				  
 				  
 				 //Reads the Enemies String 
@@ -114,6 +115,7 @@ class Game {
 							}
 							counter++;
 						}
+					}
 
 				
 				
@@ -136,7 +138,7 @@ class Game {
 					roomTemp.setExit(s.trim().charAt(0), exitRoom);
 
 				}
-			}
+
 			}
 
 			roomScanner.close();
