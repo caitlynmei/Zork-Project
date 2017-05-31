@@ -1,6 +1,6 @@
 Room Name: Room 1 
 Room Lock: 0
-Room Description: Volcano Base **description of surroundings rocks and stuff
+Room Description: Behind you is a rock wall. You seem to be in a Volcano? It's dark and there is a faint light in the North-East.
 Exit Rooms: E-Room 2, N-Room 3, W-Room 4
 Room Name: Room 2
 Room Lock: 0
@@ -16,7 +16,7 @@ Room Description: stuff
 Exit Rooms: N-Room 6, E-Room 1
 Room Name: Room 5
 Room Lock: 0
-Room Description: stuff
+Room Description: There is a cloaked creature in the corner by the Volcano walls.
 Exit Rooms: S-Room 2, W-Room 3
 Room Name: Room 6
 Room Lock: 0
