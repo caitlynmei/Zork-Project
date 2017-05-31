@@ -2,6 +2,10 @@ package com.bayviewglen.zork;
 
 import java.util.Scanner;
 
+import com.bayviewglen.zork.inventory.Inventory;
+import com.bayviewglen.zork.item.Item;
+import com.bayviewglen.zork.tool.Tool;
+
 public class DialogueLevel1 {
 
 	static Scanner keyboard = new Scanner(System.in);
@@ -123,10 +127,12 @@ public class DialogueLevel1 {
 	}
 
 	// When you get bean & meet Jack for 2nd time
-	public static void Jack2ndMeeting() throws InterruptedException {
+	public static void Jack2ndMeeting(Tool secondKey) throws InterruptedException {
 		System.out.println("Hey did you get the bean?");
 		thread.sleep(2000);
-//PUT KEY INTO INVENTORY HERE
+		// dialogue for key
+		Inventory.add(secondKey);
+		System.out.println("KEY ADDED TO INVENTORY");
 	}
 
 	// When you come across door there is keypad
