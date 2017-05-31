@@ -191,8 +191,9 @@ class Game {
 					resetLevel(currentLevel);
 				}
 			} else if (currentLevel == 2){
-				DialogueLevel2.level2Intro();
-				if (currentRoom.equals(masterRoomMap.get("ROOM_6"))){
+				if (currentRoom.equals(masterRoomMap.get("ROOM_1"))){
+					DialogueLevel2.level2Intro();
+				} else if (currentRoom.equals(masterRoomMap.get("ROOM_6"))){
 					if (Inventory.findIndex(bubble) == -1){
 						DialogueLevel2.level2NoAir();
 						finished = true;
