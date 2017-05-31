@@ -211,7 +211,7 @@ public class DialogueLevel2 {
 			for (int i = 0; i < code.length(); i++){ 
 				if (usedChars.indexOf(code.charAt(i)) != -1){
 					//encryptedCode += usedChars.charAt(usedChars.indexOf(code.charAt(i))) + " ";
-						encryptedCode += code.charAt(i); // simpler version of above line
+						encryptedCode += code.charAt(i) + " "; // simpler version of above line
 				} else if (VALID_CODE_CHARACTERS.indexOf(code.charAt(i)) != -1){
 						encryptedCode += "_ ";
 				} 
@@ -271,6 +271,7 @@ public class DialogueLevel2 {
 				codeIsSolved = true;
 			}
 		}
+		System.out.println("KEYPAD: THE");
 		System.out.println("\nGreat! You opened the cave! The sea floor shakes, and the boulder rolls slightly to the side, revealing a gap just large enough for you to enter to your east.");
 	}
 		
