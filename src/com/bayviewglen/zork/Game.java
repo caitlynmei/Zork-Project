@@ -182,7 +182,7 @@ class Game {
 			Command command = parser.getCommand();
 			finished = processCommand(command);
 			
-			//printWelcome();
+			printWelcome();
 			
 			if (currentLevel == 1){
 				printLevel1();
@@ -191,7 +191,7 @@ class Game {
 					resetLevel(currentLevel);
 				}
 			} else if (currentLevel == 2){
-				// DialogueLevel2.level2Intro();
+				DialogueLevel2.level2Intro();
 				if (currentRoom.equals(masterRoomMap.get("ROOM_6"))){
 					if (Inventory.findIndex(bubble) == -1){
 						DialogueLevel2.level2NoAir();
