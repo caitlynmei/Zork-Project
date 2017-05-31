@@ -42,10 +42,7 @@ class Game {
 	Tool secondKey = new Tool("2: Sea Key");
 	Tool stone = new Tool("stone");
 	Tool bubble = new Tool("bubble");
-	Tool knife = new Tool("knife");		//Level 3 is also using the knife
-	
-	//Level 3 Items
-	Tool thirdKey = new Tool("3: Earth Key");
+	Tool knife = new Tool("knife");	
 
 	static Thread thread = new Thread(); // thread for delays
 
