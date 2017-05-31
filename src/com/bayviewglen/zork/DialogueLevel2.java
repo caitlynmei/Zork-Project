@@ -191,7 +191,7 @@ public class DialogueLevel2 {
 		level2CodeCheck();
 	}
 	
-	// Level 2: Keypad Code Check
+	// Level 2: Keypad Code Check (Adapted Hangman Game for this Keypad Lock :) - CM)
 	public static void level2CodeCheck(){
 		
 		final String VALID_CODE_CHARACTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
