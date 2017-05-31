@@ -48,7 +48,7 @@ Room Description: KELP FOREST<br>You see kelp all around you in this thick and d
 Exit Rooms: W-Room 9, N-Room 10, E-Room 15
 Room Name: Room 13
 Room Lock: 0 
-Room Description: KELP FOREST CLEARING<br>In the middle of the kelp forest, you see a glowing rock shaped like a "T". Hmmm...
+Room Description: KELP FOREST CLEARING<br>In the middle of the kelp forest, you see a glowing rock shaped like a 'T'. Hmmm...
 Exit Rooms: W-Room 10, N-Room 14, S-Room 15, E-Room 16
 Room Name: Room 14
 Room Lock: 0 
@@ -88,7 +88,7 @@ Room Description: MIDNIGHT ZONE<br>There is a turquoise light coming from the we
 Exit Rooms: U-Room 21, W-Room 23, D-Room 24
 Room Name: Room 23
 Room Lock: 0 
-Room Description: WALL LEDGE<br>Oooh, a glowing turquoise stone is on the ledge. There is a note under the stone. 
+Room Description: WALL LEDGE<br>Oooh, a glowing turquoise stone is on the ledge. There is a 'midnight zone note' under the stone. 
 Exit Rooms: E-Room 22, D-Room 25
 Room Name: Room 24
 Room Lock: 0 
@@ -100,7 +100,7 @@ Room Description: CURRENT MOVING DOWN<br>You are caught in a current!<br>Tumblin
 Exit Rooms: D-Room 26
 Room Name: Room 26
 Room Lock: 0 
-Room Description: ABYSS FLOOR<br>Finally you stop. The current took you to the bottom of the abyss. You are on the floor of the abyss.<br>Another school of bioluminescent fish swim by. You see a another sign beside you. 
+Room Description: ABYSS FLOOR<br>Finally you stop. The current took you to the bottom of the abyss. You are on the floor of the abyss.<br>Another school of bioluminescent fish swim by. You see a \'abyss sign\' beside you. 
 Exit Rooms: E-Room 27
 Room Name: Room 27
 Room Lock: 0 

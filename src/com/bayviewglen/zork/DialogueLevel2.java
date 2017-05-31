@@ -65,7 +65,7 @@ public class DialogueLevel2 {
 		System.out.println("Good luck making if so far. If you still can\'t remember much right now, here's a clue.");
 		System.out.println();
 		thread.sleep(1000);
-		System.out.println("\'One fish,");
+		System.out.println(" \'One fish,");
 		System.out.println("  Two fish,");
 		System.out.println("  Red fish,");
 		System.out.println("  Blue fish...\n");
@@ -86,18 +86,19 @@ public class DialogueLevel2 {
 	
 	// Level 2: Cave Entrance Scene with Oarfish
 	public static void level2Oarfish() throws InterruptedException{
+		thread.sleep(3000);
 		System.out.println();
 		System.out.println("*SWISH*\nWhat was that? A red stripy thing just swam by... \n*WHAM*");
 		thread.sleep(1000);
 		System.out.println("You were knocked onto the sea floor by something. Your head banged onto the side of the cave. Thank goodness your oxygen bubble is still intact.");
 		System.out.println("Dizzy, you look up and see an infinitely giant and long silver fish. It's really, really long. Almost three times your height... And big... You shake your");
 		System.out.println("head to clear the blurriness. ");
-		thread.sleep(3000);
+		thread.sleep(5000);
 		System.out.println("Nope. The fish is still there, guarding the cave entrance with a long, narrow silvery body, almost like a sea serpent. It has a very deep red dorsal fin,");
 		System.out.println("from its head all the way to its back.\nWait, a red dorsal fin?");
 		System.out.println("\nThinking, you realize it's an oarfish. You wonder for a split second why you even know that, but the oarfish advances toward you. You back away, slowly"); 
 		System.out.println("scootching your body backwards with your hands. Unfortunately, there's nowhere to go. Your back is pressed against the cave wall.\n");
-		thread.sleep(5000);
+		thread.sleep(6000);
 		System.out.println("What do you do? It could eat you alive... It's definitely large enough to swallow you whole...\n");
 		System.out.println("Option 1: Remember that knife in your inventory? That might be useful. Enter \'1\'.\nOption 2: Think again. Use your head. Maybe, violence isn\'t the answer. Enter \'2\'.\n");
 		thread.sleep(1500);

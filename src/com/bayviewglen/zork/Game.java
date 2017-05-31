@@ -233,6 +233,7 @@ class Game {
 		System.out
 				.println("You play the game by entering commands with your keyboard when you see the \'>\' symbol.\n");
 		System.out.println("You can also type \'help\' for a bit of advice.\n");
+		printGameRules();
 		thread.sleep(8000);
 		System.out.println("Are you prepared for some serious challenges?");
 		System.out.println();
@@ -534,14 +535,23 @@ class Game {
 		thread.sleep(6000);
 		System.out.println("Just joking!! :)");
 		System.out.println("Don't worry. We will help guide you through this:");
-		System.out.println("- to see the game rules, enter: \'rules\'");
+		System.out.println("- to see the game rules, enter: \'rules\' (*HINT*: you should actually look at this for helpful tips at least once)");
 		System.out.println("- to see the list of commands you may use, enter: \'commandlist\'");
 	}
 
 	private void printGameRules() throws InterruptedException {
 		System.out.println("\n");
 		System.out.println("Remember what your goal is. Here is a refresher of the game rules. \n");
-		System.out.println("**Whatever the rules end up being... ");
+		System.out.println("- purpose of this game is to get your memory back (because that\'s sorta important) and get out of this game");
+		System.out.println("- there will be command hints in quotes, \'like this\', you should use");
+		System.out.println("- you will have to enter commands into the game to control your actions. Here are some starter commands:");
+		System.out.println("- to view all commands, enter: \'commandlist\'");
+		System.out.println("- to take and drop items, simply enter: \'take\' or \'drop\' respectively");
+		System.out.println("- to see what is in your inventory, enter: \'inventory\'");
+		System.out.println("- to see the room description again, enter: \'look\'");
+		System.out.println("- to quit the game, you may enter: \'quit\'");
+		System.out.println("- for help, enter: \'help\'");
+		System.out.println("- once again, if you would like to see the rules, enter: \'rules\'");
 	}
 
 	private void printCommandList() throws InterruptedException {
