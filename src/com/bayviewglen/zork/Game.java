@@ -198,7 +198,7 @@ class Game {
 	 * @throws Exception
 	 */
 	public void play() throws Exception {
-		printWelcome();
+		//printWelcome();
 
 		// Enter the main command loop. Here we repeatedly read commands and
 		// execute them until the game is over.
@@ -332,6 +332,8 @@ class Game {
 
 		return (level2Over == true);
 	}
+	
+
 
 	// loading Method: prints the "Loading . . . . " message
 	private void loading() throws InterruptedException {
