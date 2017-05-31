@@ -32,7 +32,7 @@ import com.bayviewglen.zork.tool.Tool;
 
 class Game {
 
-	public int currentLevel = 1; // temp 2 for testing, CM
+	public int currentLevel = 2; // temp 2 for testing, CM
 
 	// Level 1 Items
 	Tool firstKey = new Tool("1: Air Key");
@@ -196,7 +196,7 @@ class Game {
 	 * @throws Exception
 	 */
 	public void play() throws Exception {
-		//printWelcome();
+		printWelcome();
 
 		// Enter the main command loop. Here we repeatedly read commands and
 		// execute them until the game is over.
@@ -208,7 +208,7 @@ class Game {
 			int counter = 0; // to count the number of times you enter a room,
 								// so dialogue only shows once
 
-			System.out.println("current level: " + currentLevel);
+			//System.out.println("current level: " + currentLevel);
 			// System.out.println();
 			// System.out.println(currentRoom.longDescription());
 
@@ -248,6 +248,7 @@ class Game {
 					DialogueLevel2.level2Shark();
 				} else if (currentRoom.equals(masterRoomMap.get("ROOM_29"))) {
 					DialogueLevel2.level2Oarfish(finished);
+					
 				} else if (currentRoom.equals(masterRoomMap.get("ROOM_30"))) {
 					DialogueLevel2.level2Mirror();
 					DialogueLevel2.level2Ending(currentLevel, secondKey);
