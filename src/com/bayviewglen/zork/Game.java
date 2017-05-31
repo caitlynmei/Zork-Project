@@ -200,7 +200,7 @@ class Game {
 				} else if (currentRoom.equals(masterRoomMap.get("ROOM_6"))){
 					DialogueLevel2.level2Shark();
 				} else if (currentRoom.equals(masterRoomMap.get("ROOM_29"))){
-					DialogueLevel2.level2Oarfish();
+					DialogueLevel2.level2Oarfish(finished);
 				} else if (currentRoom.equals(masterRoomMap.get("ROOM_30"))){
 					DialogueLevel2.level2Mirror();
 					DialogueLevel2.level2Ending(currentLevel, secondKey);

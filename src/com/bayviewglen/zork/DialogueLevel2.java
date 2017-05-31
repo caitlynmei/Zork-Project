@@ -85,20 +85,20 @@ public class DialogueLevel2 {
 	}
 	
 	// Level 2: Cave Entrance Scene with Oarfish
-	public static void level2Oarfish() throws InterruptedException{
+	public static void level2Oarfish(boolean finished) throws InterruptedException{
 		thread.sleep(3000);
 		System.out.println();
-		System.out.println("*SWISH*\nWhat was that? A red stripy thing just swam by... \n*WHAM*");
+		System.out.println("*SWISH*\nWhat was that? A red stripy thing just swam by... \n*WHAM*\n");
 		thread.sleep(1000);
 		System.out.println("You were knocked onto the sea floor by something. Your head banged onto the side of the cave. Thank goodness your oxygen bubble is still intact.");
 		System.out.println("Dizzy, you look up and see an infinitely giant and long silver fish. It's really, really long. Almost three times your height... And big... You shake your");
 		System.out.println("head to clear the blurriness. ");
-		thread.sleep(5000);
-		System.out.println("Nope. The fish is still there, guarding the cave entrance with a long, narrow silvery body, almost like a sea serpent. It has a very deep red dorsal fin,");
+		thread.sleep(7000);
+		System.out.println("\nNope. The fish is still there, guarding the cave entrance with a long, narrow silvery body, almost like a sea serpent. It has a very deep red dorsal fin,");
 		System.out.println("from its head all the way to its back.\nWait, a red dorsal fin?");
 		System.out.println("\nThinking, you realize it's an oarfish. You wonder for a split second why you even know that, but the oarfish advances toward you. You back away, slowly"); 
 		System.out.println("scootching your body backwards with your hands. Unfortunately, there's nowhere to go. Your back is pressed against the cave wall.\n");
-		thread.sleep(6000);
+		thread.sleep(9000);
 		System.out.println("What do you do? It could eat you alive... It's definitely large enough to swallow you whole...\n");
 		System.out.println("Option 1: Remember that knife in your inventory? That might be useful. Enter \'1\'.\nOption 2: Think again. Use your head. Maybe, violence isn\'t the answer. Enter \'2\'.\n");
 		thread.sleep(1500);
@@ -120,24 +120,28 @@ public class DialogueLevel2 {
 		}
 		
 		if (temp.equals("1")){
-			level2Oarfish1();
+			level2Oarfish1(finished);
 			level2Keypad();
 		}
 		
 		if (temp.equals("2")){
-			level2Oarfish();
+			level2Oarfish2();
 		}
 		
 	}
 	
 	// Level 2: Option 1: Killed by Oarfish Message
-	public static void level2Oarfish1() throws InterruptedException{
+	public static boolean level2Oarfish1(boolean finished) throws InterruptedException{
 		System.out.println("\nOption 1:\nYou take the knife out, and stab as hard as you can into the oarfish\'s right side.");
 		thread.sleep(1500);
 		System.out.println("The oarfish's eyes are filled with hate and anger. In a millisecond, it flicks its tail and you slam into the cave wall. *CRACK* That's going to leave more than");
 		System.out.println("a bruise... You almost blank out, but it could also just be the darkness.");
-		thread.sleep(2000);
+		thread.sleep(4000);
 		System.out.println("*POP*\nOr not... There goes your oxygen bubble... What a painful way to die...");
+		
+		finished = true;
+		
+		return finished;
 	}
 	
 	// Level 2: Option 2: Made an Oarfish Friend Message
@@ -147,7 +151,7 @@ public class DialogueLevel2 {
 		thread.sleep(1500);
 		System.out.println("Cautiously, you remain silent and wait for the oarfish to come closer. Its eyes stare into yours. You slowly reach out a hand, and stroke its side. It bumps its");
 		System.out.println("head into you. You laugh. You just made a new friend!");
-		thread.sleep(2000);
+		thread.sleep(4000);
 		System.out.println("\nGood job! Never judge anyone by their mere appearance. Looks are always deceiving.\nThe oarfish nudges your hand to the keypad.");
 	}
 	
@@ -164,8 +168,8 @@ public class DialogueLevel2 {
 				validAnswer = true;
 			} else if (temp.equals("NO")){
 				System.out.println("Okaaay, have fun waiting outside. Don\'t you have any curiosity? Don\'t you want to taste glory? Just say \'yes\'.");
-				thread.sleep(25000);
-				System.out.println("Actually, you know what? Too bad. Just a heads up, you actually have to enter a code. The only exit to this world is inside like it or not");
+				thread.sleep(2500);
+				System.out.println("Actually, you know what? Too bad. Just a heads up, you actually have to enter a code. The only exit to this world is inside like it or not.");
 				System.out.print(">");
 			} else if (temp.equals("HELP")){
 				System.out.println("\nType which option you are thinking.");
@@ -178,8 +182,8 @@ public class DialogueLevel2 {
 		
 		if (temp.equals("YES")){
 			System.out.println("\n");
-			System.out.println("Great! (*Hint: Hmmm... where there any clues along the way?)\n\nCode: _ _ _ ");
-			System.out.println("Like perhaps, some clues that made you go \'hmmmm....\'?"); // Code is "THE"
+			System.out.println("Great! (*Hint: Hmmm... where there any clues along the way?)");
+			System.out.println("Like perhaps, there were some clues that made you go \'hmmmm....\'?\n"); // Code is "THE"
 		}
 		
 		// check if player enters in correct code for keypad to open cave entrance
@@ -193,12 +197,27 @@ public class DialogueLevel2 {
 		final int GUESSED_CHAR_LENGTH = 1; 			// length of guessed character (which has to be 1)
 		boolean codeIsSolved = false; 				// for when code is solved by player
 		int numCorrectGuesses = 0;					// stores the number of times a correct character is guessed
-		String encryptedCode = "THE"; 				// the ANSWER for the cave entrance (the code word)
+		String code = "THE";						// the ANSWER for the cave entrance (the code word)
+		String encryptedCode = ""; 					// stores the characters the player has guessed, displayed for player to see updates 
 		String guessedCharacter = ""; 				// the character that the player guessed
 		String usedChars = ""; 						// stores all characters that have been guessed
 		String characterList = "A B C D E F G H I J K L M N O P Q R S T U V W X Y Z"; 	// the displayed characters which the player may choose from 
 		
 		while (!codeIsSolved){
+			// to update and show encrypted message
+			for (int b = 0; b < encryptedCode.length(); b++){ 
+				if (usedChars.indexOf(encryptedCode.charAt(b)) != -1){
+					encryptedCode += usedChars.charAt(usedChars.indexOf(code.charAt(b))) + " ";
+					//codedMessage += phrase.charAt(b); // simpler version of above line
+				} else if (VALID_CODE_CHARACTERS.indexOf(encryptedCode.charAt(b)) != -1){
+					encryptedCode += "_ ";
+				} else {
+					encryptedCode += "/ ";
+				}
+			}
+			
+			System.out.println(encryptedCode);
+			
 			// to display unused characters
 			System.out.println("Unused Characters: ");
 			String displayedCharacters = ""; // the displayed unused and guessed characters
@@ -239,11 +258,11 @@ public class DialogueLevel2 {
 			
 			// to check if guessed character is in message
 			for (int i = 0; i < GUESSED_CHAR_LENGTH; i++){
-				if (encryptedCode.indexOf(guessedCharacter.charAt(i)) != -1){
-					System.out.println("The character \'" + guessedCharacter + "\' is in the phrase.");
+				if (code.indexOf(guessedCharacter.charAt(i)) != -1){
+					System.out.println("The character \'" + guessedCharacter + "\' is in the phrase.\n");
 					numCorrectGuesses++;
 				} else {
-					System.out.println("The character \'" + guessedCharacter + "\' is not in the phrase.");
+					System.out.println("The character \'" + guessedCharacter + "\' is not in the phrase.\n");
 				}
 				usedChars += guessedCharacter;
 			}
@@ -252,7 +271,7 @@ public class DialogueLevel2 {
 				codeIsSolved = true;
 			}
 		}
-		System.out.println("\nGreat! You opened the cave! The sea floor shakes, and the boulder rolls slightly to the side, revealing a gap just large enough for you to enter.");
+		System.out.println("\nGreat! You opened the cave! The sea floor shakes, and the boulder rolls slightly to the side, revealing a gap just large enough for you to enter to your east.");
 	}
 		
 	// Level 2: Mirror Memory Flashback
@@ -260,11 +279,11 @@ public class DialogueLevel2 {
 		System.out.println("\nYou see your own reflection looking back at you in the mirror. You look like death. Your hair is a mess, you have dark bags under your eyes, and your ");
 		System.out.println("clothes are torn from this journey. But, you smile. You made it this far and you're proud of that. You gasp as you relive a memory...");
 		loading();
-		System.out.println("Your best friend smiled at you on his birthday. July 6th. You gave him the book he had his eye on for years about the midnight zone sea creatures. He was"); 
+		System.out.println("\n\nYour best friend smiled at you on his birthday. July 6th. You gave him the book he had his eye on for years about the midnight zone sea creatures. He was"); 
 		System.out.println("a huge dork when it came to marine animals. He had a huge obsession and was practically a walking encyclopedia. His name was... Odd, it\'s on the tip of ");
 		System.out.println("your tongue. You can\'t remember... ");
 		loading();
-		System.out.println("But something happened. The last time he saw you, he was really scared. He had to do something that would be extraordinarily dangerous. And he warned you,");
+		System.out.println("\n\nBut something happened. The last time he saw you, he was really scared. He had to do something that would be extraordinarily dangerous. And he warned you,");
 		System.out.println("what were his last words? Something about staying away from him... ");	
 	}
 	
