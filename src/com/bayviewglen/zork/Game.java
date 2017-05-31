@@ -35,9 +35,12 @@ class Game {
 	
 	public int currentLevel = 2; // temp 2 for testing, CM
 
+	// Level 1 Items
+	Tool firstKey = new Tool("1: Air Key");
+	
 	// Level 2 Items
 	Food apple = new Food("apple");
-	Tool secondKey = new Tool("Sea Key");
+	Tool secondKey = new Tool("2: Sea Key");
 	Tool stone = new Tool("stone");
 	Tool bubble = new Tool("bubble");
 
@@ -88,12 +91,11 @@ class Game {
 
 				exits.put(roomName.substring(10).trim().toUpperCase().replaceAll(" ", "_"), temp);
 				
-				 //Reads the Items String roomItems = roomScanner.nextLine();
-							  
+				 //Reads the Items String roomItems = roomScanner.nextLine();				  
 				  
 				  
 				 //Reads the Enemies String 
-				  String[] roomEnemies = roomScanner.nextLine().trim().split(":")[1].split(",");
+				 /* String[] roomEnemies = roomScanner.nextLine().trim().split(":")[1].split(",");
 					int counter = 0;
 					if (!roomEnemies[0].trim().equals("none")) {
 						for (String s : roomEnemies) {
@@ -101,23 +103,23 @@ class Game {
 							String inRange = roomEnemies[counter].trim().split("-")[1];
 							int hitsToKill = Integer.parseInt(roomEnemies[counter].trim().split("-")[2]);
 							if(currentEnemyType.equals("Grunt")){
-								room.addRoomEnemy(new Grunt(hitsToKill,"Grunt",inRange.equals("Close")));
+								room.addRoomEnemy(new Grunt(hitsToKill,"Grunt",inRange.equals("C")));
 							}else if(currentEnemyType.equals("Grunt")){
-								room.addRoomEnemy(new Grunt(hitsToKill,"Grunt",inRange.equals("Close")));
+								room.addRoomEnemy(new Grunt(hitsToKill,"Grunt",inRange.equals("C")));
 							}else if(currentEnemyType.equals("Grunt")){
-								room.addRoomEnemy(new Grunt(hitsToKill,"Grunt",inRange.equals("Close")));
+								room.addRoomEnemy(new Grunt(hitsToKill,"Grunt",inRange.equals("C")));
 							}else if(currentEnemyType.equals("Grunt")){
-								room.addRoomEnemy(new Grunt(hitsToKill,"Grunt",inRange.equals("Close")));
+								room.addRoomEnemy(new Grunt(hitsToKill,"Grunt",inRange.equals("C")));
 							}else if(currentEnemyType.equals("Grunt")){
-								room.addRoomEnemy(new Grunt(hitsToKill,"Grunt",inRange.equals("Close")));
+								room.addRoomEnemy(new Grunt(hitsToKill,"Grunt",inRange.equals("C")));
 							}else if(currentEnemyType.equals("Grunt")){
-								room.addRoomEnemy(new Grunt(hitsToKill,"Grunt",inRange.equals("Close")));
+								room.addRoomEnemy(new Grunt(hitsToKill,"Grunt",inRange.equals("C")));
 							}
 							counter++;
+							
 						}
 					}
-
-				
+				*/
 				
 				// This puts the room we created (Without the exits in the
 				// masterMap)
@@ -138,7 +140,6 @@ class Game {
 					roomTemp.setExit(s.trim().charAt(0), exitRoom);
 
 				}
-
 			}
 
 			roomScanner.close();
@@ -169,10 +170,12 @@ class Game {
 		} else if (currentLevel == 2){
 			initRooms("data/levels/level2.dat");
 			currentRoom = masterRoomMap.get("ROOM_1");
-			if (currentRoom.equals(masterRoomMap.get("ROOM_1"))){
+			
+			/*if (currentRoom.equals(masterRoomMap.get("ROOM_1"))){
 				System.out.println();
 				System.out.println(currentRoom.longDescription()); // to print out room description of ROOM_1
 			}
+			*/
 			
 		} else if (currentLevel == 3){
 			initRooms("data/levels/level3.dat");
@@ -486,8 +489,11 @@ class Game {
 			System.out.println("You're going to have to be way more specific. What is the item called?");
 		} else {
 			if (currentLevel == 1) {
-				// list stuff in here
-				System.out.println("That is not an item that you can take.");
+				if (itemSecondWord.equalsIgnoreCase("key")){
+					Inventory.add(firstKey);
+				} else {
+					System.out.println("That is not an item that you can take.");
+				}
 			} else if (currentLevel == 2) {
 				if (itemSecondWord.equalsIgnoreCase("stone")) {
 					Inventory.add(stone);
