@@ -196,7 +196,7 @@ class Game {
 	 * @throws Exception
 	 */
 	public void play() throws Exception {
-		//printWelcome();
+		printWelcome();
 
 		// Enter the main command loop. Here we repeatedly read commands and
 		// execute them until the game is over.
@@ -260,7 +260,14 @@ class Game {
 					resetLevel(currentLevel);
 				}
 			} else { // currentLevel == 4
-				System.out.println("You are now in LEVEL 4!");
+				if (currentRoom.equals(masterRoomMap.get("ROOM_21"))) {
+					if(DialogueLevel4.keyWord()){
+					DialogueLevel4.levelEnd();
+					currentLevel++;
+					resetLevel(currentLevel);
+					}
+					
+				}
 			}
 
 		}
