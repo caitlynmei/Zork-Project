@@ -12,7 +12,7 @@ Room Description: UNDER THE SEA (BELOW WATER SURFACE)<br>There is a colourful co
 Exit Rooms: U-Room 2, D-Room 4
 Room Name: Room 4
 Room Lock: 0 
-Room Description: CORAL REEF<br>You are now on the sea floor with the exotic reefs. To the east, there is a sign. To the west, there is a trail of bubbles<br>coming from something that looks like a large ... purple ... rock? (*HINT* Go west)
+Room Description: CORAL REEF<br>You are now on the sea floor with the exotic reefs. To the east, there is a sign. To the west, there is a trail of bubbles<br>coming from something that looks like a large ... purple ... rock? (*HINT* Go west if you haven't yet)
 Exit Rooms: W-Room 5, E-Room 6
 Room Name: Room 5
 Room Lock: 0 
@@ -100,7 +100,7 @@ Room Description: CURRENT MOVING DOWN<br>You are caught in a current!<br>Tumblin
 Exit Rooms: D-Room 26
 Room Name: Room 26
 Room Lock: 0 
-Room Description: ABYSS FLOOR<br>Finally you stop. The current took you to the bottom of the abyss. You are on the floor of the abyss.<br>Another school of bioluminescent fish swim by. You see a \'abyss sign\' beside you. 
+Room Description: ABYSS FLOOR<br>Finally you stop. The current took you to the bottom of the abyss. You are on the floor of the abyss.<br>Another school of bioluminescent fish swim by. You see a 'abyss sign' beside you. 
 Exit Rooms: E-Room 27
 Room Name: Room 27
 Room Lock: 0 

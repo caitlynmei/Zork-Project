@@ -58,7 +58,7 @@ public class  DialogueLevel0{
 						System.out.println("\nYou say:\nWho are you?\n");
 						thread.sleep(2000);
 						System.out.println("\nMysterious Figure:");
-						System.out.println("You don't Remember? You don't remember the hell you put me through?");
+						System.out.println("You don't remember? You don't remember the hell you put me through?");
 						thread.sleep(2500);
 						System.out.println("Well, that will make this more enjoyable. I might feel a bit guilty after though...");
 						thread.sleep(2500);
@@ -92,6 +92,7 @@ public class  DialogueLevel0{
 					System.out.println("\nThe dark figure starts laughing as their figure fades from the dimly lit airplane hanger.");
 					thread.sleep(6000);
 					System.out.println("\nSuddenly the ground beneath you collapses and you fall. Everything goes dark.");
+					thread.sleep(6000);
 	
 	}
 

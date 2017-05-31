@@ -147,6 +147,10 @@ class Game {
 		} else if (currentLevel == 2){
 			initRooms("data/levels/level2.dat");
 			currentRoom = masterRoomMap.get("ROOM_1");
+			if (currentRoom.equals(masterRoomMap.get("ROOM_1"))){
+				System.out.println();
+				System.out.println(currentRoom.longDescription()); // to print out room description of ROOM_1
+			}
 			
 		} else if (currentLevel == 3){
 			initRooms("data/levels/level3.dat");
@@ -168,9 +172,7 @@ class Game {
 	 * @throws Exception 
 	 */
 	public void play() throws Exception {
-		System.out.println();
-		System.out.println();
-		System.out.println(currentRoom.longDescription());
+		printWelcome();
 		
 		int counter = 0; // to count the number of times you enter a room, so dialogue only shows once 
 		
@@ -182,7 +184,9 @@ class Game {
 			Command command = parser.getCommand();
 			finished = processCommand(command);
 			
-			//printWelcome();
+			//System.out.println();
+			//System.out.println();
+			//System.out.println(currentRoom.longDescription());
 			
 			if (currentLevel == 1){
 				printLevel1();
@@ -191,8 +195,9 @@ class Game {
 					resetLevel(currentLevel);
 				}
 			} else if (currentLevel == 2){
-				// DialogueLevel2.level2Intro();
-				if (currentRoom.equals(masterRoomMap.get("ROOM_6"))){
+				if (currentRoom.equals(masterRoomMap.get("ROOM_1"))){
+					DialogueLevel2.level2Intro();
+				} else if (currentRoom.equals(masterRoomMap.get("ROOM_6"))){
 					if (Inventory.findIndex(bubble) == -1){
 						DialogueLevel2.level2NoAir();
 						finished = true;
@@ -200,7 +205,7 @@ class Game {
 				} else if (currentRoom.equals(masterRoomMap.get("ROOM_6"))){
 					DialogueLevel2.level2Shark();
 				} else if (currentRoom.equals(masterRoomMap.get("ROOM_29"))){
-					DialogueLevel2.level2Oarfish();
+					DialogueLevel2.level2Oarfish(finished);
 				} else if (currentRoom.equals(masterRoomMap.get("ROOM_30"))){
 					DialogueLevel2.level2Mirror();
 					DialogueLevel2.level2Ending(currentLevel, secondKey);
@@ -234,9 +239,10 @@ class Game {
 		System.out
 				.println("You play the game by entering commands with your keyboard when you see the \'>\' symbol.\n");
 		System.out.println("You can also type \'help\' for a bit of advice.\n");
+		thread.sleep(2000);
 		printGameRules();
-		thread.sleep(8000);
-		System.out.println("Are you prepared for some serious challenges?");
+		thread.sleep(10000);
+		System.out.println("\n\nAre you prepared for some serious challenges?");
 		System.out.println();
 
 		// And the game begins!!
