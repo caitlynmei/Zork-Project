@@ -42,6 +42,7 @@ class Game {
 	Tool secondKey = new Tool("2: Sea Key");
 	Tool stone = new Tool("stone");
 	Tool bubble = new Tool("bubble");
+	Tool knife = new Tool("knife");
 
 	static Thread thread = new Thread(); // thread for delays
 
@@ -163,13 +164,13 @@ class Game {
 
 		} else if (currentLevel == 2) {
 			initRooms("data/levels/level2.dat");
-			currentRoom = masterRoomMap.get("ROOM_1");
+			currentRoom = masterRoomMap.get("ROOM_29");
 
 			/*
 			 * if (currentRoom.equals(masterRoomMap.get("ROOM_1"))){
-			 * System.out.println();
-			 * System.out.println(currentRoom.longDescription()); // to print
-			 * out room description of ROOM_1 }
+			 * 	 System.out.println();
+			 *	 System.out.println(currentRoom.longDescription()); // to print out room description of ROOM_1 
+			 * }
 			 */
 
 		} else if (currentLevel == 3) {
@@ -196,7 +197,7 @@ class Game {
 	 * @throws Exception
 	 */
 	public void play() throws Exception {
-		printWelcome();
+		//printWelcome();
 
 		// Enter the main command loop. Here we repeatedly read commands and
 		// execute them until the game is over.
@@ -239,6 +240,7 @@ class Game {
 			} else if (currentLevel == 2) {
 				if (currentRoom.equals(masterRoomMap.get("ROOM_1"))) {
 					DialogueLevel2.level2Intro();
+					Inventory.add(knife);
 				} else if (currentRoom.equals(masterRoomMap.get("ROOM_6"))) {
 					if (Inventory.findIndex(bubble) == -1) {
 						DialogueLevel2.level2NoAir();
@@ -247,8 +249,10 @@ class Game {
 				} else if (currentRoom.equals(masterRoomMap.get("ROOM_6"))) {
 					DialogueLevel2.level2Shark();
 				} else if (currentRoom.equals(masterRoomMap.get("ROOM_29"))) {
-					DialogueLevel2.level2Oarfish(finished);
-					
+					if (DialogueLevel2.level2Oarfish() == true){
+						System.out.println();
+						finished = true;
+					} 
 				} else if (currentRoom.equals(masterRoomMap.get("ROOM_30"))) {
 					DialogueLevel2.level2Mirror();
 					DialogueLevel2.level2Ending(currentLevel, secondKey);

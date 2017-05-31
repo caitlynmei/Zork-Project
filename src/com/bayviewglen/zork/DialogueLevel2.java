@@ -86,7 +86,7 @@ public class DialogueLevel2 {
 	}
 	
 	// Level 2: Cave Entrance Scene with Oarfish
-	public static void level2Oarfish(boolean finished) throws InterruptedException{
+	public static boolean level2Oarfish() throws InterruptedException{
 		thread.sleep(3000);
 		System.out.println();
 		System.out.println("*SWISH*\nWhat was that? A red stripy thing just swam by... \n*WHAM*\n");
@@ -102,7 +102,7 @@ public class DialogueLevel2 {
 		thread.sleep(9000);
 		System.out.println("What do you do? It could eat you alive... It's definitely large enough to swallow you whole...\n");
 		System.out.println("Option 1: Remember that knife in your inventory? That might be useful. Enter \'1\'.\nOption 2: Think again. Use your head. Maybe, violence isn\'t the answer. Enter \'2\'.\n");
-		thread.sleep(1500);
+		thread.sleep(1000);
 		System.out.print(">");
 		
 		String temp = " ";
@@ -121,7 +121,8 @@ public class DialogueLevel2 {
 		}
 		
 		if (temp.equals("1")){
-			level2Oarfish1(finished);
+			level2Oarfish1();
+			return true;
 		}
 		
 		if (temp.equals("2")){
@@ -129,10 +130,11 @@ public class DialogueLevel2 {
 			level2Keypad();
 		}
 		
+		return false;
 	}
 	
 	// Level 2: Option 1: Killed by Oarfish Message
-	public static boolean level2Oarfish1(boolean finished) throws InterruptedException{
+	public static boolean level2Oarfish1() throws InterruptedException{
 		System.out.println("\nOption 1:\nYou take the knife out, and stab as hard as you can into the oarfish\'s right side.");
 		thread.sleep(1500);
 		System.out.println("The oarfish's eyes are filled with hate and anger. In a millisecond, it flicks its tail and you slam into the cave wall. *CRACK* That's going to leave more than");
@@ -140,9 +142,7 @@ public class DialogueLevel2 {
 		thread.sleep(4000);
 		System.out.println("*POP*\nOr not... There goes your oxygen bubble... What a painful way to die...");
 		
-		finished = true;
-		
-		return finished;
+		return true;
 	}
 	
 	// Level 2: Option 2: Made an Oarfish Friend Message
@@ -199,16 +199,19 @@ public class DialogueLevel2 {
 		boolean codeIsSolved = false; 				// for when code is solved by player
 		int numCorrectGuesses = 0;					// stores the number of times a correct character is guessed
 		String code = "THE";						// the ANSWER for the cave entrance (the code word)
-		String encryptedCode = "_ _ _"; 					// stores the characters the player has guessed, displayed for player to see updates 
+		String encryptedCode = ""; 					// stores the characters the player has guessed, displayed for player to see updates 
 		String guessedCharacter = ""; 				// the character that the player guessed
 		String usedChars = ""; 						// stores all characters that have been guessed
 		String characterList = "A B C D E F G H I J K L M N O P Q R S T U V W X Y Z"; 	// the displayed characters which the player may choose from 
 		
+		System.out.println("Code: _ _ _");
+		
 		while (!codeIsSolved){
+			codeIsSolved = false;
 			// to update and show encrypted message
-			for (int b = 0; b < encryptedCode.length(); b++){ 
-				if (usedChars.indexOf(encryptedCode.charAt(b)) != -1){
-					encryptedCode += usedChars.charAt(usedChars.indexOf(code.charAt(b))) + " ";
+			for (int i = 0; i < 3; i++){ 
+				if (usedChars.indexOf(encryptedCode.charAt(i)) != -1){
+					encryptedCode += usedChars.charAt(usedChars.indexOf(code.charAt(i))) + " ";
 					//codedMessage += phrase.charAt(b); // simpler version of above line
 				} else { //(VALID_CODE_CHARACTERS.indexOf(encryptedCode.charAt(b)) != -1){
 					encryptedCode += "_ ";
