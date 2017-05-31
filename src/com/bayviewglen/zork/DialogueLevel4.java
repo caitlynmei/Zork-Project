@@ -49,11 +49,13 @@ public class DialogueLevel4 {
 		
 		if(temp.equals("APPROACH")|| temp.equals("APPROACH THEM")){
 		
-			//what happens when they approach them
-		
+			System.out.println("You approach the figure. As you get closer the figure turns around");
+			Thread.sleep(100);
+			System.out.println("\"AAHHHHH\" you scream");
+			
 		
 		} else{
-			System.out.println("You ignore them. Which direction would you like to go?");
+			System.out.println("You ignore it. Which direction would you like to go?");
 		}
 	
 		}
