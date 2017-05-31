@@ -87,7 +87,6 @@ public class DialogueLevel2 {
 	
 	// Level 2: Cave Entrance Scene with Oarfish
 	public static boolean level2Oarfish() throws InterruptedException{
-		thread.sleep(3000);
 		System.out.println();
 		System.out.println("*SWISH*\nWhat was that? A red stripy thing just swam by... \n*WHAM*\n");
 		thread.sleep(1000);
@@ -204,21 +203,20 @@ public class DialogueLevel2 {
 		String usedChars = ""; 						// stores all characters that have been guessed
 		String characterList = "A B C D E F G H I J K L M N O P Q R S T U V W X Y Z"; 	// the displayed characters which the player may choose from 
 		
-		System.out.println("Code: _ _ _");
-		
 		while (!codeIsSolved){
 			codeIsSolved = false;
+			
 			// to update and show encrypted message
-			for (int i = 0; i < 3; i++){ 
-				if (usedChars.indexOf(encryptedCode.charAt(i)) != -1){
-					encryptedCode += usedChars.charAt(usedChars.indexOf(code.charAt(i))) + " ";
-					//codedMessage += phrase.charAt(b); // simpler version of above line
-				} else { //(VALID_CODE_CHARACTERS.indexOf(encryptedCode.charAt(b)) != -1){
-					encryptedCode += "_ ";
+			encryptedCode = "";
+			for (int i = 0; i < code.length(); i++){ 
+				if (usedChars.indexOf(code.charAt(i)) != -1){
+					//encryptedCode += usedChars.charAt(usedChars.indexOf(code.charAt(i))) + " ";
+						encryptedCode += code.charAt(i); // simpler version of above line
+				} else if (VALID_CODE_CHARACTERS.indexOf(code.charAt(i)) != -1){
+						encryptedCode += "_ ";
 				} 
 			}
-			
-			System.out.println(encryptedCode);
+			System.out.println("KEYPAD: " + encryptedCode + "\n");
 			
 			// to display unused characters
 			System.out.println("Unused Characters: ");
