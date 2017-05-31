@@ -86,17 +86,38 @@ class Game {
 				}
 
 				exits.put(roomName.substring(10).trim().toUpperCase().replaceAll(" ", "_"), temp);
-				/*
-				 * //Reads the Items String roomItems = roomScanner.nextLine();
-				 * room.setRoomItems(roomItems.split(":")[1].trim());
-				 * 
-				 * 
-				 * 
-				 //Reads the Enemies String roomEnemies =
-				 * roomScanner.nextLine();
-				 * room.setRoomEnemies(roomEnemies.split(":")[1].trim());
-				 * 
-				 */
+				
+				 //Reads the Items String roomItems = roomScanner.nextLine();
+				  room.setRoomItems(roomItems.split(":")[1].trim());
+				  
+				  
+				  
+				 //Reads the Enemies String 
+				  String[] roomEnemies = roomScanner.nextLine().trim().split(":")[1].split(",");
+					int counter = 0;
+					if (!roomEnemies[0].trim().equals("none")) {
+						for (String s : roomEnemies) {
+							String currentEnemyType = roomEnemies[counter].trim().split("-")[0];
+							String inRange = roomEnemies[counter].trim().split("-")[1];
+							int hitsToKill = Integer.parseInt(roomEnemies[counter].trim().split("-")[2]);
+							if(currentEnemyType.equals("Grunt")){
+								room.addRoomEnemy(new Grunt(hitsToKill,"Grunt",inRange.equals("Close")));
+							}else if(currentEnemyType.equals("Grunt")){
+								room.addRoomEnemy(new Grunt(hitsToKill,"Grunt",inRange.equals("Close")));
+							}else if(currentEnemyType.equals("Grunt")){
+								room.addRoomEnemy(new Grunt(hitsToKill,"Grunt",inRange.equals("Close")));
+							}else if(currentEnemyType.equals("Grunt")){
+								room.addRoomEnemy(new Grunt(hitsToKill,"Grunt",inRange.equals("Close")));
+							}else if(currentEnemyType.equals("Grunt")){
+								room.addRoomEnemy(new Grunt(hitsToKill,"Grunt",inRange.equals("Close")));
+							}else if(currentEnemyType.equals("Grunt")){
+								room.addRoomEnemy(new Grunt(hitsToKill,"Grunt",inRange.equals("Close")));
+							}
+							counter++;
+						}
+
+				
+				
 				// This puts the room we created (Without the exits in the
 				// masterMap)
 				masterRoomMap.put(roomName.toUpperCase().substring(10).trim().replaceAll(" ", "_"), room);
