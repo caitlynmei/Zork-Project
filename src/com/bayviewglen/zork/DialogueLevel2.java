@@ -14,7 +14,7 @@ public class DialogueLevel2 {
 	// Level 2 Intro
 	public static void level2Intro() throws InterruptedException{
 		System.out.println();
-		System.out.println("LEVEL 3");
+		System.out.println("LEVEL 2");
 		System.out.println("You wake up lying on your back in pitch dark. You can hear the sound of waves crashing\n"
 				+ "against cave wall. You stand up cautiously.");
 		thread.sleep(1500);
