@@ -25,7 +25,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 
-class Room 
+class Room implements Lockable
 {
 	private String roomName;
 	private int roomLock;
@@ -163,5 +163,11 @@ class Room
 	
 	public void setroomLock(int roomLock){
 		this.roomLock = roomLock;
+	}
+
+	@Override
+	public boolean isLocked() {
+		// TODO Auto-generated method stub
+		return false;
 	}
 }

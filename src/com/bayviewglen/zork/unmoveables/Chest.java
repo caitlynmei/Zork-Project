@@ -3,10 +3,11 @@ package com.bayviewglen.zork.unmoveables;
 
 import java.util.ArrayList;
 
+import com.bayviewglen.zork.Lockable;
 import com.bayviewglen.zork.item.Item;
 import com.bayviewglen.zork.tool.Key;
 
-public class Chest extends Unmoveables{
+public class Chest implements Lockable{
 
 	private boolean locked;
 	private String name;
@@ -41,9 +42,7 @@ public class Chest extends Unmoveables{
 	}
 
 	
-	public void isLocked(){
-		locked = true;
-	}
+
 	
 	public void lockChest(){
 		locked = false;
@@ -69,22 +68,6 @@ public class Chest extends Unmoveables{
 
 
 	}
-	@Override
-	public String getDescription() {
-		return description;
-	}
-	@Override
-	public boolean equals(Item item) {
-		if(name.equalsIgnoreCase(item.getName())){
-			return true;
-		}
-		return false;
-	}
-	@Override
-	public String itemType() {
-		return "chest";
-	}
-
 	private static int findIndex(Item item) {
 		
 		for(int i = 0; i<Chest.size(); i++){
@@ -93,6 +76,18 @@ public class Chest extends Unmoveables{
 			}
 		}
 		return -1;
+	}
+
+	@Override
+	public boolean isLocked() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean unlock(Key key) {
+		// TODO Auto-generated method stub
+		return false;
 	}
 
 	
