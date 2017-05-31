@@ -38,6 +38,7 @@ class Game {
 	Food apple = new Food("apple");
 	Tool secondKey = new Tool("Sea Key");
 	Tool stone = new Tool("stone");
+	Tool bubble = new Tool("bubble");
 
 	static Thread thread = new Thread(); // thread for delays
 
@@ -144,7 +145,7 @@ class Game {
 			
 		} else if (currentLevel == 2){
 			initRooms("data/levels/level2.dat");
-			currentRoom = masterRoomMap.get("ROOM_28");
+			currentRoom = masterRoomMap.get("ROOM_1");
 			
 		} else if (currentLevel == 3){
 			initRooms("data/levels/level3.dat");
@@ -187,7 +188,21 @@ class Game {
 				}
 			} else if (currentLevel == 2){
 				// DialogueLevel2.level2Intro();
-				if (currentRoom.equals(masterRoomMap.get("ROOM_30"))){
+				if (currentRoom.equals(masterRoomMap.get("ROOM_4"))){
+					DialogueLevel2.level2NeedOxygen();
+				} else if (currentRoom.equals(masterRoomMap.get("ROOM_5"))){
+					DialogueLevel2.level2ClamIntro();
+				} else if (currentRoom.equals(masterRoomMap.get("ROOM_6"))){
+					if (Inventory.findIndex(bubble) <= 0){
+						DialogueLevel2.level2NoAir();
+						finished = true;
+					}
+				} else if (currentRoom.equals(masterRoomMap.get("ROOM_6"))){
+					DialogueLevel2.level2Shark();
+				} else if (currentRoom.equals(masterRoomMap.get("ROOM_29"))){
+					DialogueLevel2.level2Oarfish();
+				} else if (currentRoom.equals(masterRoomMap.get("ROOM_30"))){
+					DialogueLevel2.level2Mirror();
 					DialogueLevel2.level2Ending(currentLevel, secondKey);
 					currentLevel++;
 					resetLevel(currentLevel);
@@ -319,6 +334,8 @@ class Game {
 			readItem(command);
 		} else if (commandWord.equalsIgnoreCase("hi")){
 			System.out.println("Hi back! What's up?");
+		} else if (commandWord.equalsIgnoreCase("use")){
+			useItem(command);
 
 		// Inventory actions
 		} else if (commandWord.equalsIgnoreCase("inventory")){
@@ -341,10 +358,36 @@ class Game {
 		return false;
 	}
 
+	private void useItem(Command command) {
+		// if there is no second word, we don't know what to use...
+		if (!command.hasSecondWord()) {
+			System.out.println("Use what? (*Hint: item)");
+			return;
+		}
+
+		String secondWord = command.getSecondWord(); 
+		String thirdWord = command.getThirdWord();
+		String fourthWord = command.getFourthWord();
+
+		// making player more specific about which items they want to use - CM
+		if (secondWord.equalsIgnoreCase("item")){
+			System.out.println("You're going to have to be way more specific. What is the item called?");
+		} else if (currentLevel == 2){
+			if (secondWord.equalsIgnoreCase("bubble")){
+				DialogueLevel2.level2YesAir();
+				Inventory.add(bubble);
+			} else {
+				System.out.println("That is not an item you can use.");
+			}
+		} else {
+			System.out.println("That is not an item you can use.");
+		}
+	}
+
 	/*
 	 * Method reads an item
 	 */
-	private void readItem(Command command) {
+	private void readItem(Command command) throws InterruptedException {
 		// if there is no second word, we don't know what to read...
 		if (!command.hasSecondWord()) { // changed from command.hasWord(1)
 			System.out.println("Read what? (*Hint: item)");
@@ -379,13 +422,7 @@ class Game {
 					// mignight zone note
 				} else if (secondWord.equalsIgnoreCase("midnight") && thirdWord.equalsIgnoreCase("zone")
 						&& fourthWord.equalsIgnoreCase("note")){
-					System.out.println("\nMIDNIGHT ZONE NOTE");
-					System.out.println(
-							"Good luck making if so far. If you still can't remember much right now, here's a clue.");
-					System.out.println("//rhyme of whatever we want the guy to remember...");
-					System.out.println(".\n.\n.\n.");
-					System.out.println("And there's also an \'H\'. Hmmm...");
-					// not a readable item
+					DialogueLevel2.level2Note();
 				} else {
 					System.out.println("That is not an item with legible words on it.");
 				}

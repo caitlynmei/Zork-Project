@@ -57,11 +57,12 @@ public class DialogueLevel2 {
 	}
 	
 	//Level 2: Midnight Zone Note
-	public static void level2Note(){
+	public static void level2Note() throws InterruptedException{
 		System.out.println();
 		System.out.println("MIDNIGHT ZONE NOTE");
 		System.out.println("Good luck making if so far. If you still can\'t remember much right now, here's a clue.");
 		System.out.println();
+		thread.sleep(1000);
 		System.out.println("\'One fish,");
 		System.out.println("  Two fish,");
 		System.out.println("  Red fish,");
@@ -71,8 +72,10 @@ public class DialogueLevel2 {
 		System.out.println("  Say! What a lot");
 		System.out.println("  Of fish there are.\'");
 		System.out.println("  - excerpt from children's author Dr. Seuss\n");
+		thread.sleep(5000);
 		System.out.println("You suddenly feel a cold chill travelling down your spine and hear a voice echo:");
 		System.out.println("\'Yes, the lovely Dr. Seuss. Kids adored him. But how would they feel if I added this in? MWAH HA HA\'\n");
+		thread.sleep(1500);
 		System.out.println("On the note, a new line appears at the bottom:");
 		System.out.println("  This one has a bubble,");
 		System.out.println("  And he is going to PAY for what he did...\n");
@@ -115,6 +118,7 @@ public class DialogueLevel2 {
 		
 		if (temp.equals("1")){
 			level2Oarfish1();
+			level2Keypad();
 		}
 		
 		if (temp.equals("2")){
@@ -263,6 +267,7 @@ public class DialogueLevel2 {
 	
 	// Level 2: Ending Message
 	public static void level2Ending(int currentLevel, Tool secondKey) throws InterruptedException{
+		thread.sleep(1000);
 		System.out.println();
 		System.out.println("\nYou blink again, and the flashback is gone. You look in the mirror, and you see yourself looking fresh and healthy, like someone who didn't just almost "
 				+ "\ndie in the deep sea. There is also the faint outline of a silver key glowing in your jeans pocket. You look down at yourself. Shocked, you realize you are no longer"

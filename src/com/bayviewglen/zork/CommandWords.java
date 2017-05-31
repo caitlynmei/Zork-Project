@@ -13,7 +13,7 @@ import java.util.ArrayList;
 class CommandWords {
 
 	// Constant String holding all valid first command words (word1)
-	private static final String validCommands[] = {"help", "rules", "commandlist", "look", "hi", "go", "quit", "save", "eat", "take", "drop", "toss", "read", "inventory",
+	private static final String validCommands[] = {"help", "rules", "commandlist", "look", "hi", "go", "quit", "save", "eat", "use", "take", "drop", "toss", "read", "inventory",
 												   "north", "south", "east", "west", "up", "down", "n", "s", "e", "w", "u", "d"
 												   };
 	/**

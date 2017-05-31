@@ -53,7 +53,7 @@ public class Inventory {
 	}
 
 	// method to find the item in the list
-	private static int findIndex(Item item) {
+	public static int findIndex(Item item) {
 		
 		for(int i = 0; i<bag.size(); i++){
 			if(bag.get(i).getName().equalsIgnoreCase(item.getName())){
