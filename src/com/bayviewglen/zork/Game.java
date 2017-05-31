@@ -171,6 +171,8 @@ class Game {
 		System.out.println();
 		System.out.println();
 		System.out.println(currentRoom.longDescription());
+				
+		printWelcome();
 		
 		int counter = 0; // to count the number of times you enter a room, so dialogue only shows once 
 		
@@ -181,8 +183,6 @@ class Game {
 		while (!finished){
 			Command command = parser.getCommand();
 			finished = processCommand(command);
-			
-			printWelcome();
 			
 			if (currentLevel == 1){
 				printLevel1();
