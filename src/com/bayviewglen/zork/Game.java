@@ -147,7 +147,7 @@ class Game {
 	/**
 	 * Create the game and initialize its internal map.
 	 */
-	public Game() { // I got the levels thing, I'll finish it later - CM
+	public Game() { 
 		try {
 			resetLevel(currentLevel);
 		} catch (Exception e) {
