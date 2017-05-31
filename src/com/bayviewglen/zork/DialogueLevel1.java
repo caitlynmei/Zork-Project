@@ -69,15 +69,16 @@ public class DialogueLevel1 {
 			}
 			if (temp2.equals("WHY SHOULD I HELP?")) {
 				thread.sleep(2000);
-				System.out.println("Hmmmmm, if you do I can give you a key.");
+				System.out.println("Hmmmmm, if you do I can give something.");
 				thread.sleep(2000);
-				System.out.println("I have no use for this key but I ");
+				System.out.println("I have no use for this key but I think you might need it. ");
 			}
 			if (temp2.equals("WHAT DO I GET OUT OF THIS?")) {
 				thread.sleep(2000);
+				System.out.println("Hmmmmm, if you do I can give something.");
+				thread.sleep(2000);
+				System.out.println("I have no use for this key but I think you might need it. ");
 			}
-
-			
 		}
 		if (temp.equals("NO")) {
 			thread.sleep(2000);
@@ -114,7 +115,7 @@ public class DialogueLevel1 {
 		}
 		if (temp.equals("DO NOTHING")) {
 			thread.sleep(2000);
-			System.out.println("You don't know what to do but stare a the door.");
+			System.out.println("You don't know what to do but stare at the door.");
 			thread.sleep(2000);
 			System.out.println("");
 		}
@@ -129,12 +130,12 @@ public class DialogueLevel1 {
 	}
 
 	// When you come across door and put key in
-	public static void level1Door() throws InterruptedException{
-		
+	public static void level1Door() throws InterruptedException {
+
 	}
 
 	// Level 1 Outro
-	public static void level1Outro() throws InterruptedException { // to be called after completing level 1
+	public static void level1Outro() throws InterruptedException {
 		System.out.println("The clouds around you start to disappear one by one.");
 		System.out.println("\n\nYou think about what to do. You think to yourself\n");
 		thread.sleep(2000);
@@ -179,5 +180,6 @@ public class DialogueLevel1 {
 		thread.sleep(2000);
 		System.out.println("\nEverything fades to black");
 		thread.sleep(2000);
+		System.out.println("END OF LEVEL 1");
 	}
 }
