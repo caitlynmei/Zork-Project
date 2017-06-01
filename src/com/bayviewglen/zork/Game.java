@@ -158,6 +158,13 @@ class Game {
 			DialogueLevel1.level1Intro();
 			initRooms("data/levels/level1.dat");
 			currentRoom = masterRoomMap.get("ROOM_13");
+			if (currentRoom.equals(masterRoomMap.get("ROOM_13"))) {
+				System.out.println();
+				System.out.println(currentRoom.longDescription()); // to print
+																	// out room
+																	// description
+																	// of ROOM_1
+			}
 
 		} else if (currentLevel == 2) {
 			DialogueLevel2.level2Intro();
@@ -204,7 +211,7 @@ class Game {
 	 * @throws Exception
 	 */
 	public void play() throws Exception {
-		printWelcome();
+		//printWelcome();
 		
 		/**
 		 * Create the game and initialize its internal map.
