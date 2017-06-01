@@ -197,7 +197,8 @@ class Game {
 				System.out.println(currentRoom.longDescription()); // to print
 																	// out room
 																	// description
-			}													// of ROOM_1
+																	// of ROOM_1
+			}
 			
 		}
 	}
@@ -280,13 +281,23 @@ class Game {
 			} else { // currentLevel == 4
 				if (currentRoom.equals(masterRoomMap.get("ROOM_21"))) {
 					if(DialogueLevel4.keyWord()){
-					DialogueLevel4.levelEnd();
-					currentLevel++;
-					resetLevel(currentLevel);
+						DialogueLevel4.levelEnd();
+						currentLevel++;
+						resetLevel(currentLevel);
 					}
+				}else if(currentRoom.equals(masterRoomMap.get("ROOM_5"))){
+							boolean test = DialogueLevel4.keyWord();
+							DialogueLevel4.personOne();
+							System.out.println("");
+							System.out.println(currentRoom.longDescription());
+	
+						
+					}
+			
 					
-				}
+				
 			}
+		
 
 		}
 		System.out.println("Thank you for playing. Good bye for now!");
