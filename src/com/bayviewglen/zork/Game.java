@@ -243,6 +243,7 @@ class Game {
 					//something
 					} else if (Inventory.findIndex(secondKey) != -1){
 						DialogueLevel1.level1Door();
+						DialogueLevel1.level1CodeCheck();
 						DialogueLevel1.level1Outro();
 						DialogueLevel1.loading();
 						currentLevel++;
