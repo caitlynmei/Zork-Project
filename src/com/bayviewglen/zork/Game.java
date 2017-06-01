@@ -32,7 +32,7 @@ import com.bayviewglen.zork.tool.Tool;
 
 class Game {
 
-	public int currentLevel = 1; // temp 2 for testing, CM
+	public int currentLevel = 4; // temp 4 for testing, GG
 
 	// Level 1 Items
 	Tool firstKey = new Tool("1: Air Key");
@@ -42,7 +42,11 @@ class Game {
 	Tool secondKey = new Tool("2: Sea Key");
 	Tool stone = new Tool("stone");
 	Tool bubble = new Tool("bubble");
+	Tool knife = new Tool("knife");	
 
+	// Level 3 Items
+	Tool thirdKey = new Tool("3: Earth Key");
+	
 	static Thread thread = new Thread(); // thread for delays
 
 	private Parser parser;
@@ -146,7 +150,7 @@ class Game {
 	/**
 	 * Create the game and initialize its internal map.
 	 */
-	public Game() { // I got the levels thing, I'll finish it later - CM
+	public Game() { 
 		try {
 			resetLevel(currentLevel);
 		} catch (Exception e) {
@@ -167,9 +171,9 @@ class Game {
 
 			/*
 			 * if (currentRoom.equals(masterRoomMap.get("ROOM_1"))){
-			 * System.out.println();
-			 * System.out.println(currentRoom.longDescription()); // to print
-			 * out room description of ROOM_1 }
+			 * 	 System.out.println();
+			 *	 System.out.println(currentRoom.longDescription()); // to print out room description of ROOM_1 
+			 * }
 			 */
 
 		} else if (currentLevel == 3) {
@@ -185,8 +189,16 @@ class Game {
 			}
 
 		} else if (currentLevel == 4) {
+			DialogueLevel4.LevelIntro();
 			initRooms("data/levels/level4.dat");
 			currentRoom = masterRoomMap.get("ROOM_1");
+			if (currentRoom.equals(masterRoomMap.get("ROOM_1"))) {
+				System.out.println();
+				System.out.println(currentRoom.longDescription()); // to print
+																	// out room
+																	// description
+			}													// of ROOM_1
+			
 		}
 	}
 
@@ -208,7 +220,7 @@ class Game {
 			int counter = 0; // to count the number of times you enter a room,
 								// so dialogue only shows once
 
-			System.out.println("current level: " + currentLevel);
+			//System.out.println("current level: " + currentLevel);
 			// System.out.println();
 			// System.out.println(currentRoom.longDescription());
 
@@ -240,6 +252,7 @@ class Game {
 			} else if (currentLevel == 2) {
 				if (currentRoom.equals(masterRoomMap.get("ROOM_1"))) {
 					DialogueLevel2.level2Intro();
+					Inventory.add(knife);
 				} else if (currentRoom.equals(masterRoomMap.get("ROOM_6"))) {
 					if (Inventory.findIndex(bubble) == -1) {
 						DialogueLevel2.level2NoAir();
@@ -248,7 +261,10 @@ class Game {
 				} else if (currentRoom.equals(masterRoomMap.get("ROOM_6"))) {
 					DialogueLevel2.level2Shark();
 				} else if (currentRoom.equals(masterRoomMap.get("ROOM_29"))) {
-					DialogueLevel2.level2Oarfish(finished);
+					if (DialogueLevel2.level2Oarfish() == true){
+						System.out.println();
+						finished = true;
+					} 
 				} else if (currentRoom.equals(masterRoomMap.get("ROOM_30"))) {
 					DialogueLevel2.level2Mirror();
 					DialogueLevel2.level2Ending(currentLevel, secondKey);
@@ -261,7 +277,14 @@ class Game {
 					resetLevel(currentLevel);
 				}
 			} else { // currentLevel == 4
-				System.out.println("You are now in LEVEL 4!");
+				if (currentRoom.equals(masterRoomMap.get("ROOM_21"))) {
+					if(DialogueLevel4.keyWord()){
+					DialogueLevel4.levelEnd();
+					currentLevel++;
+					resetLevel(currentLevel);
+					}
+					
+				}
 			}
 
 		}
@@ -320,6 +343,8 @@ class Game {
 
 		return (level2Over == true);
 	}
+	
+
 
 	// loading Method: prints the "Loading . . . . " message
 	private void loading() throws InterruptedException {
@@ -399,13 +424,11 @@ class Game {
 
 			// Quit command
 		} else if (commandWord.equalsIgnoreCase("quit")) {
-			if (secondWord == null) {
-				System.out.println("Would you like to save your progress?"); // make
-																				// data
-																				// file!!
+			if (command.hasSecondWord()) {
+				System.out.println("Do you want to quit? If so, only enter: \'quit\'");																// da																// file!!
 			} else {
 				return true; // signal that we want to quit <-- we need to do
-			} // this -CM
+			} 
 		}
 		return false;
 	}

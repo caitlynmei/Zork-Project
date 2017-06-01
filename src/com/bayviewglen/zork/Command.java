@@ -17,7 +17,7 @@ import java.util.ArrayList;
  * than a String.
  */
 
-class Command {
+class Command { //CM
 
 	private String commandWord;
 	private String secondWord;
@@ -38,6 +38,8 @@ class Command {
 		this.thirdWord = thirdWord;
 		this.fourthWord = fourthWord;
 		this.fifthWord = fifthWord;
+		
+		// ------------- Assigning words to the commands the player entered -----------------
 		
 		if (commandWord != null){
 			commandWord = commandWord.toLowerCase();
@@ -60,19 +62,8 @@ class Command {
 		}
 	}
 
-	/*
-	public Command(ArrayList<String> words) {
-		this.words = words;
-	}
-
-	public String getWord(int index){
-		if (index < words.size()){
-			return words.get(index);
-		} else {
-			return null;
-		}
-	}
-	*/
+	
+	// --------------- Following methods allow program to get specific words which are entered by the player each time --------------- 
 	
 	/*
 	 * getCommandWord method gets the command word when called. If the 
@@ -108,27 +99,9 @@ class Command {
 		return fifthWord;
 	}
 	
-	/*
-	public boolean hasWord(int index){
-		if (index < words.size()){
-			return (words.get(index) != null);
-		}
-		return false;
-	}
+	// --------------- Checking if the player typed in command words. (If not, return null) ---------------------------
 	
-	*/
-	
-	/* new tried version
-	 *@return true if this command was not understood.
-	 
-	public boolean isUnknown(ArrayList words) {
-		if (words == null || words.size() <= 0){
-			return true;
-		}
-		return !word.isCommand(word);
-	}
-	*/
-	
+	// @return true if there is no command
 	public boolean isUnknown(Command command){
 		return (commandWord == null);
 	}
