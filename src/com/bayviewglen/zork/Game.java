@@ -32,7 +32,7 @@ import com.bayviewglen.zork.tool.Tool;
 
 class Game {
 
-	public int currentLevel = 2; // temp 4 for testing, GG
+	public int currentLevel = 1; // temp 4 for testing, GG
 
 	// Level 1 Items
 	Tool firstKey = new Tool("1: Air Key");
@@ -155,10 +155,12 @@ class Game {
 	// resetLevel method for when the player wins a level
 	public void resetLevel(int currentLevel) throws Exception {
 		if (currentLevel == 1) {
+			DialogueLevel1.level1Intro();
 			initRooms("data/levels/level1.dat");
 			currentRoom = masterRoomMap.get("ROOM_13");
 
 		} else if (currentLevel == 2) {
+			DialogueLevel2.level2Intro();
 			initRooms("data/levels/level2.dat");
 			currentRoom = masterRoomMap.get("ROOM_1");
 
@@ -202,7 +204,7 @@ class Game {
 	 * @throws Exception
 	 */
 	public void play() throws Exception {
-		//printWelcome();
+		printWelcome();
 		
 		/**
 		 * Create the game and initialize its internal map.
@@ -229,7 +231,7 @@ class Game {
 
 			if (currentLevel == 1) {
 				if (currentRoom.equals(masterRoomMap.get("ROOM_13"))) {
-					DialogueLevel1.level1Intro();
+					//DialogueLevel1.level1Intro();
 				} else if (currentRoom.equals(masterRoomMap.get("ROOM_4"))) {
 					// stuff...
 				} else if (currentRoom.equals(masterRoomMap.get("ROOM_17"))) {
@@ -255,7 +257,7 @@ class Game {
 				}
 			} else if (currentLevel == 2) {
 				if (currentRoom.equals(masterRoomMap.get("ROOM_1"))) {
-					DialogueLevel2.level2Intro();
+					//DialogueLevel2.level2Intro();
 					Inventory.add(knife);
 				} else if (currentRoom.equals(masterRoomMap.get("ROOM_6"))) {
 					if (Inventory.findIndex(bubble) == -1) {
