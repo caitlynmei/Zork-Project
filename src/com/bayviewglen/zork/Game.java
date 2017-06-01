@@ -32,7 +32,7 @@ import com.bayviewglen.zork.tool.Tool;
 
 class Game {
 
-	public int currentLevel = 4; // temp 4 for testing, GG
+	public int currentLevel = 1; // temp 1
 
 	// Level 1 Items
 	Tool firstKey = new Tool("1: Air Key");
@@ -240,14 +240,13 @@ class Game {
 				if (currentRoom.equals(masterRoomMap.get("ROOM_13"))) {
 					//DialogueLevel1.level1Intro();
 				} else if (currentRoom.equals(masterRoomMap.get("ROOM_4"))) {
-					// stuff...
-				} else if (currentRoom.equals(masterRoomMap.get("ROOM_17"))) {
-					DialogueLevel1.level1Giant();
 					if (Inventory.findIndex(bean) == -1){
 						DialogueLevel1.Jack1stMeeting();
 					} else if (Inventory.findIndex(bean) != -1){
 						DialogueLevel1.Jack2ndMeeting(secondKey);
 					}
+				} else if (currentRoom.equals(masterRoomMap.get("ROOM_17"))) {
+					DialogueLevel1.level1Giant();
 				} else if (currentRoom.equals(masterRoomMap.get("ROOM_22"))) {
 					Inventory.add(bean);
 				} else if (currentRoom.equals(masterRoomMap.get("ROOM_1"))) {
