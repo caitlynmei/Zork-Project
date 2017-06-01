@@ -32,7 +32,7 @@ import com.bayviewglen.zork.tool.Tool;
 
 class Game {
 
-	public int currentLevel = 1; // temp 4 for testing, GG
+	public int currentLevel = 4; // temp 4 for testing, GG
 
 	// Level 1 Items
 	Tool firstKey = new Tool("1: Air Key");
@@ -297,7 +297,7 @@ class Game {
 						resetLevel(currentLevel);
 					}
 				}else if(currentRoom.equals(masterRoomMap.get("ROOM_5"))){
-							boolean test = DialogueLevel4.keyWord();
+						
 							DialogueLevel4.personOne();
 							System.out.println("");
 							System.out.println(currentRoom.longDescription());

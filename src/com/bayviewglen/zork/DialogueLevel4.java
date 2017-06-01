@@ -9,7 +9,7 @@ public class DialogueLevel4 {
 	}
 	
 	public static void LevelIntro() throws InterruptedException{ //level start
-		
+		System.out.println("LEVEL 4 - FINAL LEVEL\n\n" );
 		System.out.println("You wake up and look around you");
 		Thread.sleep(2000);
 		System.out.println("*sniff*");
