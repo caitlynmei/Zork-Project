@@ -32,7 +32,7 @@ import com.bayviewglen.zork.tool.Tool;
 
 class Game {
 
-	public int currentLevel = 4; // temp 4 for testing, GG
+	public int currentLevel = 2; // temp 4 for testing, GG
 
 	// Level 1 Items
 	Tool firstKey = new Tool("1: Air Key");
@@ -147,18 +147,11 @@ class Game {
 		}
 	}
 
-	/**
-	 * Create the game and initialize its internal map.
-	 */
-	public Game() { 
-		try {
-			resetLevel(currentLevel);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		parser = new Parser();
+	
+/*	public Game() { 
+		
 	}
-
+*/
 	// resetLevel method for when the player wins a level
 	public void resetLevel(int currentLevel) throws Exception {
 		if (currentLevel == 1) {
@@ -210,7 +203,16 @@ class Game {
 	 */
 	public void play() throws Exception {
 		//printWelcome();
-
+		
+		/**
+		 * Create the game and initialize its internal map.
+		 */
+		try {
+			resetLevel(currentLevel);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		parser = new Parser();
 		// Enter the main command loop. Here we repeatedly read commands and
 		// execute them until the game is over.
 
