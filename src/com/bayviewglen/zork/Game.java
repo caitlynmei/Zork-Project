@@ -32,7 +32,7 @@ import com.bayviewglen.zork.tool.Tool;
 
 class Game {
 
-	public int currentLevel = 2; // temp 4 for testing, GG
+	public int currentLevel = 4; // temp 4 for testing, GG
 
 	// Level 1 Items
 	Tool firstKey = new Tool("1: Air Key");
