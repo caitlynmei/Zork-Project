@@ -416,13 +416,11 @@ class Game {
 
 			// Quit command
 		} else if (commandWord.equalsIgnoreCase("quit")) {
-			if (secondWord == null) {
-				System.out.println("Would you like to save your progress?"); // make
-																				// data
-																				// file!!
+			if (command.hasSecondWord()) {
+				System.out.println("Do you want to quit? If so, only enter: \'quit\'");																// da																// file!!
 			} else {
 				return true; // signal that we want to quit <-- we need to do
-			} // this -CM
+			} 
 		}
 		return false;
 	}
