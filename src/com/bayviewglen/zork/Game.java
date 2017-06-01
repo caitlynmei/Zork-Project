@@ -189,8 +189,15 @@ class Game {
 			}
 
 		} else if (currentLevel == 4) {
+			DialogueLevel4.LevelIntro();
 			initRooms("data/levels/level4.dat");
 			currentRoom = masterRoomMap.get("ROOM_1");
+			if (currentRoom.equals(masterRoomMap.get("ROOM_1"))) {
+				System.out.println();
+				System.out.println(currentRoom.longDescription()); // to print
+																	// out room
+																	// description
+			}													// of ROOM_1
 			
 		}
 	}

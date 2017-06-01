@@ -11,13 +11,13 @@ public class DialogueLevel4 {
 	public static void LevelIntro() throws InterruptedException{ //level start
 		
 		System.out.println("You wake up and look around you");
-		Thread.sleep(5000);
+		Thread.sleep(2000);
 		System.out.println("*sniff*");
-		Thread.sleep(5000);
+		Thread.sleep(2000);
 		System.out.println("You smell the scent of ashes");
-		Thread.sleep(5000);
+		Thread.sleep(2000);
 		System.out.println("You look around to that you are in a cave. Is this a Volcano?");
-		Thread.sleep(5000);
+		Thread.sleep(2000);
 		
 	}
 	
