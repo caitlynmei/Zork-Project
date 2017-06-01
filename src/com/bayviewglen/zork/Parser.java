@@ -23,7 +23,7 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.StringTokenizer;
 
-class Parser {
+class Parser { // CM
 	private CommandWords commands; // holds all valid command words
 
 	public Parser() {
@@ -39,8 +39,6 @@ class Parser {
 		String word4;
 		String word5;
 			
-		//ArrayList <String> words = new ArrayList <String>();
-
 		System.out.print("> "); // print prompt
 
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
@@ -62,16 +60,6 @@ class Parser {
 		 */
 		StringTokenizer tokenizer = new StringTokenizer(inputLine);
 
-		/*
-		while (tokenizer.hasMoreTokens()){
-			String temp = tokenizer.nextToken();
-			
-			if(isUseful(temp)){
-				words.add(temp);
-			}
-		}
-		*/
-		
 		if (tokenizer.hasMoreTokens()) {
 			word1 = tokenizer.nextToken(); // get first word
 		} else {
@@ -112,25 +100,7 @@ class Parser {
 		} else {
 			return new Command(null, word2, word3, word4, word5);
 		}
-		
-		/*if (words.isCommand(words.get(0))){
-			return new Command(words);
-		} else {
-			return null;
-		}*/ // CM 5/25
-		
-		//return new Command(words);
-		
 	}
-
-	/*
-	public boolean isUseful(String word){
-		if (word != null){
-			return true;
-		}
-		return false;
-	}
-	*/
 	
 	// Set: use contains() method, like a list but can't have duplicates
 	// however, we might not actually need this... - CM
@@ -146,8 +116,6 @@ class Parser {
 		ignoreWords.add("it");
 		ignoreWords.add("in");
 		ignoreWords.add("if");
-
-		// System.out.println(ignoreWords);
 	}
 
 	/**

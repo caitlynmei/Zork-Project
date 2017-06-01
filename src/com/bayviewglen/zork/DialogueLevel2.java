@@ -6,7 +6,7 @@ import java.util.Scanner;
 import com.bayviewglen.zork.inventory.Inventory;
 import com.bayviewglen.zork.tool.Tool;
 
-public class DialogueLevel2 {
+public class DialogueLevel2 { //CM
 
 	static Scanner keyboard = new Scanner(System.in);
 	static Thread thread = new Thread();
