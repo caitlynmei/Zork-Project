@@ -1,18 +1,18 @@
 Room Name: Room 1
 Room lock: 1
-Room Description: There is a large blue door.
+Room Description: CLOUDS<br>There is a large blue door.
 Exit Rooms: E-Room 2, S-Room 6
 Room Name: Room 2
 Room lock: 0 
-Room Description: In distance you can see a large rectangle.
+Room Description: CLOUDS<br>In distance you can see a large rectangle.
 Exit Rooms: W-Room 1, S-Room 7, E-Room 3
 Room Name: Room 3
 Room lock: 0 
-Room Description: There is a faint outline of a person in the distance.
+Room Description: CLOUDS<br>There is a faint outline of a person in the distance.
 Exit Rooms: W-Room 2, S-Room 8, E-Room 4
 Room Name: Room 4
 Room lock: 0 
-Room Description: There is a little boy here.
+Room Description: CLOUDS<br>There is a little boy here.
 Exit Rooms: W-Room 3, S-Room 9, E-Room 5
 Room Name: Room 5
 Room lock: 0 
@@ -20,7 +20,7 @@ Room Description: AREA OF FLUFFY CLOUDS
 Exit Rooms: W-Room 4, S-Room 10
 Room Name: Room 6
 Room lock: 0 
-Room Description: In distance you can see a large rectangle.
+Room Description: CLOUDS<br>In distance you can see a large rectangle.
 Exit Rooms: S-Room 11, E-Room 7, N-Room 1
 Room Name: Room 7
 Room lock: 0 
@@ -28,11 +28,11 @@ Room Description: AREA OF FLUFFY CLOUDS
 Exit Rooms: W-Room 6, S-Room 12, E-Room 8, N-Room 2
 Room Name: Room 8
 Room lock: 0 
-Room Description: There is a faint outline of a person in the distance.
+Room Description: CLOUDS<br>There is a faint outline of a person in the distance.
 Exit Rooms: W-Room 7, N-Room 3, E-Room 9, S-Room 13
 Room Name: Room 9
 Room lock: 0 
-Room Description: There is a faint outline of a person in the distance.
+Room Description: CLOUDS<br>There is a faint outline of a person in the distance.
 Exit Rooms: E-Room 10, N-Room 4, W-Room 8, S-Room 14
 Room Name: Room 10
 Room lock: 0 
@@ -44,11 +44,11 @@ Room Description: AREA OF FLUFFY CLOUDS
 Exit Rooms: S-Room 16, E-Room 12, N-Room 6
 Room Name: Room 12
 Room lock: 0 
-Room Description: There is a large shadow covering the area.
+Room Description: CLOUDS<br>There is a large shadow covering the area.
 Exit Rooms: W-Room 11, S-Room 17, N-Room 7, E-Room 13 
 Room Name: Room 13
 Room lock: 0 
-Room Description: There is a trap door, from where you where dropped from.
+Room Description: CLOUDS<br>There is a trap door, from where you where dropped from.
 Exit Rooms: E-Room 14, N-Room 8, S-Room 18, W-Room 12
 Room Name: Room 14
 Room lock: 0 
@@ -60,15 +60,15 @@ Room Description: AREA OF FLUFFY CLOUDS
 Exit Rooms: S-Room 20, W-Room 14, N-Room 10
 Room Name: Room 16
 Room lock: 0 
-Room Description: There is a large shadow covering the area.
+Room Description: CLOUDS<br>There is a large shadow covering the area.
 Exit Rooms: N-Room 11, E-Room 17, S-Room 21
 Room Name: Room 17
 Room lock: 0 
-Room Description: There is an entrance to a castle.
+Room Description: CLOUDS<br>There is an entrance to a castle.
 Exit Rooms: W-Room 16, N-Room 12, E-Room 18, S-Room 22
 Room Name: Room 18
 Room lock: 0 
-Room Description: There is a large shadow covering the area.
+Room Description: CLOUDS<br>There is a large shadow covering the area.
 Exit Rooms: W-Room 17, N-Room 13, S-Room 23, E-Room 19
 Room Name: Room 19
 Room lock: 0 
@@ -84,7 +84,7 @@ Room Description: AREA OF FLUFFY CLOUDS
 Exit Rooms: N-Room 16
 Room Name: Room 22
 Room lock: 0 
-Room Description: Inside the Giant's castle<br>there is a bean on the ground. Get it
+Room Description: INSIDE GIANT'S CASTLE<br>there is a bean on the ground. Get it
 Exit Rooms: N-Room 17
 Room Name: Room 23
 Room lock: 0 
