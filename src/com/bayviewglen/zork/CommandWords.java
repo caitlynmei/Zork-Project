@@ -10,7 +10,7 @@ package com.bayviewglen.zork;
 
 import java.util.ArrayList;
 
-class CommandWords {
+class CommandWords { // CM
 
 	// Constant String holding all valid first command words (word1)
 	private static final String validCommands[] = {"help", "rules", "commandlist", "look", "hi", "go", "quit", "save", "eat", "use", "take", "drop", "toss", "read", "inventory",
@@ -20,7 +20,7 @@ class CommandWords {
 	 * Constructor - initialize the command words.
 	 **/
 	public CommandWords() {
-		// nothing to do at the moment...
+		
 	}
 
 	/**
@@ -35,25 +35,12 @@ class CommandWords {
 		} // if we get here, the string was not found in the commands
 		return false;
 	}
-	
-	/*
-	public String isCommandString(ArrayList<String> words){
-		return words.get(0);
-	}
-	*/
-	
+
 	// showAll Method: prints all valid commands
 	public void showAll() {
 		for (int i = 0; i < validCommands.length; i++) {
-			//if (i == validCommands.length - 1) {
-				//System.out.print(validCommands[i]);
-			//} else if (i == 0){
-			//	System.out.print("- " + validCommands[i]);
-			//} else {
-				System.out.println("- " + validCommands[i]);
-			//}
+			System.out.println("- " + validCommands[i]);
 		}
-		//System.out.println();
 	}
 
 }

@@ -24,7 +24,7 @@ public class DialogueLevel1 {
 		System.out.println(
 				"You try to remember how you got here, but only remember the scary figure that greeted you from outside the cage you were trapped in.");
 		thread.sleep(2000);
-		System.out.println("*Since this is the beginning of the game here aer a few tips;");
+		System.out.println("*Since this is the beginning of the game here are a few tips;");
 		thread.sleep(2000);
 		System.out.println("*You are able to walk around and the goal is to escape this level.");
 		thread.sleep(2000);
@@ -57,7 +57,7 @@ public class DialogueLevel1 {
 			System.out.println("You need to find giant's castle and get it back for me!");
 			thread.sleep(2000);
 			System.out.println("\"You think to yourself and say\"...");
-			System.out.println("Options: \t\"Why should I help?\" - \"What do I get out of this?\"");
+			System.out.println("Options: \"Why should I help?\" - \"What do I get out of this?\"");
 			System.out.print(">");
 			String temp2 = "";
 			boolean valid2 = false;
@@ -99,7 +99,7 @@ public class DialogueLevel1 {
 		thread.sleep(2000);
 		System.out.println("You decide to...");
 		thread.sleep(2000);
-		System.out.println("\t\"Knock\" - \"Do Nothing\" - \"Stare\"\n");
+		System.out.println("\"Knock\" - \"Do Nothing\" - \"Stare\"\n");
 		System.out.print(">");
 		String temp = "";
 		boolean valid = false;
@@ -279,7 +279,6 @@ public class DialogueLevel1 {
 			thread.sleep(2000);
 			System.out.println("You feel a falling sensation and lose conciousness.");
 		}
-
 		thread.sleep(2000);
 		System.out.println("You see a child skipping on a hot summers day.");
 		thread.sleep(2000);
@@ -294,7 +293,7 @@ public class DialogueLevel1 {
 		System.out.println("END OF LEVEL 1");
 	}
 	// loading Method: prints the "Loading . . . . " message
-	private static void loading() throws InterruptedException {
+	public static void loading() throws InterruptedException {
 		System.out.println();
 		thread.sleep(1500); // delays code
 		System.out.print("Loading");

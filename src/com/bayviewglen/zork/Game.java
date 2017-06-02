@@ -32,7 +32,7 @@ import com.bayviewglen.zork.tool.Tool;
 
 class Game {
 
-	public int currentLevel = 1; // temp 1S
+	public int currentLevel = 1; // temp 1
 
 	// Level 1 Items
 	Tool firstKey = new Tool("1: Air Key");
@@ -43,7 +43,7 @@ class Game {
 	Tool stone = new Tool("stone");
 	Tool bubble = new Tool("bubble");
 	Tool knife = new Tool("knife");	
-	
+
 	// Level 3 Items
 	Tool thirdKey = new Tool("3: Earth Key");
 	
@@ -147,27 +147,29 @@ class Game {
 		}
 	}
 
-	/**
-	 * Create the game and initialize its internal map.
-	 */
-	public Game() { // I got the levels thing, I'll finish it later - CM
-		try {
-			resetLevel(currentLevel);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		parser = new Parser();
+	
+/*	public Game() { 
+		
 	}
-
+*/
 	// resetLevel method for when the player wins a level
 	public void resetLevel(int currentLevel) throws Exception {
 		if (currentLevel == 1) {
+			DialogueLevel1.level1Intro();
 			initRooms("data/levels/level1.dat");
 			currentRoom = masterRoomMap.get("ROOM_13");
+			if (currentRoom.equals(masterRoomMap.get("ROOM_13"))) {
+				System.out.println();
+				System.out.println(currentRoom.longDescription()); // to print
+																	// out room
+																	// description
+																	// of ROOM_1
+			}
 
 		} else if (currentLevel == 2) {
+			DialogueLevel2.level2Intro();
 			initRooms("data/levels/level2.dat");
-			currentRoom = masterRoomMap.get("ROOM_29");
+			currentRoom = masterRoomMap.get("ROOM_1");
 
 			/*
 			 * if (currentRoom.equals(masterRoomMap.get("ROOM_1"))){
@@ -189,8 +191,16 @@ class Game {
 			}
 
 		} else if (currentLevel == 4) {
+			DialogueLevel4.LevelIntro();
 			initRooms("data/levels/level4.dat");
 			currentRoom = masterRoomMap.get("ROOM_1");
+			if (currentRoom.equals(masterRoomMap.get("ROOM_1"))) {
+				System.out.println();
+				System.out.println(currentRoom.longDescription()); // to print
+																	// out room
+																	// description
+																	// of ROOM_1
+			}
 			
 		}
 	}
@@ -202,7 +212,16 @@ class Game {
 	 */
 	public void play() throws Exception {
 		//printWelcome();
-
+		
+		/**
+		 * Create the game and initialize its internal map.
+		 */
+		try {
+			resetLevel(currentLevel);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		parser = new Parser();
 		// Enter the main command loop. Here we repeatedly read commands and
 		// execute them until the game is over.
 
@@ -219,16 +238,15 @@ class Game {
 			
 			if (currentLevel == 1) {
 				if (currentRoom.equals(masterRoomMap.get("ROOM_13"))) {
-					DialogueLevel1.level1Intro();
+					//DialogueLevel1.level1Intro();
 				} else if (currentRoom.equals(masterRoomMap.get("ROOM_4"))) {
-					// stuff...
-				} else if (currentRoom.equals(masterRoomMap.get("ROOM_17"))) {
-					DialogueLevel1.level1Giant();
 					if (Inventory.findIndex(bean) == -1){
 						DialogueLevel1.Jack1stMeeting();
 					} else if (Inventory.findIndex(bean) != -1){
 						DialogueLevel1.Jack2ndMeeting(secondKey);
 					}
+				} else if (currentRoom.equals(masterRoomMap.get("ROOM_17"))) {
+					DialogueLevel1.level1Giant();
 				} else if (currentRoom.equals(masterRoomMap.get("ROOM_22"))) {
 					Inventory.add(bean);
 				} else if (currentRoom.equals(masterRoomMap.get("ROOM_1"))) {
@@ -236,14 +254,16 @@ class Game {
 					//something
 					} else if (Inventory.findIndex(secondKey) != -1){
 						DialogueLevel1.level1Door();
+						DialogueLevel1.level1CodeCheck();
 						DialogueLevel1.level1Outro();
+						DialogueLevel1.loading();
 						currentLevel++;
 						resetLevel(currentLevel);
 					}
 				}
 			} else if (currentLevel == 2) {
 				if (currentRoom.equals(masterRoomMap.get("ROOM_1"))) {
-					DialogueLevel2.level2Intro();
+					//DialogueLevel2.level2Intro();
 					Inventory.add(knife);
 				} else if (currentRoom.equals(masterRoomMap.get("ROOM_6"))) {
 					if (Inventory.findIndex(bubble) == -1) {
@@ -265,19 +285,30 @@ class Game {
 				}
 			} else if (currentLevel == 3) {
 				if (currentRoom.equals(masterRoomMap.get("ROOM_60"))) {
+					DialogueLevel3.level3Ending(currentLevel, thirdKey);
 					currentLevel++;
 					resetLevel(currentLevel);
 				}
 			} else { // currentLevel == 4
 				if (currentRoom.equals(masterRoomMap.get("ROOM_21"))) {
 					if(DialogueLevel4.keyWord()){
-					DialogueLevel4.levelEnd();
-					currentLevel++;
-					resetLevel(currentLevel);
+						DialogueLevel4.levelEnd();
+						currentLevel++;
+						resetLevel(currentLevel);
 					}
+				}else if(currentRoom.equals(masterRoomMap.get("ROOM_5"))){
+						
+							DialogueLevel4.personOne();
+							System.out.println("");
+							System.out.println(currentRoom.longDescription());
+	
+						
+					}
+			
 					
-				}
+				
 			}
+		
 
 		}
 		System.out.println("Thank you for playing. Good bye for now!");
@@ -417,13 +448,11 @@ class Game {
 
 			// Quit command
 		} else if (commandWord.equalsIgnoreCase("quit")) {
-			if (secondWord == null) {
-				System.out.println("Would you like to save your progress?"); // make
-																				// data
-																				// file!!
+			if (command.hasSecondWord()) {
+				System.out.println("Do you want to quit? If so, only enter: \'quit\'");																// da																// file!!
 			} else {
 				return true; // signal that we want to quit <-- we need to do
-			} // this -CM
+			} 
 		}
 		return false;
 	}
