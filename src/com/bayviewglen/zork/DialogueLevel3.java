@@ -9,7 +9,6 @@ public class DialogueLevel3 {
 
 		static Scanner keyboard = new Scanner(System.in);
 		static Thread thread = new Thread();
-		private static int counter = 0;
 		
 	//level 3 Intro
 		public static void Level3Intro() throws InterruptedException{
@@ -50,11 +49,13 @@ public class DialogueLevel3 {
 		System.out.printf("Wake the Dragon peacfully/nLeave the dragon alone/nAttack the Dragon");
 		thread.sleep(1500);
 		System.out.println("What do you do?");
+		
 		}
 //Room 15 Reaction
 		public static boolean Room15React(boolean finished) throws InterruptedException{
 			String response = keyboard.nextLine();
-			
+			boolean validAnswer = false;
+			while (!validAnswer){
 			if(response.equalsIgnoreCase("Wake the Dragon peacfully")){
 				System.out.println();
 				System.out.println("You slowly creep over to the dragon and tap him on the head");
@@ -68,38 +69,80 @@ public class DialogueLevel3 {
 				thread.sleep(1500);
 				System.out.println("You wake up back on the plateau, but the dragon is gone, and it is now late in the afternoon");
 				finished = false;
-				return finished;
+				validAnswer =true;
 				}else if(response.equalsIgnoreCase("Leave the dragon alone")){
 					System.out.println();
 					System.out.println("You just walk away and continue on");
 					finished = false;
-					return finished;
+					validAnswer = true;
 				}else if(response.equalsIgnoreCase("Attack the Dragon")){
 					System.out.println();
 					System.out.println("You leap on the Dragon's head and start stabbing at his eye with your dagger");
 					System.out.println("Your knife Snaps and you fall off the dragon as it raises its head");
 					thread.sleep(1500);
 					System.out.println("It looks at you in disgust and causally bends down and eats you");
-					
+					validAnswer = true;
 					finished = true;
-					return finished;
+				}else{
+					System.out.println("Try to do something no just stand there");
+					validAnswer=false;
 				}
-			return false;
+			}
+			return finished;
 		}
 //Room 20
 		public static void Room20Msg() throws InterruptedException{
-			
+			System.out.println("You Come to the bottom of the cliff edge to see a little stone house");
+			System.out.println("In side you see a light that is faintly glowing do you enter?");
 		}
 //Room 20 React
 		public static void Room20React() throws InterruptedException{
-			
+			String response2 = keyboard.nextLine();
+			String response3 = keyboard.nextLine();
+			boolean validAnswer = false;
+			while (!validAnswer){
+			if(response2.equalsIgnoreCase("yes")){
+				System.out.println("Good choice! Inside you find that there is a crystal that is glowing the faint glow");
+				System.out.println("Your options are to take it or leave it");
+				validAnswer = true;
+			}else if(response2.equalsIgnoreCase("no")){
+				System.out.println("Ok, you just leave the house alone");
+				validAnswer = true;
+			}else{
+				System.out.println("It is a simple yes or no question... so only answer with yes or no");
+				validAnswer=false;
+			}
+			}
+			boolean validAnswer2 = false;
+			while (!validAnswer2){
+			if(response3.equalsIgnoreCase("Take it")){
+				System.out.println("You reach for the gem and take it in your hands it is warm to the touch");
+				thread.sleep(1500);
+				System.out.println("After a coulpe of seconds of looking at the gem it suddenly flashes and shows the");
+				System.out.println("image of a code in your mind");
+				System.out.println("4739");
+				thread.sleep(1500);
+				System.out.println("This is probably very important so REMEMBER IT!");
+				validAnswer2=true;
+			}else if(response3.equalsIgnoreCase("ignore it")){
+				System.out.println("You just leave the rock alone");
+				validAnswer2=true;
+			}else{
+				System.out.println("DO YOU TAKE IT OR LEAVE IT?");
+				validAnswer2=false;
+			}
+			}
 		}
 		
 		public static void Room22Msg() throws InterruptedException{
+			System.out.println("You come before the golem and suddenly he looks down at you and speaks in a deep voice like that of the earth");
+			System.out.println("ENTER THE CODE AND YOU SHALL PASS");
+			System.out.println("With that he reaches down his hand and shows you a three by three pad with the numbers 1-9");
+			System.out.println("From the look of it you will probably have to do this to continue!");
 			
-			
+			level3Keypad();
 		}
-		public static void level2Keypad() throws InterruptedException{
+		public static void level3Keypad() throws InterruptedException{
 			System.out.println("\nDo you want to \'enter a code\'?\nOption 1: Enter \'yes\'.\nOption 2: Enter \'no\'.");
 			System.out.print(">");
 			
@@ -198,33 +241,87 @@ public class DialogueLevel3 {
 			}
 		}
 		public static void Room27Msg() throws InterruptedException{
-			
+			System.out.println("You enter the giant chasm to see that it has three distinct levels of bridges");
+			System.out.println("But there is no clear way to find the way down, you will just have to look for a way down");
 		}
-		public static void Room31Msg() throws InterruptedException{
-			
-		}
-		public static void Room34Msg() throws InterruptedException{
-			
+		public static void Room36Msg() throws InterruptedException{
+			System.out.println("As you enter the room you see a ladder that goes down to the next level");
 		}
 		public static void Room41Msg() throws InterruptedException{
-			
-		}
-		public static void Room47Msg() throws InterruptedException{
-			
-		}
-		public static void Room50Msg() throws InterruptedException{
-			
+			System.out.println("As you enter the room you see a ladder that goes down to the next level");
 		}
 		public static void Room59Msg() throws InterruptedException{
+			System.out.println("You Enter the final room And you see a black iron golem standing in the center");
+			System.out.println("He looks less friendly that the one outside, you also see some levers in each corner");
+			System.out.println("What do you do?");
+			System.out.println("Pull the Levers| Do nothing | Attack the golem | Run for the next room | Run away");
+		}
+		public static boolean Room59React(boolean finished) throws InterruptedException{
+			boolean validAnswer = false;
+			while (!validAnswer){
+			String response = keyboard.nextLine();
+			if(response.equalsIgnoreCase("Pull the Levers")){
+				System.out.println("You run around the room the and pull all four levers, but after pulling the first one");
+				System.out.println("The golem starts chasing you, it then becomes an intense game of ducking and dodging as you pull each lever");
+				System.out.println("But once you pull al the levers the golem suddenly stops and falls apart into the seperate pieces of his body");
+				System.out.println("You may now proceed to the next room");
+				finished = false;
+				validAnswer=true;
+			}else if(response.equalsIgnoreCase("Do nothing ")){
+				System.out.println("You just stand there staring at the golem, with the golem staring at you");
+				thread.sleep(4500);
+				System.out.println("After a while it shoots you with a laser from its eyes and you die");
+				finished = true;
+				validAnswer=true;
+			}else if(response.equalsIgnoreCase("Attack the golem")){
+				System.out.println("You run at the golem with your knife, and start hacking at the black metal foot");
+				System.out.println("The golem looks at you curiously and then steps on you");
+				thread.sleep(2000);
+				System.out.println("As you lie dying on the ground you think to yourself");
+				System.out.println("Was that really a good idea? and would that ever had worked?");
+				finished = true;
+				validAnswer=true;
+			}else if(response.equalsIgnoreCase("Run for the next room")){
+				System.out.println("You just sprint for the next entrance and the golem completely ignores you");
+				System.out.println("You think to yourself");
+				System.out.println("What a stupid enemy");
+				System.out.println("The moment you think that the golem turns at suprising speed and punches you into the ground");
+				System.out.println("You die thinking 'mind reading, great' and receive another punch for it");
+				System.out.println("And with that you die");
+				finished = true;
+				validAnswer=true;
+			}else if(response.equalsIgnoreCase("Run Away")){
+				System.out.println("You run away");
+				thread.sleep(2000);
+				System.out.println("What, you expected something else?");
+				thread.sleep(2000);
+				System.out.println("umm ok, then you run away slowly");
+				System.out.println("then you spontaniously implode for some reason");
+				System.out.println("Don't ask me why you just do");
+				finished = true;
+				validAnswer=true;
+			}else if(response.equalsIgnoreCase("help")){
+				System.out.println("Type your thoughts");
+				validAnswer=false;
+			}else{
+				System.out.println("That doesn't appear in your thoughts");
+				validAnswer = false;
+			}
+		}
 			
+			return finished;
+	
 		}
 		public static void level3Ending(int currentLevel, Tool ThirdKey) throws InterruptedException{
 			thread.sleep(1000);
 			System.out.println();
-			System.out.println("");
+			System.out.println("After finally fighting that giant bone creature you, you eneter the next room to see the outline of a key floating in the air ");
+			System.out.println("But due to the heavy smoke you cant see clearly. So with nothing better to do you reach out and grab the key");
+			System.out.println("Pulling it close to your eyes you see it's a iron key that is completely black (the name black iron key pop in your head");
+			System.out.println("And with that you realize three keys down and only one to go!");
 			Inventory.add(ThirdKey);
 			thread.sleep(5000);
-			System.out.println("You feel a warmth come over you and then you black out... ");
+			System.out.println("But suddenly You feel a warmth come over you and then you black out... ");
 			System.out.println();
 			System.out.println("END OF LEVEL 3: EXIT THE ROCK WORLD");
 		}
