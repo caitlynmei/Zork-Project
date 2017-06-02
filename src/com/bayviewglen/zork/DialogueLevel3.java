@@ -15,15 +15,15 @@ public class DialogueLevel3 {
 			System.out.println();
 			System.out.println("LEVEL 3\n\n");
 			System.out.println("You wake up to see the sunlight shinning directly in your face.");
-			System.out.println("it lokes to be around noon in this world!");
-			System.out.println("You Stand up to see that your in a deep, but very wide canyon that almost /n Looks unaturel");
+			System.out.println(" it lokes to be around noon in this world!");
+			System.out.printf("You Stand up to see that your in a deep, but very wide canyon that almost \nLooks unaturel");
 			thread.sleep(1500);
-			System.out.println("After a bit of thought you decide that the best option is to continue forward /n To find the next key.");
+			System.out.println("After a bit of thought you decide that the best option is to continue forward \nTo find the next key.");
 		}
 //Room 7
 		public static void Room7Msg() throws InterruptedException{
 			System.out.println();
-			System.out.printf("As you get to the edge of chasm you look up to see a crude stairway cut/ Into the Stone");
+			System.out.println("As you get to the edge of chasm you look up to see a crude stairway cut Into the Stone");
 			System.out.println("You can either climb up them to see whats up top, or continue on adventuring");
 		}
 //Room 8
@@ -36,17 +36,17 @@ public class DialogueLevel3 {
 //Room 9
 		public static void Room9Msg() throws InterruptedException{
 			System.out.println();
-			System.out.printf("You come to the edge of cliff that seems to climb downwards,/n there is no clear cut path, but it looks like you can get down if you try.");
+			System.out.printf("You come to the edge of cliff that seems to climb downwards,\nthere is no clear cut path, but it looks like you can get down if you try.");
 			System.out.println("Your options now are to continue exploring or risk the climb down");
 		}
 //Room 15
 		public static void Room15Msg() throws InterruptedException{
 		System.out.println();
-		System.out.printf("You have come to the northern corner of the room, and you see a crimson red dragon/n sleeping in the corner");
+		System.out.printf("You have come to the northern corner of the room, and you see a crimson red dragon\nsleeping in the corner");
 		System.out.println("It looks rather peaceful but you are unsure if you should wake it");
 		thread.sleep(1500);
 		System.out.println("Your options right now are:");
-		System.out.printf("Wake the Dragon peacfully/nLeave the dragon alone/nAttack the Dragon");
+		System.out.printf("Wake the Dragon peacfully | Leave the dragon alone | Attack the Dragon");
 		thread.sleep(1500);
 		System.out.println("What do you do?");
 		
@@ -59,7 +59,7 @@ public class DialogueLevel3 {
 			if(response.equalsIgnoreCase("Wake the Dragon peacfully")){
 				System.out.println();
 				System.out.println("You slowly creep over to the dragon and tap him on the head");
-				System.out.printf("His eyes fling open and turn to gase at you, as you look/n you suddenly blank out");
+				System.out.printf("His eyes fling open and turn to gase at you, as you look\n you suddenly blank out");
 				System.out.println("When you wake up you find yourself in a classroom sitting next to your bestfriend");
 				System.out.println("You two are scanning a book about the development of lizards and serpents from aquatic animals");
 				thread.sleep(1500);
@@ -173,11 +173,11 @@ public class DialogueLevel3 {
 			}
 			
 			// check if player enters in correct code for keypad to open cave entrance
-			level2CodeCheck();
+			level3CodeCheck();
 		}
 		
 		// Level 2: Keypad Code Check (Adapted Hangman Game for this Keypad Lock :) - CM)
-		public static void level2CodeCheck(){
+		public static void level3CodeCheck(){
 			
 			final String VALID_CODE_CHARACTERS = "123456789";
 			boolean codeIsSolved = false; 				// for when code is solved by player
@@ -206,7 +206,7 @@ public class DialogueLevel3 {
 				System.out.println("Unused Characters: ");
 				System.out.println(characterList);
 						
-				System.out.println("Please enter a single character: "); 
+				System.out.println("Please enter a Four digit Code: "); 
 											
 				guessedCode = "";								
 				boolean validGuessedNumber = false; // to check if guessedCharacter is a single character
@@ -243,6 +243,9 @@ public class DialogueLevel3 {
 		public static void Room27Msg() throws InterruptedException{
 			System.out.println("You enter the giant chasm to see that it has three distinct levels of bridges");
 			System.out.println("But there is no clear way to find the way down, you will just have to look for a way down");
+		}
+		public static void Room31Msg() throws InterruptedException{
+			System.out.println("As you enter the room you see a ladder that goes down to the next level");
 		}
 		public static void Room36Msg() throws InterruptedException{
 			System.out.println("As you enter the room you see a ladder that goes down to the next level");
@@ -315,7 +318,7 @@ public class DialogueLevel3 {
 		public static void level3Ending(int currentLevel, Tool ThirdKey) throws InterruptedException{
 			thread.sleep(1000);
 			System.out.println();
-			System.out.println("After finally fighting that giant bone creature you, you eneter the next room to see the outline of a key floating in the air ");
+			System.out.println("After finally fighting that giant black iron golem you, you eneter the next room to see the outline of a key floating in the air ");
 			System.out.println("But due to the heavy smoke you cant see clearly. So with nothing better to do you reach out and grab the key");
 			System.out.println("Pulling it close to your eyes you see it's a iron key that is completely black (the name black iron key pop in your head");
 			System.out.println("And with that you realize three keys down and only one to go!");

@@ -32,7 +32,7 @@ import com.bayviewglen.zork.tool.Tool;
 
 class Game {
 
-	public int currentLevel = 3; // temp 1
+	public int currentLevel = 1;
 
 	// Level 1 Items
 	Tool firstKey = new Tool("1: Air Key");
@@ -179,17 +179,18 @@ class Game {
 			 */
 
 		} else if (currentLevel == 3) {
+			DialogueLevel3.Level3Intro();
 			initRooms("data/levels/level3.dat");
 			currentRoom = masterRoomMap.get("ROOM_1");
 			
-			/*// System.out.println("TESTING: currentLevel: " + currentLevel);
+			// System.out.println("TESTING: currentLevel: " + currentLevel);
 			if (currentRoom.equals(masterRoomMap.get("ROOM_1"))) {
 				System.out.println();
 				System.out.println(currentRoom.longDescription()); // to print
 																	// out room
 																	// description
 																	// of ROOM_1
-			}*/
+			}
 
 		} else if (currentLevel == 4) {
 			DialogueLevel4.LevelIntro();
@@ -285,9 +286,7 @@ class Game {
 					resetLevel(currentLevel);
 				}
 			} else if (currentLevel == 3) {
-				if(currentRoom.equals(masterRoomMap.get("ROOM_1"))){
-					DialogueLevel3.Level3Intro();
-				}else if(currentRoom.equals(masterRoomMap.get("ROOM_7"))){
+				if(currentRoom.equals(masterRoomMap.get("ROOM_7"))){
 					DialogueLevel3.Room7Msg();
 				}else if(currentRoom.equals(masterRoomMap.get("ROOM_8"))){
 					DialogueLevel3.Room8Msg();
@@ -295,7 +294,7 @@ class Game {
 					DialogueLevel3.Room9Msg();
 				}else if(currentRoom.equals(masterRoomMap.get("ROOM_15"))){
 					DialogueLevel3.Room15Msg();
-					DialogueLevel3.Room15React(finished);
+					finished=DialogueLevel3.Room15React(finished);
 				}else if(currentRoom.equals(masterRoomMap.get("ROOM_20"))){
 					DialogueLevel3.Room20Msg();
 					DialogueLevel3.Room20React();
@@ -303,13 +302,15 @@ class Game {
 					DialogueLevel3.Room22Msg();
 				}else if(currentRoom.equals(masterRoomMap.get("ROOM_27"))){
 					DialogueLevel3.Room27Msg();
+					currentRoom.longDescription();
 				}else if(currentRoom.equals(masterRoomMap.get("ROOM_36"))){
 					DialogueLevel3.Room36Msg();
 				}else if(currentRoom.equals(masterRoomMap.get("ROOM_41"))){
 					DialogueLevel3.Room41Msg();
 				}else if(currentRoom.equals(masterRoomMap.get("ROOM_59"))){
 					DialogueLevel3.Room59Msg();
-					DialogueLevel3.Room59React(finished);
+					finished = DialogueLevel3.Room59React(finished);
+					currentRoom.longDescription();
 				}else if (currentRoom.equals(masterRoomMap.get("ROOM_60"))) {
 					DialogueLevel3.level3Ending(currentLevel, thirdKey);
 					currentLevel++;
