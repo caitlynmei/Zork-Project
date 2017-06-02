@@ -32,7 +32,7 @@ import com.bayviewglen.zork.tool.Tool;
 
 class Game {
 
-	public int currentLevel = 4; // temp 4 for testing, GG
+	public int currentLevel = 1; // temp 1S
 
 	// Level 1 Items
 	Tool firstKey = new Tool("1: Air Key");
@@ -43,7 +43,10 @@ class Game {
 	Tool stone = new Tool("stone");
 	Tool bubble = new Tool("bubble");
 	Tool knife = new Tool("knife");	
-
+	
+	// Level 3 Items
+	Tool thirdKey = new Tool("3: Earth Key");
+	
 	static Thread thread = new Thread(); // thread for delays
 
 	private Parser parser;
@@ -213,7 +216,7 @@ class Game {
 			//System.out.println("current level: " + currentLevel);
 			// System.out.println();
 			// System.out.println(currentRoom.longDescription());
-
+			
 			if (currentLevel == 1) {
 				if (currentRoom.equals(masterRoomMap.get("ROOM_13"))) {
 					DialogueLevel1.level1Intro();
@@ -316,6 +319,7 @@ class Game {
 		System.out.println();
 		loading();
 		System.out.println("\n\n");
+		System.out.println("To Begin say hello.");
 	}
 
 	// JT Level 1

@@ -9,7 +9,7 @@ public class DialogueLevel3 {
 
 		static Scanner keyboard = new Scanner(System.in);
 		static Thread thread = new Thread();
-		private int counter = 0;
+		private static int counter = 0;
 		
 	//level 3 Intro
 		public static void Level3Intro() throws InterruptedException{
