@@ -210,7 +210,7 @@ class Game {
 		}
 	}
 
-	/**
+	/*
 	 * Main play routine. Loops until end of play.
 	 * 
 	 * @throws Exception
@@ -218,7 +218,7 @@ class Game {
 	public void play() throws Exception {
 		//printWelcome();
 		
-		/**
+		/*
 		 * Create the game and initialize its internal map.
 		 */
 		try {
@@ -226,6 +226,7 @@ class Game {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		
 		parser = new Parser();
 		// Enter the main command loop. Here we repeatedly read commands and
 		// execute them until the game is over.
@@ -263,7 +264,7 @@ class Game {
 						resetLevel(currentLevel);
 					}
 				}
-			} else if (currentLevel == 2) {
+			} else if (currentLevel == 2) { // CM
 				if (currentRoom.equals(masterRoomMap.get("ROOM_1"))) {
 					DialogueLevel2.level2Intro();
 					Inventory.add(knife);
@@ -345,19 +346,11 @@ class Game {
 					System.out.println("");
 					System.out.println(currentRoom.longDescription());
 				}else if(currentRoom.equals(masterRoomMap.get("ROOM_5"))){
-						
 							DialogueLevel4.personOne();
 							System.out.println("");
 							System.out.println(currentRoom.longDescription());
-	
-						
-					}
-			
-					
-				
+				}
 			}
-		
-
 		}
 		System.out.println("Thank you for playing. Good bye for now!");
 	}
@@ -428,14 +421,13 @@ class Game {
 	 * 
 	 * @throws InterruptedException
 	 */
-	private boolean processCommand(Command command) throws InterruptedException {
+	private boolean processCommand(Command command) throws InterruptedException { //CM
 		if (command.isUnknown(command)) {
 			System.out.println("I don't know what you mean...");
 			return false;
 		}
 
-		String commandWord = command.getCommandWord(); // changed from
-														// command.getWord(0)
+		String commandWord = command.getCommandWord(); 
 		String secondWord = command.getSecondWord();
 
 		// Help commands
@@ -497,7 +489,7 @@ class Game {
 		return false;
 	}
 
-	private void useItem(Command command) {
+	private void useItem(Command command) { //CM
 		// if there is no second word, we don't know what to use...
 		if (!command.hasSecondWord()) {
 			System.out.println("Use what? (*Hint: item)");
@@ -526,19 +518,18 @@ class Game {
 	/*
 	 * Method reads an item
 	 */
-	private void readItem(Command command) throws InterruptedException {
+	private void readItem(Command command) throws InterruptedException { //CM
 		// if there is no second word, we don't know what to read...
-		if (!command.hasSecondWord()) { // changed from command.hasWord(1)
+		if (!command.hasSecondWord()) { 
 			System.out.println("Read what? (*Hint: item)");
 			return;
 		}
 
-		String secondWord = command.getSecondWord(); // changed from
-														// command.getWord(1)
+		String secondWord = command.getSecondWord(); 
 		String thirdWord = command.getThirdWord();
 		String fourthWord = command.getFourthWord();
 
-		// making player more specific about which items they want to read - CM
+		// making player more specific about which items they want to read 
 		if (secondWord.equalsIgnoreCase("item")) {
 			System.out.println("You're going to have to be way more specific. What is the item called?");
 		} else if (secondWord.equalsIgnoreCase("note")) {
@@ -546,32 +537,23 @@ class Game {
 		} else if (secondWord.equalsIgnoreCase("sign")) {
 			System.out.println("Please be more specific. Which sign? What is it called?");
 		} else {
-			if (currentLevel == 1) {
-				// list stuff in here
-				System.out.println("That is not an item with legible words on it.");
-			} else if (currentLevel == 2) {
+			if (currentLevel == 2) {
 				// intro sign
 				if (secondWord.equalsIgnoreCase("intro") && thirdWord.equalsIgnoreCase("sign")) {
 					System.out.println("\nINTRO SIGN");
 					System.out.println("BEWARE: SHARK!!!\nJust stay inside the \'Kelp Forest\' to the east. ");
-					// abyss sign
+				// abyss sign
 				} else if (secondWord.equalsIgnoreCase("abyss") && thirdWord.equalsIgnoreCase("sign")) {
 					System.out
 							.println("\nABYSS SIGN\nGood job once more! Follow the path of the glow in the dark road.");
 					System.out.println("\'E\'\nHmmmm.... interesting, another letter.");
-					// mignight zone note
+				// mignight zone note
 				} else if (secondWord.equalsIgnoreCase("midnight") && thirdWord.equalsIgnoreCase("zone")
 						&& fourthWord.equalsIgnoreCase("note")) {
 					DialogueLevel2.level2Note();
 				} else {
 					System.out.println("That is not an item with legible words on it.");
 				}
-			} else if (currentLevel == 3) {
-				// list stuff in here
-				System.out.println("That is not an item with legible words on it.");
-			} else if (currentLevel == 4) {
-				// list stuff in here
-				System.out.println("That is not an item with legible words on it.");
 			} else {
 				System.out.println("That is not an item with legible words on it.");
 			}
@@ -581,7 +563,7 @@ class Game {
 	/*
 	 * Allows player to take an item and add it to their inventory
 	 */
-	private void takeItem(Command command) throws InterruptedException {
+	private void takeItem(Command command) throws InterruptedException { //CM
 		// if there is no second word, we don't know what item to take...
 		if (!command.hasSecondWord()) {
 			System.out.println("Take what? (*Hint: item)");
@@ -592,7 +574,7 @@ class Game {
 		String itemThirdWord = command.getThirdWord();
 		String itemFourthWord = command.getFourthWord();
 
-		// making player more specific about which items they want to take - CM
+		// making player more specific about which items they want to take 
 		if (itemSecondWord.equalsIgnoreCase("item")) {
 			System.out.println("You're going to have to be way more specific. What is the item called?");
 		} else {
@@ -623,7 +605,7 @@ class Game {
 	/*
 	 * Allows player to drop an item and remove it from their inventory.
 	 */
-	private void dropItem(Command command) {
+	private void dropItem(Command command) { //CM
 		// if there is no second word, we don't know what item to drop...
 		if (!command.hasSecondWord()) {
 			System.out.println("Read what? (*Hint: item)");
@@ -665,25 +647,25 @@ class Game {
 		System.out.println(currentRoom.getDescription());
 	}
 
-	/**
-	 * Print out some help information. Here we print some stupid, cryptic
-	 * message and a list of the command words.
-	 * 
+	/*
+	 * printHelp() method prints out helpful suggestions and commands player can reference
 	 * @throws InterruptedException
 	 */
-	private void printHelp() throws InterruptedException {
+	private void printHelp() throws InterruptedException { //CM
 		System.out.println("\n");
 		System.out.println("You are lost. You are going to die alone and forever be forgotten.");
 		System.out.println();
 		thread.sleep(6000);
 		System.out.println("Just joking!! :)");
 		System.out.println("Don't worry. We will help guide you through this:");
-		System.out.println(
-				"- to see the game rules, enter: \'rules\' (*HINT*: you should actually look at this for helpful tips at least once)");
+		System.out.println("- to see the game rules, enter: \'rules\' (*HINT*: you should actually look at this for helpful tips at least once)");
 		System.out.println("- to see the list of commands you may use, enter: \'commandlist\'");
 	}
 
-	private void printGameRules() throws InterruptedException {
+	/*
+	 * printGameRules() method prints the rules of the game
+	 */
+	private void printGameRules() throws InterruptedException { //CM
 		System.out.println("\n");
 		System.out.println("Remember what your goal is. Here is a refresher of the game rules. \n");
 		System.out.println(
@@ -700,20 +682,23 @@ class Game {
 		System.out.println("- once again, if you would like to see the rules, enter: \'rules\'");
 	}
 
-	private void printCommandList() throws InterruptedException {
+	/*
+	 * printCommandList() method prints all the commands that the player can use
+	 */
+	private void printCommandList() throws InterruptedException { //CM
 		System.out.println("\n");
 		System.out.println("You can try using the following command words:");
 		parser.showCommands(); // prints command words from validCommands String
 		System.out.println("Yes, you can call for help if you need it (like what you are doing right now)\n");
 	}
 
-	/**
+	/*
 	 * Try to go to one direction. If there is an exit, enter the new room,
 	 * otherwise print an error message.
 	 * 
 	 * This method is for when the user types in "go" as first word
 	 */
-	private void goRoom(Command command) {
+	private void goRoom(Command command) { //CM
 		// if there is no second word, we don't know where to go...
 		if (!command.hasSecondWord()) {
 			System.out.println("Go where? (*Hint: direction)");
@@ -757,7 +742,7 @@ class Game {
 	 * is for when the player directly types in the direction, and not "go"
 	 * first.
 	 */
-	private void goRoomDirection(String direction) {
+	private void goRoomDirection(String direction) { 
 		// Try to leave current room.
 		Room nextRoom = currentRoom.nextRoom(direction);
 
