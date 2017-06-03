@@ -257,6 +257,7 @@ public class DialogueLevel2 { //CM
 		}
 		System.out.println("KEYPAD: THE");
 		System.out.println("\nGreat! You opened the cave! The sea floor shakes, and the boulder rolls slightly to the side, revealing a gap just large enough for you to enter to your east.");
+		System.out.println("Go 'east'!!");
 	}
 		
 	// Level 2: Mirror Memory Flashback
