@@ -47,6 +47,8 @@ class Game {
 	// Level 3 Items
 	Tool thirdKey = new Tool("3: Earth Key");
 	
+	Tool forthKey = new Tool("4: Fire Key");
+	
 	static Thread thread = new Thread(); // thread for delays
 
 	private Parser parser;
@@ -323,6 +325,27 @@ class Game {
 						currentLevel++;
 						resetLevel(currentLevel);
 					}
+				}else if(currentRoom.equals(masterRoomMap.get("ROOM_9"))){
+					System.out.println("You press the glowing purple button.");
+					Thread.sleep(2000);
+					System.out.println("A voice can be heard.");
+					Thread.sleep(2000);
+					System.out.println("A");
+					Thread.sleep(2000);
+					System.out.println("You think to yourself that maybe this can be used in the future.");
+					Thread.sleep(2000);
+					System.out.println("");
+					System.out.println(currentRoom.longDescription());
+				}else if(currentRoom.equals(masterRoomMap.get("ROOM_14"))){
+					System.out.println("You find the letter \"V\" carved into the rock floor");
+					Thread.sleep(2000);
+					System.out.println("");
+					System.out.println(currentRoom.longDescription());
+				}else if(currentRoom.equals(masterRoomMap.get("ROOM_17"))){
+					System.out.println("You find the letter \"A\" carved into the wall of the Volcano");
+					Thread.sleep(2000);
+					System.out.println("");
+					System.out.println(currentRoom.longDescription());
 				}else if(currentRoom.equals(masterRoomMap.get("ROOM_5"))){
 						
 							DialogueLevel4.personOne();

@@ -104,49 +104,7 @@ public class DialogueLevel4 {
 	
 		}
 	
-	
-	public static void personTwo() throws InterruptedException{
-		Scanner keyboard = new Scanner(System.in); 
-	
-		Thread.sleep(1000);
-		System.out.println("\nYou think about what to do. You think to yourself\n");
-		Thread.sleep(2000);
-		System.out.println("\t\"Approach them\" - \"Ignore\"\n" );
-		Thread.sleep(2000);
-		System.out.println("What do you do?");
-		System.out.print(">");
-		String temp = "";
-		boolean valid = false;
-		while (!valid){
-		
-		temp = keyboard.nextLine().toUpperCase();
-		if(temp.equals("APPROACH") || temp.equals("APPROACH THEM") || temp.equals("IGNORE")){
-			valid = true;
-		}else if(temp.equals("HELP")){
-			System.out.println("\nType what you are thinking.");
-		}
-		else{
-			System.out.println("That doesn't appear in your thoughts...");
-			System.out.print(">");
-		}
-			
-		
-		if(temp.equals("APPROACH")|| temp.equals("APPROACH THEM")){
-		
-			System.out.println("You approach the figure. As you get closer the figure turns around");
-			Thread.sleep(1000);
-			System.out.println("\"AAHHHHH\" you scream");
-			
-		
-		} else{
-			System.out.println("You ignore them.");
-			Thread.sleep(2000);
-		}
-	
-		}
-	
-		}
-	
+
 	public static void levelEnd(){
 		
 	}

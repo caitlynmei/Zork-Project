@@ -24,61 +24,61 @@ Room Description: The Glimmer you saw in the distance was a metal ladder that le
 Exit Rooms: U-Room 7, E-Room 3, S-Room 4
 Room Name: Room 7
 Room Lock: 0
-Room Description: new place oo
+Room Description: You are now at the top of the ladder. There is a wall behind you. You can see a purple light to the East, and a glimmer to the South-East.
 Exit Rooms: E-Room 8, S-Room 12, D-Room 6
 Room Name: Room 8
 Room Lock: 0
-Room Description: stuff
+Room Description: There is a Glimmer coming from the North, and the West, as well there is a purple light to the East.
 Exit Rooms:S-Room 11, E-Room 9, W-Room 7
 Room Name: Room 9
 Room Lock: 0
-Room Description: stuff
+Room Description: There seems to be a purple button on the wall. 
 Exit Rooms: S-Room 10, W-Room 8
 Room Name: Room 10
 Room Lock: 0
-Room Description: stuff
+Room Description: You hit a wall. There is a purple light to the North of you and a glimmer to the West.
 Exit Rooms: N-Room 9, W-Room 11
 Room Name: Room 11
 Room Lock: 0
-Room Description: Ladder!
+Room Description: The glimmering light seems to be a metal Ladder going up!
 Exit Rooms: N-Room 8, E-Room 10, W-Room 12, U-Room 13
 Room Name: Room 12
 Room Lock: 0
-Room Description: stuff
+Room Description: You hit a wall. To the north of you is a familiar glimmer. To the East of you is a brighter Glimmer.
 Exit Rooms: N-Room 7, E-Room 11
 Room Name: Room 13
 Room Lock: 0
-Room Description: stuff
-Exit Rooms: D-Room 11, N-Room 14. W-Room 16
+Room Description: You reach the top of the ladder. There seems to be something to the North. There also seems to be the shape of a snake in the North-West.
+Exit Rooms: D-Room 11, N-Room 14, W-Room 16
 Room Name: Room 14
 Room Lock: 0
-Room Description: stuff
+Room Description: There is a strange shape to the West.
 Exit Rooms: S-Room 13, W-Room 15
 Room Name: Room 15
 Room Lock: 0
-Room Description: Ladder!
+Room Description: There is a rope leading up!
 Exit Rooms: U-Room 17, S-Room 16, E-Room 14
 Room Name: Room 16
 Room Lock: 0
-Room Description: Stuff
+Room Description: There is a wall. To the north seems to be a strange shape. To the East is a familiar glimmer.
 Exit Rooms: N-Room 15, E-Room 13
 Room Name: Room 17
 Room Lock: 0
-Room Description: stuff
+Room Description: You hit a rock wall, there is a glimmer to the East.
 Exit Rooms: E-Room 18
 Room Name: Room 18
 Room Lock: 0
-Room Description: Ladder!
+Room Description: Another Ladder going up!
 Exit Rooms: U-Room 19, W-Room 17
 Room Name: Room 19
 Room Lock: 0
-Room Description: stuff
+Room Description: There is a ladder leading down. You seem to be walking on a platform surrounded by lava. You see a chest in the distance.
 Exit Rooms: E-Room 20, D-Room 18
 Room Name: Room 20
 Room Lock: 0
-Room Description: stuff
+Room Description: The lava burns brighter around you, there is a chest to the east.
 Exit Rooms: W-Room 19, E-Room 21
 Room Name: Room 21
 Room Lock: 0
-Room Description: There is a chest
+Room Description: There is a chest surrounded by lava.
 Exit Rooms: W-Room 20
