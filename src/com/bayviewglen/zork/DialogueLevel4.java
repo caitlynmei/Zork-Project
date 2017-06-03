@@ -1,5 +1,6 @@
 package com.bayviewglen.zork;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class DialogueLevel4 {
@@ -52,12 +53,52 @@ public class DialogueLevel4 {
 			System.out.println("You approach the figure. As you get closer the figure turns around");
 			Thread.sleep(1000);
 			System.out.println("\"AAHHHHH\" you scream");
-			
-		
-		} else{
-			System.out.println("You ignore them.");
+			Thread.sleep(1000);
+			System.out.println("\nYou think about what to say. You think to yourself\n");
 			Thread.sleep(2000);
-		}
+			System.out.println("\t\"Hi\" - \"Help\"\n" );
+			Thread.sleep(2000);
+			System.out.println("What do you say?");
+			System.out.print(">");
+			temp = "";
+			valid = false;
+			while (!valid){
+			
+			temp = keyboard.nextLine().toUpperCase();
+			if(temp.equals("HI") || temp.equals("HELP")){
+				valid = true;
+			}else{
+				System.out.println("That doesn't appear in your thoughts...");
+				System.out.print(">");
+			}
+			}
+				System.out.println("You say " + temp);
+				Thread.sleep(2000);
+				System.out.println("The creature starts to shake and mumble an unknown language");
+				Thread.sleep(2000);
+				
+				String random = "ABCDEFGHIJKLMNOPQRSTUVWQYZabcdefghijklmnopqrstuvwqyz";
+				int randomInt;
+				for(int i =0; i<20;i++){
+					 randomInt = (int)(Math.random()*random.length());
+					System.out.print(random.substring(randomInt, randomInt+1));
+					Thread.sleep(50);
+				}
+				Thread.sleep(1000);
+				System.out.println("\nThe walls start to shake and crack");
+				Thread.sleep(2000);
+				System.out.println("You duck for cover.");
+				Thread.sleep(2000);
+				System.out.println("When the shaking stops, you look up to see an \"L\" carved into the wall.");
+				Thread.sleep(2500);
+				System.out.println("The figure returns to the corner and turns around. As if nothing happened.");
+				Thread.sleep(2500);
+				System.out.println("You think to yourself. \"Maybe this L will be valuable to me in the future?\" and continue on your journey.");
+				Thread.sleep(4000);
+			
+				
+		
+		} 
 	
 		}
 	
