@@ -84,7 +84,7 @@ public class DialogueLevel2 { //CM
 		System.out.println("scootching your body backwards with your hands. Unfortunately, there's nowhere to go. Your back is pressed against the cave wall.\n");
 		thread.sleep(9000);
 		System.out.println("What do you do? It could eat you alive... It's definitely large enough to swallow you whole...\n");
-		System.out.println("Option 1: Remember that knife in your inventory? That might be useful. Enter \'1\'.\nOption 2: Think again. Use your head. Maybe, violence isn\'t the answer. Enter \'2\'.\n");
+		System.out.println("Option 1: There just happens to be an old rusty knife on the ground! That might be useful. Enter \'1\'.\nOption 2: Think again. Use your head. Maybe, violence isn\'t the answer. Enter \'2\'.\n");
 		thread.sleep(1000);
 		System.out.print(">");
 		
