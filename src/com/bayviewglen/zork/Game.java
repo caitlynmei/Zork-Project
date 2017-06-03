@@ -47,6 +47,7 @@ class Game {
 	// Level 3 Items
 	Tool thirdKey = new Tool("3: Earth Key");
 	
+	// Level 4 Items
 	Tool forthKey = new Tool("4: Fire Key");
 	
 	static Thread thread = new Thread(); // thread for delays
@@ -236,9 +237,6 @@ class Game {
 			int counter = 0; // to count the number of times you enter a room,
 								// so dialogue only shows once
 
-			//System.out.println("current level: " + currentLevel);
-			// System.out.println();
-			// System.out.println(currentRoom.longDescription());
 			
 			if (currentLevel == 1) {
 				if (currentRoom.equals(masterRoomMap.get("ROOM_13"))) {
@@ -267,7 +265,7 @@ class Game {
 				}
 			} else if (currentLevel == 2) {
 				if (currentRoom.equals(masterRoomMap.get("ROOM_1"))) {
-					//DialogueLevel2.level2Intro();
+					DialogueLevel2.level2Intro();
 					Inventory.add(knife);
 				} else if (currentRoom.equals(masterRoomMap.get("ROOM_6"))) {
 					if (Inventory.findIndex(bubble) == -1) {
@@ -411,14 +409,6 @@ class Game {
 		currentLevel++;
 		return (level1Over == true);
 	}
-
-	public boolean printLevel2() throws InterruptedException {
-		boolean level2Over = false;
-
-		return (level2Over == true);
-	}
-	
-
 
 	// loading Method: prints the "Loading . . . . " message
 	private void loading() throws InterruptedException {
