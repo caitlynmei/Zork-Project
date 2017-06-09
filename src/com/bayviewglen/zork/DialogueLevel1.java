@@ -90,7 +90,10 @@ public class DialogueLevel1 {
 			thread.sleep(2000);
 
 		}
-
+		thread.sleep(2000);
+		System.out.println("Jack disappears after talking about this bean he needs and the key.");
+		thread.sleep(2000);
+		System.out.println("You decide to leave and explore some more.");
 	}
 
 	// When you encounter Giant
