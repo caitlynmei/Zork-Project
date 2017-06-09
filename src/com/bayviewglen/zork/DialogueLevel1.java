@@ -116,13 +116,17 @@ public class DialogueLevel1 {
 			System.out.println("You hear loud footsteps");
 			thread.sleep(2000);
 			System.out.println("Your scared but can't seem to move your feet");
+	
 		}
 		if (temp.equals("DO NOTHING")) {
 			thread.sleep(2000);
 			System.out.println("You don't know what to do but stare at the door.");
 			thread.sleep(2000);
-			System.out.println("");
+			System.out.println("But all of a sudden you hear loud footsteps");
+		
 		}
+	System.out.println("\"I am the giant what are you doing here at my castle!\"");
+	thread.sleep(2000);
 
 	}
 
@@ -130,13 +134,48 @@ public class DialogueLevel1 {
 	public static void Jack2ndMeeting(Tool secondKey) throws InterruptedException {
 		System.out.println("Hey did you get the bean?");
 		thread.sleep(2000);
-		// dialogue for key
+		System.out.println("\"I fought\" - \"None of your business\" ");
+		System.out.print(">");
+		String temp5 = "";
+		boolean valid5 = false;
+		while (!valid5) {
+			temp5 = keyboard.nextLine().toUpperCase();
+			if (temp5.equals("I FOUGHT") || temp5.equals("NONE OF YOUR BUSINESS")) {
+				valid = true;
+			} else if (temp5.equals("HELP")) {
+				System.out.println("\nType exactly what you want to do, make sure no there are no extra spaces");
+			}
+		}
+		if (temp5.equals("I FOUGHT")) {
+			thread.sleep(2000);
+			System.out.println("That means you beat the giant good job!");
+			thread.sleep(2000);
+			System.out.println("Since you got the bean for me I guess I will give you the key.");
+			thread.sleep(2000);
+			System.out.println("This key will aide you in leaving the clouds. Good luck.");
+
+		}
+		if (temp5.equals("NONE OF YOUR BUSINESS")) {
+			thread.sleep(2000);
+			System.out.println("That means you beat the giant good job!");
+			thread.sleep(2000);
+			System.out.println("Since you got the bean for me I guess I will give you the key.");
+			thread.sleep(2000);
+			System.out.println("This key will aide you in leaving the clouds. Good luck.");
+	
+		}
+		thread.sleep(2000);
+		System.out.println("Jack walks away leaving you.");
 		Inventory.add(secondKey);
 		System.out.println("KEY ADDED TO INVENTORY");
 	}
 
 	// When you come across door there is keypad
 	public static void level1Door() throws InterruptedException {
+		thread.sleep(2000);
+		System.out.println("Finally I have come across the door, maybe now I will be able to leave.");
+		thread.sleep(2000);
+		System.out.println("Hmm there a keypad, with a 4 slots.");
 
 	}
 
@@ -155,16 +194,8 @@ public class DialogueLevel1 {
 									// updates
 		String guessedCharacter = ""; // the character that the player guessed
 		String usedChars = ""; // stores all characters that have been guessed
-		String characterList = "A B C D E F G H I J K L M N O P Q R S T U V W X Y Z"; // the
-																						// displayed
-																						// characters
-																						// which
-																						// the
-																						// player
-																						// may
-																						// choose
-																						// from
-
+		String characterList = "A B C D E F G H I J K L M N O P Q R S T U V W X Y Z"; // the displayed characters which the player may choose
+																																			// from
 		while (!codeIsSolved) {
 			// to update and show encrypted message
 			for (int b = 0; b < encryptedCode.length(); b++) {
@@ -242,7 +273,7 @@ public class DialogueLevel1 {
 				codeIsSolved = true;
 			}
 		}
-		System.out.println("You hear a click.");
+		System.out.println("You hear a click...");
 	}
 
 	// Level 1 Outro
@@ -270,6 +301,7 @@ public class DialogueLevel1 {
 			thread.sleep(2000);
 			System.out.println("You see the clouds beneath you disappear.");
 			System.out.println("You Fall. Everything goes dark.");
+			valid = true;
 		} else {
 			thread.sleep(2000);
 			System.out.println("You close your eyes, and hope for the best.");
@@ -278,6 +310,7 @@ public class DialogueLevel1 {
 					.println("The anticipation is high and you anxiously wait for the cloud beneath you to disappear.");
 			thread.sleep(2000);
 			System.out.println("You feel a falling sensation and lose conciousness.");
+
 		}
 		thread.sleep(2000);
 		System.out.println("You see a child skipping on a hot summers day.");
