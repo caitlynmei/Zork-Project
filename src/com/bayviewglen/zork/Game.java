@@ -31,8 +31,9 @@ import com.bayviewglen.zork.tool.Tool;
  */
 
 class Game {
-
-	public int currentLevel = 2;
+	
+	// currentLevel controls the level that the game is on. You may manually change if you would like, otherwise start with level 1
+	public int currentLevel = 1;
 
 	// Level 1 Items
 	Tool firstKey = new Tool("1: Air Key");

@@ -144,7 +144,7 @@ public class DialogueLevel1 {
 		while (!valid5) {
 			temp5 = keyboard.nextLine().toUpperCase();
 			if (temp5.equals("I FOUGHT") || temp5.equals("NONE OF YOUR BUSINESS")) {
-				valid = true;
+				valid5 = true;
 			} else if (temp5.equals("HELP")) {
 				System.out.println("\nType exactly what you want to do, make sure no there are no extra spaces");
 			}
