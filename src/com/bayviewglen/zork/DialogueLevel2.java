@@ -70,7 +70,7 @@ public class DialogueLevel2 { //CM
 	}
 	
 	// Level 2: Cave Entrance Scene with Oarfish
-	public static boolean level2Oarfish() throws InterruptedException{
+	public static boolean level2Oarfish(Tool knife) throws InterruptedException{
 		System.out.println();
 		System.out.println("*SWISH*\nWhat was that? A red stripy thing just swam by... \n*WHAM*\n");
 		thread.sleep(1000);
@@ -104,7 +104,7 @@ public class DialogueLevel2 { //CM
 		}
 		
 		if (temp.equals("1")){
-			level2Oarfish1();
+			level2Oarfish1(knife);
 			return true;
 		}
 		
@@ -117,8 +117,9 @@ public class DialogueLevel2 { //CM
 	}
 	
 	// Level 2: Option 1: Killed by Oarfish Message
-	public static boolean level2Oarfish1() throws InterruptedException{
-		System.out.println("\nOption 1:\nYou take the knife out, and stab as hard as you can into the oarfish\'s right side.");
+	public static boolean level2Oarfish1(Tool knife) throws InterruptedException{
+		Inventory.add(knife);
+		System.out.println("\nOption 1:\nYou take the knife and stab as hard as you can into the oarfish\'s right side.");
 		thread.sleep(1500);
 		System.out.println("The oarfish's eyes are filled with hate and anger. In a millisecond, it flicks its tail and you slam into the cave wall. *CRACK* That's going to leave more than");
 		System.out.println("a bruise... You almost blank out, but it could also just be the darkness.");

@@ -33,7 +33,7 @@ import com.bayviewglen.zork.tool.Tool;
 class Game {
 	
 	// currentLevel controls the level that the game is on. You may manually change if you would like, otherwise start with level 1
-	public int currentLevel = 1;
+	public int currentLevel = 2;
 
 	// Level 1 Items
 	Tool firstKey = new Tool("1: Air Key");
@@ -217,7 +217,7 @@ class Game {
 	 * @throws Exception
 	 */
 	public void play() throws Exception {
-		printWelcome();
+		//printWelcome();
 		
 		/*
 		 * Create the game and initialize its internal map.
@@ -247,16 +247,16 @@ class Game {
 					if (Inventory.findIndex(bean) == -1){
 						DialogueLevel1.Jack1stMeeting();
 					} else if (Inventory.findIndex(bean) != -1){
-						DialogueLevel1.Jack2ndMeeting(secondKey);
+						DialogueLevel1.Jack2ndMeeting(firstKey);
 					}
 				} else if (currentRoom.equals(masterRoomMap.get("ROOM_17"))) {
 					DialogueLevel1.level1Giant();
 				} else if (currentRoom.equals(masterRoomMap.get("ROOM_22"))) {
 					Inventory.add(bean);
 				} else if (currentRoom.equals(masterRoomMap.get("ROOM_1"))) {
-					if (Inventory.findIndex(secondKey) == -1){
+					if (Inventory.findIndex(firstKey) == -1){
 					//something
-					} else if (Inventory.findIndex(secondKey) != -1){
+					} else if (Inventory.findIndex(firstKey) != -1){
 						DialogueLevel1.level1Door();
 						DialogueLevel1.level1CodeCheck();
 						DialogueLevel1.level1Outro();
@@ -268,7 +268,6 @@ class Game {
 			} else if (currentLevel == 2) { // CM
 				if (currentRoom.equals(masterRoomMap.get("ROOM_1"))) {
 					DialogueLevel2.level2Intro();
-					Inventory.add(knife);
 				} else if (currentRoom.equals(masterRoomMap.get("ROOM_6"))) {
 					if (Inventory.findIndex(bubble) == -1) {
 						DialogueLevel2.level2NoAir();
@@ -277,7 +276,7 @@ class Game {
 				} else if (currentRoom.equals(masterRoomMap.get("ROOM_6"))) {
 					DialogueLevel2.level2Shark();
 				} else if (currentRoom.equals(masterRoomMap.get("ROOM_29"))) {
-					if (DialogueLevel2.level2Oarfish() == true){
+					if (DialogueLevel2.level2Oarfish(knife) == true){
 						System.out.println();
 						finished = true;
 					} 
