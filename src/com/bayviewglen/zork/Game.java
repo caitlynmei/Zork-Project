@@ -217,7 +217,7 @@ class Game {
 	 * @throws Exception
 	 */
 	public void play() throws Exception {
-		//printWelcome();
+		printWelcome();
 		
 		/*
 		 * Create the game and initialize its internal map.
